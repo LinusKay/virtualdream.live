@@ -9,10 +9,10 @@
     $colour_detail = "#d0d0d0";
     $colour_text_primary = "#105289";
     $colour_text_secondary = "#9189ae";
-    # $background_body = "Digital_graphic_pattern_90.png";
     $background_body = "";
-    # $font_primary = "\"Comic Sans MS\", \"Comic Sans\", cursive";
+    # $background_body = "Digital_graphic_pattern_90.png";
     $font_primary = "";
+    # $font_primary = "\"Comic Sans MS\", \"Comic Sans\", cursive";
     $border_radius = "10"
 ?>
 
@@ -28,17 +28,21 @@
             background-image: url("<?php echo $background_body; ?>");
             background-repeat:repeat-x repeat-y;
             font-family: <?php echo $font_primary; ?>;
-            font-size: 12px;
+            font-size: 10px;
         }
         .wrap-content{
-            max-width:900px;
+            max-width:800px;
         }
         .block {
             border-radius: <?php echo $border_radius; ?>px;
             background: <?php echo $colour_main; ?>;
             padding: 10px;
             margin:10px;
+            box-shadow: 2px 2px 5px lightgray;
+            /*background-image: url('glass.jpg');
+            background-size:cover;*/
         }
+
         .block-header {
             background: <?php echo $colour_header; ?>;
         }
@@ -97,40 +101,41 @@
         <!-- variable-width content blocks -->
         <div class="block container-flex">
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <div class="block-glass"></div>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
         </div>
         <!-- variable-width content blocks -->
         <div class="block container-flex">
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
         </div>
         <div class="block container-flex">
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
             <div class="block block-flex">
-                <p class="block-title">Heading</p>
+                <p class="block-title">HEADING</p>
                 <p class="content-text">lorem ipsum etc.</p>
             </div>
         </div>
