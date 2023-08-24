@@ -7,7 +7,6 @@
     }
     $results = rand(15, 50);
     $url = "https://grungle.virtualdream.live/";
-    $url = "../grungle";
 ?>
 <!DOCTYPE html>
 <html lang="en">
