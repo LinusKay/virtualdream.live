@@ -1,0 +1,41 @@
+body {
+    max-width:900px;
+    margin:auto;
+}
+.sitetitle {
+    display:inline-block;
+    padding-right:15px;
+}
+.inputsearch {
+    width:500px;
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
+.result {
+    margin-bottom:10px;
+    border:solid 1px lightgray;
+    padding:10px;
+}
+.resulttitle, .resulturl, .resultdesc{
+    margin:0;
+}
+.resulturl {
+    color:lightgray;
+}
+.resultdesc {
+    color:gray;
+}
+.nolink {
+    text-decoration: none;
+    color:black;
+}
+
+#adspace {
+    margin-top:25px;
+}
+.advertisement {
+    border:none;
+    display:block;
+    margin:auto;
+}
