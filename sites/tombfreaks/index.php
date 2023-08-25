@@ -1,3 +1,4 @@
+<!-- boo -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +19,7 @@ body{
 }
 h1, p{
 	margin:0;
-	text-align:center;
 	padding:10px;
-	text-shadow: 2px 2px red;
 }
 #contentwrap{
 	width:500px;
@@ -29,18 +28,36 @@ h1, p{
 	color:darkred;
 	margin:20px auto;
 }
-img{
+#headstone{
 	width:300px;
 	margin-left:100px;;
+}
+#adspace {
+	margin-top:25px;
+	text-align:center;
+}
+.advertisement {
+	border:none;
+	margin:auto;
+	display:block;
 }
 </style>
 </head>
 <body>
-<div id="contentwrap">
-<img src="img/Headstone.jpg">
-<h1>Site Under Re-Construction</h1>
-<p>tombfreaks.net is current undergoing a shift at the will of the dark ones. <br> Check back later</p>
+	<div id="contentwrap">
+		<img id="headstone" src="img/Headstone.jpg">
+		<h1>Site Under Re-Construction</h1>
+		<p>tombfreaks.net is current undergoing a shift at the will of the dark ones. <br> Check back in a moon or two.</p>
+		<hr>
+		<p>Home to all freaks, fools, ghosts and ghouls that travel this web plane.</p>
+		<p>Come and rest your weary bones within the tomb.</p>
+		<div id="adspace">
+			<!-- banner advertisement -->
+			<?php include("../advertising/getbanner.php"); ?>
+			<?php include("../advertising/getbanner.php"); ?>
+			<?php include("../advertising/getbanner.php"); ?>
+		</div>
+	</div>
 
-</div>
 </body>
 </html>

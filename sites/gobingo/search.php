@@ -25,7 +25,8 @@
         </form> 
     </div>
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="75px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
     <div id="results">
         <?php
@@ -45,7 +46,8 @@
         ?>
     </div>
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
 </body>
 </html>

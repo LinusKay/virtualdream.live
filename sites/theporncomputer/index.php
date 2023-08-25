@@ -26,6 +26,7 @@
         }
         #adspace {
             margin-top:25px;
+            text-align:center;
         }
         .advertisement {
             border:none;
@@ -53,7 +54,8 @@
     <p class="caption">THE COMPUTER</p>
 
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
 
     <div class="spacer"></div>
@@ -79,7 +81,8 @@
     <div class="spacer"></div>
     
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
 
     <div class="spacer"></div>
@@ -98,7 +101,8 @@
     <p>HE’S DEAD</p>
     
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
 
     <div class="spacer"></div>
@@ -118,7 +122,7 @@
 
     <p>I DONT EVEN LIKE COMPUTER ANYMORE</p>
     <p>I DONT KNOW HOW TO USE IT I HAVE TO ASK MY SON</p>
-    <p>I USE TO LOOOVE COMPUTER </p>
+    <p>I USE TO LOVE COMPUTER </p>
     <p>I USED COMPUTER EVERY DAY TO MAKE IMAGES JUST LIKE THIS</p>
 
     <img src="IMG/mustang.png">
@@ -139,7 +143,8 @@
     <p>THEY <i>HATED</i> MY IDEAS</p>
             
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
 
     <div class="spacer"></div>
@@ -175,7 +180,8 @@
     <hr>
 
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- banner advertisement -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
     <br>
 </body>

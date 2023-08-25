@@ -16,6 +16,7 @@ body{
 	margin:25px;
 	width:100%;
 	float:left;
+	text-align:center;
 }
 .advertisement {
 	border:none;
@@ -113,9 +114,9 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 					</div>									
 					<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->\n";
 			}
-			echo '<div id="adspace">
-				<iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
-			</div>';
+			echo '<div id="adspace">';
+			include("../advertising/getbanner.php");
+			echo '</div>';
 		}
 
 		for($m=0;$m<20;$m++){

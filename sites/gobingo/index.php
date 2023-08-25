@@ -18,7 +18,9 @@
         <input type="submit" value="Go!">
     </form> 
     <div id="adspace">
-        <iframe class="advertisement" width="468px" height="55px" style="-webkit-transform:scale(1);-moz-transform-scale(1);" src="https://advertising.virtualdream.live/banner/" scrolling="no"></iframe>
+        <!-- could have a cleaner way of doing this -->
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
+    
 </body>
 </html>
