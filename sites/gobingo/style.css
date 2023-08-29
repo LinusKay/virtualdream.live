@@ -30,13 +30,22 @@ body {
     text-decoration: none;
     color:black;
 }
-
+/* advertisements */
 #adspace {
     margin-top:25px;
 }
-.advertisement {
+.advertisement-banner {
     border:none;
     display:block;
     margin:auto;
     text-align:center;
+}
+.advertisement-card {
+    border:none;
+    display:block;
+    margin:auto;
+    text-align:center;
+}
+.advertisement-card img {
+    height:200px;
 }

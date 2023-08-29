@@ -1,6 +1,6 @@
 <?php 
     $adverts = array();
-    if (($handle = fopen("../advertising/banner/adverts.csv", "r")) !== FALSE) {
+    if (($handle = fopen("../advertising/card/adverts.csv", "r")) !== FALSE) {
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $adverts[] = $data;
         }
@@ -12,5 +12,5 @@
     $ad = $adverts[$ad_selected];
     $ad_url = $ad[0];
     $ad_img = $ad[1];
-    echo "<a class=\"advertisement-banner\" href=\"$ad_url\"><img src=\"../advertising/banner/images/$ad_img\"></a>";
+    echo "<a class=\"advertisement-card\" href=\"$ad_url\"><img src=\"../advertising/card/images/$ad_img\"></a>";
 ?>

@@ -18,7 +18,8 @@
         <input type="submit" value="Go!">
     </form> 
     <div id="adspace">
-        <!-- could have a cleaner way of doing this -->
+        <?php include("../advertising/getbanner.php"); ?>
+        <?php include("../advertising/getbanner.php"); ?>
         <?php include("../advertising/getbanner.php"); ?>
     </div>
     
