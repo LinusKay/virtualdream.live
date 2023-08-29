@@ -115,7 +115,13 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 					<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->\n";
 			}
 			echo '<div id="adspace">';
-			include("../advertising/getbanner.php");
+			if(rand(0,1) == 0) {
+				include("../advertising/getbanner.php");
+			}
+			else {
+				include("../advertising/getcard.php");
+			}
+			
 			echo '</div>';
 		}
 
