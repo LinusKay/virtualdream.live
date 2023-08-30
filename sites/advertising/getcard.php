@@ -12,5 +12,5 @@
     $ad = $adverts[$ad_selected];
     $ad_url = $ad[0];
     $ad_img = $ad[1];
-    echo "<a class=\"advertisement-card\" href=\"$ad_url\"><img src=\"../advertising/card/images/$ad_img\"></a>";
+    echo "<a class=\"advertisement-card\" href=\"$ad_url\"><img src=\"https://advertising.virtualdream.live/card/images/$ad_img\"></a>";
 ?>
