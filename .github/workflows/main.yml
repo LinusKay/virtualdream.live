@@ -15,4 +15,3 @@ jobs:
         username: sftpuser
         password: ${{ secrets.password }}
         server-dir: /var/www/virtualdream.live/deploy/
-        dangerous-clean-slate: true
