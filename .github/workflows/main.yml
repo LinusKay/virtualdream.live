@@ -14,5 +14,5 @@ jobs:
         server: ${{ secrets.server_ip }}
         username: sftpuser
         password: ${{ secrets.password }}
-        dry-run: true 
         server-dir: /var/www/virtualdream.live/deploy/
+        dangerous-clean-slate: true
