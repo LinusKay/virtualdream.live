@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: virtualdream.live
+        server: ${{ secrets.server_ip }}
         username: sftpuser
         password: ${{ secrets.password }}
         dry-run: true
