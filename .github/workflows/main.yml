@@ -15,4 +15,4 @@ jobs:
         username: sftpuser
         password: ${{ secrets.password }}
         dry-run: true
-        server-dir: /var/www/virtualdream.live/deploy
+        server-dir: /var/www/virtualdream.live/deploy/
