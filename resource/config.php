@@ -1,1 +1,1 @@
-<?php define("ROOT", __DIR__ ."/"); ?>
+<?php define("ROOT", __DIR__ ."../"); ?>
