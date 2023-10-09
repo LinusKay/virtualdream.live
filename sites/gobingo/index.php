@@ -25,9 +25,9 @@ error_reporting(E_ALL);
         <input type="submit" value="Go!">
     </form> 
     <div id="adspace">
-        <?php include(SITES ."/advertising/getbanner.php"); ?>
-        <?php include(SITES ."/advertising/getbanner.php"); ?>
-        <?php include(SITES ."/advertising/getbanner.php"); ?>
+        <?php include(SITES . "/advertising/getbanner.php"); ?>
+        <?php include(SITES . "/advertising/getbanner.php"); ?>
+        <?php include(SITES . "/advertising/getbanner.php"); ?>
     </div>
     
 </body>
