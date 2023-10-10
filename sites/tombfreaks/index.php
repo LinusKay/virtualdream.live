@@ -32,6 +32,11 @@ h1, p{
 	width:300px;
 	margin-left:100px;;
 }
+#imgcenter{
+	display:block;
+	padding:50px;
+	margin:auto;
+}
 #adspace {
 	margin-top:25px;
 	text-align:center;
@@ -45,10 +50,9 @@ h1, p{
 </head>
 <body>
 	<div id="contentwrap">
-		<img id="headstone" src="img/Headstone.jpg">
 		<h1>Site Under Re-Construction</h1>
 		<p>tombfreaks.net is current undergoing a shift at the will of the dark ones. <br> Check back in a moon or two.</p>
-		<hr>
+		<img id="imgcenter" src="img/fireplace.png">
 		<p>Home to all freaks, fools, ghosts and ghouls that travel this web plane.</p>
 		<p>Come and rest your weary bones within the tomb.</p>
 		<div id="adspace">
