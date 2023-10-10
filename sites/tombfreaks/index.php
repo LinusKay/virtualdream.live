@@ -37,15 +37,6 @@ h1, p{
 	padding:50px;
 	margin:auto;
 }
-#adspace {
-	margin-top:25px;
-	text-align:center;
-}
-.advertisement {
-	border:none;
-	margin:auto;
-	display:block;
-}
 </style>
 </head>
 <body>
@@ -55,13 +46,6 @@ h1, p{
 		<img id="imgcenter" src="img/fireplace.png">
 		<p>Home to all freaks, fools, ghosts and ghouls that travel this web plane.</p>
 		<p>Come and rest your weary bones within the tomb.</p>
-		<div id="adspace">
-			<!-- banner advertisement -->
-			<?php include("../advertising/getbanner.php"); ?>
-			<?php include("../advertising/getbanner.php"); ?>
-			<?php include("../advertising/getbanner.php"); ?>
-		</div>
 	</div>
-
 </body>
 </html>
