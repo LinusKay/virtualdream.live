@@ -1,6 +1,6 @@
 <?php 
     $adverts = array();
-    if (($handle = fopen(SITES . "/advertising/banner/adverts.csv", "r")) !== FALSE) {
+    if (($handle = fopen("../advertising/banner/adverts.csv", "r")) !== FALSE) {
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $adverts[] = $data;
         }
