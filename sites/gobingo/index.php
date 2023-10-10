@@ -18,9 +18,9 @@
         <input type="submit" value="Go!">
     </form> 
     <div id="adspace">
-        <?php include(SITES . "/advertising/getbanner.php"); ?>
-        <?php include(SITES . "/advertising/getbanner.php"); ?>
-        <?php include(SITES . "/advertising/getbanner.php"); ?>
+        <?php include("../advertising/getbanner.php"); ?>
+        <?php include("../advertising/getbanner.php"); ?>
+        <?php include("../advertising/getbanner.php"); ?>
     </div>
     
 </body>
