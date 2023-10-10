@@ -105,7 +105,7 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 							display:inline-block;
 							position:relative;'>			
 						<img 								
-							src='img/".$product.".jpg' 			
+							src='img/".$product.".png' 			
 							style='							
 							width:50px;						
 							float:left'>					
