@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSING: ORB</title>
+    <style>
+        html {
+            background:black;
+            color:white;
+        }
+    </style>
 </head>
 <body>
 <h1>MISSING</h1>
@@ -17,10 +23,18 @@
 </ul>
 <p>OTHER CULPRITS:</p>
 <ul>
-    <li>GRUNG THE EVIL
-        - a small, goblin like fellow</li>
-    <li>STOLWART THE UNFORGIVING
-        - a being of unfathomable evil</li>
+    <!-- "Goblin Ghoul" by Rodrigo Bento is licensed under CC BY 4.0 and adapted for site use-->
+    <!-- https://creativecommons.org/licenses/by/4.0/ -->
+    <li>
+        GRUNG THE EVIL
+        - a small, goblin like fellow
+        <img src="grung.png">
+    </li>
+    <li>
+        STOLWART THE UNFORGIVING
+        - a being of unfathomable evil
+        <img src="wizard.png">
+    </li>
     <li>LEFT AT WIZARD PARTY
         - its possible and very embarassing</li>
 </ul>
