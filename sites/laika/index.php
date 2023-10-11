@@ -23,7 +23,7 @@
             font-size:1em;
         }
         .blink {
-            animation: star-blink 1s steps(5, start) infinite;
+            animation: star-blink 1s steps(5, start) infinite alternate;
         }
         @keyframes star-blink {
             to {
@@ -49,7 +49,7 @@
                                                       
                                                       
                                                       
-                *                                     
+        <span class="blink" style="animation-delay: 250ms;animation-duration:3s;">*</span>                                     
                                                       
                                                       
                                                       
@@ -64,7 +64,7 @@
                                                       
                                                       
                                                       
-                             .                        
+                             <span class="blink">.</span>                        
                                                       
                                                       
                                                       
@@ -86,7 +86,7 @@
                                                       
                                                   .   
                                                       
-                .                                     
+                <span class="blink">.</span>                                     
                           .                           
                                                       
                                                       
@@ -106,12 +106,12 @@
                                                       
                                                       
                                       .               
-    *   .                      .                      
+    *   .                      <span class="blink" style="animation-delay: 150ms;">.</span>                      
                                                       
                                                       
                                                       
 .                                                     
-                *                                     
+                <span class="blink" style="animation-delay: 250ms;animation-duration:3s;">*</span>                                     
            .                      .                   
                                                       
                                                       
@@ -127,12 +127,12 @@
    .                                            .     
                       .                               
                                                       
-             .                                        
+             <span class="blink">.</span>                                        
                                   .                   
                                                       
         .              .                              
                                          .            
-     .                                                
+     <span class="blink">.</span>                                                
 .                .         .                         . 
           .                                 .          
   .            .                 .       *           . 
@@ -158,18 +158,18 @@
     .          `      <span style="color:white;">,</span>               .    ,           
            .    !     .               .         .     .
 .                @                      .              
-                  #                 .           .      
+                  #                 .           <span class="blink">.</span>      
               .    <span style="color:white;">L</span>                  .        .       
-  .    .            <span style="color:white;">a</span>      ,         .  .         .    
+  <span class="blink">.</span>    .            <span style="color:white;">a</span>      ,         .  .         .    
             ,        <span style="color:white;">i</span>            .         ,          
                       <span style="color:white;">k</span>      .         .   .     .   . 
-                .      <span style="color:white;">a</span>         .          ..         
+                .      <span style="color:white;">a</span>         .          .<span class="blink">.</span>         
     .      .                        .            ,     
 .            .                  .         .            
-         .          .                             .   .
+         .          <span class="blink">.</span>                             .   .
        * .                             .               
  .  %&.         .              .             .        . 
-..   %&  *     ,         .             *              .
+..   %&  *     ,         .             *              <span class="blink">.</span>
  .%,o##o  * . . ,                  .     .          .  
 .oO000%%o.  *      .#####.                        .    
 ##oO0O ###%0oo..####%%O@@@%##.   .           .        .
