@@ -2,6 +2,12 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script>
+	window.addEventListener("load", (event) => {
+	new cursoreffects.textFlag({text: "BUY! BUY! BUY!",color:["#FF6800"]});
+	});
+</script>
 <style>
 	
 *{
