@@ -11,7 +11,8 @@
 ?>
 <title>tombfreaks.net - Crypt closed</title>
 <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
-
+<script src="../../src/assets/scripts/stickers/stickers.js"></script>
+<link rel="stylesheet" href="../../src/assets/scripts/stickers/stickers.css">
 <style>
 html{
 	width:100%;
