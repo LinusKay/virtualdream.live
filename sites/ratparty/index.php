@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background: url('balloons_tile.png');background-repeat: repeat;font-family:cursive;color:lime;text-decoration:underline;">
+<html lang="en" style="background: url('balloons_tile-export.png');background-repeat: repeat;font-family:cursive;color:lime;text-decoration:underline;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 </head>
 <body style="width:700px;margin:auto;text-align:center;background-color:aliceblue;">
 <h1>rat party</h1>
-<img src="0vwwiysamtu61.jpg" style="width:500px;">
+<img src="0vwwiysamtu61.png" style="width:400px;">
 <br>
 <audio controls autoplay loop>
 <source src="ratparty.mp3" type="audio/mpeg">
