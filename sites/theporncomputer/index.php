@@ -9,6 +9,8 @@
     <style> 
         body {
             background-color:#004b7f;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:white;
         }
         #wrap {
             max-width:550px;
@@ -54,7 +56,7 @@
             height:5px;
         }
         p{
-            margin:30px 0;
+            margin:20px 0;
         }
 
     </style>
@@ -83,11 +85,7 @@
         <img src="src/img/computer.jpg">
         <p class="caption">THE COMPUTER.</p>
 
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -111,11 +109,7 @@
 
         <div class="spacer"></div>
         
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -132,11 +126,7 @@
 
         <p><u>HE’S DEAD</u>.</p>
         
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -174,12 +164,7 @@
 
         <p>THEY FIRED ME WHEN I SAID I NEEDED MORE TIME TO WORK ON THE PORN COMPUTER.</p>
         <p>THEY <i>HATED</i> MY IDEAS.</p>
-                
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -213,11 +198,7 @@
         <p>EMAIL ME AT PORNCOMPUTER@VIRTUALDREAM.LIVE.</p>
         <hr>
 
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
         <!--
         .............................
         ........______________.......
@@ -236,10 +217,6 @@
         
         <br>
     </div>
-    <div id="adspace-fixed">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getcard.php"); ?>
-        </div>
+
 </body>
 </html>

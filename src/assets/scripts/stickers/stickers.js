@@ -29,9 +29,6 @@ function generateSticker() {
 
 // load stickers from local storage
 function loadStickers() {
-    // let stickers = [
-    //     ["src/img/polyfox2-transparent-500x.gif", 550, 250]
-    // ];
     let stickers = []
     if(localStorage.getItem('stickers') != null) {
         stickers = JSON.parse(localStorage.getItem('stickers'));
@@ -54,10 +51,12 @@ function createSticker(stickerImage, stickerX, stickerY, stickerZ) {
     stickerDivElement.style.left = stickerX;
     stickerDivElement.style.top = stickerY;
     stickerDivElement.style.zIndex = stickerZ;
+    stickerDivElement.ondblclick = function() { deleteSticker(this) };
     let stickerDiv = document.body.appendChild(stickerDivElement);
     let stickerElement = document.createElement('img');
     stickerElement.classList.add('sticker-img');
     stickerElement.src = stickerImage;
+    stickerElement.ondblclick = function() { deleteSticker(this) }
     let sticker = stickerDiv.appendChild(stickerElement);
     dragElement(stickerDiv);
 }
@@ -92,25 +91,26 @@ function saveStickers() {
         let stickerZ = stickerElements[i].style.zIndex;
         let sticker = [stickerImage, stickerX, stickerY, stickerZ];
         stickers.push(sticker);
-        console.log(sticker);
     }
     localStorage.setItem("stickers", JSON.stringify(stickers))
 }
 
 // remove sticker from screen
 function deleteSticker(sticker) {
-    if(confirm("Delete sticker?") == true){ 
-        let elementTag = sticker.tagName;
-        if(sticker.tagName == "IMG") {
-            sticker = sticker.parentElement;
-        }
-        console.log(sticker)
+    // if(confirm("Delete sticker?") == true){ 
+    //     if(sticker.tagName == "IMG") {
+    //         sticker = sticker.parentElement;
+    //     }
+    try {
         sticker.remove()
         saveStickers();
     }
+    catch(err) {}
+        
+    // }
 }
 
-/* STICKER DRAG */
+// STICKER DRAG 
 function dragElement(element) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     element.onmousedown = dragMouseDown;
@@ -121,7 +121,7 @@ function dragElement(element) {
         pos3 = e.clientX;
         pos4 = e.clientY;
         let stickerBin = document.getElementById('sticker-bin');
-        stickerBin.style.display = "block";
+        //stickerBin.style.display = "block";
         element.style.zIndex = getTopStickerZIndex();
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;

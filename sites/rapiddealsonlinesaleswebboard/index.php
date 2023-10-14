@@ -14,7 +14,7 @@
 	new cursoreffects.textFlag({text: "BUY! BUY! BUY!",color:["#FF6800"]});
 	});
 </script>
-<script src="../../src/assets/scripts/stickers/stickers.js"></script>
+<script src="../../src/assets/scripts/stickers/stickers.js" defer></script>
 <link rel="stylesheet" href="../../src/assets/scripts/stickers/stickers.css">
 <style>
 	
