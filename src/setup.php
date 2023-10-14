@@ -34,6 +34,4 @@ if(isset($cursorFollow)) {
 
 ";
 }
-
-#include('malware.php');
 ?>
