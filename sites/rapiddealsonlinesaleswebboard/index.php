@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php 
+    # PAGE SETUP
+    $cursorFollow = "src/img/cursor/hand-point-62x62.png";
+    include('../../src/setup.php');
+    # /PAGE SETUP
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 <script>
@@ -13,10 +19,15 @@
 *{
 	margin:0;
 }
+html {
+	background:palegreen;
+}
 body{
 	overflow-x:hidden;
-	background:palegreen;
+	background-image: url("src/img/dollar.png");
+  	background-repeat: repeat;
 	margin:auto;
+	font-family: 'Arial', monospace;
 }
 #adspace {
 	margin:25px;
@@ -42,6 +53,7 @@ marquee{
 	display:block;
 	width:100%;
 	z-index:3;
+	font-size:2em;
 }
 a{
 	z-index:5;
@@ -57,6 +69,10 @@ h1, h3{
 .blink {
 	animation: blink 1s step-start infinite;
 }
+#header {
+	background:palegreen;
+	padding:10px;
+}
 </style>
 </head>
 <?php
@@ -65,13 +81,13 @@ function roundUpToAny($n) {
     return round(($n*2)/10)*4;
 }
 
-$readtag = file_get_contents('taglines.txt'); 			//Load taglines
+$readtag = file_get_contents('src/taglines.txt'); 			//Load taglines
 $taglines = explode(",", $readtag);						//Split taglines into array
 
-$readprod = file_get_contents('products.txt');			//Load products
+$readprod = file_get_contents('src/products.txt');			//Load products
 $products = explode(",", $readprod);					//Split products into array
 
-$colours = ['palegreen', 'lightcyan', 'beige'];			//Colours for ad background
+$colours = ['lightcyan', 'beige'];			//Colours for ad background
 
 $borders = ['dotted', 'dashed', 'solid', 'double'];		//Styles for ad border
 
@@ -81,9 +97,11 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 ?>
 
 <body>
-	<h1>Rapid Deals Online Sales Web Board</h1>
-	<h3>Best deals on the web net</h3>
-	<h3><strong>For purhcases, EMAIL joesales@virtualdream.live</strong></h3>
+	<div id="header">
+		<h1>Rapid Deals Online Sales Web Board</h1>
+		<h3>Best deals from across the web net</h3>
+		<h3><strong>For purhcases, EMAIL joesales@virtualdream.live</strong></h3>
+	</div>
 	<hr>
 	<br>
 	<div id="adarea">
@@ -111,7 +129,7 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 							display:inline-block;
 							position:relative;'>			
 						<img 								
-							src='img/".$product.".png' 			
+							src='src/img/".$product.".png' 			
 							style='							
 							width:50px;						
 							float:left'>					
@@ -131,6 +149,7 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 			echo '</div>';
 		}
 
+		/*
 		for($m=0;$m<20;$m++){
 			$blinktrue = rand(0,1);
 			if($blinktrue) {
@@ -147,6 +166,7 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 			}
 			
 		}
+		*/
 		?>
 	</div>
 </body>

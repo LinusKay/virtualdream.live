@@ -47,12 +47,12 @@
         <!-- "Goblin Ghoul" by Rodrigo Bento is licensed under CC BY 4.0 and adapted for site use-->
         <!-- https://creativecommons.org/licenses/by/4.0/ -->
         <li class="li-horizontal">
-            <img src="grung.png">
+            <img src="src/img/grung.png">
             <p>GRUNG THE EVIL</p>
             <p><i>a small, goblin like fellow</i></p>
         </li>
         <li class="li-horizontal">
-            <img src="wizard.png">
+            <img src="src/img/wizard.png">
             <p>STOLWART THE UNFORGIVING</p>
             <p><i>- a being of unfathomable evil</i></p>
         </li>

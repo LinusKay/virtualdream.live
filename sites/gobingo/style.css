@@ -1,6 +1,7 @@
 body {
     max-width:900px;
     margin:auto;
+    font-family:'Courier New', Courier, monospace;
 }
 .sitetitle {
     display:inline-block;

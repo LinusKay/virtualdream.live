@@ -77,7 +77,7 @@
         <p>THE WORLDS FIRST COMPUTER FOR PORN ONLY.</p>
         <div class="spacer"></div>
 
-        <img src="IMG/computer.jpg">
+        <img src="src/img/computer.jpg">
         <p class="caption">THE COMPUTER.</p>
 
         <div id="adspace">
@@ -94,7 +94,7 @@
 
         <div class="spacer"></div>
 
-        <img src="IMG/computer2.jpg">
+        <img src="src/img/computer2.jpg">
         <p class="caption">THE COMPUTER.</p>
 
         <div class="spacer"></div>
@@ -118,7 +118,7 @@
 
         <p>I BUILT THIS IN MY WORKSHOP USING <i>THESE</i>TOOLS.</p>
 
-        <img src="IMG/Tools.jpg">
+        <img src="src/img/Tools.jpg">
         <p class="caption">THE TOOLS.</p>
 
         <p>THESE TOOLS BELONGED TO MY GRANDFATHER.</p>
@@ -147,7 +147,7 @@
         <p>I NEVER EVEN SAW HIM EVEN MAKE ANYTHING AT ALL.</p>
         <p>I DONT KNOW WHAT THIS THING IS.</p>
 
-        <img src="IMG/s-l1600 (4).jpg">
+        <img src="src/img/s-l1600 (4).jpg">
         <p class="caption">I DONT KNOW WHAT IT DOES.</p>
 
         <p>I DONT EVEN LIKE COMPUTER ANYMORE.</p>
@@ -155,11 +155,11 @@
         <p>I USE TO LOVE COMPUTER .</p>
         <p>I USED COMPUTER EVERY DAY TO MAKE IMAGES JUST LIKE THIS.</p>
 
-        <img src="IMG/mustang.png">
+        <img src="src/img/mustang.png">
 
         <p>AND THIS.</p>
 
-        <img src="IMG/Telly Robot.png">
+        <img src="src/img/Telly Robot.png">
 
         <p>BUT THIS MACHINE HAS SUCKED THE LIFE OUT OF MY VERY BEING FROM HEAD TO TOE AND I DONT KNOW HOW TO GO ON ANYMORE AFTER DOING WHAT IVE DONE.</p>
 
@@ -202,7 +202,7 @@
         <hr>
         <p><strong>OTHER THINGS I HAVE MADE</strong>.</p>
 
-        <img src="IMG/Phone.jpg">
+        <img src="src/img/Phone.jpg">
 
         <p class="caption">PHONE TO LISTEN TO PORN.</p>
 
