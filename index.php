@@ -54,5 +54,6 @@
             ?>
         </tbody>
     </table>
+    <p>Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
 </body>
 </html>
