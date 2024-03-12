@@ -32,8 +32,9 @@
             height:400px;
         }
         td {
-            padding:25px 0;
             width:400px;
+            height:400px;
+            position:relative;
         }
         table {
             position:relative;
@@ -51,6 +52,22 @@
         }
         tr {
             background-image: url('trbacking.png');
+        }
+        .imageblood {
+            position:absolute;
+            left:100px;
+            z-index:-10;
+            width:250px;
+        }
+        audio {
+            position:relative;
+            margin-top:25px;
+            background:black;
+        }
+        .songtitle {
+            background:black;
+            position:relative;
+            width:300px;
         }
     </style>
 </head>
@@ -72,8 +89,9 @@
     <table>
         <tr>
             <td>
-                <p>DOMINION OF THE FIST</p>
-                <audio controls><source src="tracks/Dominion of the Fist.mp3" type="audio/mpeg"></audio> <br>
+                <img src="blood.png" class="imageblood">
+                <p class="songtitle">DOMINION OF THE FIST</p>
+                <audio controls autoplay><source src="tracks/Dominion of the Fist.mp3" type="audio/mpeg"></audio> <br>
             </td>
             <td>
                 <img src="funktempest2.png" id="imagebig">
@@ -84,7 +102,8 @@
                 <img src="funktempest3.png" id="imagebig">
             </td>
             <td>
-                <p>EVAPORATE THE NONBELIEVERS</p>
+                <img src="blood.png" class="imageblood">
+                <p class="songtitle">EVAPORATE THE NONBELIEVERS</p>
                 <audio controls><source src="tracks/Evaporate the Nonbelievers.mp3" type="audio/mpeg"></audio> <br>
             </td>
         </tr>
@@ -99,7 +118,8 @@
     <table>
         <tr>
             <td>
-                <p>LAVENDER TEA</p>
+                <img src="blood.png" class="imageblood">
+                <p class="songtitle">LAVENDER TEA</p>
                 <audio controls><source src="tracks/Lavender Tea.mp3" type="audio/mpeg"></audio> <br>
             </td>
             <td>
@@ -111,7 +131,8 @@
                 <img src="funktempest5.png" id="imagebig">
             </td>
             <td>
-                <p>PRIESTS OF THE TEMPLE OF THE FIST</p>
+                <img src="blood.png" class="imageblood">
+                <p class="songtitle">PRIESTS OF THE TEMPLE OF THE FIST</p>
                 <audio controls><source src="tracks/Priests of the Temple of the Fist.mp3"></audio>
             </td>
         </tr>
