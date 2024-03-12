@@ -22,7 +22,7 @@
 	margin:0;
 }
 html {
-	background:palegreen;
+	background:lightblue;
 }
 body{
 	overflow-x:hidden;

@@ -12,12 +12,16 @@
     </script>
     <style>
         html {
-            background:black;
+            background:url('src/img/mossywall-1000x.png');
+            background-repeat: repeat;
+            background-size: 200px;
             color:white;
         }
         #wrap {
             width:900px;
             margin:auto;
+            background:black;
+            padding:20px;
         }
         .li-horizontal {
             display:inline-block;
