@@ -5,12 +5,15 @@ error_reporting(E_ALL);
 
 # WEBRINGS
 # name, image, link
-$webRings = [
+$webRingPresets = [
     [
-        "test", "../../src/assets/img/webrings/webring-web-bin.png", "https://virtualdream.live/test"
+        "test", "../../src/assets/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"
     ],
     [
-        "darknet", "../../src/assets/img/webrings/webring-darknet.png", "https://virtualdream.live/darknet"
+        "darknet", "../../src/assets/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"
+    ],
+    [
+        "joesales", "../../src/assets/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"
     ]
 ];
 
@@ -19,7 +22,7 @@ $webRings = [
 # backgroundColour
 # cursorCustom
 # cursorFollow
-# webRing
+# webRings
 
 # STYLESHEETS
 echo "
@@ -52,7 +55,8 @@ if(isset($cursorFollow)) {
 
 ";
 }
-if(isset($webRingInput)) {
+if(isset($webRings)) {
+    $webRingInput = $webRings;
     # convert single string input to array
     if(!is_array($webRingInput)) {
         $webRingInput = [$webRingInput];
@@ -62,16 +66,20 @@ if(isset($webRingInput)) {
     # if webring exists in existing webrings, add to final array
     # if webring doesn't exist, ignore
     foreach($webRingInput as $webRingInputItem) {
-        $webRingFound = false;
-        foreach($webRings as $ring) {
-            if($ring[0] == $webRingInputItem) {
-                $webRingFound = true;
-                array_push($webRingData, $ring);
+        # allow input of custom web rings not already in preset list
+        if(is_array($webRingInputItem)) {
+            array_push($webRingData, $webRingInputItem);
+        }
+        else {
+            $webRingFound = false;
+            foreach($webRingPresets as $ring) {
+                if($ring[0] == $webRingInputItem) {
+                    $webRingFound = true;
+                    array_push($webRingData, $ring);
+                }
             }
         }
     }
-    // echo "webRingData";
-    // print_r($webRingData);
 
     # display webring unless empty
     if(count($webRingData) > 0) {
@@ -83,14 +91,17 @@ if(isset($webRingInput)) {
             $webRingName = $webRing[0];
             $webRingImage = $webRing[1];
             $webRingLink = $webRing[2];
-            echo "<a href='$webRingLink'>
+            if(count($webRing) > 3) {$webRingTagline = $webRing[3];} else {$webRingTagline = "";}
+            
+            echo "
+            <a href='$webRingLink' title='$webRingName Web Ring&#013;$webRingTagline'>
                 <img src='$webRingImage' style='margin:0;'>
-            </a>
-            ";
+            </a>";
         }
             
         echo "
         </div>
+        <!-- /web ring -->
         ";
     }
 }

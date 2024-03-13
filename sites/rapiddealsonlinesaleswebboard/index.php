@@ -4,6 +4,7 @@
 <?php 
     # PAGE SETUP
     $cursorFollow = "src/img/cursor/hand-point-62x62.png";
+	$webRings = "joesales";
     include('../../src/setup.php');
     # /PAGE SETUP
 ?>
