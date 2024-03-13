@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php 
+        # PAGE SETUP
+        $webRings = "techring";
+        include('../../src/setup.php');
+        # /PAGE SETUP
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORN COMPUTER - WORLD FIRST</title>

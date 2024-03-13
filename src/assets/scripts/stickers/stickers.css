@@ -13,7 +13,7 @@
 #sticker-bin {
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    left: 50px;
     opacity:50%;
     display:none;
 }

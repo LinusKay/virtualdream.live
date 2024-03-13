@@ -1,12 +1,23 @@
 //STICKER MANAGEMENT 
-document.onload = setup();
-
-function setup() {
+window.onload = function() {
     let stickerBin = document.createElement('img');
     stickerBin.src = "../../src/assets/bin.png";
     stickerBin.id = "sticker-bin";
     document.body.appendChild(stickerBin);
     loadStickers();
+}
+
+// dec2hex :: Integer -> String
+// i.e. 0-255 -> '00'-'ff'
+function dec2hex (dec) {
+    return dec.toString(16).padStart(2, "0")
+  }
+  
+// generateId :: Integer -> String
+function generateId (len) {
+var arr = new Uint8Array((len || 40) / 2)
+window.crypto.getRandomValues(arr)
+return Array.from(arr, dec2hex).join('')
 }
 
 // generate random sticker 
@@ -23,7 +34,8 @@ function generateSticker() {
     let stickerX = Math.floor(Math.random()*100);
     let stickerY = Math.floor(Math.random()*100);
     let stickerZ = getTopStickerZIndex() + 1;
-    createSticker(stickerImage, stickerX, stickerY, stickerZ);
+    let stickerId = generateId(16);
+    createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId);
     saveStickers();
 }
 
@@ -33,18 +45,18 @@ function loadStickers() {
     if(localStorage.getItem('stickers') != null) {
         stickers = JSON.parse(localStorage.getItem('stickers'));
     } 
-    console.log(stickers)
     for(let i = 0; stickers[i]; i++) {
         let stickerImage = stickers[i][0];
         let stickerX = stickers[i][1];
         let stickerY = stickers[i][2];
         let stickerZ = stickers[i][3];
-        createSticker(stickerImage, stickerX, stickerY, stickerZ);
+        let stickerId = stickers[i][4];
+        createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId);
     }
 }
 
 // create and display elements for stickers
-function createSticker(stickerImage, stickerX, stickerY, stickerZ) {
+function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
     let stickerDivElement = document.createElement('div');
     stickerDivElement.classList.add('sticker');
     stickerDivElement.style.position = "fixed";
@@ -56,7 +68,8 @@ function createSticker(stickerImage, stickerX, stickerY, stickerZ) {
     let stickerElement = document.createElement('img');
     stickerElement.classList.add('sticker-img');
     stickerElement.src = stickerImage;
-    stickerElement.ondblclick = function() { deleteSticker(this) }
+    // stickerElement.ondblclick = function() { deleteSticker(this) }
+    stickerElement.dataset.stickerId = stickerId;
     let sticker = stickerDiv.appendChild(stickerElement);
     dragElement(stickerDiv);
 }
@@ -85,11 +98,13 @@ function saveStickers() {
     let stickers = [];
     let stickerElements = document.getElementsByClassName('sticker');
     for(let i = 0; stickerElements[i]; i++) {
-        let stickerImage = stickerElements[i].getElementsByTagName('img')[0].src;
+        let stickerElement = stickerElements[i].getElementsByTagName('img')[0];
+        let stickerImage = stickerElement.src;
         let stickerX = stickerElements[i].style.left;
         let stickerY = stickerElements[i].style.top;
         let stickerZ = stickerElements[i].style.zIndex;
-        let sticker = [stickerImage, stickerX, stickerY, stickerZ];
+        let stickerId = stickerElement.dataset.stickerId;
+        let sticker = [stickerImage, stickerX, stickerY, stickerZ, stickerId];
         stickers.push(sticker);
     }
     localStorage.setItem("stickers", JSON.stringify(stickers))
@@ -97,17 +112,20 @@ function saveStickers() {
 
 // remove sticker from screen
 function deleteSticker(sticker) {
-    // if(confirm("Delete sticker?") == true){ 
-    //     if(sticker.tagName == "IMG") {
-    //         sticker = sticker.parentElement;
-    //     }
-    try {
-        sticker.remove()
-        saveStickers();
-    }
-    catch(err) {}
+    if(confirm("Delete sticker?") == true){ 
+
+        try {
+            if(sticker.tagName == "DIV") {
+                sticker.remove();
+            }
+            else {
+                sticker.parentElement.remove();
+            }
+            saveStickers();
+        }
+        catch(err) {}
         
-    // }
+    }
 }
 
 // STICKER DRAG 
@@ -121,7 +139,11 @@ function dragElement(element) {
         pos3 = e.clientX;
         pos4 = e.clientY;
         let stickerBin = document.getElementById('sticker-bin');
-        //stickerBin.style.display = "block";
+        stickerBin.style.display = "block";
+        let stickerBinX = stickerBin.offsetLeft;
+        let stickerBinY = stickerBin.offsetTop;
+        stickerBinDistance = pointDistance(e.clientX, e.clientY, stickerBinX, stickerBinY);
+        if(stickerBinDistance < 50) { stickerBin.style.opacity = "100%"; } else { stickerBin.style.opacity = "50%"; }
         element.style.zIndex = getTopStickerZIndex();
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
@@ -148,7 +170,7 @@ function dragElement(element) {
         let stickerBinY = stickerBin.offsetTop;
         stickerBin.style.display = "none";
         stickerBinDistance = pointDistance(e.clientX, e.clientY, stickerBinX, stickerBinY);
-        if(stickerBinDistance < 50) { deleteSticker(e.target); }
+        if(stickerBinDistance < 100) { deleteSticker(e.target); }
         saveStickers();
     }
 

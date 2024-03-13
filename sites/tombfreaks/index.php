@@ -6,14 +6,12 @@
 <?php 
     # PAGE SETUP
     $cursorFollow = "src/img/skull-spin-40x40.gif";
-	$webRings = ["darknet", ["custom", "../../src/assets/img/webrings/webring-web-bin.png", "https://virtualdream.live/custom"]];
+	$webRings = ["darknet", "techring", ["custom", "../../src/assets/img/webrings/webring-web-bin.png", "https://virtualdream.live/custom"]];
     include('../../src/setup.php');
     # /PAGE SETUP
 ?>
 <title>tombfreaks.net - Crypt closed</title>
 <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
-<script src="../../src/assets/scripts/stickers/stickers.js"></script>
-<link rel="stylesheet" href="../../src/assets/scripts/stickers/stickers.css">
 <style>
 html{
 	width:100%;

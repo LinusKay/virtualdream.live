@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php 
+        # PAGE SETUP
+        include('../../src/setup.php');
+        # /PAGE SETUP
+        ?>
         <title>GoBingo!</title>
         <link rel="stylesheet" href="style.css">
         <script src="../../src/assets/scripts/stickers/stickers.js"></script>

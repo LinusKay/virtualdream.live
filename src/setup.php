@@ -14,6 +14,9 @@ $webRingPresets = [
     ],
     [
         "joesales", "../../src/assets/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"
+    ],
+    [
+        "techring", "../../src/assets/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"
     ]
 ];
 
@@ -24,6 +27,11 @@ $webRingPresets = [
 # cursorFollow
 # webRings
 
+ if(!isset($disableStickers)) {
+    echo "<script src='../../src/assets/scripts/stickers/stickers.js'></script>
+    <link rel='stylesheet' href='../../src/assets/scripts/stickers/stickers.css'>"
+    ;
+ }
 # STYLESHEETS
 echo "
     <style>
@@ -105,4 +113,5 @@ if(isset($webRings)) {
         ";
     }
 }
+
 ?>
