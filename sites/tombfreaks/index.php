@@ -6,6 +6,7 @@
 <?php 
     # PAGE SETUP
     $cursorFollow = "src/img/skull-spin-40x40.gif";
+	$webRingInput = ["darknet", "test"];
     include('../../src/setup.php');
     # /PAGE SETUP
 ?>

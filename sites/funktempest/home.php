@@ -6,6 +6,7 @@
         # PAGE SETUP
         $cursorCustom = "hand-point-export.png";
         $cursorFollow = "3dfunk.gif";
+        $webRing = "test";
         include('../../src/setup.php');
         # /PAGE SETUP
     ?>

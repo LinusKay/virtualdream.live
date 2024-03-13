@@ -8,7 +8,8 @@
     #$cursorCustom = "src/img/hand-point-62x62.png";
     $cursorFollow = "src/img/bird-rotate-50x50.gif";
     $backgroundImage = "src/img/dollar-50x50.png";
-    $backgroundColour = "black";
+    // $backgroundColour = "black";
+    $webRing = "test";
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
