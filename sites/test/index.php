@@ -16,6 +16,20 @@
     <script src="../../src/assets/scripts/stickers/stickers.js"></script>
     <link rel="stylesheet" href="../../src/assets/scripts/stickers/stickers.css">
     <title>Document</title>
+    <style> 
+        #patriot {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 50px;
+            width: 100px;
+            mask: url("../../src/assets/img/USA-Flag-usa3.gif");
+            -webkit-mask: url("../../src/assets/img/USA-Flag-usa3.gif");
+            background-repeat: no-repeat;
+            background-size: 75px;
+            background-position: center;
+        }
+    </style>
 </head>
 <body style="width:900px;height:900px;color:white;overflow-x:hidden;">
     <p>aaa</p>
@@ -26,4 +40,7 @@
     <img src="src/img/skull-spin-40x40.gif">
     
 </body>
+<script>
+    
+</script>
 </html>
