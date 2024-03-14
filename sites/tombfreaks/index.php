@@ -3,8 +3,15 @@
 <html>
 <head>
 <meta charset="utf-8">
+<?php 
+    # PAGE SETUP
+    $cursorFollow = "src/img/skull-spin-40x40.gif";
+	$webRings = ["darknet", "techring"];
+    include('../../src/setup.php');
+    # /PAGE SETUP
+?>
 <title>tombfreaks.net - Crypt closed</title>
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
 <style>
 html{
 	width:100%;
@@ -16,6 +23,7 @@ body{
 	height:900px;
 	margin:auto;
 	font-family: "Courier New";
+	overflow-x:hidden;
 }
 h1, p{
 	margin:0;
@@ -43,7 +51,7 @@ h1, p{
 	<div id="contentwrap">
 		<h1>Site Under Re-Construction</h1>
 		<p>tombfreaks.net is current undergoing a shift at the will of the dark ones. <br> Check back in a moon or two.</p>
-		<img id="imgcenter" src="img/fireplace.png">
+		<img id="imgcenter" src="src/img/fireplace.png">
 		<p>Home to all freaks, fools, ghosts and ghouls that travel this web plane.</p>
 		<p>Come and rest your weary bones within the tomb.</p>
 	</div>

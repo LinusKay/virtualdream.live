@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php 
+    # PAGE SETUP
+    include('../../src/setup.php');
+    # /PAGE SETUP
+    ?>
     <title>MISSING: ORB</title>
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script>
@@ -12,12 +17,16 @@
     </script>
     <style>
         html {
-            background:black;
+            background:url('src/img/mossywall-1000x.png');
+            background-repeat: repeat;
+            background-size: 200px;
             color:white;
         }
         #wrap {
             width:900px;
             margin:auto;
+            background:black;
+            padding:20px;
         }
         .li-horizontal {
             display:inline-block;
@@ -47,12 +56,12 @@
         <!-- "Goblin Ghoul" by Rodrigo Bento is licensed under CC BY 4.0 and adapted for site use-->
         <!-- https://creativecommons.org/licenses/by/4.0/ -->
         <li class="li-horizontal">
-            <img src="grung.png">
+            <img src="src/img/grung.png">
             <p>GRUNG THE EVIL</p>
             <p><i>a small, goblin like fellow</i></p>
         </li>
         <li class="li-horizontal">
-            <img src="wizard.png">
+            <img src="src/img/wizard.png">
             <p>STOLWART THE UNFORGIVING</p>
             <p><i>- a being of unfathomable evil</i></p>
         </li>

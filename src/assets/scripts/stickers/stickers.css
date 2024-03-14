@@ -1,0 +1,26 @@
+.sticker-img {
+    width:100%;
+    z-index:2000;
+}
+.sticker {
+    z-index:2000;
+}
+.sticker:hover {
+    border: dashed 3px gray;
+    box-sizing: border-box;
+    border-radius:25px;
+    cursor:grab;
+}
+.sticker:active {
+    cursor:grabbing;
+}
+#sticker-bin {
+    position: fixed;
+    bottom: 100px;
+    left: 100px;
+    opacity:50%;
+    display:none;
+}
+#sticker-bin:hover{
+    opacity:100%;
+}

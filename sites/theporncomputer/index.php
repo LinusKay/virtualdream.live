@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php 
+        # PAGE SETUP
+        $webRings = ["techring", "darknet", "test", "joesales"];
+        include('../../src/setup.php');
+        # /PAGE SETUP
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORN COMPUTER - WORLD FIRST</title>
     <style> 
         body {
             background-color:#004b7f;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:white;
         }
         #wrap {
             max-width:550px;
@@ -17,7 +25,7 @@
             padding:15px;
             background-color:#0069b3;
         }
-        img {
+        .photo {
             width:100%;
             display:block;
             margin:auto;
@@ -45,13 +53,14 @@
         #adspace-fixed {
             position:fixed;
             bottom:0;
+            right:15px;
             z-index:50;
         }
         .spacer {
             height:5px;
         }
         p{
-            margin:30px 0;
+            margin:20px 0;
         }
 
     </style>
@@ -77,14 +86,10 @@
         <p>THE WORLDS FIRST COMPUTER FOR PORN ONLY.</p>
         <div class="spacer"></div>
 
-        <img src="IMG/computer.jpg">
+        <img class="photo" src="src/img/computer.jpg">
         <p class="caption">THE COMPUTER.</p>
 
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -94,7 +99,7 @@
 
         <div class="spacer"></div>
 
-        <img src="IMG/computer2.jpg">
+        <img class="photo" src="src/img/computer2.jpg">
         <p class="caption">THE COMPUTER.</p>
 
         <div class="spacer"></div>
@@ -108,17 +113,13 @@
 
         <div class="spacer"></div>
         
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
         <p>I BUILT THIS IN MY WORKSHOP USING <i>THESE</i>TOOLS.</p>
 
-        <img src="IMG/Tools.jpg">
+        <img class="photo" src="src/img/Tools.jpg">
         <p class="caption">THE TOOLS.</p>
 
         <p>THESE TOOLS BELONGED TO MY GRANDFATHER.</p>
@@ -129,11 +130,7 @@
 
         <p><u>HE’S DEAD</u>.</p>
         
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -147,7 +144,7 @@
         <p>I NEVER EVEN SAW HIM EVEN MAKE ANYTHING AT ALL.</p>
         <p>I DONT KNOW WHAT THIS THING IS.</p>
 
-        <img src="IMG/s-l1600 (4).jpg">
+        <img class="photo" src="src/img/s-l1600 (4).jpg">
         <p class="caption">I DONT KNOW WHAT IT DOES.</p>
 
         <p>I DONT EVEN LIKE COMPUTER ANYMORE.</p>
@@ -155,11 +152,11 @@
         <p>I USE TO LOVE COMPUTER .</p>
         <p>I USED COMPUTER EVERY DAY TO MAKE IMAGES JUST LIKE THIS.</p>
 
-        <img src="IMG/mustang.png">
+        <img class="photo" src="src/img/mustang.png">
 
         <p>AND THIS.</p>
 
-        <img src="IMG/Telly Robot.png">
+        <img class="photo" src="src/img/Telly Robot.png">
 
         <p>BUT THIS MACHINE HAS SUCKED THE LIFE OUT OF MY VERY BEING FROM HEAD TO TOE AND I DONT KNOW HOW TO GO ON ANYMORE AFTER DOING WHAT IVE DONE.</p>
 
@@ -171,12 +168,7 @@
 
         <p>THEY FIRED ME WHEN I SAID I NEEDED MORE TIME TO WORK ON THE PORN COMPUTER.</p>
         <p>THEY <i>HATED</i> MY IDEAS.</p>
-                
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
 
         <div class="spacer"></div>
 
@@ -202,7 +194,7 @@
         <hr>
         <p><strong>OTHER THINGS I HAVE MADE</strong>.</p>
 
-        <img src="IMG/Phone.jpg">
+        <img class="photo" src="src/img/Phone.jpg">
 
         <p class="caption">PHONE TO LISTEN TO PORN.</p>
 
@@ -210,11 +202,7 @@
         <p>EMAIL ME AT PORNCOMPUTER@VIRTUALDREAM.LIVE.</p>
         <hr>
 
-        <div id="adspace">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getbanner.php"); ?>
-        </div>
+
         <!--
         .............................
         ........______________.......
@@ -233,10 +221,6 @@
         
         <br>
     </div>
-    <div id="adspace-fixed">
-            <!-- Banner advertisement -->
-            <span class="ad-title">Advertisement</span>
-            <?php include("../advertising/getcard.php"); ?>
-        </div>
+
 </body>
 </html>
