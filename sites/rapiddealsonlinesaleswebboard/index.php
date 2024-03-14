@@ -142,10 +142,10 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 			}
 			echo '<div id="adspace">';
 			if(rand(0,1) == 0) {
-				include("../advertising/getbanner.php");
+				echo "<div class='advertisement-banner'></div>";
 			}
 			else {
-				include("../advertising/getcard.php");
+				echo "<div class='advertisement-card'></div>";
 			}
 			
 			echo '</div>';

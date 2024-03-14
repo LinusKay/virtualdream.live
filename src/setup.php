@@ -27,6 +27,10 @@ if(!isset($disableMalware)) {
     <link rel='stylesheet' href='$assetLocation/scripts/malware/malware.css'>";
 }
 
+if(!isset($disableAdverts)) {
+    echo "<script src='../advertising/adverts.js'></script>";
+}
+
 // Inline styles
 echo "<style>
     html {
