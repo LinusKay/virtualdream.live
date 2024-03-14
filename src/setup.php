@@ -29,13 +29,13 @@ $webRingPresets = [
 
  if(!isset($disableStickers)) {
     echo "
-    <script src='../../src/assets/scripts/stickers/stickers.js' defer></script>
+    <script src='../../src/assets/scripts/stickers/stickers.js'></script>
     <link rel='stylesheet' href='../../src/assets/scripts/stickers/stickers.css'>"
     ;
  }
  if(!isset($disableMalware)) {
     echo "
-    <script src='../../src/assets/scripts/malware/malware.js' defer></script>
+    <script src='../../src/assets/scripts/malware/malware.js'></script>
     <link rel='stylesheet' href='../../src/assets/scripts/malware/malware.css'>"
     ;
  }
