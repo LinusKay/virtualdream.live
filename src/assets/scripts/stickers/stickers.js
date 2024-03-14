@@ -23,8 +23,11 @@ return Array.from(arr, dec2hex).join('')
 // generate random sticker 
 // used for testing
 let stickerImages = [
-        "../../src/assets/scripts/stickers/img/polyfox2-transparent-150x.gif",
-        "../../src/assets/scripts/stickers/img/skull-spin.gif",
+        "../../src/assets/img/stickers/polyfox2-transparent.gif",
+        "../../src/assets/img/stickers/skull-spin.gif",
+        "../../src/assets/img/stickers/mascot-pyramid.png",
+        "../../src/assets/img/stickers/yippee200x.png",
+        "../../src/assets/img/stickers/catfish.png",
     ];
 document.addEventListener("keydown", function(e) {
     if(e.key == "q") generateSticker();
