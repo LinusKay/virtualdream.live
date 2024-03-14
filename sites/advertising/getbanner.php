@@ -1,16 +1,41 @@
 <?php 
-    $adverts = array();
-    if (($handle = fopen("../advertising/banner/adverts.csv", "r")) !== FALSE) {
-        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-            $adverts[] = $data;
-        }
-        fclose($handle);
-    }
-    $ad_count = sizeof($adverts);
-    $ad_selected = rand(0, $ad_count - 1);
+// Function to fetch advertisement data based on type
+function fetchAdvertisements($type, $count) {
+    $adverts = [];
+    $file_path = "../advertising/$type/adverts.csv";
 
-    $ad = $adverts[$ad_selected];
-    $ad_url = $ad[0];
-    $ad_img = $ad[1];
-    echo "<a class=\"advertisement-banner\" href=\"$ad_url\"><img src=\"../advertising/banner/images/$ad_img\"></a>";
+    // Check if the file exists and is readable
+    if (is_readable($file_path)) {
+        $handle = fopen($file_path, "r");
+
+        // Check if file opened successfully
+        if ($handle !== FALSE) {
+            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                $adverts[] = $data;
+            }
+            fclose($handle);
+        }
+    }
+
+    // Select random items from the advertisements array
+    $randomAdverts = [];
+    for ($i = 0; $i < $count; $i++) {
+        $randomIndex = array_rand($adverts);
+        $randomAdverts[] = $adverts[$randomIndex];
+    }
+
+    return $randomAdverts;
+}
+
+// Get advertisement type from request parameter
+$type = isset($_GET['type']) ? $_GET['type'] : 'banner';
+$type = in_array($type, ['banner', 'card']) ? $type : 'banner'; // Ensure valid type
+
+// Get number of advertisements to return
+$count = isset($_GET['count']) ? intval($_GET['count']) : 1;
+$count = max(1, $count); // Ensure count is at least 1
+
+// Fetch advertisements based on type and return as JSON
+$advertisements = fetchAdvertisements($type, $count);
+echo json_encode($advertisements);
 ?>
