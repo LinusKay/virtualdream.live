@@ -3,7 +3,7 @@
 <head>
     <?php 
         # PAGE SETUP
-        $webRings = "techring";
+        $webRings = ["techring", "darknet", "test", "joesales"];
         include('../../src/setup.php');
         # /PAGE SETUP
     ?>

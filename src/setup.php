@@ -3,20 +3,29 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
 
+// CHANGE ON LIVE
+$dev = true;
+if($dev) {
+    $assetLocation = "../../src/assets";
+}
+else {
+    $assetLocation = "assets.virtualdream.live";
+}
+
 # WEBRINGS
 # name, image, link
 $webRingPresets = [
     [
-        "test", "../../src/assets/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"
+        "test", "$assetLocation/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"
     ],
     [
-        "darknet", "../../src/assets/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"
+        "darknet", "$assetLocation/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"
     ],
     [
-        "joesales", "../../src/assets/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"
+        "joesales", "$assetLocation/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"
     ],
     [
-        "techring", "../../src/assets/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"
+        "techring", "$assetLocation/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"
     ]
 ];
 
@@ -29,14 +38,14 @@ $webRingPresets = [
 
  if(!isset($disableStickers)) {
     echo "
-    <script src='../../src/assets/scripts/stickers/stickers.js'></script>
-    <link rel='stylesheet' href='../../src/assets/scripts/stickers/stickers.css'>"
+    <script src='$assetLocation/scripts/stickers/stickers.js'></script>
+    <link rel='stylesheet' href='$assetLocation/scripts/stickers/stickers.css'>"
     ;
  }
  if(!isset($disableMalware)) {
     echo "
-    <script src='../../src/assets/scripts/malware/malware.js'></script>
-    <link rel='stylesheet' href='../../src/assets/scripts/malware/malware.css'>"
+    <script src='$assetLocation/scripts/malware/malware.js'></script>
+    <link rel='stylesheet' href='$assetLocation/scripts/malware/malware.css'>"
     ;
  }
  
