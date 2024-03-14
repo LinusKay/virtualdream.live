@@ -9,7 +9,7 @@ if($dev) {
     $assetLocation = "../../src/assets";
 }
 else {
-    $assetLocation = "assets.virtualdream.live";
+    $assetLocation = "https://assets.virtualdream.live";
 }
 
 # WEBRINGS
@@ -119,7 +119,7 @@ if(isset($webRings)) {
             if(count($webRing) > 3) {$webRingTagline = $webRing[3];} else {$webRingTagline = "";}
             
             echo "
-            <a href='$webRingLink' title='$webRingName Web Ring&#013;$webRingTagline'>
+            <a href='$webRingLink' title='$webRingName Web Ring&#013;$webRingTagline' style='text-decoration:none;'>
                 <img src='$webRingImage' style='margin:0;'>
             </a>";
         }

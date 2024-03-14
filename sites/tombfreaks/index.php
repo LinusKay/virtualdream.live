@@ -6,7 +6,7 @@
 <?php 
     # PAGE SETUP
     $cursorFollow = "src/img/skull-spin-40x40.gif";
-	$webRings = ["darknet", "techring", ["custom", "../../src/assets/img/webrings/webring-web-bin.png", "https://virtualdream.live/custom"]];
+	$webRings = ["darknet", "techring"];
     include('../../src/setup.php');
     # /PAGE SETUP
 ?>
