@@ -215,6 +215,15 @@ function deleteSticker(sticker) {
     }
 }
 
+/**
+ * Clears all infections from the local storage.
+ * @returns {void}
+ */
+function deleteAllStickers() {
+    localStorage.removeItem('stickers');
+    location.reload();
+}
+
 
 // Dragging Functions
 
