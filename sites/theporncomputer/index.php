@@ -10,8 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORN COMPUTER - WORLD FIRST</title>
-    <script src="../../src/assets/scripts/stickers/stickers.js" defer></script>
-    <link rel="stylesheet" href="../../src/assets/scripts/stickers/stickers.css">
     <style> 
         body {
             background-color:#004b7f;
