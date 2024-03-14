@@ -15,6 +15,7 @@
 	new cursoreffects.textFlag({text: "BUY! BUY! BUY!",color:["#FF6800"]});
 	});
 </script>
+<title>$ $ $ RAPID SALES $ $ $</title>
 <style>
 	
 *{
