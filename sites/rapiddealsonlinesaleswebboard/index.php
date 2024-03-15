@@ -78,24 +78,22 @@ h1, h3{
 </style>
 </head>
 <?php
-
+// Function to round up to the nearest multiple of 4
 function roundUpToAny($n) {
-    return round(($n*2)/10)*4;
+    return round(($n * 2) / 10) * 4;
 }
 
-$readtag = file_get_contents('src/taglines.txt'); 			//Load taglines
-$taglines = explode(",", $readtag);						//Split taglines into array
+// Load taglines from file and split into array
+$taglines = explode(",", file_get_contents('src/taglines.txt'));
 
-$readprod = file_get_contents('src/products.txt');			//Load products
-$products = explode(",", $readprod);					//Split products into array
+// Load products from file and split into array
+$products = explode(",", file_get_contents('src/products.txt'));
 
-$colours = ['lightcyan', 'beige'];			//Colours for ad background
-
-$borders = ['dotted', 'dashed', 'solid', 'double'];		//Styles for ad border
-
-$fontstyle = ['normal', 'italic'];						//Styles for ad fontstyle
-
-$fontweight = ['normal', 'bold'];						//Styles for ad fontweight
+// Define arrays for ad styles
+$colours = ['lightcyan', 'beige'];
+$borders = ['dotted', 'dashed', 'solid', 'double'];
+$fontstyles = ['normal', 'italic'];
+$fontweights = ['normal', 'bold'];
 ?>
 
 <body>
@@ -107,68 +105,40 @@ $fontweight = ['normal', 'bold'];						//Styles for ad fontweight
 	<hr>
 	<br>
 	<div id="adarea">
-		<?php
-		for($x=0;$x<3;$x++){
-			for($i=0;$i<40;$i++){
-				$product = $products[rand(0,count($products)-1)]; //Select a product
-				$adtext = str_replace('product', $product, $taglines[rand(0,count($taglines)-1)]); //Select an ad template
-				$bgcol = $colours[rand(0,count($colours)-1)]; //Select a background colour 
-				$border = $borders[rand(0,count($borders)-1)]; //Select a border style 
-				$fstyle = $fontstyle[rand(0,count($fontstyle)-1)]; //select font style 
-				$fweight = $fontweight[rand(0,count($fontweight)-1)]; //select font weight
-				$price = rand(10,1000);
-				echo "<div id='ad' 					
-						style='								
-							width:300px; 					
-							background:".$bgcol."; 			
-							overflow:hidden; 				
-							float:left; 					
-							border:".$border." black 2px; 	
-							font-style:".$fstyle."; 		
-							font-weight:".$fweight."; 		
-							white-space:nowrap;
-							box-sizing:border-box;
-							display:inline-block;
-							position:relative;'>			
-						<img 								
-							src='src/img/".$product.".png' 			
-							style='							
-							width:50px;						
-							float:left'>					
-						$adtext
-						<p class='price'>$".$price."
-					</div>									
-					<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->\n";
-			}
-			echo '<div id="adspace">';
-			if(rand(0,1) == 0) {
-				echo "<div class='advertisement-banner'></div>";
-			}
-			else {
-				echo "<div class='advertisement-card'></div>";
-			}
-			
-			echo '</div>';
-		}
+	<?php
+    // Loop to generate ads
+    for ($x = 0; $x < 3; $x++) {
+        // Loop to generate multiple ads
+        for ($i = 0; $i < 40; $i++) {
+            // Randomly select product and tagline
+            $product = $products[rand(0, count($products) - 1)];
+            $adtext = str_replace('product', $product, $taglines[rand(0, count($taglines) - 1)]);
 
-		/*
-		for($m=0;$m<20;$m++){
-			$blinktrue = rand(0,1);
-			if($blinktrue) {
-				echo "\n".'<marquee class="blink" style="top:'.rand(0,4500).'px;'. //Calculate how far the marquee should be from the top of the page
-				'	width:'.rand(1200,2500).'px;'.					//Calculate how wide the marquee should be. This affects how long before it shows on screen.
-				'	color:#'.str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, 0, STR_PAD_LEFT).';">'. //Calculate a text colour for the marquee
-				'<b>'.str_replace('product', $products[rand(0,count($products)-1)], $taglines[rand(0,count($taglines)-1)]).'</b></marquee>'; //Set the line and product for the marquee
-			}
-			else {
-				echo "\n".'<marquee style="top:'.rand(0,4500).'px;'. //Calculate how far the marquee should be from the top of the page
-				'	width:'.rand(1200,2500).'px;'.					//Calculate how wide the marquee should be. This affects how long before it shows on screen.
-				'	color:#'.str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, 0, STR_PAD_LEFT).';">'. //Calculate a text colour for the marquee
-				'<b>'.str_replace('product', $products[rand(0,count($products)-1)], $taglines[rand(0,count($taglines)-1)]).'</b></marquee>'; //Set the line and product for the marquee
-			}
-			
-		}
-		*/
+            // Randomly select styles for ad
+            $bgcol = $colours[rand(0, count($colours) - 1)];
+            $border = $borders[rand(0, count($borders) - 1)];
+            $fstyle = $fontstyles[rand(0, count($fontstyles) - 1)];
+            $fweight = $fontweights[rand(0, count($fontweights) - 1)];
+            $price = rand(10, 1000);
+
+            // Output ad HTML
+            echo "<div id='ad' style='width: 300px; background: $bgcol; overflow: hidden; float: left; border: $border black 2px; font-style: $fstyle; font-weight: $fweight; white-space: nowrap; box-sizing: border-box; display: inline-block; position: relative;'>
+                    <img src='src/img/$product.png' style='width: 50px; float: left'>
+                    $adtext
+                    <p class='price'>$ $price</p>
+                  </div>\n";
+        }
+
+        // Output advertisement banner or card
+        echo '<div id="adspace">';
+        if (rand(0, 1) == 0) {
+            echo "<div class='advertisement-banner'></div>";
+        } else {
+            echo "<div class='advertisement-card'></div>";
+        }
+        echo '</div>';
+    }
+    ?>
 		?>
 	</div>
 </body>
