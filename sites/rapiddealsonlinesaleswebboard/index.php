@@ -123,10 +123,10 @@ $fontweights = ['normal', 'bold'];
 
             // Output ad HTML
             echo "<div id='ad' style='width: 300px; background: $bgcol; overflow: hidden; float: left; border: $border black 2px; font-style: $fstyle; font-weight: $fweight; white-space: nowrap; box-sizing: border-box; display: inline-block; position: relative;'>
-                    <img src='src/img/$product.png' style='width: 50px; float: left'>
-                    $adtext
-                    <p class='price'>$ $price</p>
-                  </div>\n";
+				<img src='src/img/$product.png' style='width: 50px; float: left'>
+				$adtext
+				<p class='price'>$ $price</p>
+				</div>\n";
         }
 
         // Output advertisement banner or card
