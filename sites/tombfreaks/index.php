@@ -13,11 +13,21 @@
 <title>tombfreaks.net - Crypt closed</title>
 <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
 <style>
+	
+
+@keyframes sway {
+  from {transform:scale(0.5,0.5) rotate(0deg);}
+  to {transform: scale(0.5,0.5) rotate(-5deg);}
+}
+
 html{
 	width:100%;
 	height:100%;
 	background:black;
+	/* animation:sway 3s ease-in-out 0s infinite alternate both, slipaway 60s; */
 }
+
+
 body{
 	width:1000px;
 	height:900px;
