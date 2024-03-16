@@ -1,1 +1,0 @@
-<html><head><title>joesales Webring</title></head><body><h1>joesales Webring</h1><ul><li><a href='https://rapiddealsonlinesaleswebboard.virtualdream.live/'>rapiddealsonlinesaleswebboard</a></li><li><a href='https://theporncomputer.virtualdream.live/'>theporncomputer</a></li><li><a href='https://friendonline.virtualdream.live/'>friendonline</a></li>

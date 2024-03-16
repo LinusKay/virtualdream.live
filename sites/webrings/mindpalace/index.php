@@ -1,1 +1,0 @@
-<html><head><title>mindpalace Webring</title></head><body><h1>mindpalace Webring</h1><ul><li><a href='https://funktempest.virtualdream.live/'>funktempest</a></li>

@@ -1,1 +1,0 @@
-<html><head><title>tech Webring</title></head><body><h1>tech Webring</h1><ul><li><a href='https://tombfreaks.virtualdream.live/'>tombfreaks</a></li><li><a href='https://theporncomputer.virtualdream.live/'>theporncomputer</a></li>
