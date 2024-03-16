@@ -103,12 +103,13 @@ function createStickerBin() {
 }
 
 /**
- * Loads sticker data from local storage and creates sticker elements..
+ * Loads sticker data from a cookie and creates sticker elements.
  * 
  * @returns {void}
  */
 function loadStickers() {
-    const stickers = JSON.parse(localStorage.getItem('stickers')) || [];
+    const stickersCookie = Cookies.get('stickers');
+    const stickers = stickersCookie ? JSON.parse(stickersCookie) : [];
 
     stickers.forEach(stickerData => {
         const [stickerImage, stickerX, stickerY, stickerZ, stickerId] = stickerData;
@@ -117,7 +118,7 @@ function loadStickers() {
 }
 
 /**
- * Saves all existing sticker data to local storage.
+ * Saves all existing sticker data to a cookie.
  * 
  * @returns {void}
  */
@@ -136,8 +137,7 @@ function saveStickers() {
         stickers.push(sticker);
     }
     
-    localStorage.setItem("stickers", JSON.stringify(stickers), { domain: 'DOMAIN' });
-    
+    Cookies.set('stickers', JSON.stringify(stickers), { domain: 'DOMAIN', path: '/' });
 }
 
 /**
@@ -216,11 +216,11 @@ function deleteSticker(sticker) {
 }
 
 /**
- * Clears all infections from the local storage.
+ * Clears all stickers from the local storage.
  * @returns {void}
  */
 function deleteAllStickers() {
-    localStorage.removeItem('stickers');
+    Cookies.remove('stickers', { domain: 'DOMAIN', path: '/' });
     location.reload();
 }
 
