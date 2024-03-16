@@ -4,6 +4,22 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
 
+// Enable CORS for all origins
+header("Access-Control-Allow-Origin: *");
+
+// Allow credentials (cookies) to be sent with the request
+header("Access-Control-Allow-Credentials: true");
+
+// Allow specific methods (e.g., GET, POST, OPTIONS)
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+
+// Allow specific headers (e.g., Content-Type, Authorization)
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+// Set the max age for preflight requests (cache duration)
+header("Access-Control-Max-Age: 3600");
+
+
 // Development mode check
 $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 
