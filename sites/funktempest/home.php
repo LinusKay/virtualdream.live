@@ -23,7 +23,7 @@
     <title>Funk Tempest - Realm of the Fist</title>
     <style>
         html {
-            background:black;
+            /* background:black; */
         }
         #bg {
             border-radius:10px;
@@ -180,6 +180,37 @@
                 }, 100);
             }
         </script>
+        <!-- <script>
+            // Function to make an AJAX request
+            function fetchWebRingData(site) {
+                return new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', `../webrings/getwebring.php?site=${site}`);
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            resolve(JSON.parse(xhr.responseText));
+                        } else {
+                            reject(xhr.statusText);
+                        }
+                    };
+                    xhr.onerror = function() {
+                        reject(xhr.statusText);
+                    };
+                    xhr.send();
+                });
+            }
+
+            // Usage example: Fetch webring data for the 'funktempest' site
+            fetchWebRingData('tombfreaks')
+                .then(data => {
+                    // Process the received data
+                    console.log('WebRing data:', data);
+                    // Here you can use the data to display the webrings on the webpage
+                })
+                .catch(error => {
+                    console.error('Error fetching webRing data:', error);
+                });
+        </script> -->
 </head>
 <body>
     <div id="content">

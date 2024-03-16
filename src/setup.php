@@ -4,33 +4,34 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
 
-// Development mode flag
-$dev = true;
-$assetLocation = $dev ? "../../src/assets" : "https://assets.virtualdream.live";
+// Development mode check
+$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 
-// Web Rings data
-$webRingPresets = [
-    ["test", "$assetLocation/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"],
-    ["darknet", "$assetLocation/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],
-    ["joesales", "$assetLocation/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"],
-    ["techring", "$assetLocation/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"],
-    ["mindpalace", "$assetLocation/img/webrings/webring-mindpalace.gif", "https://virtualdream.live/webrings/mindpalace", "for the thinkers..."],
-    ["fist", "$assetLocation/img/webrings/webring-fist.png", "https://virtualdream.live/webrings/fist", "seek the fist"]
-];
+// Define base URL for assets based on environment
+$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
+
+// Get the current URL
+$currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$path = preg_replace('#/+#', '/', parse_url($currentUrl, PHP_URL_PATH));
+$directories = explode('/', $path);
+$directories = array_filter($directories);
+$sitesIndex = array_search('sites', $directories);
+$siteName = isset($directories[$sitesIndex + 1]) ? $directories[$sitesIndex + 1] : null;
+echo $siteName;
 
 // Include stickers and malware scripts if not disabled
 if(!isset($disableStickers)) {
-    echo "<script src='$assetLocation/scripts/stickers/stickers.js'></script>
-    <link rel='stylesheet' href='$assetLocation/scripts/stickers/stickers.css'>";
+    echo "<script src='$assetBaseUrl/scripts/stickers/stickers.php'></script>\n";
+    echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/stickers/stickers.css'>\n";
 }
 
 if(!isset($disableMalware)) {
-    echo "<script src='$assetLocation/scripts/malware/malware.js'></script>
-    <link rel='stylesheet' href='$assetLocation/scripts/malware/malware.css'>";
+    echo "<script src='$assetBaseUrl/scripts/malware/malware.php'></script>\n";
+    echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/malware/malware.css'>\n";
 }
 
 if(!isset($disableAdverts)) {
-    echo "<script src='../advertising/adverts.js'></script>";
+    echo "<script src='../advertising/adverts.js'></script>\n";
 }
 
 // Inline styles
@@ -66,31 +67,25 @@ if(isset($cursorFollow)) {
     ";
 }
 
-// Display Web Rings
-if(isset($webRings)) {
-    $webRingInput = is_array($webRings) ? $webRings : [$webRings];
-    $webRingData = [];
+// Function to fetch webring data
+function fetchWebringData($site) {
+    $url = "http://localhost/virtualdream.live/sites/webrings/getwebring.php?site=" . urlencode($site);
+    $response = file_get_contents($url);
+    return json_decode($response, true);
+}
 
-    foreach($webRingInput as $webRingInputItem) {
-        if(is_array($webRingInputItem)) {
-            array_push($webRingData, $webRingInputItem);
-        }
-        else {
-            foreach($webRingPresets as $ring) {
-                if($ring[0] == $webRingInputItem) {
-                    array_push($webRingData, $ring);
-                }
-            }
-        }
-    }
+// Usage example: Fetch webring data for the 'funktempest' site
+$webrings = fetchWebringData($siteName);
 
-    if(count($webRingData) > 0) {
+// Process the received data
+
+    if(count($webrings) > 0) {
         echo "
         <!-- web ring -->
         <div id='webring-container' style='position:fixed;bottom:25px;right:25px;margin:0;'>
             <span style='color:lightgray;font-size:10px;margin:0;text-align:left;'>Web Rings<br></span>";
-        foreach($webRingData as $webRing) {
-            [$webRingName, $webRingImage, $webRingLink, $webRingTagline] = $webRing;
+        foreach($webrings as $webring) {
+            [$webRingName, $webRingImage, $webRingLink, $webRingTagline] = $webring;
             echo "
             <a href='$webRingLink' title='$webRingName Web Ring&#013;$webRingTagline' style='text-decoration:none;'>
                 <img src='$webRingImage' style='margin:0;'>
@@ -102,5 +97,5 @@ if(isset($webRings)) {
         <!-- /web ring -->
         ";
     }
-}
+
 ?>

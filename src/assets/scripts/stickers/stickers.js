@@ -96,7 +96,7 @@ function pointDistance(x1, y1, x2, y2) {
 function createStickerBin() {
     const stickerBin = document.createElement('img');
     
-    stickerBin.src = "../../src/assets/bin.png";
+    stickerBin.src = "ASSET_DIRECTORY/bin.png";
     stickerBin.id = "sticker-bin";
     
     return stickerBin;
@@ -147,11 +147,11 @@ function saveStickers() {
  */
 function generateRandomSticker() {
     const stickerImages = [
-        "../../src/assets/img/stickers/polyfox2-transparent.gif",
-        "../../src/assets/img/stickers/skull-spin.gif",
-        "../../src/assets/img/stickers/mascot-pyramid.png",
-        "../../src/assets/img/stickers/yippee200x.png",
-        "../../src/assets/img/stickers/catfish.png",
+        "ASSET_DIRECTORY/img/stickers/polyfox2-transparent.gif",
+        "ASSET_DIRECTORY/img/stickers/skull-spin.gif",
+        "ASSET_DIRECTORY/img/stickers/mascot-pyramid.png",
+        "ASSET_DIRECTORY/img/stickers/yippee200x.png",
+        "ASSET_DIRECTORY/img/stickers/catfish.png",
     ];
     const stickerImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
     const stickerX = Math.floor(Math.random() * 100);
@@ -281,7 +281,7 @@ function dragElement(element) {
         stickerBin.style.display = "block";
         stickerBin.style.zIndex = e.target.parentElement.style.zIndex - 1;
         stickerBin.style.opacity = (stickerBinDistance < actionDistance) ? "100%" : "50%";
-        stickerBin.src = (stickerBinDistance < actionDistance / 2) ? "../../src/assets/bin-open-full2.png" : (stickerBinDistance < actionDistance) ? "../../src/assets/bin-open.png" : "../../src/assets/bin.png";
+        stickerBin.src = (stickerBinDistance < actionDistance / 2) ? "ASSET_DIRECTORY/bin-open-full2.png" : (stickerBinDistance < actionDistance) ? "ASSET_DIRECTORY/bin-open.png" : "ASSET_DIRECTORY/bin.png";
     }
     
 

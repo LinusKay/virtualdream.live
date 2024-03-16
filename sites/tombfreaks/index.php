@@ -58,5 +58,6 @@ h1, p{
 		<p>Home to all freaks, fools, ghosts and ghouls that travel this web plane.</p>
 		<p>Come and rest your weary bones within the tomb.</p>
 	</div>
+
 </body>
 </html>
