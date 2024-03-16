@@ -1,6 +1,6 @@
 <?php 
 // Allow requests from all origins
-header("Access-Control-Allow-Origin: https://*.virtualdream.live");
+header("Access-Control-Allow-Origin: *");
 
 // Set other CORS headers as needed
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
