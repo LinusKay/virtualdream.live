@@ -42,7 +42,7 @@ foreach ($siteToWebrings as $site => $webrings) {
             }
 
             // Check if the site entry already exists in the index file
-            $siteEntry = "<li><a href='https://virtualdream.live/sites/$site'>$site</a></li>";
+            $siteEntry = "<li><a href='https://$site.virtualdream.live/'>$site</a></li>";
             if (strpos($content, $siteEntry) === false) {
                 // Add the site entry to the index file
                 $content .= $siteEntry;
