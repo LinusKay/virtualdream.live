@@ -9,6 +9,7 @@ $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 
 // Define base URL for assets based on environment
 $assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
+$webringBaseUrl = $environment === 'local' ? 'http://localhost/virtualdream.live/sites/webrings' : 'https://webrings.virtualdream.live';
 
 // Get the current URL
 $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -68,34 +69,32 @@ if(isset($cursorFollow)) {
 }
 
 // Function to fetch webring data
-function fetchWebringData($site) {
-    $url = "http://localhost/virtualdream.live/sites/webrings/getwebring.php?site=" . urlencode($site);
+function fetchWebringData($site, $webringBaseUrl) {
+    $url = "$webringBaseUrl/getwebring.php?site=" . urlencode($site);
     $response = file_get_contents($url);
     return json_decode($response, true);
 }
 
-// Usage example: Fetch webring data for the 'funktempest' site
-$webrings = fetchWebringData($siteName);
+$webrings = fetchWebringData($siteName, $webringBaseUrl);
 
-// Process the received data
-
-    if(count($webrings) > 0) {
+// Process the received webring data
+if(count($webrings) > 0) {
+    echo "
+    <!-- web ring -->
+    <div id='webring-container' style='position:fixed;bottom:25px;right:25px;margin:0;'>
+        <span style='color:lightgray;font-size:10px;margin:0;text-align:left;'>Web Rings<br></span>";
+    foreach($webrings as $webring) {
+        [$webRingName, $webRingImage, $webRingLink, $webRingTagline] = $webring;
         echo "
-        <!-- web ring -->
-        <div id='webring-container' style='position:fixed;bottom:25px;right:25px;margin:0;'>
-            <span style='color:lightgray;font-size:10px;margin:0;text-align:left;'>Web Rings<br></span>";
-        foreach($webrings as $webring) {
-            [$webRingName, $webRingImage, $webRingLink, $webRingTagline] = $webring;
-            echo "
-            <a href='$webRingLink' title='$webRingName Web Ring&#013;$webRingTagline' style='text-decoration:none;'>
-                <img src='$webRingImage' style='margin:0;'>
-            </a>";
-        }
-            
-        echo "
-        </div>
-        <!-- /web ring -->
-        ";
+        <a href='$webRingLink' title='$webRingName Web Ring&#013;$webRingTagline' style='text-decoration:none;'>
+            <img src='$webRingImage' style='margin:0;'>
+        </a>";
     }
+        
+    echo "
+    </div>
+    <!-- /web ring -->
+    ";
+}
 
 ?>
