@@ -10,6 +10,7 @@ $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 // Define base URL for assets based on environment
 $assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
 $webringBaseUrl = $environment === 'local' ? 'http://localhost/virtualdream.live/sites/webrings' : 'https://webrings.virtualdream.live';
+$advertsBaseUrl = $environment === 'local' ? '../advertising' : 'https://advertising.virtualdream.live';
 
 // Get the current URL
 $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -38,7 +39,7 @@ if(!isset($disableMalware)) {
 }
 
 if(!isset($disableAdverts)) {
-    echo "<script src='../advertising/adverts.php'></script>\n";
+    echo "<script src='$advertsBaseUrl/adverts.php'></script>\n";
 }
 
 // Inline styles
