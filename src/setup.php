@@ -38,7 +38,7 @@ if(!isset($disableMalware)) {
 }
 
 if(!isset($disableAdverts)) {
-    echo "<script src='../advertising/adverts.js'></script>\n";
+    echo "<script src='../advertising/adverts.php'></script>\n";
 }
 
 // Inline styles
