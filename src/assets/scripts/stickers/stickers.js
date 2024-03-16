@@ -17,7 +17,7 @@ window.addEventListener("load", function onLoad() {
  * @param {KeyboardEvent} e - The keyboard event object.
  */
 document.addEventListener("keydown", function(e) {
-    if(e.key == "q") generateRandomSticker();
+    if(e.key == "s") generateRandomSticker();
 } );
 
 
