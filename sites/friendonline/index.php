@@ -31,7 +31,7 @@ $ad_image_array = glob('ad-img/*.jpg');
 <?php 
 # PAGE SETUP
 $webRings = ["joesales"];
-$cursorFollow = "../../src/assets/img/heart.gif";
+$cursorFollow = "heart.gif";
 include('../../src/setup.php');
 # /PAGE SETUP
 ?>

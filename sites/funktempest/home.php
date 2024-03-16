@@ -179,44 +179,14 @@
                 }, 100);
             }
         </script>
-        <!-- <script>
-            // Function to make an AJAX request
-            function fetchWebRingData(site) {
-                return new Promise((resolve, reject) => {
-                    const xhr = new XMLHttpRequest();
-                    xhr.open('GET', `../webrings/getwebring.php?site=${site}`);
-                    xhr.onload = function() {
-                        if (xhr.status === 200) {
-                            resolve(JSON.parse(xhr.responseText));
-                        } else {
-                            reject(xhr.statusText);
-                        }
-                    };
-                    xhr.onerror = function() {
-                        reject(xhr.statusText);
-                    };
-                    xhr.send();
-                });
-            }
 
-            // Usage example: Fetch webring data for the 'funktempest' site
-            fetchWebRingData('tombfreaks')
-                .then(data => {
-                    // Process the received data
-                    console.log('WebRing data:', data);
-                    // Here you can use the data to display the webrings on the webpage
-                })
-                .catch(error => {
-                    console.error('Error fetching webRing data:', error);
-                });
-        </script> -->
 </head>
 <body>
     <div id="content">
         <img id="bg" src="src/img/bg.png">
         <div class="interact" id="interact-scriptures"  onclick="createBubble('scripture of the funk', this)"></div>
         <div class="interact" id="interact-templefist"  onclick="createBubble('the mighty temple of the fist', this)"></div>
-        <div class="interact" id="interact-monkright" onclick="createBubble('double cheese quarter pounder meal $7.50.', this)"></div>
+        <div class="interact" id="interact-monkright" onclick="createBubble('\'i love funk tempest\'', this)"></div>
         <div class="interact" id="interact-monkleft"  onclick="createBubble('seek the fist.', this)"></div>
         <div class="interact" id="interact-templedoor"  onclick="createBubble('the temple is closed.', this)"></div>
         <div class="interact" id="interact-monkhead"  onclick="createBubble('the fist of enlightenment shows cranial strength.', this)"></div>

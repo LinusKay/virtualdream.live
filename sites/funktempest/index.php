@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php
+    # PAGE SETUP
+    $cursorCustom = "src/img/hand-point-export.png";
+    $cursorFollow = "src/img/3dfunk.gif";
+    include('../../src/setup.php');
+    # /PAGE SETUP
+    ?>
+    <title>Funk Tempest</title>
     <style>
         * {
             text-align:center;
@@ -28,7 +35,6 @@
             height:100%;
             width:100%;
             position:relative;
-            display:block;
             color:white;
             text-decoration:none;
         }
@@ -36,7 +42,7 @@
 </head>
 <body>
     <div id="spacer"></div>
-    <img src="avatar.jpg">
+    <img src="src/img/avatar.jpg">
     <h1>FUNK TEMPEST</h1>
     <p>ENTER MY REALM...</p>
     <p>EMBRACE THE FUNK</p> <br>
