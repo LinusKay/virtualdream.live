@@ -15,7 +15,7 @@ include('../../src/setup.php');
 <img src="src/img/0vwwiysamtu61.png" style="width:400px;">
 <br>
 <audio controls autoplay loop>
-<source src="src/sound/ratparty.mp3" type="audio/mpeg">
+<source src="src/audio/ratparty.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio> 
 <br>
