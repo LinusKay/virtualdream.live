@@ -1,5 +1,10 @@
 <?php
-$assetLocation ="../../src/assets";
+// Development mode check
+$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
+
+// Define base URL for assets based on environment
+$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
+
 $webRingPresets = [
     ["test", "$assetLocation/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"],
     ["darknet", "$assetLocation/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],

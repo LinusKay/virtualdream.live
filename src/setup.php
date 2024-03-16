@@ -18,7 +18,6 @@ $directories = explode('/', $path);
 $directories = array_filter($directories);
 $sitesIndex = array_search('sites', $directories);
 $siteName = isset($directories[$sitesIndex + 1]) ? $directories[$sitesIndex + 1] : null;
-echo $siteName;
 
 // Include stickers and malware scripts if not disabled
 if(!isset($disableStickers)) {
