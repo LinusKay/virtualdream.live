@@ -33,24 +33,23 @@ foreach ($siteToWebrings as $site => $webrings) {
         if (!file_exists($webRingDirectory)) {
             // Create the directory if it doesn't exist
             mkdir($webRingDirectory, 0777, true); 
-            // Read existing content from index.php
-            $content = '';
-            if (!file_exists($indexFile)) {
-                $content = "<html><head><title>$webring Webring</title></head><body><h1>$webring Webring</h1><ul>";
-            } else {
-                $content = file_get_contents($indexFile);
-            }
-
-            // Check if the site entry already exists in the index file
-            $siteEntry = "<li><a href='https://$site.virtualdream.live/'>$site</a></li>";
-            if (strpos($content, $siteEntry) === false) {
-                // Add the site entry to the index file
-                $content .= $siteEntry;
-                file_put_contents($indexFile, $content);
-            }
         }
 
-        
+        // Read existing content from index.php
+        $content = '';
+        if (!file_exists($indexFile)) {
+            $content = "<html><head><title>$webring Webring</title></head><body><h1>$webring Webring</h1><ul>";
+        } else {
+            $content = file_get_contents($indexFile);
+        }
+
+        // Check if the site entry already exists in the index file
+        $siteEntry = "<li><a href='https://$site.virtualdream.live/'>$site</a></li>";
+        if (strpos($content, $siteEntry) === false) {
+            // Add the site entry to the index file
+            $content .= $siteEntry;
+            file_put_contents($indexFile, $content);
+        }
     }
 }
 ?>
