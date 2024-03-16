@@ -46,17 +46,20 @@ echo "
 if(isset($cursorFollow)) {
     echo "
     <!-- Cursor Follow -->
-    <img id='cursor-follow' src='$cursorFollow' style='position:absolute; z-index:99;'>
+    <img id='cursor-follow' src='$cursorFollow' style='position: fixed; z-index: 99;'>
     <script>
-        onmousemove = function(e){
+        document.addEventListener('DOMContentLoaded', function() {
             var cursorFollow = document.getElementById('cursor-follow');
-            let offset = 10;
-            let left = e.pageX + offset;
-            let top = e.pageY + offset;
-            cursorFollow.style.left = left + 'px';
-            cursorFollow.style.top = top + 'px';
-        }
+            document.addEventListener('mousemove', function(e) {
+                let offset = 10;
+                let left = e.clientX + offset;
+                let top = e.clientY + offset;
+                cursorFollow.style.left = left + 'px';
+                cursorFollow.style.top = top + 'px';
+            });
+        });
     </script>
+    
     <!-- /Cursor Follow -->
     ";
 }
