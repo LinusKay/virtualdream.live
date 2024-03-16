@@ -136,7 +136,7 @@ function saveStickers() {
         stickers.push(sticker);
     }
     
-    localStorage.setItem("stickers", JSON.stringify(stickers));
+    localStorage.setItem("stickers", JSON.stringify(stickers), { domain: 'DOMAIN' });
     
 }
 

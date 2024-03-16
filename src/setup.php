@@ -25,8 +25,6 @@ if ($environment === 'local') {
     $siteName = $subdomain;
 }
 
-echo $siteName;
-
 // Include stickers and malware scripts if not disabled
 if(!isset($disableStickers)) {
     echo "<script src='$assetBaseUrl/scripts/stickers/stickers.php'></script>\n";
