@@ -7,7 +7,6 @@
     # PAGE SETUP
     $cursorCustom = "src/img/hand-point-export.png";
     $cursorFollow = "src/img/3dfunk.gif";
-    $webRings = ["fist", "darknet", "mindpalace"];
     include('../../src/setup.php');
     # /PAGE SETUP
     $eternalPoolOfWisdom = [
@@ -23,7 +22,7 @@
     <title>Funk Tempest - Realm of the Fist</title>
     <style>
         html {
-            /* background:black; */
+            background:black;
         }
         #bg {
             border-radius:10px;

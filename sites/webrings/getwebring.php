@@ -6,12 +6,12 @@ $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 $assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
 
 $webRingPresets = [
-    ["test", "$assetLocation/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"],
-    ["darknet", "$assetLocation/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],
-    ["joesales", "$assetLocation/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"],
-    ["tech", "$assetLocation/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"],
-    ["mindpalace", "$assetLocation/img/webrings/webring-mindpalace.gif", "https://virtualdream.live/webrings/mindpalace", "for the thinkers..."],
-    ["fist", "$assetLocation/img/webrings/webring-fist.png", "https://virtualdream.live/webrings/fist", "seek the fist"]
+    ["test", "$assetBaseUrl/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"],
+    ["darknet", "$assetBaseUrl/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],
+    ["joesales", "$assetBaseUrl/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"],
+    ["tech", "$assetBaseUrl/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"],
+    ["mindpalace", "$assetBaseUrl/img/webrings/webring-mindpalace.gif", "https://virtualdream.live/webrings/mindpalace", "for the thinkers..."],
+    ["fist", "$assetBaseUrl/img/webrings/webring-fist.png", "https://virtualdream.live/webrings/fist", "seek the fist"]
 ];
 
 // Define the site-to-webrings mapping

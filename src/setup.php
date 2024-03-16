@@ -13,11 +13,18 @@ $webringBaseUrl = $environment === 'local' ? 'http://localhost/virtualdream.live
 
 // Get the current URL
 $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$path = preg_replace('#/+#', '/', parse_url($currentUrl, PHP_URL_PATH));
-$directories = explode('/', $path);
-$directories = array_filter($directories);
-$sitesIndex = array_search('sites', $directories);
-$siteName = isset($directories[$sitesIndex + 1]) ? $directories[$sitesIndex + 1] : null;
+// Extract site name based on environment
+if ($environment === 'local') {
+    // Development environment
+    $path = parse_url($currentUrl, PHP_URL_PATH);
+    $siteName = basename(dirname($path));
+} else {
+    // Production environment
+    $subdomain = explode('.', $_SERVER['HTTP_HOST'])[0];
+    $siteName = $subdomain;
+}
+
+echo $siteName;
 
 // Include stickers and malware scripts if not disabled
 if(!isset($disableStickers)) {
