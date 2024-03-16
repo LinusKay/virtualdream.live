@@ -21,7 +21,8 @@ $siteToWebrings = [
     "funktempest" => ["fist", "mindpalace", "darknet"],
     "tombfreaks"  => ["darknet", "tech"],
     "rapiddealsonlinesaleswebboard" => ["joesales"],
-    "theporncomputer" => ["tech", "darknet", "joesales"]
+    "theporncomputer" => ["tech", "darknet", "joesales"],
+    "friendonline" => ["joesales"]
 
 ];
 
