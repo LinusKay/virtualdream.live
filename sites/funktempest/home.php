@@ -220,8 +220,8 @@
         <div class="interact" id="interact-monkleft"  onclick="createBubble('seek the fist.', this)"></div>
         <div class="interact" id="interact-templedoor"  onclick="createBubble('the temple is closed.', this)"></div>
         <div class="interact" id="interact-monkhead"  onclick="createBubble('the fist of enlightenment shows cranial strength.', this)"></div>
-        <!-- <h1>Funk Tempest</h1> -->
-        <!-- <p id="introtext">welcome... to my world...</p> -->
+        <h1>Funk Tempest</h1>
+        <p id="introtext">welcome... to my world...</p>
         <div class="speechbubble" id="speechbubblemonk">
             <p><b>Teachings of the Temple of Funk</b></p>
             <p><i><?php echo $todaysWisdom; ?></i></p>

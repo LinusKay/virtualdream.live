@@ -18,12 +18,18 @@ $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 if ($environment === 'local') {
     // Development environment
     $path = parse_url($currentUrl, PHP_URL_PATH);
-    $siteName = basename(dirname($path));
+    $siteName = '';
+    $pathParts = explode('/', $path);
+    $siteIndex = array_search('sites', $pathParts);
+    if ($siteIndex !== false && isset($pathParts[$siteIndex + 1])) {
+        $siteName = $pathParts[$siteIndex + 1];
+    }
 } else {
     // Production environment
     $subdomain = explode('.', $_SERVER['HTTP_HOST'])[0];
     $siteName = $subdomain;
 }
+echo $siteName;
 
 echo "<script src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js'></script>\n";
 // Include stickers and malware scripts if not disabled
