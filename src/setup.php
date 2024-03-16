@@ -13,7 +13,9 @@ $webRingPresets = [
     ["test", "$assetLocation/img/webrings/webring-web-bin.png", "https://virtualdream.live/webrings/test", "placeholder webring!"],
     ["darknet", "$assetLocation/img/webrings/webring-darknet.png", "https://virtualdream.live/webrings/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],
     ["joesales", "$assetLocation/img/webrings/webring-joesales.png", "https://virtualdream.live/webrings/joesales", "$$$$$$$$$$$$$$$$$$$"],
-    ["techring", "$assetLocation/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"]
+    ["techring", "$assetLocation/img/webrings/webring-tech.png", "https://virtualdream.live/webrings/tech", "BEEP BEEP BEEP"],
+    ["mindpalace", "$assetLocation/img/webrings/webring-mindpalace.gif", "https://virtualdream.live/webrings/mindpalace", "for the thinkers..."],
+    ["fist", "$assetLocation/img/webrings/webring-fist.png", "https://virtualdream.live/webrings/fist", "seek the fist"]
 ];
 
 // Include stickers and malware scripts if not disabled
