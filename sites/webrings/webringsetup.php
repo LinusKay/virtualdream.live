@@ -8,12 +8,12 @@ $assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.
 $webringBaseUrl = $environment === 'local' ? '../webrings' : 'https://webrings.virtualdream.live';
 
 $webRingPresets = [
-    ["test", "$assetBaseUrl/img/webrings/webring-web-bin.png", "$webringBaseUrl/test", "placeholder webring!"],
-    ["darknet", "$assetBaseUrl/img/webrings/webring-darknet.png", "$webringBaseUrl/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],
-    ["joesales", "$assetBaseUrl/img/webrings/webring-joesales.png", "$webringBaseUrl/joesales", "$$$$$$$$$$$$$$$$$$$"],
-    ["tech", "$assetBaseUrl/img/webrings/webring-tech.png", "$webringBaseUrl/tech", "BEEP BEEP BEEP"],
-    ["mindpalace", "$assetBaseUrl/img/webrings/webring-mindpalace.gif", "$webringBaseUrl/mindpalace", "for the thinkers..."],
-    ["fist", "$assetBaseUrl/img/webrings/webring-fist.png", "$webringBaseUrl/fist", "seek the fist"]
+    ["test", "$assetBaseUrl/img/webrings/webring-web-bin-export.png", "$webringBaseUrl/test", "placeholder webring!"],
+    ["darknet", "$assetBaseUrl/img/webrings/webring-darknet-export.png", "$webringBaseUrl/darknet", "all things dark and creepy&#013;come forth, all creatures of the night!"],
+    ["joesales", "$assetBaseUrl/img/webrings/webring-joesales-export.png", "$webringBaseUrl/joesales", "$$$$$$$$$$$$$$$$$$$"],
+    ["tech", "$assetBaseUrl/img/webrings/webring-tech-export.png", "$webringBaseUrl/tech", "BEEP BEEP BEEP"],
+    ["mindpalace", "$assetBaseUrl/img/webrings/webring-mindpalace-export.gif", "$webringBaseUrl/mindpalace", "for the thinkers..."],
+    ["fist", "$assetBaseUrl/img/webrings/webring-fist-export.png", "$webringBaseUrl/fist", "seek the fist"]
 ];
 
 // Define the site-to-webrings mapping

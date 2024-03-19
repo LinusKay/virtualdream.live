@@ -17,15 +17,13 @@
     </script>
     <style>
         html {
-            background:url('src/img/mossywall-1000x.png');
+            background:url('src/img/mossywall-export-1000x.png');
             background-repeat: repeat;
             background-size: 200px;
-            color:white;
         }
         #wrap {
             width:900px;
             margin:auto;
-            background:black;
             padding:20px;
         }
         .li-horizontal {
@@ -37,6 +35,10 @@
             display:block;
             margin:auto;
             text-align:center;
+        }
+        p, li, h1, h2 {
+            background:white;
+            color:black;
         }
     </style>
 </head>

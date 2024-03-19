@@ -33,7 +33,7 @@
         }
     </style>
 </head>
-<body background="src/img/stares.jfif">
+<body background="src/img/stares.png">
         <table align="center" cellpadding="20" height="395" width="820" bgcolor="#000000" style="color:white;">
             <tbody>
                 <tr>
@@ -46,7 +46,7 @@
                             <li><a href="cryptids.php"><b>cryptids</b></a></li>
                             <li><a href="mailto:tombfreaks@virtualdream.live">EMAIL US</a></li>
                         </ul>
-                        <img src="src/img/usa.gif" width="100" style="display:block;margin:auto">
+                        <img src="src/img/usa-export.gif" width="100" style="display:block;margin:auto">
                         <br>
                         <div class="advertisement-card"></div>
                     </td>
