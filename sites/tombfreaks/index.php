@@ -19,8 +19,6 @@ html{
 	height:100%;
 	background:black;
 }
-
-
 body{
 	width:1000px;
 	height:900px;
