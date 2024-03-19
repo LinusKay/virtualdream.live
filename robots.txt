@@ -1,0 +1,3 @@
+# bot be gone
+User-agent: chatgpt
+Disallow: /
