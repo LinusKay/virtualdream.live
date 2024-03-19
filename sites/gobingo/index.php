@@ -8,6 +8,8 @@
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
+        <!-- <script src="../../src/assets/scripts/malware/malware.js"></script> -->
+
         <title>GoBingo!</title>
         <link rel="stylesheet" href="style.css">
         <style> 
@@ -18,7 +20,11 @@
 
     </head>
     <body>
-        
+        <script>
+            window.addEventListener("load", function() {
+                window.addInfection("smileee");
+            });
+        </script>
         <h1>GoBingo!</h1>
         <form action="search.php" method="get" enctype="multipart/form-data">
             <input class="inputsearch" placeholder="Search" name="s">
