@@ -20,11 +20,6 @@
 
     </head>
     <body>
-        <script>
-            window.addEventListener("load", function() {
-                window.addInfection("smileee");
-            });
-        </script>
         <h1>GoBingo!</h1>
         <form action="search.php" method="get" enctype="multipart/form-data">
             <input class="inputsearch" placeholder="Search" name="s">
