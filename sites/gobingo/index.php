@@ -8,7 +8,6 @@
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
-        <!-- <script src="../../src/assets/scripts/malware/malware.js"></script> -->
 
         <title>GoBingo!</title>
         <link rel="stylesheet" href="style.css">
@@ -27,13 +26,14 @@
         </form> 
         <div id="adspace">
             
-            <!-- Example banner divs -->
     <div class="advertisement-banner"></div>
     <div class="advertisement-banner"></div>
 
-    <!-- Example card divs -->
     <div class="advertisement-card"></div>
-    <div class="advertisement-card"></div>
+
+    <div class="advertisement-banner"></div>
+    <div class="advertisement-banner"></div>
+    
     <div class="advertisement-card"></div>
 
     
