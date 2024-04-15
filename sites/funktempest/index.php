@@ -10,6 +10,7 @@
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
+
     <title>Funk Tempest</title>
     <style>
         * {

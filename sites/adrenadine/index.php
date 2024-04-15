@@ -12,7 +12,7 @@
 </head>
 <body>
     <center>
-        <img src="src/img/plan.png">
+        <img src="src/img/adrenadine.png">
     </center>
 </body>
 </html>

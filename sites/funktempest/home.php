@@ -8,6 +8,7 @@
     $cursorCustom = "src/img/hand-point-export.png";
     $cursorFollow = "src/img/3dfunk.gif";
     include('../../src/setup.php');
+    echo "<script src='$assetBaseUrl/scripts/audioplayer/audioplayer.php' type='module'></script>\n";
     # /PAGE SETUP
     $eternalPoolOfWisdom = [
         "The catacombs of my woe know no end. Eclipsed by my voracious clout doth the meek wallow in my supreme aura of social influence divinity.",
@@ -128,6 +129,119 @@
             height:50px;
         }
         </style>
+        <script>
+            window.addEventListener("load", function() {
+                window.createAudioPlayer({
+                    backgroundColor: "black",
+                    borderColour: "white",
+                    borderWidth: "2",
+                    borderStyle: "outset",
+                    textColour: "white",
+                    playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
+                    pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
+                    timelineBackgroundColor: "white",
+                    timelineColor: "black",
+                    timelineOpacity: 1,
+                    showCover: false,
+                    // playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
+                    // playerBackgroundOffset: [-190, -160],
+                    playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/yellinghead.png" ?>",
+                    playerBackgroundOffset: [-15, -185],
+                    songs: [
+                        { 
+                            file: "src/tracks/He Who Holds the Zest.mp3",
+                            title: "He Who Holds the Zest...",
+                            artist: "Funk Tempest",
+                            cover: "src/img/hewhoholdsthezest.jpg"
+                        },
+                        {
+                            file: "src/tracks/Must Learn to Control the Zest.mp3",
+                            title: "...Must Learn to Control the Zest",
+                            artist: "Funk Tempest",
+                            cover: "src/img/mustlearntocontrolthezest.jpg"
+                        },
+                        {
+                            file: "src/tracks/Dominion of the Fist.mp3",
+                            title: "Dominion of the Fist",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        },
+                        {
+                            file: "src/tracks/Evaporate the Nonbelievers.mp3",
+                            title: "Evaporate the Nonbelievers",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        },
+                        {
+                            file: "src/tracks/Lavender Tea.mp3",
+                            title: "Lavender Tea",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        },
+                        {
+                            file: "src/tracks/Priests of the Temple of the Fist.mp3",
+                            title: "Priests of the Temple of the Fist",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        }
+                    ]
+                });
+                window.createAudioPlayer({
+                    backgroundColor: "black",
+                    borderColour: "white",
+                    borderWidth: "2",
+                    borderStyle: "outset",
+                    textColour: "white",
+                    playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
+                    pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
+                    timelineBackgroundColor: "white",
+                    timelineColor: "black",
+                    timelineOpacity: 1,
+                    showCover: false,
+                    playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
+                    playerBackgroundOffset: [-190, -160],
+                    songs: [
+                        { 
+                            file: "src/tracks/He Who Holds the Zest.mp3",
+                            title: "He Who Holds the Zest...",
+                            artist: "Funk Tempest",
+                            cover: "src/img/hewhoholdsthezest.jpg"
+                        },
+                        {
+                            file: "src/tracks/Must Learn to Control the Zest.mp3",
+                            title: "...Must Learn to Control the Zest",
+                            artist: "Funk Tempest",
+                            cover: "src/img/mustlearntocontrolthezest.jpg"
+                        },
+                        {
+                            file: "src/tracks/Dominion of the Fist.mp3",
+                            title: "Dominion of the Fist",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        },
+                        {
+                            file: "src/tracks/Evaporate the Nonbelievers.mp3",
+                            title: "Evaporate the Nonbelievers",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        },
+                        {
+                            file: "src/tracks/Lavender Tea.mp3",
+                            title: "Lavender Tea",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        },
+                        {
+                            file: "src/tracks/Priests of the Temple of the Fist.mp3",
+                            title: "Priests of the Temple of the Fist",
+                            artist: "Funk Tempest",
+                            cover: "src/img/avatar.jpg"
+                        }
+                    ]
+                });
+            });
+            
+        </script>
         <script>
             function createBubble(bubbleText, target, autoTimeOut=true) {
                 const placementOffset = 10;
