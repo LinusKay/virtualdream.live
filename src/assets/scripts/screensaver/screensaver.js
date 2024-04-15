@@ -1,56 +1,81 @@
-function idleScreensaver() {
+// set up event listeners for screensaver end
+window.addEventListener('load', resetTimer, true);
+window.addEventListener('mousemove', resetTimer, true);
+window.addEventListener('mousedown', resetTimer, true);
+window.addEventListener('touchstart', resetTimer, true);
+window.addEventListener('touchmove', resetTimer, true);
+window.addEventListener('click', resetTimer, true);
+window.addEventListener('keydown', resetTimer, true);
+window.addEventListener('scroll', resetTimer, true);
 
-    function startScreensaver() {
-        console.log("start screensaver");
-        const availableScreensaversKeys = Object.keys(availableScreensavers);
-        const chosenScreensaverKey = availableScreensaversKeys[Math.floor(Math.random() * availableScreensaversKeys.length)];
-        availableScreensavers[chosenScreensaverKey]();
-    }
-
-    function stopScreensaver() {
-        console.log("stop screensaver");
-        clearScreensaver();
-    }
-
-    function clearScreensaver() {
-        const screensaverElements = document.querySelectorAll('[data-screen-saver]');
-        screensaverElements.forEach(element => {
-            element.remove();
-        })
-    }
-
-    let time;
-    function resetTimer() {
-        stopScreensaver();
-        clearTimeout(time);
-        time = setTimeout(startScreensaver, 30000); 
-    }
-
-    window.addEventListener('load', resetTimer, true);
-    window.addEventListener('mousemove', resetTimer, true);
-    window.addEventListener('mousedown', resetTimer, true);
-    window.addEventListener('touchstart', resetTimer, true);
-    window.addEventListener('touchmove', resetTimer, true);
-    window.addEventListener('click', resetTimer, true);
-    window.addEventListener('keydown', resetTimer, true);
-    window.addEventListener('scroll', resetTimer, true);
+/**
+ * Resets the screensaver idle timer
+ * 
+ * @returns {void}
+ */
+let timer;
+const idleTime = 30000;
+function resetTimer() {
+    stopScreensaver();
+    clearTimeout(timer);
+    timer = setTimeout(startScreensaver, idleTime); 
 }
-idleScreensaver();
-console.log("loaded screensaver");
 
+/**
+ * Picks a random screensaver and runs it
+ * 
+ * @returns {void}
+ */
+function startScreensaver() {
+    console.log("start screensaver");
+    const availableScreensaversKeys = Object.keys(availableScreensavers);
+    const chosenScreensaverKey = availableScreensaversKeys[Math.floor(Math.random() * availableScreensaversKeys.length)];
+    availableScreensavers[chosenScreensaverKey]();
+}
+
+/**
+ * Stops any running screensaver
+ * 
+ * @returns {void}
+ */
+function stopScreensaver() {
+    console.log("stop screensaver");
+    clearScreensaver();
+}
+
+/**
+ * Clears any screensaver elements
+ * 
+ * @returns {void}
+ */
+function clearScreensaver() {
+    const screensaverElements = document.querySelectorAll('[data-screen-saver]');
+    screensaverElements.forEach(element => {
+        element.remove();
+    })
+}
+
+// 
 const availableScreensavers = {
-    "test": screensaverBounceRandom
+    "bounceRandom": screensaverBounceRandom
 };
 
+/**
+ * Bounces a random image around the screen, DVD style.
+ * 
+ * @returns {void}
+ */
 function screensaverBounceRandom() {
     console.log("running screensaverBounceRandom screensaver");
     const blackScreen = document.createElement('div');
-    blackScreen.style.backgroundColor = "black";
-    blackScreen.style.position = "fixed";
-    blackScreen.style.width = "100vw";
-    blackScreen.style.height = "100vh";
-    blackScreen.style.top = "0";
-    blackScreen.style.left = "0";
+    Object.assign(blackScreen.style, {
+        backgroundColor: "black",
+        position: "fixed",
+        width: "100vw",
+        height: "100vh",
+        top: "0",
+        left: "0"
+    });
     blackScreen.dataset.screenSaver = true;
     document.body.appendChild(blackScreen);
 
@@ -63,8 +88,10 @@ function screensaverBounceRandom() {
 
     const bouncingElement = document.createElement('img');
     bouncingElement.src = chosenImage;
-    bouncingElement.style.height = "200px";
-    bouncingElement.style.position = "fixed";
+    Object.assign(bouncingElement.style, {
+        height: "200px",
+        position: "fixed"
+    });
     bouncingElement.dataset.screenSaver = true;
     document.body.appendChild(bouncingElement);
     animationBounce(bouncingElement);
