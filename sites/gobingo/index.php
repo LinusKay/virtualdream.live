@@ -8,6 +8,7 @@
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
+
         <title>GoBingo!</title>
         <link rel="stylesheet" href="style.css">
         <style> 
@@ -18,7 +19,6 @@
 
     </head>
     <body>
-        
         <h1>GoBingo!</h1>
         <form action="search.php" method="get" enctype="multipart/form-data">
             <input class="inputsearch" placeholder="Search" name="s">
@@ -26,13 +26,14 @@
         </form> 
         <div id="adspace">
             
-            <!-- Example banner divs -->
     <div class="advertisement-banner"></div>
     <div class="advertisement-banner"></div>
 
-    <!-- Example card divs -->
     <div class="advertisement-card"></div>
-    <div class="advertisement-card"></div>
+
+    <div class="advertisement-banner"></div>
+    <div class="advertisement-banner"></div>
+    
     <div class="advertisement-card"></div>
 
     
