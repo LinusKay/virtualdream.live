@@ -15,6 +15,7 @@
             margin:0;
             padding:0;
             text-align:center;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
         }
         #freejoke {
             padding:15px;
@@ -22,13 +23,14 @@
         }
         #presidentialpardon {
             padding:15px;
+            position:relative;
+            background:lightblue;
         }
         #president {
             border: ridge 5px gray;
         }
         #freejokes {
             padding:15px;
-            background:blue;
         }
         #freejokes p {
             margin:0; padding:0;
@@ -47,7 +49,23 @@
             max-width:200px;
         }
         #buydvd {
-            padding:15px;
+            padding:15px 0;
+            background:url("src/img/bg-brick.png");
+            position:relative;
+            color:white;
+        }
+        #buydvd table {
+            position:relative;
+            z-index:2;
+        }
+        #stage {
+            background: url("src/img/bg-wood.png");
+            background-repeat: repeat;
+            height:75px;
+            width:100%;
+            bottom:0;
+            position:absolute;
+            z-index: 1;
         }
         #calltoaction{ 
             padding:15px;
@@ -76,20 +94,7 @@
             <p>Straight outta the stand-up circuit and onto your screens, Harry's here to tickle your funny bone with his clean-cut comedy that's as wholesome as a bowl of Juice Tubes!</p>
             <p>Catch him on stage at the local comedy club, where he's been known to crack a joke or two that'll have you snickering into your slap bracelet. And hey, if you can't make it to the live show, no sweat—Harry's got you covered with his collection of DVDs featuring his most bodacious stand-up routines. </p>
             <p>But don't let his corny jokes fool you—Harry's got a sharp wit when it comes to commenting on the latest political happenings. Whether he's poking fun at the president or riffing on the latest legislative shenanigans, Harry's got a knack for turning serious subjects into side-splitting comedy gold.</p>
-        </div>
-        <div id="laughcity">
-            <p>Welcome to Laugh City!</p>
-            <img src="src/img/anlthouse.gif">
-            <img src="src/img/Button_House.gif">
-            <img src="src/img/27.gif" style="width:50px;">
-            <img src="src/img/mushroom_house_md_wht.gif">
-            <img src="src/img/carmove.gif" style="width:50px;">
-            <img src="src/img/anihouse.gif">
-            <img src="src/img/house.gif">
-            <img src="src/img/valhousewithsmokehearts.gif">
-            <img src="src/img/swordfight.gif" style="width:50px;">
-            <p>Population: YOU!</p>
-        </div>
+    </div>
         <div id="freejoke">
             <p>Here's a free joke. Its on the house!</p>
             <p>"I tried to catch some fog yesterday. I mist!"</p>
@@ -97,6 +102,9 @@
         </div>
         <div id="presidentialpardon">
             <img src="src/img/toysoldier_drumming_md_wht.gif"><img src="src/img/movingwhitehouse.gif"><img src="src/img/presidentmid.png" id="president"><img src="src/img/movingwhitehouse.gif"><img src="src/img/toysoldier_drumming_md_wht.gif">
+            <img src="src/img/halo.png" style="position:absolute;width:60px;left:48.5%;top:10px;">
+            <img src="src/img/cloud.png" style="position:absolute;left:40%;top:10px;">
+            <img src="src/img/cloud.png" style="position:absolute;left:55%;top:10px;">
             <p>"I hereby pardon Harry Humour for his funny jokes and use my presidential power to say he is the funniest guy on the internet!"</p>
             <p>- President Schmonger</p>
         </div>
@@ -109,6 +117,17 @@
                 <p>"I accidentally swallowed some food coloring yesterday. The doctor says I'm okay, but I feel like I've dyed a little inside."</p>
                 <p>"I used to play piano by ear. Then I realized it was easier to use my fingers."</p>
                 <p>"I told my friend I had a great joke about construction, but I'm still working on it. Guess you could say I'm building up to it!"</p>
+            <p>Welcome to Laugh City!</p>
+            <img src="src/img/anlthouse.gif">
+            <img src="src/img/Button_House.gif">
+            <img src="src/img/27.gif" style="width:50px;">
+            <img src="src/img/mushroom_house_md_wht.gif">
+            <img src="src/img/carmove.gif" style="width:50px;">
+            <img src="src/img/anihouse.gif">
+            <img src="src/img/house.gif">
+            <img src="src/img/valhousewithsmokehearts.gif">
+            <img src="src/img/swordfight.gif" style="width:50px;">
+            <p>Population: YOU!</p>
         </div>
         <div id="buydvd">
             <img src="src/img/TV.gif"><img src="src/img/dvd.gif"><img src="src/img/TV.gif">
@@ -124,10 +143,14 @@
                     </tr>
                 </tbody>
             </table>
+            <div id="stage"></div>
+            <img src="src/img/microphone.png" style="position:absolute;left:50px;bottom:25px;z-index:2;">
+            <img src="src/img/stool.png" style="position:absolute;width:100px;left:150px;bottom:25px;z-index:2;">
         </div>
         <div id="calltoaction">
+            <img src="src/img/vote.gif">
             <h2>A call to action from Harry Humour!</h2>
-            <p>Hey there, fellow jokesters! It's your pal Harry Humour, here to spread some smiles and maybe even a chuckle or two. But lately, I've been feeling a bit bummed out about the state of comedy, and I just gotta get something off my chest.
+            <p>Hey there, fellow jokesters! It's your pal Harry Humour, here to spread some smiles and maybe even a chuckle or two. But lately, I've been feeling a bit bummed out about the state of comedy, and I just gotta get something off my chest. I've only said this twice in my life, but lets get serious for a moment.
             <br>
             <br>
             You see, it seems like everywhere I look these days, comedy has taken a nosedive into the gutter. Dirty jokes, crude humor, and innuendos are all the rage, leaving us clean comedians feeling like the odd ones out. And let me tell ya, it's not a fun place to be.
@@ -157,7 +180,7 @@
             </p>
         </div>
         <div id="inmemoriam">
-            <div class="advertisement-banner"></div>
+            <img src="src/img/redposey.gif">
             <h2>In Memoriam: Fungle the Clown</h2>
             <img src="src/img/tombstone_lg_clr.gif">
             <img src="src/img/fungle.png" id="fungle">
