@@ -72,6 +72,6 @@
             $snailWisdom = $snailphrases[array_rand($snailphrases)];
         ?>
         <p id="advicebox"><?php echo $snailWisdom; ?></p>
-        <p>Copyright (c) Harry Humour - <a href="../harryhumour">MORE JOKES</a></p>
+        <p>Copyright (c) Harry Humour - <a href="https://harryhumour.virtualdream.live">MORE JOKES</a></p>
     </body> 
 </html>

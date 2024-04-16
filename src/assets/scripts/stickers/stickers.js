@@ -59,7 +59,7 @@ function generateId(len) {
  */
 function getHighestZIndex() {
     let highestZIndex = 0;
-    const allElements = document.querySelectorAll('*');
+    const allElements = document.querySelectorAll('.sticker');
     allElements.forEach(element => {
         const zIndex = parseInt(window.getComputedStyle(element).zIndex);
         if (!isNaN(zIndex) && zIndex > highestZIndex) {

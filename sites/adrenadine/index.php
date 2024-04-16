@@ -8,7 +8,7 @@
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
-    <title>Document</title>
+    <title>Goodbye from Adrenadine</title>
 </head>
 <body style="background:url('src/img/bg.png');background-repeat:repeat;">
     <center style="margin-top:200px;">

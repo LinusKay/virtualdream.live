@@ -74,7 +74,8 @@ function screensaverBounceRandom() {
         width: "100vw",
         height: "100vh",
         top: "0",
-        left: "0"
+        left: "0",
+        zIndex: 99
     });
     blackScreen.dataset.screenSaver = true;
     document.body.appendChild(blackScreen);
@@ -90,7 +91,8 @@ function screensaverBounceRandom() {
     bouncingElement.src = chosenImage;
     Object.assign(bouncingElement.style, {
         height: "200px",
-        position: "fixed"
+        position: "fixed",
+        zIndex: 100
     });
     bouncingElement.dataset.screenSaver = true;
     document.body.appendChild(bouncingElement);
