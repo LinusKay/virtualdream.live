@@ -23,7 +23,8 @@
     <title>Funk Tempest - Realm of the Fist</title>
     <style>
         html {
-            background:black;
+            background: url('src/img/starstwinkle.gif');
+            background-repeat: repeat;
         }
         #bg {
             border-radius:10px;
@@ -131,114 +132,114 @@
         </style>
         <script>
             window.addEventListener("load", function() {
-                window.createAudioPlayer({
-                    backgroundColor: "black",
-                    borderColour: "white",
-                    borderWidth: "2",
-                    borderStyle: "outset",
-                    textColour: "white",
-                    playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
-                    pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
-                    timelineBackgroundColor: "white",
-                    timelineColor: "black",
-                    timelineOpacity: 1,
-                    showCover: false,
-                    // playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
-                    // playerBackgroundOffset: [-190, -160],
-                    playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/yellinghead.png" ?>",
-                    playerBackgroundOffset: [-15, -185],
-                    songs: [
-                        { 
-                            file: "src/tracks/He Who Holds the Zest.mp3",
-                            title: "He Who Holds the Zest...",
-                            artist: "Funk Tempest",
-                            cover: "src/img/hewhoholdsthezest.jpg"
-                        },
-                        {
-                            file: "src/tracks/Must Learn to Control the Zest.mp3",
-                            title: "...Must Learn to Control the Zest",
-                            artist: "Funk Tempest",
-                            cover: "src/img/mustlearntocontrolthezest.jpg"
-                        },
-                        {
-                            file: "src/tracks/Dominion of the Fist.mp3",
-                            title: "Dominion of the Fist",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        },
-                        {
-                            file: "src/tracks/Evaporate the Nonbelievers.mp3",
-                            title: "Evaporate the Nonbelievers",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        },
-                        {
-                            file: "src/tracks/Lavender Tea.mp3",
-                            title: "Lavender Tea",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        },
-                        {
-                            file: "src/tracks/Priests of the Temple of the Fist.mp3",
-                            title: "Priests of the Temple of the Fist",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        }
-                    ]
-                });
-                window.createAudioPlayer({
-                    backgroundColor: "black",
-                    borderColour: "white",
-                    borderWidth: "2",
-                    borderStyle: "outset",
-                    textColour: "white",
-                    playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
-                    pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
-                    timelineBackgroundColor: "white",
-                    timelineColor: "black",
-                    timelineOpacity: 1,
-                    showCover: false,
-                    playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
-                    playerBackgroundOffset: [-190, -160],
-                    songs: [
-                        { 
-                            file: "src/tracks/He Who Holds the Zest.mp3",
-                            title: "He Who Holds the Zest...",
-                            artist: "Funk Tempest",
-                            cover: "src/img/hewhoholdsthezest.jpg"
-                        },
-                        {
-                            file: "src/tracks/Must Learn to Control the Zest.mp3",
-                            title: "...Must Learn to Control the Zest",
-                            artist: "Funk Tempest",
-                            cover: "src/img/mustlearntocontrolthezest.jpg"
-                        },
-                        {
-                            file: "src/tracks/Dominion of the Fist.mp3",
-                            title: "Dominion of the Fist",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        },
-                        {
-                            file: "src/tracks/Evaporate the Nonbelievers.mp3",
-                            title: "Evaporate the Nonbelievers",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        },
-                        {
-                            file: "src/tracks/Lavender Tea.mp3",
-                            title: "Lavender Tea",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        },
-                        {
-                            file: "src/tracks/Priests of the Temple of the Fist.mp3",
-                            title: "Priests of the Temple of the Fist",
-                            artist: "Funk Tempest",
-                            cover: "src/img/avatar.jpg"
-                        }
-                    ]
-                });
+                // window.createAudioPlayer({
+                //     backgroundColor: "black",
+                //     borderColour: "white",
+                //     borderWidth: "2",
+                //     borderStyle: "outset",
+                //     textColour: "white",
+                //     playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
+                //     pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
+                //     timelineBackgroundColor: "white",
+                //     timelineColor: "black",
+                //     timelineOpacity: 1,
+                //     showCover: false,
+                //     // playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
+                //     // playerBackgroundOffset: [-190, -160],
+                //     playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/yellinghead.png" ?>",
+                //     playerBackgroundOffset: [-15, -185],
+                //     songs: [
+                //         { 
+                //             file: "src/tracks/He Who Holds the Zest.mp3",
+                //             title: "He Who Holds the Zest...",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/hewhoholdsthezest.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Must Learn to Control the Zest.mp3",
+                //             title: "...Must Learn to Control the Zest",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/mustlearntocontrolthezest.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Dominion of the Fist.mp3",
+                //             title: "Dominion of the Fist",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Evaporate the Nonbelievers.mp3",
+                //             title: "Evaporate the Nonbelievers",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Lavender Tea.mp3",
+                //             title: "Lavender Tea",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Priests of the Temple of the Fist.mp3",
+                //             title: "Priests of the Temple of the Fist",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         }
+                //     ]
+                // });
+                // window.createAudioPlayer({
+                //     backgroundColor: "black",
+                //     borderColour: "white",
+                //     borderWidth: "2",
+                //     borderStyle: "outset",
+                //     textColour: "white",
+                //     playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
+                //     pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
+                //     timelineBackgroundColor: "white",
+                //     timelineColor: "black",
+                //     timelineOpacity: 1,
+                //     showCover: false,
+                //     playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
+                //     playerBackgroundOffset: [-190, -160],
+                //     songs: [
+                //         { 
+                //             file: "src/tracks/He Who Holds the Zest.mp3",
+                //             title: "He Who Holds the Zest...",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/hewhoholdsthezest.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Must Learn to Control the Zest.mp3",
+                //             title: "...Must Learn to Control the Zest",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/mustlearntocontrolthezest.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Dominion of the Fist.mp3",
+                //             title: "Dominion of the Fist",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Evaporate the Nonbelievers.mp3",
+                //             title: "Evaporate the Nonbelievers",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Lavender Tea.mp3",
+                //             title: "Lavender Tea",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         },
+                //         {
+                //             file: "src/tracks/Priests of the Temple of the Fist.mp3",
+                //             title: "Priests of the Temple of the Fist",
+                //             artist: "Funk Tempest",
+                //             cover: "src/img/avatar.jpg"
+                //         }
+                //     ]
+                // });
             });
             
         </script>
@@ -296,24 +297,42 @@
 
 </head>
 <body>
+    <img src="src/img/planet3.gif" style="position:absolute; top:100px; left:150px;">
+    <img src="src/img/planet4.gif" style="position:absolute; top:350px; right:150px;">
+    <img src="src/img/planet5.gif" style="position:absolute; top:450px; left:400px;">
+    <img src="src/img/planet7.gif" style="position:absolute; top:750px; right:350px;">
+    <img src="src/img/monk-walk.gif" style="position:absolute; top:1250px; left:350px;">
+    <img src="src/img/Monk.gif" style="position:absolute; top:740px; right:425px;">
+    <img src="src/img/planet2.gif" style="position:absolute; top:950px; left:250px;">
     <div id="content">
         <img id="bg" src="src/img/bg.png">
-        <div class="interact" id="interact-scriptures"  onclick="createBubble('scripture of the funk', this)"></div>
+        <!-- <div class="interact" id="interact-scriptures"  onclick="createBubble('scripture of the funk', this)"></div> -->
         <div class="interact" id="interact-templefist"  onclick="createBubble('the mighty temple of the fist', this)"></div>
         <div class="interact" id="interact-monkright" onclick="createBubble('\'i love funk tempest\'', this)"></div>
         <div class="interact" id="interact-monkleft"  onclick="createBubble('seek the fist.', this)"></div>
         <div class="interact" id="interact-templedoor"  onclick="createBubble('the temple is closed.', this)"></div>
         <div class="interact" id="interact-monkhead"  onclick="createBubble('the fist of enlightenment shows cranial strength.', this)"></div>
-        <h1>Funk Tempest</h1>
-        <p id="introtext">welcome... to my world...</p>
+        <!-- <h1>Funk Tempest</h1>
+        <p id="introtext">welcome... to my world...</p> -->
         <div class="speechbubble" id="speechbubblemonk">
             <p><b>Teachings of the Temple of Funk</b></p>
             <p><i><?php echo $todaysWisdom; ?></i></p>
         </div>
-        <audio controls id="track1"><source src="src/tracks/Priests of the Temple of the Fist.mp3"></audio>
+        <!-- <audio controls id="track1"><source src="src/tracks/Priests of the Temple of the Fist.mp3"></audio>
         <audio controls id="track2"><source src="src/tracks/Dominion of the Fist.mp3"></audio>
         <audio controls id="track3"><source src="src/tracks/Evaporate the Nonbelievers.mp3"></audio>
-        <audio controls id="track4"><source src="src/tracks/Lavender Tea.mp3"></audio>
+        <audio controls id="track4"><source src="src/tracks/Lavender Tea.mp3"></audio> -->
+        <p>time without time. for it had not yet been invented. yet, hurtling through space with the speed and fury of a billion fists, the funk abounds. 
+        
+        it began. four billion years ago. a microbe, the first of the living. the microbe thought not of the funk, yet it was within them.
+
+        then came the fish. they swam through the oceans like the mind swims through dreams.
+
+        homo habilis, the creater of the first tool. homo funkus, well, lets just say they had other ideas. 
+
+        man 
+
+        the age of funk tempest
     </div>
 </body>
 </html>

@@ -18,7 +18,8 @@
             margin:auto;
         }
         html {
-            background: black;
+            background: url('src/img/starstwinkle.gif');
+            background-repeat: repeat;
             color:red;
         }
         body {
