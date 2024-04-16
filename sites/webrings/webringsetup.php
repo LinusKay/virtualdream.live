@@ -13,7 +13,8 @@ $webRingPresets = [
     ["joesales", "$assetBaseUrl/img/webrings/webring-joesales-export.png", "$webringBaseUrl/joesales", "$$$$$$$$$$$$$$$$$$$"],
     ["tech", "$assetBaseUrl/img/webrings/webring-tech-export.png", "$webringBaseUrl/tech", "BEEP BEEP BEEP"],
     ["mindpalace", "$assetBaseUrl/img/webrings/webring-mindpalace-export.gif", "$webringBaseUrl/mindpalace", "for the thinkers..."],
-    ["fist", "$assetBaseUrl/img/webrings/webring-fist-export.png", "$webringBaseUrl/fist", "seek the fist"]
+    ["fist", "$assetBaseUrl/img/webrings/webring-fist-export.png", "$webringBaseUrl/fist", "seek the fist"],
+    ["comedyclub", "$assetBaseUrl/img/webrings/webring-comedyclub.png", "$webringBaseUrl/comedyclub", "Mind that funny bone!"]
 ];
 
 // Define the site-to-webrings mapping
@@ -23,8 +24,10 @@ $siteToWebrings = [
     "rapiddealsonlinesaleswebboard" => ["joesales"],
     "theporncomputer" => ["tech", "darknet", "joesales"],
     "friendonline" => ["joesales"],
-    "gobingo" => ["tech"]
-
+    "gobingo" => ["tech"],
+    "harryhumour" => ["comedyclub"],
+    "snailmail" => ["comedyclub"],
+    "malpals" => ["tech"]
 ];
 
 foreach ($siteToWebrings as $site => $webrings) {
