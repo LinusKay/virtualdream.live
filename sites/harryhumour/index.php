@@ -142,7 +142,7 @@
             Folks, let me tell you about Ronald Schmonger—our beacon of hope, our shining star in a world of chaos. Ronald isn't just a politician; he's a force of nature, a whirlwind of change sweeping across our great nation. Ronald's vision for our country is bold, it's audacious, it's... well, it's something else, let me tell you. He's got plans, big plans, to make our country laugh again. And let me tell you, it's about time. 
             <br>
             <br>
-            Now, I know, many people find themselves unable to look past some of Ron's quirks. They question his stance in medicine prices, and even I wasn't sure when he promised to send the current president into space strapped to a rocket, but are you saying a pharmaceutical CEO with an interest in space science, and a healthy spoon of sugar wouldn't know what he's talking about? 
+            Now, I know, many people find themselves unable to look past some of Ron's quirks. They question his stance in medicine prices, and even I wasn't sure when he promised to send the other candidate into space strapped to a rocket, but are you saying a pharmaceutical CEO with an interest in space science, and a healthy spoon of laughs wouldn't know what he's talking about? 
             <br>
             <br>
             His policies may be bold, but they're backed by a deep understanding of what it takes to bring people together and uplift our spirits. From his plan to boost small businesses such as comedy clubs to his proposal for a national "Joke of the Day" initiative, Ronald's vision for the country is as refreshing as a stand-up routine on a hot summer day. 

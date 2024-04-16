@@ -24,7 +24,7 @@
         </style>
     </head>
     <body>
-        <img src="src/img/cargolmissatger.gif">
+        <img src="src/img/snailmail.gif">
         <p>Consult the snail</p>
         <?php 
             $snailphrases = [
