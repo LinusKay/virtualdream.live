@@ -9,12 +9,18 @@
     # /PAGE SETUP
     ?>
     <title>YOU'VE WON!</title>
+    <script>
+        window.addEventListener("load", function() {
+            window.addInfection("rapidLinks");
+        });
+    </script>
 </head>
-<body style="width:900px;height:900px;color:white;overflow-x:hidden;">
-<h1>Congratulation!</h1>
-<p>For being our 10000000th visitor!</p>
+<body style="">
+<h1>WIN BIG CASINO SWEEPSTAKES</h1>
+<p>YOU have been chosen!</p>
 <script>
-    alert("YOU'VE DONE IT!! Congratulations!\n\n~~~~~~~~\n\nYou are iour 10000000th Visitor!\n\nCLICK OK To claim your Prize! :-)")
+    alert("CASINO SWEEPSTAKES!! Congratulations!\n\n~~~~~~~~\n\nYou have Won!\n\nCLICK OK To claim your Prize! :-)")
 </script>
+<p>Sponsored by RapidLinks (c)</p>
 </body>
 </html>
