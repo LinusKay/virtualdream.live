@@ -150,8 +150,11 @@ function generateRandomSticker() {
         "ASSET_DIRECTORY/img/stickers/polyfox2-transparent.gif",
         "ASSET_DIRECTORY/img/stickers/skull-spin.gif",
         "ASSET_DIRECTORY/img/stickers/mascot-pyramid.png",
-        "ASSET_DIRECTORY/img/stickers/yippee200x.png",
-        "ASSET_DIRECTORY/img/stickers/catfish.png",
+        "ASSET_DIRECTORY/img/stickers/planet8.gif",
+        "ASSET_DIRECTORY/img/stickers/planet3.gif",
+        "ASSET_DIRECTORY/img/stickers/planet4.gif",
+        "ASSET_DIRECTORY/img/stickers/planet5.gif",
+        "ASSET_DIRECTORY/img/stickers/planet6.gif",
     ];
     const stickerImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
     const stickerX = Math.floor(Math.random() * 100);
