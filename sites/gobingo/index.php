@@ -16,7 +16,7 @@
             text-align:center;
         }
         #globe {
-            margin-top:25px;
+            margin-top:100px;
         }
         h1 {
             margin-top:0;
@@ -37,11 +37,6 @@
     <div class="advertisement-banner"></div>
     <div class="advertisement-banner"></div>
 
-    <div class="advertisement-card"></div>
-
-    <div class="advertisement-banner"></div>
-    <div class="advertisement-banner"></div>
-    
     <div class="advertisement-card"></div>
 
     
