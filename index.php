@@ -46,7 +46,7 @@
                 for($cell=0;$cell<4 && $index < $sitecount;$cell++) {
                     $siteurl = $sites[$index];
                     $sitename = str_replace("./sites/", "", $siteurl);
-                    echo "<td><a href=\"$siteurl\">$sitename</a></td>";
+                    echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
                     $index++;
                 }
                 echo "</tr>";
