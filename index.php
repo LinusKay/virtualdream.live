@@ -55,5 +55,6 @@
         </tbody>
     </table>
     <p>Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
+    <p><a href="disclaimer.php">Disclaimer</a></p>
 </body>
 </html>
