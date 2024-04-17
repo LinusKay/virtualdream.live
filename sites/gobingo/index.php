@@ -15,11 +15,19 @@
         body {
             text-align:center;
         }
+        #globe {
+            margin-top:25px;
+        }
+        h1 {
+            margin-top:0;
+        }
         </style>
 
     </head>
     <body>
+        <img id="globe" src="src/img/Earth_Globe.gif">
         <h1>GoBingo!</h1>
+        <p><i>Virtual Dream's most reliable search engine</i></p>
         <form action="search.php" method="get" enctype="multipart/form-data">
             <input class="inputsearch" placeholder="Search" name="s">
             <input type="submit" value="Go!">
