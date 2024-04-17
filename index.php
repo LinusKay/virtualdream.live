@@ -19,14 +19,13 @@
     
     <p>Popular Sites</p>
     <ul>
-        <li><a href="sites/ratparty">rat party (ratparty)</a></li>
-        <li><a href="sites/theporncomputer">The Porn Computer (theporncomputer)</a></li>
-        <li><a href="sites/missingorb">MISSING: ORB (missingorb)</a></li>
+        <li><a href="https://snailmail.virtualdream.live">snailmail - Consult the Snail</a></li>
+        <li><a href="https://malwarecleaner.virtualdream.live">Malware Cleaner</a></li>
     </ul>
     <p>Sponsored Sites</p>
     <ul>
-        <li><a href="sites/rapiddealsonlinesaleswebboard">Joe Sales' Rapid Deals Online Sales Web Board (rapiddealsonlinesaleswebboard)</a></li>
-        <li><a href="sites/gobingo">GoBingo! Search Engine (gobingo)</a></li>
+        <li><a href="https://rapiddealsonlinesaleswebboard.virtualdream.live">Joe Sales' Rapid Deals Online Sales Web Board (rapiddealsonlinesaleswebboard)</a></li>
+        <li><a href="https://gobingo.virtualdream.live">GoBingo! Search Engine (gobingo)</a></li>
     </ul>
     <br>
     Directory:
