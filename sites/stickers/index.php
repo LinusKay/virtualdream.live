@@ -96,7 +96,6 @@
         }
 
         function saveStickersEnabled() {
-            <?php $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';?>
             Cookies.set('stickersEnabled', JSON.stringify(stickersEnabled), { domain: '<?php echo $environment === 'local' ? 'localhost' : '.virtualdream.live';?>' , path: '/' });
         }
 
