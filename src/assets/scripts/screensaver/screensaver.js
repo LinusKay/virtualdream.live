@@ -27,7 +27,6 @@ function resetTimer() {
  * @returns {void}
  */
 function startScreensaver() {
-    console.log("start screensaver");
     const availableScreensaversKeys = Object.keys(availableScreensavers);
     const chosenScreensaverKey = availableScreensaversKeys[Math.floor(Math.random() * availableScreensaversKeys.length)];
     availableScreensavers[chosenScreensaverKey]();
@@ -39,7 +38,6 @@ function startScreensaver() {
  * @returns {void}
  */
 function stopScreensaver() {
-    console.log("stop screensaver");
     clearScreensaver();
 }
 
@@ -66,7 +64,6 @@ const availableScreensavers = {
  * @returns {void}
  */
 function screensaverBounceRandom() {
-    console.log("running screensaverBounceRandom screensaver");
     const blackScreen = document.createElement('div');
     Object.assign(blackScreen.style, {
         backgroundColor: "black",

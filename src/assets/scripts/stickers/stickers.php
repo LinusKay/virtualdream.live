@@ -17,7 +17,15 @@ $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 $assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
 $domain = $environment === 'local' ? 'localhost' : '.virtualdream.live';
 
+include('configurestickers.php');
+
+$stickersString = "";
+foreach($stickers as $sticker) {
+    $stickersString = $stickersString . "'$sticker',";
+}
+
 $jsContent = file_get_contents('stickers.js');
+$jsContent = str_replace('STICKERS', $stickersString, $jsContent);
 $jsContent = str_replace('ASSET_DIRECTORY', $assetBaseUrl, $jsContent);
 $jsContent = str_replace('DOMAIN', $domain, $jsContent);
 

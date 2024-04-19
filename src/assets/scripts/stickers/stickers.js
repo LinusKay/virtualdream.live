@@ -3,16 +3,16 @@
 let mouseX = 0;
 let mouseY = 0;
 
+// load enabled stickers to sticker pool
+let stickersEnabled = [];
+function loadStickersEnabled() {
+    const stickersEnabledCookie = Cookies.get('stickersEnabled');
+    stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0"];
+}
+
 //
 const stickerImages = [
-    "ASSET_DIRECTORY/img/stickers/polyfox2-transparent.gif",
-    "ASSET_DIRECTORY/img/stickers/skull-spin.gif",
-    "ASSET_DIRECTORY/img/stickers/mascot-pyramid.png",
-    "ASSET_DIRECTORY/img/stickers/planet8.gif",
-    "ASSET_DIRECTORY/img/stickers/planet3.gif",
-    "ASSET_DIRECTORY/img/stickers/planet4.gif",
-    "ASSET_DIRECTORY/img/stickers/planet5.gif",
-    "ASSET_DIRECTORY/img/stickers/planet6.gif",
+STICKERS
 ];
 
 document.addEventListener('mousemove', function(event) {
@@ -25,6 +25,7 @@ document.addEventListener('mousemove', function(event) {
  * Creates sticker bin element, appends to the document body, loads stickers.
  */
 window.addEventListener("load", function onLoad() {
+    loadStickersEnabled();
     const stickerBin = createStickerBin();
     document.body.appendChild(stickerBin);
     loadStickers();
@@ -166,9 +167,11 @@ function saveStickers() {
  * @returns {void}
  */
 function generateRandomSticker() {
+    loadStickersEnabled();
     console.log(mouseX + ", " + mouseY);
 
-    const stickerImageIndex = Math.floor(Math.random() * stickerImages.length);
+    const stickerImageIndex = stickersEnabled[Math.floor(Math.random() * stickersEnabled.length)];
+    console.log(stickerImageIndex)
     const stickerX = mouseX + "px";
     const stickerY = mouseY + "px";
     const stickerZ = getHighestZIndex() + 1;
