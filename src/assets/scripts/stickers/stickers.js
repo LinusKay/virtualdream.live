@@ -1,4 +1,24 @@
 // Event Listeners 
+// track mouse position for sticker placement
+let mouseX = 0;
+let mouseY = 0;
+
+//
+const stickerImages = [
+    "ASSET_DIRECTORY/img/stickers/polyfox2-transparent.gif",
+    "ASSET_DIRECTORY/img/stickers/skull-spin.gif",
+    "ASSET_DIRECTORY/img/stickers/mascot-pyramid.png",
+    "ASSET_DIRECTORY/img/stickers/planet8.gif",
+    "ASSET_DIRECTORY/img/stickers/planet3.gif",
+    "ASSET_DIRECTORY/img/stickers/planet4.gif",
+    "ASSET_DIRECTORY/img/stickers/planet5.gif",
+    "ASSET_DIRECTORY/img/stickers/planet6.gif",
+];
+
+document.addEventListener('mousemove', function(event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+});
 
 /**
  * Event listener triggers when the window finishes loading.
@@ -12,7 +32,7 @@ window.addEventListener("load", function onLoad() {
 
 /**
  * Event listener that triggers when a key is pressed.
- * If the pressed key is 'q', generates a random sticker.
+ * If the pressed key is 's', generates a random sticker.
  * 
  * @param {KeyboardEvent} e - The keyboard event object.
  */
@@ -112,8 +132,8 @@ function loadStickers() {
     const stickers = stickersCookie ? JSON.parse(stickersCookie) : [];
 
     stickers.forEach(stickerData => {
-        const [stickerImage, stickerX, stickerY, stickerZ, stickerId] = stickerData;
-        createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId);
+        const [stickerImageIndex, stickerX, stickerY, stickerZ] = stickerData;
+        createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
     });
 }
 
@@ -127,18 +147,18 @@ function saveStickers() {
     const stickerElements = document.getElementsByClassName('sticker');
     
     for (const stickerElement of stickerElements) {
-        const stickerImage = stickerElement.querySelector('img').src;
+        const stickerImageIndex = stickerElement.querySelector('img').dataset.stickerImageIndex;
         const stickerX = stickerElement.style.left;
         const stickerY = stickerElement.style.top;
         const stickerZ = stickerElement.style.zIndex;
-        const stickerId = stickerElement.querySelector('img').dataset.stickerId;
     
-        const sticker = [stickerImage, stickerX, stickerY, stickerZ, stickerId];
+        const sticker = [stickerImageIndex, stickerX, stickerY, stickerZ];
         stickers.push(sticker);
     }
     
     Cookies.set('stickers', JSON.stringify(stickers), { domain: 'DOMAIN', path: '/' });
 }
+
 
 /**
  * Generates a sticker with random image and position and saves it to local storage.
@@ -146,36 +166,27 @@ function saveStickers() {
  * @returns {void}
  */
 function generateRandomSticker() {
-    const stickerImages = [
-        "ASSET_DIRECTORY/img/stickers/polyfox2-transparent.gif",
-        "ASSET_DIRECTORY/img/stickers/skull-spin.gif",
-        "ASSET_DIRECTORY/img/stickers/mascot-pyramid.png",
-        "ASSET_DIRECTORY/img/stickers/planet8.gif",
-        "ASSET_DIRECTORY/img/stickers/planet3.gif",
-        "ASSET_DIRECTORY/img/stickers/planet4.gif",
-        "ASSET_DIRECTORY/img/stickers/planet5.gif",
-        "ASSET_DIRECTORY/img/stickers/planet6.gif",
-    ];
-    const stickerImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
-    const stickerX = Math.floor(Math.random() * 100);
-    const stickerY = Math.floor(Math.random() * 100);
+    console.log(mouseX + ", " + mouseY);
+
+    const stickerImageIndex = Math.floor(Math.random() * stickerImages.length);
+    const stickerX = mouseX + "px";
+    const stickerY = mouseY + "px";
     const stickerZ = getHighestZIndex() + 1;
-    const stickerId = generateId(16);
+    console.log(stickerX + ", " + stickerY);
     
-    createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId);
+    createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
     saveStickers();
 }
 
 /**
  * Creates and displays a sticker on the webpage.
  * 
- * @param {string} stickerImage - The URL of the sticker image.
+ * @param {string} stickerImageIndex - The index of the sticker image.
  * @param {number} stickerX - The horizontal position of the sticker.
  * @param {number} stickerY - The vertical position of the sticker.
  * @param {number} stickerZ - The z-index of the sticker.
- * @param {string} stickerId - The unique ID of the sticker.
  */
-function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
+function createSticker(stickerImageIndex, stickerX, stickerY, stickerZ) {
     const stickerDivElement = document.createElement('div');
     stickerDivElement.classList.add('sticker');
     stickerDivElement.style.position = "fixed";
@@ -188,8 +199,8 @@ function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
     
     const stickerElement = document.createElement('img');
     stickerElement.classList.add('sticker-img');
-    stickerElement.src = stickerImage;
-    stickerElement.dataset.stickerId = stickerId;
+    stickerElement.src = stickerImages[stickerImageIndex];
+    stickerElement.dataset.stickerImageIndex = stickerImageIndex;
     
     stickerDiv.appendChild(stickerElement);
     
@@ -203,7 +214,7 @@ function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
  * @param {HTMLElement} sticker - The sticker element to delete.
  */
 function deleteSticker(sticker) {
-    if (confirm("Delete sticker?")) {
+    // if (confirm("Delete sticker?")) {
         try {
             if (sticker.tagName === "DIV") {
                 sticker.remove();
@@ -215,7 +226,7 @@ function deleteSticker(sticker) {
         } catch (err) {
             console.error("Error deleting sticker:", err);
         }
-    }
+    // }
 }
 
 /**
