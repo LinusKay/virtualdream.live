@@ -16,7 +16,7 @@ $stickers = [
 $cookieValue = json_encode(["malPals", "dorkazoids"]);
 
 // Set the cookie
-setcookie("stickersUnlocked", $cookieValue, time() + (86400 * 30), "/");
+setcookie("stickersUnlocked", $cookieValue, time() + (86400 * 30), ".virtualdream.live");
 
 if(isset($_COOKIE["stickersUnlocked"])) {
     $stickersUnlocked = json_decode($_COOKIE["stickersUnlocked"]);
