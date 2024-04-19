@@ -4,7 +4,7 @@ let mouseX = 0;
 let mouseY = 0;
 
 //
-const stickerImages = [
+let stickerImages = [
 STICKERS
 ];
 

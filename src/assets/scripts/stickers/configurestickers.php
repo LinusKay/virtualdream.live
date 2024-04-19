@@ -13,11 +13,16 @@ $stickers = [
     "$assetBaseUrlStickers/dollar.gif"
 ];
 
+$cookieValue = json_encode(["malPals", "dorkazoids"]);
+
+// Set the cookie
+setcookie("stickersUnlocked", $cookieValue, time() + (86400 * 30), "/");
+
 if(isset($_COOKIE["stickersUnlocked"])) {
     $stickersUnlocked = json_decode($_COOKIE["stickersUnlocked"]);
     if(in_array("malPals", $stickersUnlocked)) {
-        $megaFunPackStickers = ["$assetBaseUrlStickers/mascot-pyramid.gif"];
-        $stickers = array_merge($stickers, $megaFunPackStickers);
+        $malPalsStickers = ["$assetBaseUrlStickers/mascot-pyramid.gif"];
+        $stickers = array_merge($stickers, $malPalsStickers);
     }
 }
 
