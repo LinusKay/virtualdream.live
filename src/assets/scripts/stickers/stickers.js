@@ -7,7 +7,7 @@ let mouseY = 0;
 let stickersEnabled = [];
 function loadStickersEnabled() {
     const stickersEnabledCookie = Cookies.get('stickersEnabled');
-    stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0"];
+    stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
 }
 
 //

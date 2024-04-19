@@ -48,7 +48,7 @@
                     echo "
                     <td class='stickercontainer' data-index=$index>
                         <img class='stickerimage' src='$sticker' onclick='selectRadioImageClick(this)'>
-                        <input type='checkbox' onclick='handleRadioClick(this)'>
+                        <input type='checkbox' onclick='handleRadioClick(this)' checked>
                     </td>";
                     if ($index % $columns == $columns-1 || $index == count($stickers) - 1) {
                         echo "</tr>";
@@ -98,13 +98,13 @@
         }
 
         function saveStickersEnabled() {
-            Cookies.set('stickersEnabled', JSON.stringify(stickersEnabled), { domain: 'localhost', path: '/' });
+            Cookies.set('stickersEnabled', JSON.stringify(stickersEnabled), { domain: '<?php echo $environment === 'local' ? 'localhost' : '.virtualdream.live';?>' , path: '/' });
         }
 
         function loadStickersEnabled() {
             console.log("load")
             const stickersEnabledCookie = Cookies.get('stickersEnabled');
-            stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : [];
+            stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
             const radioElements = document.body.querySelectorAll('input[type="checkbox"]');
             radioElements.forEach(radioElement => {
                 const stickerId = radioElement.parentNode.dataset.index;
