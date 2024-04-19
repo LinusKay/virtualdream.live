@@ -3,13 +3,6 @@
 let mouseX = 0;
 let mouseY = 0;
 
-// load enabled stickers to sticker pool
-let stickersEnabled = [];
-function loadStickersEnabled() {
-    const stickersEnabledCookie = Cookies.get('stickersEnabled');
-    stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
-}
-
 //
 const stickerImages = [
 STICKERS
@@ -109,6 +102,24 @@ function pointDistance(x1, y1, x2, y2) {
 
 // Sticker Management Functions
 
+// unlock a specified sticker pack
+function unlockSticker(stickerPackName) {
+    const stickersUnlockedCookie = Cookies.get("stickersUnlocked");
+    let stickersUnlocked = stickersUnlockedCookie ? JSON.parse(stickersUnlockedCookie) : [];
+    if(!stickersUnlocked.includes(stickerPackName)) {
+        stickersUnlocked.push(stickerPackName);
+    }
+    Cookies.set('stickersUnlocked', JSON.stringify(stickersUnlocked), { domain: 'DOMAIN' , path: '/' });
+}
+window.unlockSticker = unlockSticker;
+
+// load enabled stickers to sticker pool
+let stickersEnabled = [];
+function loadStickersEnabled() {
+    const stickersEnabledCookie = Cookies.get('stickersEnabled');
+    stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
+}
+
 /**
  * Creates and returns an image element representing a sticker bin.
  * 
@@ -168,14 +179,11 @@ function saveStickers() {
  */
 function generateRandomSticker() {
     loadStickersEnabled();
-    console.log(mouseX + ", " + mouseY);
 
     const stickerImageIndex = stickersEnabled[Math.floor(Math.random() * stickersEnabled.length)];
-    console.log(stickerImageIndex)
     const stickerX = mouseX + "px";
     const stickerY = mouseY + "px";
     const stickerZ = getHighestZIndex() + 1;
-    console.log(stickerX + ", " + stickerY);
     
     createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
     saveStickers();

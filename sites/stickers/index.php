@@ -84,7 +84,6 @@
 
         function enableSticker(stickerContainer) {
             const stickerId = stickerContainer.dataset.index;
-            console.log(typeof stickersEnabled);
             stickersEnabled.push(stickerId);
             saveStickersEnabled();
         }
@@ -94,7 +93,6 @@
             const stickersEnabledIndex = stickersEnabled.indexOf(stickerId);
             stickersEnabled.splice(stickersEnabledIndex, 1);
             saveStickersEnabled();
-            console.log(stickersEnabled);
         }
 
         function saveStickersEnabled() {
@@ -102,7 +100,6 @@
         }
 
         function loadStickersEnabled() {
-            console.log("load")
             const stickersEnabledCookie = Cookies.get('stickersEnabled');
             stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
             const radioElements = document.body.querySelectorAll('input[type="checkbox"]');
