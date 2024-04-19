@@ -20,11 +20,11 @@ setcookie("stickersUnlocked", $cookieValue, time() + (86400 * 30), "/", ".virtua
 
 if(isset($_COOKIE["stickersUnlocked"])) {
     $stickersUnlocked = json_decode($_COOKIE["stickersUnlocked"]);
-    echo $stickersUnlocked;
+    print_r($stickersUnlocked);
     if(in_array("malPals", $stickersUnlocked)) {
         $malPalsStickers = ["$assetBaseUrlStickers/mascot-pyramid.gif"];
         $stickers = array_merge($stickers, $malPalsStickers);
-        echo $stickers;
+        print_r($stickers);
     }
 }
 
