@@ -102,17 +102,6 @@ function pointDistance(x1, y1, x2, y2) {
 
 // Sticker Management Functions
 
-// unlock a specified sticker pack
-function unlockSticker(stickerPackName) {
-    const stickersUnlockedCookie = Cookies.get("stickersUnlocked");
-    let stickersUnlocked = stickersUnlockedCookie ? JSON.parse(stickersUnlockedCookie) : [];
-    if(!stickersUnlocked.includes(stickerPackName)) {
-        stickersUnlocked.push(stickerPackName);
-    }
-    Cookies.set('stickersUnlocked', JSON.stringify(stickersUnlocked), { domain: 'DOMAIN' , path: '/' });
-}
-window.unlockSticker = unlockSticker;
-
 // load enabled stickers to sticker pool
 let stickersEnabled = [];
 function loadStickersEnabled() {

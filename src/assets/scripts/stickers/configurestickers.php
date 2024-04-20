@@ -12,20 +12,4 @@ $stickers = [
     "$assetBaseUrlStickers/planet6.gif",
     "$assetBaseUrlStickers/dollar.gif"
 ];
-
-$cookieValue = json_encode(["malPals", "dorkazoids"]);
-
-// Set the cookie
-setcookie("stickersUnlocked", $cookieValue, time() + (86400 * 30), "/", ".virtualdream.live");
-
-if(isset($_COOKIE["stickersUnlocked"])) {
-    $stickersUnlocked = json_decode($_COOKIE["stickersUnlocked"]);
-    print_r($stickersUnlocked);
-    if(in_array("malPals", $stickersUnlocked)) {
-        $malPalsStickers = ["$assetBaseUrlStickers/mascot-pyramid.gif"];
-        $stickers = array_merge($stickers, $malPalsStickers);
-        print_r($stickers);
-    }
-}
-
 ?>

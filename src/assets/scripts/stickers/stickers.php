@@ -23,7 +23,6 @@ $stickersString = "";
 foreach($stickers as $sticker) {
     $stickersString = $stickersString . "'$sticker',";
 }
-echo $stickerString;
 
 $jsContent = file_get_contents('stickers.js');
 $jsContent = str_replace('STICKERS', $stickersString, $jsContent);
