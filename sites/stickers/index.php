@@ -25,6 +25,11 @@
         .stickercontainer img {
             max-width:100px;
         }
+        .stickercontainer img:hover {
+            border: dashed 1px gray;
+            box-sizing: border-box;
+            cursor:pointer;
+        }
         .stickercontainer input {
             display:block;
             width:100%;
@@ -37,6 +42,8 @@
     </head>
     <body>
         <h1>Select stickers</h1>
+        <p>Create random stickers on any Virtual Dream page by pressing the <b>s</b> key on your keyboard!</p>
+        <p>Enable/disable any stickers below!</p>
         <table>
             <?php
                 include('../../src/assets/scripts/stickers/configurestickers.php');
