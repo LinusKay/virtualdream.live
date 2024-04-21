@@ -1,4 +1,4 @@
-function createRogueCursor(cursorName, defeatable = false) {
+function createRogueCursor(cursorName, cursorDefeatable = false, cursorExtraText) {
     let cursorHealth = 100;
     let cursorMoveSpeedLeft = 1;
     let cursorMoveSpeedTop = 1;
@@ -8,7 +8,7 @@ function createRogueCursor(cursorName, defeatable = false) {
     let newLeft = 0;
     let newTop = 0;
     let pauseMin = 200;
-    let pauseMax = 2000;
+    let pauseMax = 3000;
 
     if(cursorName.constructor === Array) cursorName[Math.floor(Math.random()*cursorName.length)];
 
@@ -17,13 +17,9 @@ function createRogueCursor(cursorName, defeatable = false) {
         position:"absolute",
         top:"100px",
         left: "100px",
-        cursor: "grabbing",
         textAlign: "left",
         fontFamily: "consolas",
         fontSize: "11px"
-    });
-    cursor.addEventListener("click", function() {
-        lowerCursorHealth(25);
     });
     cursor.classList.add("prevent-select");
     document.body.appendChild(cursor);
@@ -44,7 +40,20 @@ function createRogueCursor(cursorName, defeatable = false) {
     const cursorHealthPara = document.createElement("p");
     cursorHealthPara.innerText = `Health: ${cursorHealth}`;
     cursorHealthPara.style.margin = 0;
-    if(defeatable) { cursor.appendChild(cursorHealthPara); }
+    if(cursorDefeatable) { 
+        cursor.appendChild(cursorHealthPara); 
+        cursor.addEventListener("click", function() {
+            lowerCursorHealth(25);
+        });
+    }
+
+    const cursorExtraPara = document.createElement("p");
+    cursorExtraPara.innerText = cursorExtraText;
+    Object.assign(cursorExtraPara.style, {
+        margin: 0,
+        background: "lightgray"
+    });
+    if(cursorExtraPara !== undefined) { cursor.appendChild(cursorExtraPara); }
 
     moveCursor(cursorMoveSpeedLeft, cursorMoveSpeedTop);
 
@@ -102,7 +111,6 @@ function createRogueCursor(cursorName, defeatable = false) {
             }
             if(newLeft == targetLeft && newTop == targetTop) {
                 cursorTargetFound = true;
-                // cursorTargetElement.click();
             }
             Object.assign(cursor.style, {
                 left: newLeft + "px",

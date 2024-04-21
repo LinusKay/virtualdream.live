@@ -40,12 +40,15 @@
 			];
 			let shoppersMin = 1;
 			let shoppersMax = 20;
+			let shopperCartValueMin = 1.50;
+			let shopperCartValueMax = 1000;
 			let shoppers = Math.floor(Math.random() * (shoppersMax - shoppersMin + 1) + shoppersMin);
 			document.getElementById("shopperCount").innerHTML = shoppers;
 			for (let i = 0; i < shoppers; i++) {
 				let shopperNameIndex = Math.floor(Math.random() * shopperNames.length);
 				let shopperName = shopperNames[shopperNameIndex];
-				window.createRogueCursor(shopperName, false); 
+				let shopperCartValue = "Cart: $" + Math.floor(Math.random() * (shopperCartValueMax - shopperCartValueMin + 1) + shopperCartValueMin);
+				window.createRogueCursor(shopperName, false, shopperCartValue); 
 			}
 		});
 	</script>
@@ -60,7 +63,7 @@
 	}
 	body{
 		overflow-x:hidden;
-		background-image: url("src/img/dollar.png");
+		/* background-image: url("src/img/dollar.png"); */
 		background-repeat: repeat;
 		margin:auto;
 		font-family: 'Arial', monospace;
