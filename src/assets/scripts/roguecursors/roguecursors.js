@@ -1,4 +1,4 @@
-function createRogueCursor(nameArray, defeatable = false) {
+function createRogueCursor(cursorName, defeatable = false) {
     let cursorHealth = 100;
     let cursorMoveSpeedLeft = 1;
     let cursorMoveSpeedTop = 1;
@@ -10,9 +10,7 @@ function createRogueCursor(nameArray, defeatable = false) {
     let pauseMin = 200;
     let pauseMax = 2000;
 
-    if(!nameArray.constructor === Array) nameArray = [nameArray];
-
-    let hackerName = nameArray[Math.floor(Math.random()*nameArray.length)];
+    if(cursorName.constructor === Array) cursorName[Math.floor(Math.random()*cursorName.length)];
 
     const cursor = document.createElement("div");
     Object.assign(cursor.style, {
@@ -36,8 +34,11 @@ function createRogueCursor(nameArray, defeatable = false) {
     cursor.appendChild(cursorImg);
 
     const cursorNamePara = document.createElement("p");
-    cursorNamePara.innerText = `${hackerName}`;
-    cursorNamePara.style.margin = 0;
+    cursorNamePara.innerText = `${cursorName}`;
+    Object.assign(cursorNamePara.style, {
+        margin: 0,
+        background: "lightgray"
+    });
     cursor.appendChild(cursorNamePara);
 
     const cursorHealthPara = document.createElement("p");

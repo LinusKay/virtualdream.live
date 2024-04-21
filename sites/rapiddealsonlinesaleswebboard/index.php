@@ -16,7 +16,7 @@
 	</script>
 	<script>
 		window.addEventListener('load', function() { 
-			var shoppingUserNames = [
+			var shopperNames = [
 				"BigShopper53",
 				"ShopManiac",
 				"DealsDynamo",
@@ -43,7 +43,9 @@
 			let shoppers = Math.floor(Math.random() * (shoppersMax - shoppersMin + 1) + shoppersMin);
 			document.getElementById("shopperCount").innerHTML = shoppers;
 			for (let i = 0; i < shoppers; i++) {
-				window.createRogueCursor(shoppingUserNames, false); 
+				let shopperNameIndex = Math.floor(Math.random() * shopperNames.length);
+				let shopperName = shopperNames[shopperNameIndex];
+				window.createRogueCursor(shopperName, false); 
 			}
 		});
 	</script>
