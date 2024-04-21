@@ -200,7 +200,7 @@
             </table>
             <p>Or check out some of our new Virtual Dream sponsors!</p>
             <div class="advertisement-banner"></div>
-            <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p>
+            <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p>
         </div>
         <div id="emailme">
             <h1>I have mail! Send me some more!</h1>

@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<?php 
+		# PAGE SETUP
+		include('../../src/setup.php');
+		# /PAGE SETUP
+	?>
+    <title>Home</title>
 </head>
 <body>
 </h1>Ms. Patrick 5A</h1>
