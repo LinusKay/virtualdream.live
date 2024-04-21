@@ -240,6 +240,7 @@ function deleteAllStickers() {
     Cookies.remove('stickers', { domain: 'DOMAIN', path: '/' });
     location.reload();
 }
+window.deleteAllStickers = deleteAllStickers;
 
 
 // Dragging Functions
