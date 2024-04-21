@@ -40,6 +40,8 @@ echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/malware/malware.css'>\n
 
 echo "<script src='$assetBaseUrl/scripts/screensaver/screensaver.php' type='module'></script>\n";
 
+echo "<script src='$assetBaseUrl/scripts/roguecursors/roguecursors.php' type='module'></script>\n";
+
 echo "<script src='$advertsBaseUrl/adverts.php'></script>\n";
 
 // Inline styles

@@ -9,7 +9,6 @@
         # /PAGE SETUP
         ?>
         <title>Stickers</title>
-        <link rel="stylesheet" href="style.css">
         <style> 
         body {
             text-align:center;
@@ -37,7 +36,11 @@
             bottom:10px;
             margin:0;
         }
-
+        .prevent-select {
+            -webkit-user-select: none;
+            -ms-user-select: none; 
+            user-select: none; 
+        }
         </style>
     </head>
     <body>
@@ -65,131 +68,6 @@
         </table>
         <button id="clearAll">Clear Stickers</button>
     </body>
-    <script>
-        let cursorHealth = 100;
-        let cursorMoveSpeedLeft = 1;
-        let cursorMoveSpeedTop = 1;
-        let cursorTargetElement = null;
-        let cursorTargetFound = false;
-        let allElements = null;
-        let newLeft = 0;
-        let newTop = 0;
-
-        const cursorHealthPara = document.createElement("p");
-        cursorHealthPara.innerText = `Cursor Health: ${cursorHealth}`;
-        Object.assign(cursorHealthPara.style, {
-            position: "fixed",
-            textAlign: "center",
-            top: "10px",
-            left: "0px",
-            backgroundColor: "gray",
-            width: "100%"
-        });
-        document.body.appendChild(cursorHealthPara);
-        const cursor = document.createElement("img");
-        cursor.src = "../../src/assets/img/cursor.png";
-        cursor.ondragstart = function() { return false; };
-        Object.assign(cursor.style, {
-            position:"absolute",
-            top:"100px",
-            left: "100px",
-            cursor: "grabbing",
-            padding: "20px",
-            border: "solid 1px black"
-        });
-        cursor.addEventListener("click", function() {
-            lowerCursorHealth(25);
-        });
-        document.body.appendChild(cursor);
-        moveCursor(cursorMoveSpeedLeft, cursorMoveSpeedTop);
-
-        function lowerCursorHealth(amount) {
-            cursorHealth -= amount;
-            cursorHealthPara.innerText = `Cursor Health: ${cursorHealth}`;
-            if(cursorHealth <= 0) {
-                cursorDefeated();
-            }
-        }
-
-        function cursorDefeated() {
-            cursorHealthPara.innerText = "You win!";
-            Object.assign(cursor.style, {
-                left: cursor.style.left.slice(0, -2) - 30 + "px",
-                top: cursor.style.left.slice(0, -2) - 30 + "px",
-            });
-            cursor.src = "../../src/assets/img/explosion.gif";
-            setTimeout(function() { 
-                cursorEventClear();
-            }, 800);
-        }
-
-        function cursorEventClear() {
-            cursor.remove();
-            cursorHealthPara.remove();
-        }
-
-        function moveCursor(leftDistance, topDistance) {
-            if(cursorTargetElement == null) {
-                cursorNewTarget();
-            }
-            let targetBoundingLeft = cursorTargetElement.getBoundingClientRect().left;
-            let targetBoundingRight = cursorTargetElement.getBoundingClientRect().right;
-            let targetLeft = Math.round(targetBoundingLeft + ((targetBoundingRight - targetBoundingLeft) / 2));
-
-            let targetBoundingTop = cursorTargetElement.getBoundingClientRect().top;
-            let targetBoundingBottom = cursorTargetElement.getBoundingClientRect().bottom;
-            let targetTop = Math.round(targetBoundingTop + ((targetBoundingBottom - targetBoundingTop) / 2));
-
-            newLeft = Number(cursor.style.left.slice(0, -2))
-            newTop = Number(cursor.style.top.slice(0, -2))
-            console.log(cursorTargetFound)
-            if(!cursorTargetFound) {
-                if(newLeft < targetLeft) {
-                    newLeft = newLeft + leftDistance;
-                }
-                if(newLeft > targetLeft) {
-                    newLeft = newLeft - leftDistance;
-                }
-                if(newTop < targetTop) {
-                    newTop = newTop + topDistance;
-                }
-                if(newTop > targetTop) {
-                    newTop = newTop - topDistance;
-                }
-                if(newLeft == targetLeft && newTop == targetTop) {
-                    console.log("bingo")
-                    cursorTargetFound = true;
-                }
-                Object.assign(cursor.style, {
-                    left: newLeft + "px",
-                    top: newTop + "px",
-                });
-                if(cursorHealth > 0) {
-                    setTimeout(function() { 
-                        moveCursor(cursorMoveSpeedLeft, cursorMoveSpeedTop);
-                    }, 1);
-                }
-            }
-            else {
-                setTimeout(function() { 
-                    cursorNewTarget();
-                }, 1000);
-            }
-        }
-
-        function cursorNewTarget() {
-            if(allElements == null) {
-                allElements = document.body.querySelectorAll("*");
-            }
-            cursorTargetElement = allElements[Math.floor(Math.random()*allElements.length)];
-            console.log("new target")
-            console.log(cursorTargetElement)
-            cursorTargetFound = false;
-            if(cursorHealth > 0) {
-                moveCursor(cursorMoveSpeedLeft, cursorMoveSpeedTop);
-            }
-        }
-    </script>
     <script>
 
         document.querySelector("#clearAll").addEventListener("click", function() {
