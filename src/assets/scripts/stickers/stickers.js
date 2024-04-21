@@ -31,7 +31,11 @@ window.addEventListener("load", function onLoad() {
  * @param {KeyboardEvent} e - The keyboard event object.
  */
 document.addEventListener("keydown", function(e) {
-    if(e.key == "s") generateRandomSticker();
+    if(document.activeElement.tagName != "INPUT" && document.activeElement.tagName != "TEXTAREA") {
+        if(e.key == "s") {
+            generateRandomSticker();
+        }
+    }
 } );
 
 
