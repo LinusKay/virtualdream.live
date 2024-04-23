@@ -46,7 +46,7 @@
             echo "<ul>";
             foreach ($sites as $site) {
                 // Hyperlink each website
-                $siteUrl = "https://virtualdream.live/sites/$site";
+                $siteUrl = "https://$site.virtualdream.live/";
                 echo "<li><a href='$siteUrl'>$site</a></li>";
             }
             echo "</ul>";

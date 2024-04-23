@@ -48,7 +48,7 @@
 				let shopperNameIndex = Math.floor(Math.random() * shopperNames.length);
 				let shopperName = shopperNames[shopperNameIndex];
 				let shopperCartValue = "Cart: $" + Math.floor(Math.random() * (shopperCartValueMax - shopperCartValueMin + 1) + shopperCartValueMin);
-				window.createRogueCursor(shopperName, false, shopperCartValue); 
+				// window.createRogueCursor(shopperName, false, shopperCartValue); 
 			}
 		});
 	</script>
@@ -63,7 +63,7 @@
 	}
 	body{
 		overflow-x:hidden;
-		/* background-image: url("src/img/dollar.png"); */
+		background-image: url("src/img/dollar.png");
 		background-repeat: repeat;
 		margin:auto;
 		font-family: 'Arial', monospace;
