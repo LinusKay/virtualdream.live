@@ -6,10 +6,11 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <?php 
     # PAGE SETUP
+    $screensaverOptOut = true;
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
-    <title>SquabSquob Games!</title>
+    <title>Zamboni Simulator</title>
     <style>
         body {
             background-image: url('bg_ice.png');

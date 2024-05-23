@@ -38,7 +38,10 @@ echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/stickers/stickers.css'>
 echo "<script src='$assetBaseUrl/scripts/malware/malware.php' type='module'></script>\n";
 echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/malware/malware.css'>\n";
 
-echo "<script src='$assetBaseUrl/scripts/screensaver/screensaver.php' type='module'></script>\n";
+// allow opt out for screensaver feature
+if (!isset($screensaverOptOut) || !$screensaverOptOut) {
+    echo "<script src='{$assetBaseUrl}/scripts/screensaver/screensaver.php' type='module'></script>\n";
+}
 
 echo "<script src='$assetBaseUrl/scripts/roguecursors/roguecursors.php' type='module'></script>\n";
 
