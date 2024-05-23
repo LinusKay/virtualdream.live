@@ -14,7 +14,7 @@ window.addEventListener('scroll', resetTimer, true);
  * @returns {void}
  */
 let timer;
-const idleTime = 3000;
+const idleTime = 30000;
 function resetTimer() {
     stopScreensaver();
     clearTimeout(timer);
