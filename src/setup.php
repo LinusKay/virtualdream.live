@@ -30,6 +30,9 @@ if ($environment === 'local') {
     $siteName = $subdomain;
 }
 
+echo "<meta name='title' content='$siteName — Virtual Dream' />";
+echo "<meta property='og:url' content='$currentUrl' />";
+
 echo "<script src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js'></script>\n";
 // Include stickers and malware scripts if not disabled
 echo "<script src='$assetBaseUrl/scripts/stickers/stickers.php' type='module'></script>\n";
