@@ -11,27 +11,39 @@
         td {
             padding:10px;
         }
+        .headericon {
+            width:15px;
+            margin:0 5px;
+        }
     </style>
 </head>
 <body>
-    virtualdream.live
-    <br>
-    
-    <p>Popular Sites</p>
+    <h1>Virtual Dream</h1>
+    <p>Welcome home, netizen</p>
+    <h3><img src="index/aniheart.gif" class="headericon">Popular Sites</h3>
     <ul>
         <li><a href="https://snailmail.virtualdream.live">snailmail - Consult the Snail</a></li>
         <li><a href="https://malwarecleaner.virtualdream.live">Malware Cleaner</a></li>
     </ul>
-    <p>Sponsored Sites</p>
+    <h3><img src="index/dollar.gif" class="headericon">Sponsored Sites</h3>
     <ul>
         <li><a href="https://rapiddealsonlinesaleswebboard.virtualdream.live">Joe Sales' Rapid Deals Online Sales Web Board (rapiddealsonlinesaleswebboard)</a></li>
         <li><a href="https://gobingo.virtualdream.live">GoBingo! Search Engine (gobingo)</a></li>
     </ul>
-    <br>
-    Directory:
-    <br>
+    <h3><img src="index/book2.gif" class="headericon">Public Directory</h3>
     <?php
         $sites = glob('./sites/*' , GLOB_ONLYDIR);
+        $excludedDirs = [
+            'advertising', 
+            'earnvirtubucks', 
+            'webrings',
+            'zambonisimulator'
+        ];
+        $sites = array_filter($sites, function($dir) use ($excludedDirs) {
+            return !in_array(basename($dir), $excludedDirs);
+        });
+        $sites = array_values($sites);
+
         $sitecount = sizeof($sites);
         $colcount = 4;
         $rowcount = ceil($sitecount/4);
@@ -53,7 +65,7 @@
             ?>
         </tbody>
     </table>
-    <p>Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
-    <p><a href="disclaimer.php">Disclaimer</a></p>
+    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
+    <!-- <p><a href="disclaimer.php">Disclaimer</a></p> -->
 </body>
 </html>
