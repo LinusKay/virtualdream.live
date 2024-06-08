@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="src/img/computer.ico">
     <?php 
     # PAGE SETUP
     $screensaverOptOut = true;
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
-    <title>Virtual Dream Status</title>
+    <title>Virtual Dream Status Page</title>
     <style> 
         * {
             margin:0;
@@ -29,7 +30,6 @@
             display:inline-block;
             width: 60px;
             position:relative;
-            /* float:left; */
             border: outset 3px gray;
             box-sizing: border-box;
             margin:10px;

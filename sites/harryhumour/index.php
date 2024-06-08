@@ -8,18 +8,18 @@
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
-        <title>HARRY HUMOUR - LAUGH OUT LOUD ONLINE</title>
+        <title>Harry Humour's Homepage</title>
         <link rel="stylesheet" href="style.css">
         <style> 
         body {
             margin:0;
             padding:0;
             text-align:center;
-            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            background: #3299cc;
         }
         #freejoke {
             padding:15px;
-            background:red;
+            /* background:red; */
         }
         #presidentialpardon {
             padding:15px;
@@ -32,12 +32,9 @@
         #freejokes {
             padding:15px;
         }
-        #freejokes p {
-            margin:0; padding:0;
-        }
         #othersites {
             padding:15px;
-            background:green;
+            /* background:green; */
         }
         table {
             width:400px;
@@ -85,16 +82,29 @@
         }
         #emailme {
             padding:15px;
+            background:lightblue;
+        }
+        #jester {
+            background:white;
+            border: solid 4px blue;
+            display:inline-block;
+        }
+        #joke {
+            line-height:25px;
+            color:blue;
+            font-size:17px;
+            margin: 30px;
         }
         </style>
     </head>
     <body>
         <div id="introduction">
             <h1>Welcome to the groovy cyber realm of Harry Humour, the net's funniest clean comedian</h1>
-            <p>Straight outta the stand-up circuit and onto your screens, Harry's here to tickle your funny bone with his clean-cut comedy that's as wholesome as a bowl of Juice Tubes!</p>
-            <p>Catch him on stage at the local comedy club, where he's been known to crack a joke or two that'll have you snickering into your slap bracelet. And hey, if you can't make it to the live show, no sweat—Harry's got you covered with his collection of DVDs featuring his most bodacious stand-up routines. </p>
-            <p>But don't let his corny jokes fool you—Harry's got a sharp wit when it comes to commenting on the latest political happenings. Whether he's poking fun at the president or riffing on the latest legislative shenanigans, Harry's got a knack for turning serious subjects into side-splitting comedy gold.</p>
-    </div>
+        </div>
+        <div id="jester">
+            <img src="src/img/jester.gif">
+        </div>
+        
         <div id="freejoke">
             <p>Here's a free joke. Its on the house!</p>
             <p>"I tried to catch some fog yesterday. I mist!"</p>
@@ -109,15 +119,25 @@
             <p>- President Schmonger</p>
         </div>
         <div id="freejokes">
-                <p>Here's some more free jokes!</p>
-                <p>Why don't skeletons fight each other? They don't have the guts... or the muscles... or the skin. Okay, maybe they just don't have the spine for it!"</p>
-                <p>"I told my wife she should embrace her mistakes. She gave me a hug. Turns out, she misunderstood me. Now we're stuck together like Velcro!"</p>
-                <p>"Why did the scarecrow win an award? Because he was outstanding in his field! Though he's a bit stiff when it comes to acceptance speeches."</p>
-                <p>"I told my computer I needed a break. Now it won't stop sending me vacation ads. Guess it's trying to give me some byte-sized advice!"</p>
-                <p>"I accidentally swallowed some food coloring yesterday. The doctor says I'm okay, but I feel like I've dyed a little inside."</p>
-                <p>"I used to play piano by ear. Then I realized it was easier to use my fingers."</p>
-                <p>"I told my friend I had a great joke about construction, but I'm still working on it. Guess you could say I'm building up to it!"</p>
-            <p>Welcome to Laugh City!</p>
+            <h2><b>Free Jokes!</b></h2>
+            <p id="joke"><u>Why don't skeletons fight each other?</u><br>They don't have the guts... or the muscles... or the skin. Okay, maybe they just don't have the spine for it!</p>
+            <hr>
+            <p id="joke"><u>I told my wife she should embrace her mistakes.</u><br>She gave me a hug. Turns out, she misunderstood me. Now we're stuck together like Velcro!</p>
+            <hr>
+            <p id="joke"><u>Why did the scarecrow win an award?</u><br>Because he was outstanding in his field! Though he's a bit stiff when it comes to acceptance speeches.</p>
+            <hr>
+            <img src="src/img/babylaugh.gif">
+            <hr>
+            <p id="joke"><u>I told my computer I needed a break.</u><br>Now it won't stop sending me vacation ads. Guess it's trying to give me some byte-sized advice!</p>
+            <hr>
+            <p id="joke"><u>I accidentally swallowed some food coloring yesterday.</u><br>The doctor says I'm okay, but I feel like I've dyed a little inside.</p>
+            <hr>
+            <p id="joke"><u>I used to play piano by ear.</u><br>Then I realized it was easier to use my fingers.</p>
+            <hr>
+            <p id="joke"><u>I told my friend I had a great joke about construction,</u><br>but I'm still working on it. Guess you could say I'm building up to it!</p>
+            <hr>
+            <div id="joke">
+            <p><u>Welcome to Laugh City!</u></p>
             <img src="src/img/anlthouse.gif">
             <img src="src/img/Button_House.gif">
             <img src="src/img/27.gif" style="width:50px;">
@@ -128,6 +148,7 @@
             <img src="src/img/valhousewithsmokehearts.gif">
             <img src="src/img/swordfight.gif" style="width:50px;">
             <p>Population: YOU!</p>
+            </div>
         </div>
         <div id="buydvd">
             <img src="src/img/TV.gif"><img src="src/img/dvd.gif"><img src="src/img/TV.gif">
@@ -156,19 +177,16 @@
             You see, it seems like everywhere I look these days, comedy has taken a nosedive into the gutter. Dirty jokes, crude humor, and innuendos are all the rage, leaving us clean comedians feeling like the odd ones out. And let me tell ya, it's not a fun place to be.
             <br>
             <br>
-            Now, don't get me wrong—I'm all for a good laugh. But when every punchline is laced with profanity or relies on cheap shock value, it's like we've lost sight of what real comedy is all about: bringing joy and laughter to people of all ages, without resorting to cheap tricks.
+            Now, don't get me wrong — I'm all for a good laugh. But when every punchline is laced with profanity or relies on cheap shock value, it's like we've lost sight of what real comedy is all about: bringing joy and laughter to people of all ages, without resorting to cheap tricks.
             <br>
             <br>
-            That's why I'm calling on all you fine folks out there to join me in <u>VOTING for Ronald Schmonger for a 7th term as President of our free nation!</u> There's only one man who is going to clean up this rabble, and bring back the humour we used to love. Ronald's got the wit, the charm, and the impeccable taste in clean jokes that our country needs right now.
+            That's why I'm calling on all you fine folks out there to join me in <u>VOTING for Ronald Schmonger for a 7th term as President of our free nation!</u> There's only one man who is going to clean up this rabble, and bring back the humour we used to love. Ronald's got the wit, the charm, and the impeccable taste in clean jokes that our country needs right now. He's been fighting for us, and he's only going to fight more!
             <br>
             <br>
-            Folks, let me tell you about Ronald Schmonger—our beacon of hope, our shining star in a world of chaos. Ronald isn't just a politician; he's a force of nature, a whirlwind of change sweeping across our great nation. Ronald's vision for our country is bold, it's audacious, it's... well, it's something else, let me tell you. He's got plans, big plans, to make our country laugh again. And let me tell you, it's about time. 
+            Folks, let me tell you something. Ronald isn't just a politician; he's a force of nature, a whirlwind of change sweeping across our great nation. Ronald's vision for our country is bold, it's audacious, it's... well, it's something else, let me tell you. He's got plans, big plans, to make our country one again. And let me tell you, it's about time. 
             <br>
             <br>
-            Now, I know, many people find themselves unable to look past some of Ron's quirks. They question his stance in medicine prices, and even I wasn't sure when he promised to send the other candidate into space strapped to a rocket, but are you saying a pharmaceutical CEO with an interest in space science, and a healthy spoon of laughs wouldn't know what he's talking about? 
-            <br>
-            <br>
-            His policies may be bold, but they're backed by a deep understanding of what it takes to bring people together and uplift our spirits. From his plan to boost small businesses such as comedy clubs to his proposal for a national "Joke of the Day" initiative, Ronald's vision for the country is as refreshing as a stand-up routine on a hot summer day. 
+            There's plenty of jackanapes that don't understand, and they're exactly the kind of scum that's tearing this country apart at its core. They question his stance in medicine prices, but the sea walls aren't going to pay for themselves. They questioned when he promised to strap his presidential opponents to a rocket, but at least there will be enough room up there for their giant heads! If you can't take a joke, take a hike instead! We don't need you!
             <br>
             <br>
             Together, let's keep the laughs coming, one squeaky-clean joke at a time!
@@ -179,15 +197,6 @@
             Harry Humour
             </p>
         </div>
-        <div id="inmemoriam">
-            <img src="src/img/redposey.gif">
-            <h2>In Memoriam: Fungle the Clown</h2>
-            <img src="src/img/tombstone_lg_clr.gif">
-            <img src="src/img/fungle.png" id="fungle">
-            <img src="src/img/tombstone_lg_clr.gif">
-            <p><i>"In the quiet depths of memory, their absence echoes louder than any words spoken in their honor, reminding us of the profound void left behind by their departure."</i></p>
-        </div>
-        
         <div id="othersites">
             <p><img src="src/img/pointright.gif">Try out some of my other comedy sites!<img src="src/img/pointleft.gif"></p>
             <table>
@@ -200,12 +209,20 @@
             </table>
             <p>Or check out some of our new Virtual Dream sponsors!</p>
             <div class="advertisement-banner"></div>
-            <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p>
+            <!-- <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p> -->
         </div>
         <div id="emailme">
             <h1>I have mail! Send me some more!</h1>
             <a href="mailto:harryhumour@virtualdream.live"><img src="src/img/mail6.gif"><img src="src/img/mailbox1.gif"><img src="src/img/mail.gif"></a>
             <p><a href="mailto:harryhumour@virtualdream.live">harryhumour@virtualdream.live</a></p>
+        </div>
+        <div id="inmemoriam">
+            <img src="src/img/redposey.gif">
+            <h2>In Memoriam: Fungle the Clown</h2>
+            <img src="src/img/tombstone_lg_clr.gif">
+            <img src="src/img/fungle.png" id="fungle">
+            <img src="src/img/tombstone_lg_clr.gif">
+            <p><i>"In the quiet depths of memory, their absence echoes louder than any words spoken in their honor, reminding us of the profound void left behind by their departure."</i></p>
         </div>
     </body> 
 </html>
