@@ -64,6 +64,7 @@
         }
         .node-farm .node-image {
             display:block;
+            max-width:13px;
             margin:5px;
             float:left;
         }
@@ -257,7 +258,6 @@
         <p class="node-name">API-V1</p>
         <img class="node-status-image" src="src/img/status/offline.gif" title="Offline">
     </div>
-    <!-- NA -->
     <div class="node-group">
         <div class="node">
             <img class="node-image" src="src/img/Computer_2.gif">
@@ -653,7 +653,7 @@
     </div>
     <div class="node">
         <img class="node-image" src="src/img/Computer_2.gif">
-        <p class="node-name">DESKTOP-LISA</p>
+        <p class="node-name">DESKTOP-ALICIA</p>
         <img class="node-status-image" src="src/img/status/offline.gif" title="Offline">
     </div>
     <div class="node-group node-group-wide">
@@ -722,6 +722,28 @@
             <img class="node-status-image" src="src/img/status/offline.gif" title="Offline">
         </div>
     </div>
+    <div class="node node-wide node-farm">
+        <div class="node-farm-wrap">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+            <img class="node-image" src="src/img/office.png">
+        </div>
+        <p class="node-name">OFFICE-STACK-NE</p>
+        <img class="node-status-image" src="src/img/status/online.gif" title="Online">
+    </div>
     <div class="node-group">
         <div class="node">
             <img class="node-image" src="src/img/Flop.gif">
@@ -766,5 +788,33 @@
             <img class="node-status-image" src="src/img/status/online.gif" title="Online">
         </div>
     </div>
+    <div class="node">
+        <img class="node-image" src="src/img/Computer_2.gif">
+        <p class="node-name">WEBRINGS-CORE</p>
+        <img class="node-status-image" src="src/img/status/online.gif" title="Online">
+    </div>
+    <div class="node node-wide node-farm">
+        <div class="node-farm-wrap">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+            <img class="node-image" src="src/img/computernode.gif">
+        </div>
+        <p class="node-name">HOTDESKS-01</p>
+        <img class="node-status-image" src="src/img/status/online.gif" title="Online">
+    </div>
+
 </body>
 </html>
