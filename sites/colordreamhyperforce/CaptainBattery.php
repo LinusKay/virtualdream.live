@@ -8,7 +8,7 @@
 		include('../../src/setup.php');
 		# /PAGE SETUP
 	?>
-    <title>Captain Battery</title>
+    <title>THE CAPTAIN'S COCKPIT</title>
     <style> 
         body {
             background:black;
@@ -19,19 +19,6 @@
         }
         h2{
             text-decoration: underline;
-        }
-        #dove {
-            display:block;
-            margin:auto;
-        }
-        #poem {
-            font-size:12px;
-            color:#FF99FF;
-            text-align: center;
-            border: outset 3px #FF99FF;
-            width:200px;
-            padding:15px;
-            margin:auto;
         }
         #listening {
             text-align: center;
@@ -47,42 +34,54 @@
             display:block;
             margin:auto;
         }
+        #quote {
+            font-size:12px;
+        }
+        
+        #dove {
+            display:block;
+            margin:auto;
+            width:100px;
+        }
+        #poem {
+            font-size:12px;
+            color:#FF99FF;
+            text-align: center;
+            border: outset 3px #FF99FF;
+            width:200px;
+            padding:15px;
+            margin:auto;
+        }
     </style>
 </head>
 <body>
+    <a href="index.php"><img id="back" src="src/img/back2.gif"></a>
     <h1>CAPTAIN BATTERY'S COCKPIT</h1>
+    <p id="quote">To bring peace to the galaxy. This is your task.<br>~Planet Sage</p>
     <UL>
         <LI><A HREF="#INTRODUCTION">INTRODUCTION</A></LI>
         <LI><A HREF="#ICOULDFLY">XARXAX PILOT?</A></LI>
         <LI><A HREF="#QUIZ">PARTYMOUSE'S KNOWYOU QUIZ</A></LI>
     </UL>
     <HR>
-    <p>To our dearest Keith.</p>
-    <p>Charge Up. Fly high. </p>
-    <img id="dove" src="src/img/dovepeace.gif">
-    <p id="poem">Hope is the thing with feathers<br>
-    That Perches in the soul,<br>
-    And sings the tune without the words,<br>
-    And never stops at all,<br>
+    <p id="poem">I see it, do you?<br>
+    That star which blinks off yonder<br>
+    Just past the mind's eye.<br>
     <br>
-    And sweetest in the gale is heard;<br>
-    And sore must be the storm<br>
-    That could abash the little bird<br>
-    That kept so many warm.<br>
     <br>
-    I've heard it in the chillest land<br>
-    And on the strangest sea;<br>
-    Yet, never, in extremity,<br>
-    It asked a crumb of me.
+    That thing which waves and shimmers<br>
+    And does not cease<br>
+    Even when it may go unseen.<br>
+    <br>
+    It's with you. Within you.<br>
+    It always was, Xebulon,<br>
+    That hope.<br>
     </p>
-    <hr>
-    <div id="discoballs">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    </div>
+    <p style="text-align:center">For our dearest Keith.</p>
+    <p style="text-align:center">Stay charged.</p>
+    <p style="text-align:center">Fly high. </p>
+    <img id="dove" src="src/img/spaceship.gif">
+
     <HR>
     <H3 ID="QUIZ"><U>PARTYMOUSE'S KNOWYOU QUIZ</U></H3>
     <p>AGE: 32</p>
@@ -94,7 +93,7 @@
     <p>DATING: YES</p>
     <p>MARRIED: NO</p>
     <p>FAVOURITE ANIMAL: NORTH AMERICAN SABER-TOOTH</p>
-    <p>NICKNAME: THE BATTERY, CAPTAIN BATTERY</p>
+    <p>NICKNAME: THE BATTERY, CAPTAIN BATTERY, CAPTAIN K</p>
     <P>LOCATION: THE UPPER STEPS OF THIS UNIVERSE, THE FOOT OF XEBULON</P>
     <P>C@PY THIS AND SEND IT TO 10 PEOPLE YOU KNOW</P>
     <HR>

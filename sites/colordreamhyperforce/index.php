@@ -8,7 +8,7 @@
 		include('../../src/setup.php');
 		# /PAGE SETUP
 	?>
-    <title>COLOR DREAM HYPER FORCE | GREETINGS MR PRESIDENT</title>
+    <title>GREETINGS MR PRESIDENT | COLOR DREAM HYPER FORCE | OUR REQUEST</title>
     <style> 
         body {
             background:black;
@@ -25,6 +25,9 @@
         #subtitle {
             font-size:12px;
             color:gray;
+        }
+        #gotobattery {
+            width:30px;
         }
     </style>
 </head>
@@ -137,6 +140,6 @@
 <br>
 <p>TO GLORY! TO XARXAX!</p>
 <hr>
-<p><a href="CaptainBattery.php">CAPTAIN BATTERY'S COCKPIT</a></p>
+<p><img id="gotobattery" src="src/img/ClickAn2.gif"><a href="CaptainBattery.php">CAPTAIN BATTERY'S COCKPIT</a></p>
 </body>
 </html>
