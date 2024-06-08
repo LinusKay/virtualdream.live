@@ -98,15 +98,15 @@
     <P>C@PY THIS AND SEND IT TO 10 PEOPLE YOU KNOW</P>
     <HR>
     <div id="discoballs">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
     </div>
     <HR>
     <div id="listening">
-        <IMG id="cd" SRC="SRC/IMG/cd.gif">
+        <IMG id="cd" SRC="src/img/cd.gif">
         <P><img src="src/img/note.gif">Listening to<img src="src/img/note.gif"></p>
         <p>Heart of Roses - Smooth McMahnson</p>
     </div>
@@ -116,15 +116,15 @@
     <P>THEY DONT CALL ME THE CAPTAIN FOR NOTHING YOU KNOW IT </P>
     <hr>
     <div id="discoballs">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
     </div>
     <HR>
     <div id="listening">
-        <IMG id="cd" SRC="SRC/IMG/cd.gif">
+        <IMG id="cd" SRC="src/img/cd.gif">
         <P><img src="src/img/note.gif">Listening to<img src="src/img/note.gif"></p>
         <p>Tu Corazón Es Como La Pista De Baile - Alvaro Pérez</p>
     </div>
@@ -139,18 +139,18 @@
     <P>AND DAMN THAT LADY XEBULON HAS GOTTA BE THE SHINIEST THING THE BATTERY HAS EVER SEEN IN THIS HERE UNIVERSE</P>
     <P>PEACE AND LOVE</P>
     <div id="listening">
-        <IMG id="cd" SRC="SRC/IMG/cd.gif">
+        <IMG id="cd" SRC="src/img/cd.gif">
         <P><img src="src/img/note.gif">Listening to<img src="src/img/note.gif"></p>
         <p>Theme for Xarxax VII - Brian Goldfield</p>
     </div>
     <img id="sword" src="src/img/swordani.gif">
     <HR>
     <div id="discoballs">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
-    <IMG SRC="SRC/IMG/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
+    <IMG SRC="src/img/Disco.gif">
     </div>
 </body>
 </html>
