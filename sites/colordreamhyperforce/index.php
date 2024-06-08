@@ -32,6 +32,7 @@
     </style>
 </head>
 <body>
+<audio autoplay loop><source src="src/Xarxax_Theme_Full.mp3"></audio>
 <h1>I HOOKED MYSELF UP TO THE MICROWAVE, AND NOW I SEE COLORS IN MY SLEEP: A WARNING TO MR PRESIDENT</h1>
 <p>From the Color Dream Hyper Force</p>
 <img id="microwave" src="src/img/microwave.gif">
@@ -130,8 +131,8 @@
     <li>teeth dont look no good</li>
     <li>we think its probably to do with his long-running chrome allergy</li>
 </ul>
-<p>Now no ladies will talk to him on account of his skin glows too bad(it freaks them out (the ladies)). The whole club lights up and makes it real hard to see anyone but Captain Battery. At every dance club we go to the lighting technicians keep kicking him out for ruining their jobs. They say nobody can see any good and he ruins the atmosphere with his cosmic wavey glow. (One time a lighting guy even tried to get us kicked out from Crunchtown, but Large Don knows Triple Barry so it was never gonna happen anyway)</p>
-<p>We have sent this website to every representative that we could fine, and are preparing to print millions of copies downtown so that the people of the world can know who we are. Good luck!!</p>
+<p>Now no ladies will talk to him on account of his skin glows too bad(it freaks them out (the ladies)). The whole club lights up and makes it real hard to see anyone but Captain Battery. At every dance club we go to the lighting technicians keep kicking him out for ruining their jobs. They say nobody can see any good and he ruins the atmosphere with his cosmic wavey glow. (One time a lighting guy even tried to get us kicked out from Crunchtown, but Large Don knows Triple Barry so it was never gonna happen like that)</p>
+<p>We have sent this website to every representative that we could find, and are preparing to print millions of copies downtown so that the people of the world can know who we are. Good luck!!</p>
 
 <p>Come find us!</p>
 <p>We'll be waiting!</p>

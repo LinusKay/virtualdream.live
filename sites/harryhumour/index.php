@@ -226,8 +226,5 @@
             <img src="src/img/tombstone_lg_clr.gif">
             <p><i>"In the quiet depths of memory, their absence echoes louder than any words spoken in their honor, reminding us of the profound void left behind by their departure."</i></p>
         </div>
-        <hr>
-        <p>Come back soon!</p>
-        <a href="../"><img src="src/img/reddoor.gif"><h3>Way Out</h3></a>
     </body> 
 </html>
