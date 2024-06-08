@@ -198,7 +198,8 @@
             </p>
         </div>
         <div id="othersites">
-            <p><img src="src/img/pointright.gif">Try out some of my other comedy sites!<img src="src/img/pointleft.gif"></p>
+            <p>Try out some of my other comedy sites!</p>
+            <img src="src/img/pointright.gif">
             <table>
                 <tbody>
                     <tr>
@@ -207,6 +208,7 @@
                     </tr>
                 </tbody>
             </table>
+            <img src="src/img/pointleft.gif">
             <p>Or check out some of our new Virtual Dream sponsors!</p>
             <div class="advertisement-banner"></div>
             <!-- <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p> -->
@@ -224,5 +226,8 @@
             <img src="src/img/tombstone_lg_clr.gif">
             <p><i>"In the quiet depths of memory, their absence echoes louder than any words spoken in their honor, reminding us of the profound void left behind by their departure."</i></p>
         </div>
+        <hr>
+        <p>Come back soon!</p>
+        <a href="../"><img src="src/img/reddoor.gif"><h3>Way Out</h3></a>
     </body> 
 </html>

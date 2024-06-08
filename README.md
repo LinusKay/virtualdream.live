@@ -15,6 +15,9 @@ Deliberately janky, confusing to navigate, and brimming with "malware", the site
 ## A Note on Ad-blockers
 I love ad-blockers, and I hate ads. That said, I encourage you to disable your ad-blocker when accessing Virtual Dream, as you'll be missing out on a lot of content otherwise. None of the advertisements you'll see lead externally, and are a primary way of discovering new sites!
 
+## Auto-Play
+Some sites have music set to auto-play. Not vital, but its encouraged to allow auto-play from the live domain!
+
 ## FAQ
 * **Can I get a virtualdream site?** Probably! Check out the Collaboration section below.
 
