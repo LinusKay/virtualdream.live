@@ -7,6 +7,11 @@ Welcome, weary netizen, to Virtual Dream, a quirky webhost from another time.
 
 Deliberately janky, confusing to navigate, and brimming with "malware", the sites at VD are meant to be explored blindly. Is there a running thesis for the project? Probably. 
 
+## Additional Controls
+### Stickers
+* Press 's' to place a sticker
+* Stickers can be chosen from the relevant page (`sites/stickers` or `https://stickers.virtualdream.live`)
+
 ## A Note on Ad-blockers
 I love ad-blockers, and I hate ads. That said, I encourage you to disable your ad-blocker when accessing Virtual Dream, as you'll be missing out on a lot of content otherwise. None of the advertisements you'll see lead externally, and are a primary way of discovering new sites!
 

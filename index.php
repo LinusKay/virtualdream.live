@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php 
+    # PAGE SETUP
+    include('src/setup.php');
+    # /PAGE SETUP
+    $popularSites = [
+        ["snailmail", "SnailMail - Consult the Snail"],
+        ["malwarecleaner", "Malware Cleaner"]
+    ];
+    $sponsoredSites = [
+        ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
+        ["gobingo", "GoBingo! Search Engine"]
+    ];
+    ?>
     <title>Virtual Dream</title>
     <style>
         tr {
@@ -22,13 +35,33 @@
     <p>Welcome home, netizen</p>
     <h3><img src="index/aniheart.gif" class="headericon">Popular Sites</h3>
     <ul>
-        <li><a href="https://snailmail.virtualdream.live">snailmail - Consult the Snail</a></li>
-        <li><a href="https://malwarecleaner.virtualdream.live">Malware Cleaner</a></li>
+        <?php 
+            foreach($popularSites as $site) {
+                $siteName = $site[0];
+                $siteTagline = $site[1];
+                if ($environment == 'local') {
+                    echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
+                }
+                else {
+                    echo "<li><a href='https://$siteName.virtualdream.live'>$siteTagline</a></li>";
+                }
+            }
+        ?>
     </ul>
     <h3><img src="index/dollar.gif" class="headericon">Sponsored Sites</h3>
     <ul>
-        <li><a href="https://rapiddealsonlinesaleswebboard.virtualdream.live">Joe Sales' Rapid Deals Online Sales Web Board (rapiddealsonlinesaleswebboard)</a></li>
-        <li><a href="https://gobingo.virtualdream.live">GoBingo! Search Engine (gobingo)</a></li>
+    <?php 
+        foreach($sponsoredSites as $site) {
+            $siteName = $site[0];
+            $siteTagline = $site[1];
+            if ($environment == 'local') {
+                echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
+            }
+            else {
+                echo "<li><a href='https://$siteName.virtualdream.live'>$siteTagline</a></li>";
+            }
+        }
+    ?>
     </ul>
     <h3><img src="index/book2.gif" class="headericon">Public Directory</h3>
     <?php
@@ -57,7 +90,12 @@
                 for($cell=0;$cell<4 && $index < $sitecount;$cell++) {
                     $siteurl = $sites[$index];
                     $sitename = str_replace("./sites/", "", $siteurl);
-                    echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
+                    if ($environment == 'local') {
+                        echo "<td><a href=\"sites/$sitename\">$sitename</a></td>";
+                    }
+                    else {
+                        echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
+                    }
                     $index++;
                 }
                 echo "</tr>";
@@ -66,6 +104,6 @@
         </tbody>
     </table>
     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
-    <!-- <p><a href="disclaimer.php">Disclaimer</a></p> -->
+    <!-- <p><a href="index/disclaimer.php">Disclaimer</a></p> -->
 </body>
 </html>
