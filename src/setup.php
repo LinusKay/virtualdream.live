@@ -30,8 +30,14 @@ if ($environment === 'local') {
     $siteName = $subdomain;
 }
 
-echo "<meta name='title' content='$siteName — Virtual Dream' />";
-echo "<meta property='og:url' content='$currentUrl' />";
+echo "<meta name='title' content='$siteName — Virtual Dream' />\n";
+echo "<meta property='og:url' content='$currentUrl' />\n";
+echo "<meta property='og:image' content='$assetBaseUrl/img/vdbanner.png' />\n";
+echo "<meta property='og:type' content='website' />\n";
+echo "<meta property='og:description' content='Your new favourite web community' />\n";
+echo "<meta property='twitter:card' content='$assetBaseUrl/img/vdbanner.png' />\n";
+
+echo "<link rel='icon' type='image/x-icon' href='$assetBaseUrl/img/computer.ico'>\n";
 
 echo "<script src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js'></script>\n";
 // Include stickers and malware scripts if not disabled
