@@ -35,11 +35,13 @@
 <audio autoplay loop><source src="src/Xarxax_Theme_Full.mp3"></audio>
 <h1>I HOOKED MYSELF UP TO THE MICROWAVE, AND NOW I SEE COLORS IN MY SLEEP: A WARNING TO MR PRESIDENT</h1>
 <p>From the Color Dream Hyper Force</p>
+<p id="subtitle">♫ Now Playing: 'Theme for Xarxax VII' by Brian Goldfield ♫</p>
+<p>I was at home on another night skunked up at home on the couch, exploring my mind through the fruits of cherished night-time sci-fi marathon television. I hungered for another pound of Nubson's Chocolate-filled Cherry Blast Bitlets. Making the journey across my exotic and finely-rugged apartment, passing the signed, framed portrait of my beautiful Xebulon, the warrior princess of Xarxax VII, I was hit with a wave of love or a cosmic ray or a moon ray, and I fell over. I don't know what happened next, or how long I was out, but when I woke, my head was stuck all the way inside that microwave with settings to HIGH. It took all of my roommates 2 hours to wrench my head free from the machine that had me so tight in its grasp.</p>
+
 <img id="microwave" src="src/img/microwave.gif">
 <img id="microwave" src="src/img/microwave.gif">
 <img id="microwave" src="src/img/microwave.gif">
 <p id="subtitle">The eternal high-powered spin of glory</p>
-<p>I was at home on another night skunked up at home on the couch, exploring my mind through the fruits of cherished night-time sci-fi marathon television. I hungered for another pound of Nubson's Chocolate-filled Cherry Blast Bitlets. Making the journey across my exotic and finely-rugged apartment, passing the signed, framed portrait of my beautiful Xebulon, the warrior princess of Xarxax VII, I was hit with a wave of love or a cosmic ray or a moon ray, and I fell over. I don't know what happened next, or how long I was out, but when I woke, my head was stuck all the way inside that microwave with settings to HIGH. It took all of my roommates 2 hours to wrench my head free from the machine that had me so tight in its grasp.</p>
 <p>But ever since the fated incident I have never slept the same. Like the lights of Xebulon and her divine cosmic rays, the colors blast my eyes ass I drift into the night. It was at this moment I realised I was born for something greater. The calling I had been waiting for that I knew would appear when I needed it the most was finally here. </p>
 <p>During my sleep sessions I have seen colors you couldn’t even imagine. I've already begun naming them:</p>
 <table>
