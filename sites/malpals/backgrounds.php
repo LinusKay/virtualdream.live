@@ -8,7 +8,7 @@
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
-    <title>MalPals!</title>
+    <title>MalPals! - Free Backgrounds</title>
     <script>
         window.addEventListener("load", function() {
             window.addInfection("malPalPyramid");

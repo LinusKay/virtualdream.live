@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php 
     # PAGE SETUP
-    $metaTitle = "MalPals! - Cool Online Friends!";
-    $metaDescription = "Introducing MalPals!® The fun interactive friends that totally chill out on your browser! Coming all the way from planet Maltron, these Pals do whatever they can to have fun and be safe.";
+    $metaDescription = "Introducing MalPals!® The fun interactive friends that totally chill out on your browser!";
     include('../../src/setup.php');
     # /PAGE SETUP
     ?>
-    <title>MalPals!</title>
+    <title>MalPals! - Cool Online Friends</title>
     <style>
         * {
             margin:0;
