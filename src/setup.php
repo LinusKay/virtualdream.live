@@ -30,7 +30,7 @@ if ($environment === 'local') {
     $siteName = $subdomain;
 }
 
-if(!isset($metaTitle)) $metaTitle = $siteName; else $metaTitle = $metaTitle + "\n";
+if(!isset($metaTitle)) $metaTitle = $siteName; else $metaTitle = $metaTitle + "\n ";
 if(!isset($metaDescription)) $metaDescription = "";
 $brandingTagline = "Virtual Dream - Your new favourite web host, powered by community.";
 
