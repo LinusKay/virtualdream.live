@@ -124,6 +124,7 @@
         #extra-goodies-table td {
             height:50px;
             border-bottom: dashed 1px gray;
+            vertical-align: middle;
         }
         #extra-goodies-table img {
             width:40px;
