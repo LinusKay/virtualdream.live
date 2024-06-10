@@ -6,6 +6,8 @@
     <title>GREETINGS MR PRESIDENT | COLOR DREAM HYPER FORCE | OUR REQUEST</title>
 	<?php 
 		# PAGE SETUP
+        $metaTitle = "Color Dream Hyper Force";
+        $metaDescription = "FOR THE PRESIDENT'S EYES ONLY. THIS IS A WARNING.";
 		include('../../src/setup.php');
 		# /PAGE SETUP
 	?>

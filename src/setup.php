@@ -30,11 +30,15 @@ if ($environment === 'local') {
     $siteName = $subdomain;
 }
 
-echo "<meta property='og:title' content='$siteName — Virtual Dream' />\n";
+if(!isset($metaTitle)) $metaTitle = $siteName;
+if(!isset($metaDescription)) $metaDescription = "";
+$brandingTagline = "Virtual Dream - Your new favourite web host, powered by community.";
+
+echo "<meta property='og:title' content='$metaTitle — Virtual Dream' />\n";
 echo "<meta property='og:url' content='$currentUrl' />\n";
 echo "<meta property='og:image' content='$assetBaseUrl/img/vdbanner.png' />\n";
 echo "<meta property='og:type' content='website' />\n";
-echo "<meta property='og:description' content='Virtual Dream - Your new favourite web host, powered by community.' />\n";
+echo "<meta property='og:description' content='$metaDescription\n$brandingTagline' />\n";
 echo "<meta property='twitter:card' content='$assetBaseUrl/img/vdbanner.png' />\n";
 
 echo "<link rel='icon' type='image/x-icon' href='$assetBaseUrl/img/computer.ico'>\n";
