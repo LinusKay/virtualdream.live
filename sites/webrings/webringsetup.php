@@ -45,9 +45,6 @@ foreach ($siteToWebrings as $site => $webrings) {
                 break;
             }
         }
-        if(!str_starts_with($webringImageUrl, "http")) {
-            $webringImageUrl = "../" . $webringImageUrl;
-        }
         
         $webRingDirectory = "./$webring"; 
         $indexFile = $webRingDirectory . "/index.php";
