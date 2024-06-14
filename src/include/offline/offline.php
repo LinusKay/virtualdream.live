@@ -7,6 +7,7 @@
             <td width="1%"><img src="https://assets.virtualdream.live/img/shock.gif" border="0" hspace="2" width="41"></td>
             <td>This Virtual Dream page is currently unavailable. Please check back later!</td>
         </tr>
+        <tr><td colspan="2"><font face="arial" size="-1">Lost? Try one of our handy <a href="https://help.virtualdream.live/">help</a> pages.</font><td></tr>
     </tbody>
 </table>
 <hr size="1" width="500">
