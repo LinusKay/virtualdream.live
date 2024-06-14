@@ -35,6 +35,9 @@
     </div>
     <div id="results">
         <?php
+        if(strtolower($search) != 'malpals') {
+            echo '<p>Did you mean <a id="suggestion" href="?s=malpals">malpals</a>?</p>';
+        }
         if($search == NULL) {
             echo "<p><strong>Bingo found 0 results</strong></p>";
         }

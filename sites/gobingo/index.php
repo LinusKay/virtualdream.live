@@ -36,7 +36,6 @@
             
     <div class="advertisement-banner"></div>
     <div class="advertisement-banner"></div>
-
     <div class="advertisement-card"></div>
 
     
