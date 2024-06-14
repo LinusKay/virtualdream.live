@@ -16,7 +16,7 @@
     </head>
     <body>
         <?php 
-            require('../../src/include/placeholder/placeholder.php');
+            include('../../src/include/placeholder/placeholder.php');
         ?>
     </body> 
 </html>

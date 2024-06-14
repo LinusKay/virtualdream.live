@@ -19,5 +19,5 @@
     </tbody>
 </table>
 <hr size="1" width="500">
-<font face="verdana" size="-2">Copyright © 2007 <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
+<font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
 </center>

@@ -16,7 +16,7 @@
     </head>
     <body>
         <?php 
-            include('../../src/include/offline/offline.php');
+            include('../../src/include/nothing/nothing.php');
         ?>
     </body> 
 </html>
