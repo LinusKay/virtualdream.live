@@ -72,7 +72,8 @@ function screensaverBounceRandom() {
         height: "100vh",
         top: "0",
         left: "0",
-        zIndex: 99
+        zIndex: 99,
+        opacity:0
     });
     blackScreen.dataset.screenSaver = true;
     document.body.appendChild(blackScreen);
@@ -87,13 +88,17 @@ function screensaverBounceRandom() {
     const bouncingElement = document.createElement('img');
     bouncingElement.src = chosenImage;
     Object.assign(bouncingElement.style, {
-        height: "200px",
+        height: "150px",
         position: "fixed",
-        zIndex: 100
+        zIndex: 100,
+        opacity:0
     });
     bouncingElement.dataset.screenSaver = true;
     document.body.appendChild(bouncingElement);
     animationBounce(bouncingElement);
+
+    fadeIn(blackScreen, 1000);
+    fadeIn(bouncingElement, 1000);
 }
 
 /**
@@ -107,7 +112,7 @@ function animationBounce(element) {
     let y = Math.random() * window.innerHeight;
     let dirX = (Math.random() < 0.5) ? 1 : -1; // Random initial direction
     let dirY = (Math.random() < 0.5) ? 1 : -1;
-    const speed = 2;
+    const speed = 1;
 
     const elementWidth = element.clientWidth;
     const elementHeight = element.clientHeight;
@@ -130,4 +135,25 @@ function animationBounce(element) {
     }
 
     window.requestAnimationFrame(move);
+}
+
+ /**
+ * Fades in an element by gradually increasing its opacity.
+ *
+ * @param {HTMLElement} element - The element to fade in.
+ * @param {number} duration - The duration of the fade-in effect in milliseconds.
+ */
+function fadeIn(element, duration) {
+    let opacity = 0;
+    const interval = 50; 
+    const increment = interval / duration;
+
+    const fade = setInterval(() => {
+        opacity += increment;
+        if (opacity >= 1) {
+            opacity = 1;
+            clearInterval(fade);
+        }
+        element.style.opacity = opacity;
+    }, interval);
 }

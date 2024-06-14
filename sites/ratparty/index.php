@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background: url('src/img/balloons_tile-export.png');background-repeat: repeat;font-family:cursive;color:red;text-decoration:underline;">
+<html lang="en" style="background: url('src/img/balloons_tile-export.png');background-size:80px; background-repeat: repeat;color:red;text-decoration:underline;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
