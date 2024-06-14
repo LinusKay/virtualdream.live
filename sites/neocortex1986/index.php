@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php 
         # PAGE SETUP
-        $pageTitle = "test";
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
@@ -16,7 +15,7 @@
     </head>
     <body>
         <?php 
-            include('../../src/include/nothing/nothing.php');
+            include('../../src/include/placeholder/placeholder.php');
         ?>
     </body> 
 </html>

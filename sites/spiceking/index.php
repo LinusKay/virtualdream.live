@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php 
         # PAGE SETUP
-        $pageTitle = "test";
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
