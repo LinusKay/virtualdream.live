@@ -45,7 +45,7 @@ foreach ($siteToWebrings as $site => $webrings) {
         // Read existing content from index.php
         $content = '';
         if (!file_exists($indexFile)) {
-            $content = "<html><head><title>$webring Webring</title></head><body><a href='../'>More Webrings</a><h1>$webring Webring</h1><ul>";
+            $content = "<html><head><link rel='stylesheet' href='webrings.css'><title>$webring Webring</title></head><body><a href='../'>More Webrings</a><h1>$webring Webring</h1><ul>";
         } else {
             $content = file_get_contents($indexFile);
         }

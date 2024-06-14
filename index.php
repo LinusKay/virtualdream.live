@@ -106,5 +106,6 @@
     </table>
     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
     <!-- <p><a href="index/disclaimer.php">Disclaimer</a></p> -->
+    <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
 </body>
 </html>

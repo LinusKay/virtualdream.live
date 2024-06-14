@@ -14,6 +14,7 @@
             text-align:center;
             width:800px;
             margin:auto;
+            font-family:Arial, Helvetica, sans-serif;
         }
         .stickercontainer {
             width:150px;
@@ -67,6 +68,8 @@
             ?>
         </table>
         <button id="clearAll">Clear Stickers</button>
+        <br>
+        <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
     </body>
     <script>
 

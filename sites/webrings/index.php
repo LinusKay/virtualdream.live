@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="webrings.css">
 </head>
 <body>
+    <center>
+    <p>Webrings help bring sites with similar content together. Here are all of Virtual Dream's official webrings!</p>
+    <p>If you would like to request to create or join an official webring please <a href="mailto:webmaster@virtualdream.live">send an email</a></p>
     <?php 
         include('webringsetup.php');
         $webringSites = [];
@@ -50,7 +54,10 @@
                 echo "<li><a href='$siteUrl'>$site</a></li>";
             }
             echo "</ul>";
+            echo "<hr size='1'>";
         }
     ?>
+    <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
+    </center>
 </body>
 </html>
