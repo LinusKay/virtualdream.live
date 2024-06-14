@@ -70,7 +70,8 @@
             'advertising', 
             'earnvirtubucks', 
             'webrings',
-            'zambonisimulator'
+            'zambonisimulator',
+            'rand'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
