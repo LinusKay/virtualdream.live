@@ -13,6 +13,10 @@
             body {
                 width:800px;
                 margin:auto;
+                background:black;
+                color:white;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height:20px;
             }
             td {
                 text-align:center;
@@ -29,15 +33,39 @@
             .email {
                 text-align: left;
             }
+            a {
+                color:purple;
+                text-decoration: none;
+                font-weight: bolder;
+            }
         </style>
     </head>
     <body>
         <center>
-        <h3>The Leader's Tech Blog</h3>
+        <table width="800">
+            <tbody>
+                <tr>
+                    <td><img src="src/img/skull121.gif"></td>
+                    <td><h1>The One Leader's Tech Blog</h1></td>
+                    <td><img src="src/img/skull121.gif"></td>
+                </tr>
+            </tbody>
+        </table>
+        
         <p>Greetings, Netizens. You have arrived at The One Leader's blog. Take your god damn shoes off inside.</p>
         <p>I review all things tech, mostly in the Virtual Dream sphere. I have been into computers since before you were probably alive, and I probably don't give a shit what your opinion is on them.</p>
         <p><a href="guestbook.php">Click here</a> to view my guestbook</p>
-        <h2>Reviews</h2>
+        <table width="800">
+            <tbody>
+                <tr>
+                    <td width="200px"><img src="src/img/FBI.png" style="width:200px;"></td>
+                    <td width="200px"><img src="src/img/FBI.png" style="width:200px;"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Virtual Dream Reviews</h2>
+        <hr>
         <table width="800">
             <tbody>
                 <tr>
@@ -69,7 +97,28 @@
                 </tr>
             </tbody>
         </table>
+        <h2>Technology Reviews</h2>
+        <hr>
+        <table width="800">
+            <tbody>
+                <tr>
+                    <td width="400">
+                        <h3>ConnectTon A3</h3>
+                        <p>Horrible piece of computing technology. Like all ConnectTons, heats up insanely high and falters easily. Will be recommending to my enemies and anyone looking to burn down a house.</p>
+                        <p><img class="inline-img" src="src/img/rom.gif"> 1 out of 5</p>
+                        <p class="review-quote">Purchase and put fire rescue on speed dial.</p>
+                    </td>
+                    <td width="400">
+                        <h3>ClimaxTech Netizen</h3>
+                        <p>Decent little computer with some pretty average specs. Would recommend to anyone on an especially tight budget that doesn't need a real machine with proper computing power.</p>
+                        <p><img class="inline-img" src="src/img/rom.gif"> 3 out of 5</p>
+                        <p class="review-quote">Better than nothing.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <h2>Email Shame Wall</h2>
+        <hr>
         <p>Those who send me stupid shit get put on the shame wall. My email address is not currently public.</p>
         <table width="800">
             <tbody>
@@ -88,6 +137,15 @@
                         <p><b>Subject</b>: W@nk W@nk W@nk W@nk W@nk</p>
                         <p><i>[I've redacted the contents of this email.]</i></p>
                         <p>Inane. Very childish. I've blocked your email address, punk. Stay out of my fucking inbox.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="email">
+                        <hr>
+                        <p><b>From</b>: designpro456@*****.com</p>
+                        <p><b>Subject</b>: Clarification on your review of the ConnectTon A3 laptop</p>
+                        <p><i>Hi, One Leader, I hope you're doing well.<br> I read your detailed review of the ConnectTon laptop and noticed you mentioned some heating issues during gaming sessions. I wanted to point out that this is actually only relevant to ConnectTon laptops up to A1, and has not been an issue in newer models such as the A3. I've read through their benchmarks and recently purchases an A3 myself and have not experienced any of the issues you mentioned in your review. Not sure if you received a faulty device or are being intentionally disingenous, but you may want to give it another go. <br>Best Regards, Brian</i></p>
+                        <p>Firstly, if you're not happy with my reviews there are plenty of other tech sites out there that are <i>HAPPY</i> to pander to the imbecilic market of users who would go anywhere near a ConnectTon device to begin with. Secondly, I'm not even going to grace the bulk of your comments with a proper response, as everyone is aware that these devices are garbage and would be better suited in beating dull-minded tech consumers like yourself over the brain, if they weren't liable to shatter at the slightest touch. I will not be changing my review. In fact, I have removed it entirely (OF MY OWN VOLUTION) to avoid any of your ilk wandering in here like lost little babies. Have a horrible Christmas.</p>
                     </td>
                 </tr>
                 <tr>
