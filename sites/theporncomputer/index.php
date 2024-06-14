@@ -18,14 +18,14 @@
         #wrap {
             max-width:550px;
             margin:auto;
-            font-size:18px;
+            font-size:13px;
             text-align: center;
             border: dashed 1px white;
             padding:15px;
             background-color:#0069b3;
         }
         .photo {
-            width:100%;
+            width:70%;
             display:block;
             margin:auto;
         }
@@ -59,7 +59,7 @@
             height:5px;
         }
         p{
-            margin:20px 0;
+            margin:10px 0;
         }
 
     </style>
