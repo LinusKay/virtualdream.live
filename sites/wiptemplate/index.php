@@ -16,7 +16,7 @@
     </head>
     <body>
         <?php 
-            require('../../src/include/offline/offline.php');
+            require('../../src/include/placeholder/placeholder.php');
         ?>
     </body> 
 </html>
