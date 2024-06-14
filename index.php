@@ -18,6 +18,12 @@
     ?>
     <title>Virtual Dream</title>
     <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:13px;
+            width:800px;
+            margin:auto;
+        }
         tr {
             margin:auto;
         }
@@ -28,9 +34,23 @@
             width:15px;
             margin:0 5px;
         }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration:underline;
+        }
+        li {
+            list-style-type: none;
+        }
+        ul {
+            padding:0;
+        }
     </style>
 </head>
 <body>
+    <center>
     <h1>Virtual Dream</h1>
     <p>Welcome home, netizen</p>
     <h3><img src="index/aniheart.gif" class="headericon">Popular Sites</h3>
@@ -104,8 +124,9 @@
             ?>
         </tbody>
     </table>
-    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? Email webmaster@virtualdream.live</p>
+    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
     <!-- <p><a href="index/disclaimer.php">Disclaimer</a></p> -->
     <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
+    </center>
 </body>
 </html>

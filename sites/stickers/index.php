@@ -8,7 +8,7 @@
         include('../../src/setup.php');
         # /PAGE SETUP
         ?>
-        <title>Stickers</title>
+        <title>Virtual Dream - Stickers</title>
         <style> 
         body {
             text-align:center;
