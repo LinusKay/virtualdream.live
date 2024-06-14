@@ -45,6 +45,9 @@ foreach ($siteToWebrings as $site => $webrings) {
                 break;
             }
         }
+        if(!str_starts_with($webringImageUrl, "http")) {
+            $webringImageUrl = "../" . $webringImageUrl;
+        }
         
         $webRingDirectory = "./$webring"; 
         $indexFile = $webRingDirectory . "/index.php";
@@ -57,7 +60,7 @@ foreach ($siteToWebrings as $site => $webrings) {
         // Read existing content from index.php
         $content = '';
         if (!file_exists($indexFile)) {
-            $content = "<html><head><link rel='stylesheet' href='../webrings.css'><title>$webring Webring</title></head><body><center><a href='../'>More Webrings</a><h1>$webring Webring</h1><img src='../$webringImageUrl' alt='$webring'><ul>";
+            $content = "<html><head><link rel='stylesheet' href='../webrings.css'><title>$webring Webring</title></head><body><center><a href='../'>More Webrings</a><h1>$webring Webring</h1><img src='$webringImageUrl' alt='$webring'><ul>";
         } else {
             $content = file_get_contents($indexFile);
         }
