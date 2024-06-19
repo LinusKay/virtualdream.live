@@ -48,7 +48,7 @@
                 margin:auto;
             }
         </style>
-        <title>The Leader's Tech Blog</title>
+        <title>Welcome to Virtual Dream!</title>
     </head>
     <body >
     <table width="1920" height="915" style="border:solid 1px black; border-collapse: collapse; position:relative;" cellspacing="0" cellpadding="0">
