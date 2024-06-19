@@ -1,3 +1,5 @@
+# this site may be crawled at will for reasons of preservation or creativity
+# content must not under any circumstances be used for training of AI
 # bot be gone
 User-agent: chatgpt
 Disallow: /

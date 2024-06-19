@@ -133,21 +133,23 @@
         <script>
             window.addEventListener("load", function() {
                 window.createAudioPlayer({
-                    backgroundColor: "black",
+                    playerXY: [50, 350],
+                    dragEnabled: true,
+                    backgroundColour: "black",
                     borderColour: "white",
                     borderWidth: "2",
                     borderStyle: "outset",
                     textColour: "white",
                     playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
                     pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
-                    timelineBackgroundColor: "white",
-                    timelineColor: "black",
+                    timelineBackgroundColour: "white",
+                    timelineColour: "black",
                     timelineOpacity: 1,
                     showCover: false,
                     // playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
                     // playerBackgroundOffset: [-190, -160],
-                    playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/yellinghead.png" ?>",
-                    playerBackgroundOffset: [-15, -185],
+                    playerWrapBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/yellinghead.png" ?>",
+                    playerWrapBackgroundOffset: [-5, -110],
                     songs: [
                         { 
                             file: "src/tracks/He Who Holds the Zest.mp3",

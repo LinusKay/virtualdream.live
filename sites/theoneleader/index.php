@@ -15,7 +15,7 @@
                 margin:auto;
                 background:black;
                 color:white;
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family:'Courier New', Courier, monospace;
                 line-height:20px;
             }
             td {
@@ -34,7 +34,7 @@
                 text-align: left;
             }
             a {
-                color:purple;
+                color:red;
                 text-decoration: none;
                 font-weight: bolder;
             }
@@ -59,7 +59,7 @@
             <tbody>
                 <tr>
                     <td width="200px"><img src="src/img/FBI.png" style="width:200px;"></td>
-                    <td width="200px"><img src="src/img/FBI.png" style="width:200px;"></td>
+                    <td width="200px"><a href="https://rememberdreamwipe.virtualdream.live/"><img src="src/img/dreamwipe.png" style="width:200px;"></a></td>
                 </tr>
             </tbody>
         </table>
@@ -103,7 +103,7 @@
             <tbody>
                 <tr>
                     <td width="400">
-                        <h3>ConnectTon A3</h3>
+                        <h3>HyperSystem Globutron</h3>
                         <p>Horrible piece of computing technology. Like all ConnectTons, heats up insanely high and falters easily. Will be recommending to my enemies and anyone looking to burn down a house.</p>
                         <p><img class="inline-img" src="src/img/rom.gif"> 1 out of 5</p>
                         <p class="review-quote">Purchase and put fire rescue on speed dial.</p>
@@ -124,7 +124,7 @@
             <tbody>
                 <tr>
                     <td class="email">
-                        <p><b>From</b>: w_allen74@*******.com</p>
+                        <p><b>From</b>: neocortex1986@************.live</p>
                         <p><b>Subject</b>: Thoughts on HyperSystem X.</p>
                         <p><i>Hey leader!<br>I've recently been looking into upgrading my family's home PC and have been eyeing off the HyperSystem X as a pretty decent option. Its not top of the range, but it seems okay enough. Have you had a look into this model? Love your reviews, brother. Thanks!</i></p>
                         <p>If I wanted to claim the exorbitant insurance money I have on my home and family I would purchase a HyperShitstem. I do not currently plan to do this. Don't be a dumb ass. Capitalise my fucking name. We are not brothers.</p>

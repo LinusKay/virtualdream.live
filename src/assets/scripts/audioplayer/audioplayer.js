@@ -3,57 +3,91 @@ let songIndex = 0;
 /**
  * Function to create the audio player with custom styles.
  * @param {object} options - Configuration options for the audio player.
- * @param {string} options.playerBackground - URL of the player background image.
- * @param {number[]} options.playerBackgroundOffset - Offset coordinates [x, y] for the player background image.
- * @param {string} options.backgroundColor - Background color of the player container.
+ * @param {string} options.playerWrapBackground - URL of the player background image.
+ * @param {number[]} options.playerWrapBackgroundOffset - Offset coordinates [x, y] for the player background image.
+ * @param {string} options.backgroundColour - Background color of the player container.
  * @param {string} options.borderColour - Border color of the player container.
  * @param {number} options.borderWidth - Border width of the player container.
  * @param {string} options.borderStyle - Border style of the player container.
  * @param {string} options.playIcon - URL of the play icon image.
  * @param {string} options.pauseIcon - URL of the pause icon image.
- * @param {string} options.timelineBackgroundColor - Background color of the timeline container.
- * @param {string} options.timelineColor - Color of the timeline indicator.
+ * @param {string} options.timelineBackgroundColour - Background color of the timeline container.
+ * @param {string} options.timelineColour - Colour of the timeline indicator.
  * @param {number} options.timelineOpacity - Opacity of the timeline container.
  * @param {boolean} options.showCover - Whether to show the cover image.
  * @param {object[]} options.songs - Array of song objects with `file`, `cover`, `title`, and `artist` properties.
  * @param {string} options.textColour - Text color of the player.
+ * @param {boolean} options.dragEnabled - If player is draggable.
  */
 function createAudioPlayer(options) {
-    const { playerBackground, playerBackgroundOffset, backgroundColor, borderColour, borderWidth, borderStyle, playIcon, pauseIcon, timelineBackgroundColor, timelineColor, timelineOpacity, showCover, songs, textColour } = options;
+    const { 
+        playerOrigin = ["bottom", "left"], 
+        playerXY, 
+        playerWidth = 250, 
+        playerHeight = 75, 
+        playerWrapBackground, 
+        playerWrapBackgroundOffset, 
+        backgroundColour, 
+        backgroundImage, 
+        borderColour, 
+        borderWidth, 
+        borderStyle,
+        borderRadius,
+        playIcon, 
+        pauseIcon, 
+        timelineBackgroundColour, 
+        timelineColour, 
+        timelineOpacity, 
+        showCover, 
+        songs, 
+        textColour, 
+        dragEnabled 
+    } = options;
 
     // Create player wrapper
     const playerWrap = document.createElement("div");
-    playerWrap.style.position = "fixed";
-    playerWrap.style.color = textColour;
+    const playerX = playerXY[0];
+    const playerY = playerXY[1];
+    const playerOriginX = playerOrigin[1];
+    const playerOriginY = playerOrigin[0];
+    playerWrap.style = `
+        position: fixed;
+        color: ${textColour};
+        ${playerOriginX}: ${playerX}px;
+        ${playerOriginY}: ${playerY}px;
+    `
     document.body.appendChild(playerWrap);
 
     // Create player container
     const playerContainer = document.createElement("div");
     playerContainer.style = `
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 250px;
-        height: 75px;
+        width: ${playerWidth}px;
+        height: ${playerHeight}px;
         border: ${borderWidth}px ${borderStyle} ${borderColour};
-        background: ${backgroundColor};
+        border-radius: ${borderRadius}px;
+        background: ${backgroundColour};
+        background-image: url('${backgroundImage}');
+        background-size: cover;
         box-sizing: border-box;
         z-index: 2;
     `;
     playerWrap.appendChild(playerContainer);
 
     // Add player background image if provided
-    if (playerBackground) {
-        const playerBackgroundElement = document.createElement("img");
-        playerBackgroundElement.src = playerBackground;
-        playerBackgroundElement.style = `
+    if (playerWrapBackground) {
+        const playerWrapBackgroundElement = document.createElement("img");
+        playerWrapBackgroundElement.src = playerWrapBackground;
+        const playerWrapBackgroundLeft = playerWrapBackgroundOffset[0];
+        const playerWrapBackgroundTop = playerWrapBackgroundOffset[1];
+        playerWrapBackgroundElement.style = `
             position: absolute;
-            left: ${playerBackgroundOffset[0]}px;
-            top: ${playerBackgroundOffset[1]}px;
+            left:${playerWrapBackgroundLeft}px;
+            top: ${playerWrapBackgroundTop}px;
             z-index: 1;
         `;
-        playerBackgroundElement.addEventListener("dragstart", event => event.preventDefault());
-        playerWrap.appendChild(playerBackgroundElement);
+        playerWrapBackgroundElement.addEventListener("dragstart", event => event.preventDefault());
+        playerWrap.appendChild(playerWrapBackgroundElement);
     }
 
     // Create audio element
@@ -149,14 +183,15 @@ function createAudioPlayer(options) {
 
     // Create timeline container
     const timelineContainer = document.createElement("div");
+    const timelineWidth = playerWidth - 90;
     timelineContainer.style = `
         position: absolute;
         bottom: 10px;
         left: 70px;
-        width: 160px;
+        width: ${timelineWidth}px;
         cursor: pointer;
         opacity: ${timelineOpacity};
-        background-color: ${timelineBackgroundColor};
+        background-color: ${timelineBackgroundColour};
     `;
     playerContainer.appendChild(timelineContainer);
 
@@ -165,7 +200,7 @@ function createAudioPlayer(options) {
     timeline.style = `
         width: 0;
         height: 10px;
-        background-color: ${timelineColor};
+        background-color: ${timelineColour};
         position: relative;
         bottom: 0;
     `;
@@ -216,36 +251,38 @@ function createAudioPlayer(options) {
         updateTimeline();
     });
 
-    // Drag and drop functionality for the player
-    let isDragging = false;
-    let offsetX, offsetY;
+    if(dragEnabled) {
+        // Drag and drop functionality for the player
+        let isDragging = false;
+        let offsetX, offsetY;
 
-    playerWrap.addEventListener("mousedown", event => {
-        isDragging = true;
-        offsetX = event.clientX - playerWrap.getBoundingClientRect().left;
-        offsetY = event.clientY - playerWrap.getBoundingClientRect().top;
-    });
+        playerWrap.addEventListener("mousedown", event => {
+            isDragging = true;
+            offsetX = event.clientX - playerWrap.getBoundingClientRect().left;
+            offsetY = event.clientY - playerWrap.getBoundingClientRect().top;
+        });
 
-    document.addEventListener("mousemove", event => {
-        if (isDragging) {
-            let newX = event.clientX - offsetX;
-            let newY = event.clientY - offsetY;
+        document.addEventListener("mousemove", event => {
+            if (isDragging) {
+                let newX = event.clientX - offsetX;
+                let newY = event.clientY - offsetY;
 
-            // Check boundaries
-            const maxX = window.innerWidth - playerWrap.offsetWidth;
-            const maxY = window.innerHeight - playerWrap.offsetHeight;
-            newX = Math.min(Math.max(0, newX), maxX);
-            newY = Math.min(Math.max(0, newY), maxY);
+                // Check boundaries
+                const maxX = window.innerWidth - playerWrap.offsetWidth;
+                const maxY = window.innerHeight - playerWrap.offsetHeight;
+                newX = Math.min(Math.max(0, newX), maxX);
+                newY = Math.min(Math.max(0, newY), maxY);
 
-            // Apply new position
-            playerWrap.style.left = `${newX}px`;
-            playerWrap.style.top = `${newY}px`;
-        }
-    });
+                // Apply new position
+                playerWrap.style.left = `${newX}px`;
+                playerWrap.style.top = `${newY}px`;
+            }
+        });
 
-    document.addEventListener("mouseup", () => {
-        isDragging = false;
-    });
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+        });
+    }
 }
 
 window.createAudioPlayer = createAudioPlayer;
