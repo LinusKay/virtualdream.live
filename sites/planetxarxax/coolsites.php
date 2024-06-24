@@ -31,6 +31,7 @@
                         <ul>
                             <li><font size="2"><a href="https://colordreamhyperforce.virtualdream.live">Hyper Dream Color Force</a> - These guys love Planet Xarxax almost as much as me!</font></li>
                             <li><font size="2"><a href="https://contemplationrock.virtualdream.live">Contemplation Rock</a> - Simple, silly, but honestly really relaxing</font></li>
+                            <li><font size="2"><a href="https://downloadmania.virtualdream.live">Download Mania</a> - I got a bunch of Xarxax seasons off here (hard to find!!)</font></li>
                         </ul>
                         <center>
                             <p><font size="2"><b>Advertisement</b></font></p>
