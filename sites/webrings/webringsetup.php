@@ -30,7 +30,8 @@ $siteToWebrings = [
     "malpals" => ["tech"],
     "malwarecleaner" => ["tech"],
     "contemplationrock" => ["mindpalace"],
-    "theoneleader" => ["tech"]
+    "theoneleader" => ["tech"],
+    "downloadmania" => ["tech"]
 ];
 
 foreach ($siteToWebrings as $site => $webrings) {

@@ -36,11 +36,17 @@
 </head>
 <body>
     <?php 
+    if(isset($_COOKIE['downloads'])) {
+        $downloads = $_COOKIE['downloads'];
+    }
+    else { $downloads = 0; }
+    setcookie( "downloads", $downloads + 1, time() + (86400 * 30)); 
+
     if(isset($_GET['file'])) { $file = "<b>" . $_GET['file'] . "</b>"; } else { $file = "your file"; }
     ?>
     <center>
     <img src="src/img/bannergridcroptext.png">
-    <p>GET YOUR LOAD ON</p>
+    <p>GET YOUR LOAD ON - LET SOFTWARE BE FREE</p>
     <h3>THANK YOU FOR VISITING</h3>
     <table width="600">
         <tbody>
@@ -48,6 +54,9 @@
                 <td align="center">
                     Thank you for downloading <?php echo $file; ?>! Your download should begin soon.
                 </td>
+            </tr>
+            <tr>
+                <td align="center">-- <a href="index.php">Back</a> --</td>
             </tr>
         </tbody>
     </table>
