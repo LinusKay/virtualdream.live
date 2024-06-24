@@ -47,6 +47,9 @@
         ul {
             padding:0;
         }
+        #officialsites li {
+            display:inline;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +94,8 @@
             'earnvirtubucks', 
             'webrings',
             'zambonisimulator',
-            'rand'
+            'rand',
+            'planetxarxax'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
@@ -124,6 +128,16 @@
             ?>
         </tbody>
     </table>
+    <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
+    <ul id="officialsites">
+        <li><a href="https://help.virtualdream.live/">help</a></li>
+        |
+        <li><a href="https://status.virtualdream.live/">status</a></li>
+        |
+        <li><a href="https://stickers.virtualdream.live/">stickers</a></li>
+        |
+        <li><a href="https://webrings.virtualdream.live/">webrings</a></li>
+    </ul>
     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
     <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
     </center>

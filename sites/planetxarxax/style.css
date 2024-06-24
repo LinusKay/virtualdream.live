@@ -1,0 +1,14 @@
+body {
+    font-family: Verdana, Arial, helvetica;
+}
+a {
+    color: #3366ff;
+    text-decoration:none;
+    font-weight:bold;
+}
+a:hover{
+    text-decoration: underline;
+}
+.advertisement-banner {
+    margin:20px;
+}
