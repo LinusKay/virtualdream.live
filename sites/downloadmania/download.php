@@ -56,7 +56,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center">-- <a href="index.php">Back</a> --</td>
+            <td align="center"><b>-- <a href="index.php">Back</a> --</b></td>
             </tr>
         </tbody>
     </table>
