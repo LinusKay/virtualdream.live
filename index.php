@@ -127,7 +127,8 @@
             'neocortex1986',
             'rememberdreamwipe',
             'spiceking',
-            'theoneleader'
+            'theoneleader',
+            'downloadmania'
         ];
         $isNewSite = false;
     ?>
