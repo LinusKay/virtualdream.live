@@ -50,6 +50,15 @@
         #officialsites li {
             display:inline;
         }
+        .newsite {
+            font-size:10px;
+            background:red;
+            padding:2px 4px;
+            border-radius: 25px;
+            margin: 2px;
+            color:white;
+            font-weight:bold;
+        }
     </style>
 </head>
 <body>
@@ -94,7 +103,12 @@
             'earnvirtubucks', 
             'webrings',
             'zambonisimulator',
-            'rand'
+            'rand',
+            'help',
+            'status',
+            'test',
+            'winbigcasinosweepstakes-bg9yzw0taxbzdw0',
+            'stickers'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
@@ -105,6 +119,17 @@
         $colcount = 4;
         $rowcount = ceil($sitecount/4);
         $index = 0;
+
+        $newSites = [
+            'planetxarxax',
+            'armourofgod',
+            'colordreamhyperforce',
+            'neocortex1986',
+            'rememberdreamwipe',
+            'spiceking',
+            'theoneleader'
+        ];
+        $isNewSite = false;
     ?>
     <table>
         <tbody>
@@ -114,12 +139,29 @@
                 for($cell=0;$cell<4 && $index < $sitecount;$cell++) {
                     $siteurl = $sites[$index];
                     $sitename = str_replace("./sites/", "", $siteurl);
+
+                    # check if new site
+                    if(in_array($sitename, $newSites)) {
+                        $isNewSite = true;
+                    }
+
                     if ($environment == 'local') {
-                        echo "<td><a href=\"sites/$sitename\">$sitename</a></td>";
+                        if($isNewSite) {
+                            echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
+                        }
+                        else {
+                            echo "<td><a href=\"sites/$sitename\">$sitename</a></td>";
+                        }
                     }
                     else {
-                        echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
+                        if($isNewSite) {
+                            echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a><span class='newsite'>New!</span></td>";
+                        }
+                        else {
+                            echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
+                        }
                     }
+                    $isNewSite = false;
                     $index++;
                 }
                 echo "</tr>";
