@@ -97,12 +97,16 @@
                     <ul id="dl-popular">
                         <li><span class="dl-title"><a href="download.php?file=Xarxax_VII_(Season_17)_[ES].zip">Xarxax_VII_(Season_17)_[ES]</a></span> - (ZIP) 35.1KB</li>
                         <li><span class="dl-title"><a href="download.php?file=VirusV1.3_RENAMEBEFOREUPLOAD.exe">MicroMedia Splash Player</a></span> - (ZIP) 97KB</li>
+                        <li><span class="dl-title"><a href="download.php?file=UltimateMedia_Player.exe">UltimateMedia_Player</a></span> - (EXE) 12MB</li>
+                        <li><span class="dl-title"><a href="download.php?file=WomanParadiseExtreme1.exe">Woman-Paradise-Extreme-2</a></span> - (ZIP) 9MB</li>
                     </ul>
                 </td>
                 <td width="300">
                     <ul id="dl-popular">
                     <li><span class="dl-title"><a href="download.php?file=DesktopFriendInstallerRU.exe">DesktopBuddy_Web</a></span> - (EXE) 23KB</li>
                     <li><span class="dl-title"><a href="download.php?file=Programming_for_dummies.pdf">Programming_for_dummies.PDF</a></span> - (PDF) 7KB</li>
+                    <li><span class="dl-title"><a href="download.php?file=VirtualPet_Paradise.zip">VirtualPet_Paradise</a></span> - (ZIP) 800KB</li>
+                    <li><span class="dl-title"><a href="download.php?file=InfiniteRunner_Extreme.exe">InfiniteRunner_Extreme</a></span> - (EXE) 28MB</li>
                     </ul>
                 </td>
             </tr>
@@ -131,7 +135,7 @@
     </div>
     <p>DANGER! DANGER! WE HAVE NOT YET HIT THE UPLOAD/DOWNLOAD GOAL<br>
     IF WE DO NOT GET ENOUGH UPLOADS/DOWNLOADS THIS BOMB GOES OFF AND KILLS 17 ELDERLY<br>
-    THIS IS IN YOUR HANDS</p>
+    WE DIDN'T DO THIS. THIS IS IN YOUR HANDS</p>
     <img id="bomb" src="src/img/dynamite_bomb_md_clr.gif" alt="dynamite bomb">
     <P>DO YOUR PART TODAY!</P>
     <img class="heading" src="src/img/uploadload.png" alt="upload a load">

@@ -52,6 +52,7 @@
         <tbody>
             <tr>
                 <td align="center">
+                    <img src="src/img/download.gif" alt="download"><br>
                     Thank you for downloading <?php echo $file; ?>! Your download should begin soon.
                 </td>
             </tr>
