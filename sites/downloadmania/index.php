@@ -42,17 +42,19 @@
             border:solid 1px gray;
             border-radius:2px;
             overflow:hidden;
+            position:relative;
         }
         #downloadbarfill {
             height:20px;
-            width:150px;
             background:#11cccc;
             float:left;
             border-radius:5px;
             margin-left: -5px;
         }
         #downloadbarpercent {
-            float:right;
+            position:absolute;
+            top:0;
+            right:0;
             margin-right:10px;
             font-family: Arial, Helvetica, sans-serif;
             font-size:10px;
@@ -114,7 +116,6 @@
     </table>
     <img class="heading" src="src/img/dailyloadbomb.png" alt="daily load bomb">
     <div id="downloadbarwrap">
-        <div id="downloadbarfill"></div>
         <?php 
             if(isset($_COOKIE['uploads'])) {
                 $uploads = $_COOKIE['uploads'];
@@ -130,14 +131,26 @@
             }
             $uploadBaseline = 37.5;
             $uploadTotal = $uploadBaseline + $uploads + $downloads;
+
+            $barWidthTotal = 400;
+            $barWidthCurrent = $uploadTotal/100 * $barWidthTotal;
         ?>
+        <div id="downloadbarfill" style="width: <?php echo $barWidthCurrent;?>px"></div>
         <span id="downloadbarpercent"><?php echo $uploadTotal; ?>%</span>
     </div>
-    <p>DANGER! DANGER! WE HAVE NOT YET HIT THE UPLOAD/DOWNLOAD GOAL<br>
+    <?php 
+    if($uploadTotal < 100) {
+        echo '<p>DANGER! DANGER! WE HAVE NOT YET HIT THE UPLOAD/DOWNLOAD GOAL<br>
     IF WE DO NOT GET ENOUGH UPLOADS/DOWNLOADS THIS BOMB GOES OFF AND KILLS 17 ELDERLY<br>
-    WE DIDN'T DO THIS. THIS IS IN YOUR HANDS</p>
+    WE DIDN\'T DO THIS. THIS IS IN YOUR HANDS</p>
     <img id="bomb" src="src/img/dynamite_bomb_md_clr.gif" alt="dynamite bomb">
-    <P>DO YOUR PART TODAY!</P>
+    <P>DO YOUR PART TODAY!</P>';
+    }
+    else {
+        echo '<p>PHEW!<BR>DAILY UPLOAD/DOWNLOAD GOAL REACHED! <BR>THE OFFICE WILL NOW HAVE A PARTY ON YOUR BEHALF. <BR>THANK YOU.</p>';
+    }
+    ?>
+    
     <img class="heading" src="src/img/uploadload.png" alt="upload a load">
     <form action="upload.php">
         <label for="uploadfile">Choose a file to upload:</label>
