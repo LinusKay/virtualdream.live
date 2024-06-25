@@ -42,7 +42,7 @@
     else { $uploads = 0; }
     setcookie( "uploads", $uploads + 1, time() + (86400 * 30));  
 
-    if(isset($_GET['uploadfile'])) { $file = "<b>" . $_GET['uploadfile'] . "</b>"; } else { $file = "your file"; }
+    if(isset($_GET['uploadfile'])) { $file = "<b>" . htmlspecialchars($_GET['uploadfile'], ENT_QUOTES) . "</b>"; } else { $file = "your file"; }
     ?>
     <center>
     <img src="src/img/bannergridcroptext.png">
