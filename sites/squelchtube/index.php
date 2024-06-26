@@ -239,7 +239,7 @@
                         <div class="vid-thumb"><img src="src/img/thumb/thumb14_small.jpg"><p class="vid-time">36:40</p></div>
                         <p class="vid-title">GONE 2 JAIL (FUNDRAISER) + GIVEAWAY!!</p>
                         <p class="vid-uploader">KingSquelch</p>
-                        <p class="vid-stats">193,239 Views - 1 days</p>
+                        <p class="vid-stats">193,239 Views - 1 day</p>
                     </td>
                     <td class="vid-container">
                         <div class="vid-thumb"><img src="src/img/thumb/thumb19_small.jpg"><p class="vid-time">22:31</p></div>
@@ -251,7 +251,7 @@
                         <div class="vid-thumb"><img src="src/img/thumb/thumb16_small.jpg"><p class="vid-time">0:07</p></div>
                         <p class="vid-title">Man bitby dawg (yeowch)</p>
                         <p class="vid-uploader">holeymoleygwocamoly</p>
-                        <p class="vid-stats">124 Views - 1 year</p>
+                        <p class="vid-stats">124,034,829 Views - 1 year</p>
                     </td>
                 </tr>
             </tbody>
