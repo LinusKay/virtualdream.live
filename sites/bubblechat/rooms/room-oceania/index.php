@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BubbleChat: ~oceania~</title>
+    <?php 
+    # PAGE SETUP
+    include('../../src/setup.php');
+    # /PAGE SETUP
+    ?>
     <style>
         * {
             margin:0;
