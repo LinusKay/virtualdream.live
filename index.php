@@ -128,7 +128,8 @@
             'rememberdreamwipe',
             'spiceking',
             'theoneleader',
-            'downloadmania'
+            'downloadmania',
+            'bubblechat'
         ];
         $isNewSite = false;
     ?>
