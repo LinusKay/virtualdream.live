@@ -6,7 +6,7 @@
     <title>BubbleChat: ~20somethings~</title>
     <?php 
     # PAGE SETUP
-    include('../../src/setup.php');
+    include('../../../../src/setup.php');
     # /PAGE SETUP
     ?>
     <style>
@@ -196,7 +196,7 @@
             <p class="usercount"><span id="usercount">0</span> users online</p>
         </div>
         <div class="wrap-input">
-            <input class="input-message" type="text" value="You must be logged in to chat." disabled>
+            <input class="input-message" type="text" placeholder="You must be logged in to chat." disabled>
             <button class="input-send aero" type="submit" value="Send" onclick="alert('You must be logged in to chat!');">Send</button>
         </div>
     </div>
