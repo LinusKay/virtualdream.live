@@ -116,7 +116,7 @@
                 </tr>
                 <tr>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">3:10</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb21_small.jpg"><p class="vid-time">3:10</p></div>
                         <p class="vid-title">Squelching my neighbour</p>
                         <p class="vid-uploader">arnold47</p>
                         <p class="vid-stats">288,091 Views - 2 days</p>
@@ -176,7 +176,7 @@
                 </tr>
                 <tr>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">4:55</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb22_small.jpg"><p class="vid-time">4:55</p></div>
                         <p class="vid-title">✧˖°. ~Squelch Haul~ ✧˖°. <3</p>
                         <p class="vid-uploader">AllieAllieAllie</p>
                         <p class="vid-stats">55,437 Views - 5 days</p>
@@ -196,7 +196,7 @@
                 </tr>
                 <tr>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">5:12:48</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb20_small.jpg"><p class="vid-time">5:12:48</p></div>
                         <p class="vid-title">Squelch Kingdom (2003), Class Warfare & You</p>
                         <p class="vid-uploader">astronaut219</p>
                         <p class="vid-stats">1,439,589 Views - 6 days</p>
@@ -242,9 +242,9 @@
                         <p class="vid-stats">193,239 Views - 1 days</p>
                     </td>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">22:31</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb19_small.jpg"><p class="vid-time">22:31</p></div>
                         <p class="vid-title">So... THAT Just Happened!!</p>
-                        <p class="vid-uploader">Vin Deezel</p>
+                        <p class="vid-uploader">Veen Deezel</p>
                         <p class="vid-stats">84,392 Views - 3 weeks</p>
                     </td>
                     <td class="vid-container">
