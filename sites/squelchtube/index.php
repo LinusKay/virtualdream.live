@@ -75,7 +75,7 @@
             font-size:13px;
         }
         .footer {
-            width: 770px;
+            width: 750px;
             height:15px;
             background:gray;
             margin-top: 10px;
@@ -92,7 +92,7 @@
 <body>
         <center>
         <h1 class="heading">SquelchTube</h1>
-        <table width="770" cellspacing="0" cellpadding="0" border="0">
+        <table width="750" cellspacing="0" cellpadding="0" border="0">
             <tbody>
                 <tr>
                     <td class="vid-container">
@@ -104,7 +104,7 @@
                     <td class="vid-container">
                         <div class="vid-thumb"><img src="src/img/thumb/thumb4_small.jpg"><p class="vid-time">13:20</p></div>
                         <p class="vid-title">$10,000,000 SQUELCH BOX!!!</p>
-                        <p class="vid-uploader">MegaBongo1999</p>
+                        <p class="vid-uploader">MrEpicStyle - Cool Video</p>
                         <p class="vid-stats">77,732 Views - 1 day</p>
                     </td>
                     <td class="vid-container">
@@ -142,15 +142,15 @@
                         <p class="vid-stats">18,240 Views - 1 day</p>
                     </td>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">5:00</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb17_small.jpg"><p class="vid-time">5:00</p></div>
                         <p class="vid-title">They uncovered what???</p>
                         <p class="vid-uploader">GromlinHater23</p>
                         <p class="vid-stats">2,624 Views - 2 weeks</p>
                     </td>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">16:20</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb4_small.jpg"><p class="vid-time">16:20</p></div>
                         <p class="vid-title">$100 OR MYSTERY SQUELCH BOX</p>
-                        <p class="vid-uploader">KingSquelch</p>
+                        <p class="vid-uploader">MrEpicStyle - Cool Video</p>
                         <p class="vid-stats">842,342 Views - 3 days</p>
                     </td>
                 </tr>
@@ -208,7 +208,7 @@
                         <p class="vid-stats">2,492,935 Views - 3 weeks</p>
                     </td>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">1:00:05</p></div>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb18_small.jpg"><p class="vid-time">1:00:05</p></div>
                         <p class="vid-title">Relaxing Gameplay - Squelch Beats - Study Time - No Talking</p>
                         <p class="vid-uploader">VolcanicMoose - Free Beats</p>
                         <p class="vid-stats">128,394 Views - 1 year</p>
@@ -228,10 +228,10 @@
                         <p class="vid-stats">9,043,299 Views - 2 days</p>
                     </td>
                     <td class="vid-container">
-                        <div class="vid-thumb"><p class="vid-time">0:35</p></div>
-                        <p class="vid-title">Spaghetti Factory - Advertisement</p>
-                        <p class="vid-uploader">Spaghetti Factory</p>
-                        <p class="vid-stats">853 Views - 2 year</p>
+                        <div class="vid-thumb"><img src="src/img/thumb/thumb4_small.jpg"><p class="vid-time">0:35</p></div>
+                        <p class="vid-title">$1 SQUELCH BOX - GIVEAWAY</p>
+                        <p class="vid-uploader">MrEpicStyle - Cool Video</p>
+                        <p class="vid-stats">4,332,523 Views - 2 year</p>
                     </td>
                 </tr>
                 <tr>
