@@ -129,7 +129,8 @@
             'spiceking',
             'theoneleader',
             'downloadmania',
-            'bubblechat'
+            'bubblechat',
+            'squelchtube'
         ];
         $isNewSite = false;
     ?>
