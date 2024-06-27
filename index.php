@@ -108,7 +108,8 @@
             'status',
             'test',
             'winbigcasinosweepstakes-bg9yzw0taxbzdw0',
-            'stickers'
+            'stickers',
+            '404'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);

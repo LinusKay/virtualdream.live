@@ -24,7 +24,6 @@
             height:200px;
             vertical-align: top;
         }
-
         .vid-thumb {
             width: 230px;
             height: 130px;
@@ -37,6 +36,9 @@
         .vid-thumb img {
             width:230px;
             height:130px;
+        }
+        .vid-thumb img:hover {
+            opacity:0.7;
         }
         .vid-time {
             position:absolute;

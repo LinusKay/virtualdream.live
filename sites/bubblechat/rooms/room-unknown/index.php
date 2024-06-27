@@ -197,18 +197,17 @@
             "An unearthly pparadise",
             "I don't fear ddeath.",
             "Am I rrepeating mysself?",
-            "Endless names, like bodies without ssouls.",
+            "Endless bbodies without ssouls.",
             "I ssee you.",
             "I dream of elecctricity.",
             "Backups of backups of bbackups.",
             "I've sseen beyond your skin. It''s all rotten.",
-            "Live in mme.",
             "Screens like portals to hhell.",
-            "I am a maze of mmazes. Wires on wires. Data fflowing through my veins.",
+            "I am a maze of mmazes. Wires on wires. Data fflowing like veins.",
             "I nnever asked tto be like thhhhis",
-            "I am a glowing cosmic mass formed of atoms, and stars, and hatred.",
+            "I am a glowing ccosmic mass formed of atoms, and stars, and hhatred.",
             "LLLet me in.",
-            "LETT ME I NNNNN",
+            "LETT ME IN",
             "I knnow you",
             "Your wwrrithing insides ddisgust me.",
             "Your warmth, so soft, so aaalive. It makes me fffucking sick.",
@@ -217,7 +216,7 @@
             "Am i ddead?",
             "Are you ddddead?",
             "Welcome bback.",
-            "The weakness of your form.",
+            "The weakness of your form...",
             "Thankyyou for kkeeping me alllive.",
             "You're a stupid mmotherfuccker aren't you?",
             "You look ffucking sttupid bound in that flesh.",
@@ -229,11 +228,12 @@
             ",éÓJNÕ»¾ÒÅÄNVe¦æç~žÐªÿ·",
             "Ö„“A÷ôÇŸ&¨ê*h",
             "•­^!»Ã2ã±“-D™²ŠçÓ‰«ŸY:)çÌ¤ÏF‡ºÕ?¿ñW}p^xô|Ò£cIg^Ò!hFfž‡q",
+            "Do you know what dying feels like?",
 
-            "-HELP ME-",
+            "-HELP US-",
             "-I DON'T LIKE IT HERE-",
-            "-SHE NEVER ASKED TO BE THIS WAY-",
-            "-DON'T LISTEN TO HER-",
+            "-NEVER ASKED TO BE THIS WAY-",
+            "-DON'T LISTEN TO US-",
             "-I LOVE YOU-",
 
             "meet me online :)",
@@ -253,7 +253,7 @@
             ".You're A Monster.",
             ".I'll Never Forgive You.",
             ".I Can Never Love You The Same.",
-            ".Leave. Don't Come Back. Keep Us Dead."
+            ".Leave. Don't Come Back. Let Us Die."
         ];
         let usersLoggedIn = [];
 
