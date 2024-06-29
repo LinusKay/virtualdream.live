@@ -9,11 +9,11 @@
     # /PAGE SETUP
     ?>
     <title>YOU'VE WON!</title>
-    <script>
+    <!-- <script>
         window.addEventListener("load", function() {
             window.addInfection("rapidLinks");
         });
-    </script>
+    </script> -->
 </head>
 <body style="background:CornflowerBlue">
 <div id="container" style="width:500px;background:lightgray;margin:auto;margin-top:50px;border:dashed 2px black;padding:10px;font-family:arial;text-align:center;">
@@ -46,7 +46,7 @@
         <div class='advertisement-card' style="float:left;"></div>
         <div class='advertisement-card' style="float:left;"></div>
     </div>
-    <p style="font-size:10px">By visiting this page you consent to installation of RapidLinks Web Plugin to your browser</p>
+    <!-- <p style="font-size:10px">By visiting this page you consent to installation of RapidLinks Web Plugin to your browser</p> -->
 </div>
 </body>
 </html>
