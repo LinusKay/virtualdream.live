@@ -80,8 +80,11 @@ function screensaverBounceRandom() {
 
     const images = [
         "ASSET_DIRECTORY/img/mascots/mascot-pyramid.gif",
-        "ASSET_DIRECTORY/img/dollar.png",
         "ASSET_DIRECTORY/img/heart2.gif",
+        "ASSET_DIRECTORY/img/gitara.gif",
+        "ASSET_DIRECTORY/img/stickers/polyfox2-transparent.gif",
+        "ASSET_DIRECTORY/img/stickers/dragon.gif",
+        "ASSET_DIRECTORY/img/audioplayer/skins/yellinghead.png",
     ]
     const chosenImage = images[Math.floor(Math.random() * images.length)];
 
