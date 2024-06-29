@@ -11,8 +11,7 @@
     <title>DOWNLOAD MANIA - GET YOUR LOAD ON</title>
     <script>
         window.addEventListener("load", function() {
-            window.addInfection("slider");
-            // window.unlockSticker("malPals");
+            window.addInfection("popups");
         });
     </script>
     <style>
