@@ -15,6 +15,9 @@
         ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
         ["gobingo", "GoBingo! Search Engine"]
     ];
+    
+    $sites = glob('./sites/*' , GLOB_ONLYDIR);
+    $siteCount = sizeof( $sites );
     ?>
     <title>Virtual Dream</title>
     <style>
@@ -97,7 +100,6 @@
     </ul>
     <h3><img src="index/book2.gif" class="headericon">Public Directory</h3>
     <?php
-        $sites = glob('./sites/*' , GLOB_ONLYDIR);
         $excludedDirs = [
             'advertising', 
             'earnvirtubucks', 
