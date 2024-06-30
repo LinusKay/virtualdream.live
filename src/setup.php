@@ -103,8 +103,10 @@ if(isset($cursorFollow)) {
 
 // Function to fetch webring data
 function fetchWebringData($site, $webringBaseUrl) {
+    
     $url = "$webringBaseUrl/getwebring.php?site=" . urlencode($site);
     $response = file_get_contents($url);
+    print($response);
     return json_decode($response, true);
 }
 

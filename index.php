@@ -209,7 +209,7 @@
                         ?>
                         
                     </ul>
-                    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
+                    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@<?php echo "$hostProd";?>">Email us</a>!</p>
                     
                 </td>
                 <td width="450" align="right">
@@ -221,7 +221,7 @@
             </tr>
         </tbody>
     </table>
-    <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
+    <font face="verdana" size="-2">Copyright © <a href="<?php echo "https://$hostProd";?>">Virtual Dream</a>. All rights reserved.</font>
     </center>
 </body>
 </html>

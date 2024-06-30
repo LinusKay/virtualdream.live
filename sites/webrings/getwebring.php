@@ -1,5 +1,4 @@
 <?php
-
 include('webringsetup.php');
 
 // Get the site name from the query parameter

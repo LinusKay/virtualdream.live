@@ -1,11 +1,15 @@
 <?php
 
 // Development mode check
-$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
+$environment = $_SERVER['HTTP_HOST'];
+
+$hostLocal = 'localhost';
+$hostProd = 'virtualdream.live';
+$hostDev = 'virtualdream.dev';
 
 // Define base URL for assets based on environment
-$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
-$webringBaseUrl = $environment === 'local' ? '../webrings' : 'https://webrings.virtualdream.live';
+$assetBaseUrl = $environment === $hostLocal ? '../../src/assets' : "https://assets.$environment";
+$webringBaseUrl = $environment === $hostLocal ? "http://$hostLocal/virtualdream.live/sites/webrings" : "https://webrings.$environment";
 
 $webRingPresets = [
     ["test", "$assetBaseUrl/img/webrings/webring-web-bin-export.png", "$webringBaseUrl/test", "placeholder webring!"],
