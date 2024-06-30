@@ -28,7 +28,7 @@ $advertsBaseUrl = $baseDomain === $hostLocal ? '../advertising' : "https://adver
 // Get the current URL
 $currentUrl = "http://$baseDomain$_SERVER[REQUEST_URI]";
 // Extract site name based on environment
-if ($baseDomain === 'local') {
+if ($baseDomain === $hostLocal) {
     // Development environment
     $path = parse_url($currentUrl, PHP_URL_PATH);
     $siteName = '';
