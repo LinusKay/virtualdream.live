@@ -1,6 +1,5 @@
 <?php 
-$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
-$assetBaseUrlStickers = $environment === 'local' ? '../../src/assets/img/stickers' : 'https://assets.virtualdream.live/img/stickers';
+$assetBaseUrlStickers = "$assetBaseUrl/img/stickers";
 
 $stickers = [
     "$assetBaseUrlStickers/polyfox2-transparent.gif",
