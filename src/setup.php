@@ -5,16 +5,23 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Development mode check
-$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
+$environment = $_SERVER['HTTP_HOST'];
+
+$hostLocal = 'localhost';
+$hostProd = 'virtualdream.live';
+$hostDev = 'virtualdream.dev';
 
 // Define base URL for assets based on environment
-echo $_SERVER['HTTP_HOST'];
-$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
-$webringBaseUrl = $environment === 'local' ? 'http://localhost/virtualdream.live/sites/webrings' : 'https://webrings.virtualdream.live';
-$advertsBaseUrl = $environment === 'local' ? '../advertising' : 'https://advertising.virtualdream.live';
+$assetBaseUrl = $environment === $hostLocal ? '../../src/assets' : "https://assets.$environment";
+$webringBaseUrl = $environment === $hostLocal ? "http://$hostLocal/virtualdream.live/sites/webrings" : "https://webrings.$environment";
+$advertsBaseUrl = $environment === $hostLocal ? '../advertising' : "https://advertising.$environment";
+
+echo $assetBaseUrl . '<br>';
+echo $webringBaseUrl . '<br>';
+echo $advertsBaseUrl . '<br>';
 
 // Get the current URL
-$currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$currentUrl = "http://$environment$_SERVER[REQUEST_URI]";
 // Extract site name based on environment
 if ($environment === 'local') {
     // Development environment
@@ -27,7 +34,7 @@ if ($environment === 'local') {
     }
 } else {
     // Production environment
-    $subdomain = explode('.', $_SERVER['HTTP_HOST'])[0];
+    $subdomain = explode('.', $environment )[0];
     $siteName = $subdomain;
 }
 

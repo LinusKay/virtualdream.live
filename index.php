@@ -74,11 +74,11 @@
             foreach($popularSites as $site) {
                 $siteName = $site[0];
                 $siteTagline = $site[1];
-                if ($environment == 'local') {
+                if ($environment == $hostLocal) {
                     echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
                 }
                 else {
-                    echo "<li><a href='https://$siteName.virtualdream.live'>$siteTagline</a></li>";
+                    echo "<li><a href='https://$siteName.$environment'>$siteTagline</a></li>";
                 }
             }
         ?>
@@ -89,11 +89,11 @@
         foreach($sponsoredSites as $site) {
             $siteName = $site[0];
             $siteTagline = $site[1];
-            if ($environment == 'local') {
+            if ($environment == $hostLocal) {
                 echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
             }
             else {
-                echo "<li><a href='https://$siteName.virtualdream.live'>$siteTagline</a></li>";
+                echo "<li><a href='https://$siteName.$environment'>$siteTagline</a></li>";
             }
         }
     ?>
@@ -156,7 +156,7 @@
                         $isNewSite = true;
                     }
 
-                    if ($environment == 'local') {
+                    if ($environment == $hostLocal) {
                         if($isNewSite) {
                             echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
@@ -166,10 +166,10 @@
                     }
                     else {
                         if($isNewSite) {
-                            echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td><a href=\"https://$sitename.$environment\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
+                            echo "<td><a href=\"https://$sitename.$environment\">$sitename</a></td>";
                         }
                     }
                     $isNewSite = false;
@@ -187,13 +187,27 @@
                 <td width="350">
                     <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
                     <ul id="officialsites">
-                        <li><a href="https://help.virtualdream.live/">help</a></li>
-                        |
-                        <li><a href="https://status.virtualdream.live/">status</a></li>
-                        |
-                        <li><a href="https://stickers.virtualdream.live/">stickers</a><span class='newsite'>Hot!</span></li>
-                        |
-                        <li><a href="https://webrings.virtualdream.live/">webrings</a></li>
+                        <?php 
+                        if($environment == $hostLocal) {
+                            echo "<li><a href='sites/help/'>help</a></li>
+                            |
+                            <li><a href='sites/status/'>status</a></li>
+                            |
+                            <li><a href='sites/stickers/'>stickers</a><span class='newsite'>Hot!</span></li>
+                            |
+                            <li><a href='sites/webrings/'>webrings</a></li>";
+                        }
+                        else {
+                            echo "<li><a href='https://help.$environment'>help</a></li>
+                            |
+                            <li><a href='https://status.$environment/'>status</a></li>
+                            |
+                            <li><a href='https://stickers.$environment/'>stickers</a><span class='newsite'>Hot!</span></li>
+                            |
+                            <li><a href='https://webrings.$environment/'>webrings</a></li>";
+                        }
+                        ?>
+                        
                     </ul>
                     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
                     
