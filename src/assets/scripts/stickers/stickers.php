@@ -12,10 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit();
 }
 
-// Determine the environment (e.g., based on domain or some other indicator)
-$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
-$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
-$domain = $environment === 'local' ? 'localhost' : '.virtualdream.live';
+include("../../../config.php");
+$domain = $hostName === 'localhost' ? 'localhost' : ".$baseDomain";
 
 include('configurestickers.php');
 

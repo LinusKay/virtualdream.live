@@ -74,11 +74,11 @@
             foreach($popularSites as $site) {
                 $siteName = $site[0];
                 $siteTagline = $site[1];
-                if ($environment == 'local') {
+                if ($baseDomain == $hostLocal) {
                     echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
                 }
                 else {
-                    echo "<li><a href='https://$siteName.virtualdream.live'>$siteTagline</a></li>";
+                    echo "<li><a href='https://$siteName.$baseDomain'>$siteTagline</a></li>";
                 }
             }
         ?>
@@ -89,11 +89,11 @@
         foreach($sponsoredSites as $site) {
             $siteName = $site[0];
             $siteTagline = $site[1];
-            if ($environment == 'local') {
+            if ($baseDomain == $hostLocal) {
                 echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
             }
             else {
-                echo "<li><a href='https://$siteName.virtualdream.live'>$siteTagline</a></li>";
+                echo "<li><a href='https://$siteName.$baseDomain'>$siteTagline</a></li>";
             }
         }
     ?>
@@ -157,7 +157,7 @@
                         $isNewSite = true;
                     }
 
-                    if ($environment == 'local') {
+                    if ($baseDomain == $hostLocal) {
                         if($isNewSite) {
                             echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
@@ -167,10 +167,10 @@
                     }
                     else {
                         if($isNewSite) {
-                            echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"https://$sitename.virtualdream.live\">$sitename</a></td>";
+                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a></td>";
                         }
                     }
                     $isNewSite = false;
@@ -185,30 +185,44 @@
     <table>
         <tbody>
             <tr>
-                <td width="350">
+                <td width="475">
                     <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
                     <ul id="officialsites">
-                        <li><a href="https://help.virtualdream.live/">help</a></li>
-                        |
-                        <li><a href="https://status.virtualdream.live/">status</a></li>
-                        |
-                        <li><a href="https://stickers.virtualdream.live/">stickers</a><span class='newsite'>Hot!</span></li>
-                        |
-                        <li><a href="https://webrings.virtualdream.live/">webrings</a></li>
+                        <?php 
+                        if($baseDomain == $hostLocal) {
+                            echo "<li><a href='sites/help/'>help</a></li>
+                            |
+                            <li><a href='sites/status/'>status</a></li>
+                            |
+                            <li><a href='sites/stickers/'>stickers</a><span class='newsite'>Hot!</span></li>
+                            |
+                            <li><a href='sites/webrings/'>webrings</a></li>";
+                        }
+                        else {
+                            echo "<li><a href='https://help.$baseDomain'>help</a></li>
+                            |
+                            <li><a href='https://status.$baseDomain/'>status</a></li>
+                            |
+                            <li><a href='https://stickers.$baseDomain/'>stickers</a><span class='newsite'>Hot!</span></li>
+                            |
+                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>";
+                        }
+                        ?>
+                        
                     </ul>
-                    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
+                    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@<?php echo "$hostProd";?>">Email us</a>!</p>
                     
                 </td>
-                <td width="450" align="right">
+                <td width="325" align="right" bgcolor="#FDFBD6">
                     <h3><img src="index/flashingflowersmiley.gif" class="headericon">Tips: Exploring Virtual Dream</h3>
                     <p>A personal computer (PC) is highly recommended</p>
-                    <p>Ad-blocker is not advised. All advertisements are local only.</p>
-                    <p>Many sites are hidden, but can be linked to. Try exploring!</p>
+                    <p>Turn off ad-blocker. All advertisements are local only.</p>
+                    <p>Many sites are hidden. Try exploring!</p>
                 </td>
             </tr>
         </tbody>
     </table>
-    <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
+    <font face="verdana" size="-2">Copyright © <a href="<?php echo "https://$hostProd";?>">Virtual Dream</a>. All rights reserved.</font>
     </center>
 </body>
 </html>

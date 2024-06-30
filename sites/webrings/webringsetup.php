@@ -1,11 +1,23 @@
 <?php
+$hostLocal = 'localhost';
+$hostProd = 'virtualdream.live';
+$hostDev = 'virtualdream.dev';
 
 // Development mode check
-$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
+$hostname = $_SERVER['HTTP_HOST'];
+
+$envparts = explode('.', $hostname);
+if (count($envparts) > 2) {
+    // Remove the first part (subdomain) from the array
+    $baseDomain = implode('.', array_slice($envparts, 1));
+} else {
+    // If there's no subdomain, the base domain is the same as the hostname
+    $baseDomain = $hostname;
+}
 
 // Define base URL for assets based on environment
-$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
-$webringBaseUrl = $environment === 'local' ? '../webrings' : 'https://webrings.virtualdream.live';
+$assetBaseUrl = $baseDomain === $hostLocal ? '../../src/assets' : "https://assets.$baseDomain";
+$webringBaseUrl = $baseDomain === $hostLocal ? "http://$hostLocal/virtualdream.live/sites/webrings" : "https://webrings.$baseDomain";
 
 $webRingPresets = [
     ["test", "$assetBaseUrl/img/webrings/webring-web-bin-export.png", "$webringBaseUrl/test", "placeholder webring!"],
@@ -13,13 +25,12 @@ $webRingPresets = [
     ["joesales", "$assetBaseUrl/img/webrings/webring-joesales-export.png", "$webringBaseUrl/joesales", "$$$$$$$$$$$$$$$$$$$"],
     ["tech", "$assetBaseUrl/img/webrings/webring-tech-export.png", "$webringBaseUrl/tech", "BEEP BEEP BEEP"],
     ["mindpalace", "$assetBaseUrl/img/webrings/webring-mindpalace-export.gif", "$webringBaseUrl/mindpalace", "for the thinkers..."],
-    ["fist", "$assetBaseUrl/img/webrings/webring-fist-export.png", "$webringBaseUrl/fist", "seek the fist"],
     ["comedyclub", "$assetBaseUrl/img/webrings/webring-comedyclub.png", "$webringBaseUrl/comedyclub", "Mind that funny bone!"]
 ];
 
 // Define the site-to-webrings mapping
 $siteToWebrings = [
-    "funktempest" => ["fist", "mindpalace", "darknet"],
+    "funktempest" => ["mindpalace", "darknet"],
     "tombfreaks"  => ["darknet", "tech"],
     "rapiddealsonlinesaleswebboard" => ["joesales"],
     "theporncomputer" => ["tech", "darknet", "joesales"],

@@ -3,19 +3,12 @@
 ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
-
-// Development mode check
-$environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
-
-// Define base URL for assets based on environment
-$assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
-$webringBaseUrl = $environment === 'local' ? 'http://localhost/virtualdream.live/sites/webrings' : 'https://webrings.virtualdream.live';
-$advertsBaseUrl = $environment === 'local' ? '../advertising' : 'https://advertising.virtualdream.live';
+include("config.php");
 
 // Get the current URL
-$currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$currentUrl = "http://$baseDomain$_SERVER[REQUEST_URI]";
 // Extract site name based on environment
-if ($environment === 'local') {
+if ($baseDomain === $hostLocal) {
     // Development environment
     $path = parse_url($currentUrl, PHP_URL_PATH);
     $siteName = '';
@@ -26,7 +19,7 @@ if ($environment === 'local') {
     }
 } else {
     // Production environment
-    $subdomain = explode('.', $_SERVER['HTTP_HOST'])[0];
+    $subdomain = explode('.', $hostName )[0];
     $siteName = $subdomain;
 }
 
