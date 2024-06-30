@@ -114,7 +114,9 @@
             '404',
             'rememberdreamwipe',
             'downloadmania',
-            'lonelyboyloserclub'
+            'lonelyboyloserclub',
+            'adrenadine',
+            'theporncomputer'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
@@ -178,17 +180,33 @@
             ?>
         </tbody>
     </table>
-    <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
-    <ul id="officialsites">
-        <li><a href="https://help.virtualdream.live/">help</a></li>
-        |
-        <li><a href="https://status.virtualdream.live/">status</a></li>
-        |
-        <li><a href="https://stickers.virtualdream.live/">stickers</a></li>
-        |
-        <li><a href="https://webrings.virtualdream.live/">webrings</a></li>
-    </ul>
-    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
+    <p>Don't see your site here? You may have it set to private.</p>
+    <table>
+        <tbody>
+            <tr>
+                <td width="350">
+                    <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
+                    <ul id="officialsites">
+                        <li><a href="https://help.virtualdream.live/">help</a></li>
+                        |
+                        <li><a href="https://status.virtualdream.live/">status</a></li>
+                        |
+                        <li><a href="https://stickers.virtualdream.live/">stickers</a><span class='newsite'>Hot!</span></li>
+                        |
+                        <li><a href="https://webrings.virtualdream.live/">webrings</a></li>
+                    </ul>
+                    <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@virtualdream.live">Email us</a>!</p>
+                    
+                </td>
+                <td width="450" align="right">
+                    <h3><img src="index/flashingflowersmiley.gif" class="headericon">Tips: Exploring Virtual Dream</h3>
+                    <p>A personal computer (PC) is highly recommended</p>
+                    <p>Ad-blocker is not advised. All advertisements are local only.</p>
+                    <p>Many sites are hidden, but can be linked to. Try exploring!</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <font face="verdana" size="-2">Copyright © <a href="https://virtualdream.live/">Virtual Dream</a>. All rights reserved.</font>
     </center>
 </body>
