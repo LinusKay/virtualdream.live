@@ -8,7 +8,7 @@
  */
 function fetchAdvertisements(type, count) {
     // Fetch new advertisement data asynchronously
-    return fetch(`../advertising/getadvert.php?type=${type}&count=${count}`)
+    return fetch(`ADVERTISING_DIRECTORY/getadvert.php?type=${type}&count=${count}`)
         .then(response => response.json())
         .catch(error => {
             console.error('Error fetching advertisement data:', error);
@@ -50,7 +50,7 @@ function updateAdvertisements() {
 
                     // Create image element for the advertisement image
                     const adImage = document.createElement('img');
-                    adImage.src = `../advertising/${type}/images/${adDataImg}`;
+                    adImage.src = `ADVERTISING_DIRECTORY/${type}/images/${adDataImg}`;
                     adImage.alt = 'Advertisement';
 
                     // Append image to anchor element and then to the container

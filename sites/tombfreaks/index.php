@@ -13,6 +13,7 @@
 <title>tombfreaks.net - Crypt closed</title>
 <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
 <style>
+
 html{
 	width:100%;
 	height:100%;
@@ -55,5 +56,6 @@ h1, p{
 		<p>Home to all freaks, fools, ghosts and ghouls that travel this web plane.</p>
 		<p>Come and rest your weary bones within the tomb.</p>
 	</div>
+
 </body>
 </html>

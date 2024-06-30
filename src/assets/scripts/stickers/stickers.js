@@ -1,10 +1,24 @@
 // Event Listeners 
+// track mouse position for sticker placement
+let mouseX = 0;
+let mouseY = 0;
+
+//
+let stickerImages = [
+STICKERS
+];
+
+document.addEventListener('mousemove', function(event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+});
 
 /**
  * Event listener triggers when the window finishes loading.
  * Creates sticker bin element, appends to the document body, loads stickers.
  */
 window.addEventListener("load", function onLoad() {
+    loadStickersEnabled();
     const stickerBin = createStickerBin();
     document.body.appendChild(stickerBin);
     loadStickers();
@@ -12,12 +26,16 @@ window.addEventListener("load", function onLoad() {
 
 /**
  * Event listener that triggers when a key is pressed.
- * If the pressed key is 'q', generates a random sticker.
+ * If the pressed key is 's', generates a random sticker.
  * 
  * @param {KeyboardEvent} e - The keyboard event object.
  */
 document.addEventListener("keydown", function(e) {
-    if(e.key == "q") generateRandomSticker();
+    if(document.activeElement.tagName != "INPUT" && document.activeElement.tagName != "TEXTAREA") {
+        if(e.key == "s") {
+            generateRandomSticker();
+        }
+    }
 } );
 
 
@@ -59,7 +77,7 @@ function generateId(len) {
  */
 function getHighestZIndex() {
     let highestZIndex = 0;
-    const allElements = document.querySelectorAll('*');
+    const allElements = document.querySelectorAll('.sticker');
     allElements.forEach(element => {
         const zIndex = parseInt(window.getComputedStyle(element).zIndex);
         if (!isNaN(zIndex) && zIndex > highestZIndex) {
@@ -88,6 +106,13 @@ function pointDistance(x1, y1, x2, y2) {
 
 // Sticker Management Functions
 
+// load enabled stickers to sticker pool
+let stickersEnabled = [];
+function loadStickersEnabled() {
+    const stickersEnabledCookie = Cookies.get('stickersEnabled');
+    stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
+}
+
 /**
  * Creates and returns an image element representing a sticker bin.
  * 
@@ -96,28 +121,29 @@ function pointDistance(x1, y1, x2, y2) {
 function createStickerBin() {
     const stickerBin = document.createElement('img');
     
-    stickerBin.src = "../../src/assets/bin.png";
+    stickerBin.src = "ASSET_DIRECTORY/bin.png";
     stickerBin.id = "sticker-bin";
     
     return stickerBin;
 }
 
 /**
- * Loads sticker data from local storage and creates sticker elements..
+ * Loads sticker data from a cookie and creates sticker elements.
  * 
  * @returns {void}
  */
 function loadStickers() {
-    const stickers = JSON.parse(localStorage.getItem('stickers')) || [];
+    const stickersCookie = Cookies.get('stickers');
+    const stickers = stickersCookie ? JSON.parse(stickersCookie) : [];
 
     stickers.forEach(stickerData => {
-        const [stickerImage, stickerX, stickerY, stickerZ, stickerId] = stickerData;
-        createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId);
+        const [stickerImageIndex, stickerX, stickerY, stickerZ] = stickerData;
+        createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
     });
 }
 
 /**
- * Saves all existing sticker data to local storage.
+ * Saves all existing sticker data to a cookie.
  * 
  * @returns {void}
  */
@@ -126,19 +152,18 @@ function saveStickers() {
     const stickerElements = document.getElementsByClassName('sticker');
     
     for (const stickerElement of stickerElements) {
-        const stickerImage = stickerElement.querySelector('img').src;
+        const stickerImageIndex = stickerElement.querySelector('img').dataset.stickerImageIndex;
         const stickerX = stickerElement.style.left;
         const stickerY = stickerElement.style.top;
         const stickerZ = stickerElement.style.zIndex;
-        const stickerId = stickerElement.querySelector('img').dataset.stickerId;
     
-        const sticker = [stickerImage, stickerX, stickerY, stickerZ, stickerId];
+        const sticker = [stickerImageIndex, stickerX, stickerY, stickerZ];
         stickers.push(sticker);
     }
     
-    localStorage.setItem("stickers", JSON.stringify(stickers));
-    
+    Cookies.set('stickers', JSON.stringify(stickers), { domain: 'DOMAIN', path: '/' });
 }
+
 
 /**
  * Generates a sticker with random image and position and saves it to local storage.
@@ -146,33 +171,26 @@ function saveStickers() {
  * @returns {void}
  */
 function generateRandomSticker() {
-    const stickerImages = [
-        "../../src/assets/img/stickers/polyfox2-transparent.gif",
-        "../../src/assets/img/stickers/skull-spin.gif",
-        "../../src/assets/img/stickers/mascot-pyramid.png",
-        "../../src/assets/img/stickers/yippee200x.png",
-        "../../src/assets/img/stickers/catfish.png",
-    ];
-    const stickerImage = stickerImages[Math.floor(Math.random() * stickerImages.length)];
-    const stickerX = Math.floor(Math.random() * 100);
-    const stickerY = Math.floor(Math.random() * 100);
+    loadStickersEnabled();
+
+    const stickerImageIndex = stickersEnabled[Math.floor(Math.random() * stickersEnabled.length)];
+    const stickerX = mouseX + "px";
+    const stickerY = mouseY + "px";
     const stickerZ = getHighestZIndex() + 1;
-    const stickerId = generateId(16);
     
-    createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId);
+    createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
     saveStickers();
 }
 
 /**
  * Creates and displays a sticker on the webpage.
  * 
- * @param {string} stickerImage - The URL of the sticker image.
+ * @param {string} stickerImageIndex - The index of the sticker image.
  * @param {number} stickerX - The horizontal position of the sticker.
  * @param {number} stickerY - The vertical position of the sticker.
  * @param {number} stickerZ - The z-index of the sticker.
- * @param {string} stickerId - The unique ID of the sticker.
  */
-function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
+function createSticker(stickerImageIndex, stickerX, stickerY, stickerZ) {
     const stickerDivElement = document.createElement('div');
     stickerDivElement.classList.add('sticker');
     stickerDivElement.style.position = "fixed";
@@ -185,8 +203,8 @@ function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
     
     const stickerElement = document.createElement('img');
     stickerElement.classList.add('sticker-img');
-    stickerElement.src = stickerImage;
-    stickerElement.dataset.stickerId = stickerId;
+    stickerElement.src = stickerImages[stickerImageIndex];
+    stickerElement.dataset.stickerImageIndex = stickerImageIndex;
     
     stickerDiv.appendChild(stickerElement);
     
@@ -200,7 +218,7 @@ function createSticker(stickerImage, stickerX, stickerY, stickerZ, stickerId) {
  * @param {HTMLElement} sticker - The sticker element to delete.
  */
 function deleteSticker(sticker) {
-    if (confirm("Delete sticker?")) {
+    // if (confirm("Delete sticker?")) {
         try {
             if (sticker.tagName === "DIV") {
                 sticker.remove();
@@ -212,17 +230,18 @@ function deleteSticker(sticker) {
         } catch (err) {
             console.error("Error deleting sticker:", err);
         }
-    }
+    // }
 }
 
 /**
- * Clears all infections from the local storage.
+ * Clears all stickers from the local storage.
  * @returns {void}
  */
 function deleteAllStickers() {
-    localStorage.removeItem('stickers');
+    Cookies.remove('stickers', { domain: 'DOMAIN', path: '/' });
     location.reload();
 }
+window.deleteAllStickers = deleteAllStickers;
 
 
 // Dragging Functions
@@ -281,7 +300,7 @@ function dragElement(element) {
         stickerBin.style.display = "block";
         stickerBin.style.zIndex = e.target.parentElement.style.zIndex - 1;
         stickerBin.style.opacity = (stickerBinDistance < actionDistance) ? "100%" : "50%";
-        stickerBin.src = (stickerBinDistance < actionDistance / 2) ? "../../src/assets/bin-open-full2.png" : (stickerBinDistance < actionDistance) ? "../../src/assets/bin-open.png" : "../../src/assets/bin.png";
+        stickerBin.src = (stickerBinDistance < actionDistance / 2) ? "ASSET_DIRECTORY/bin-open-full2.png" : (stickerBinDistance < actionDistance) ? "ASSET_DIRECTORY/bin-open.png" : "ASSET_DIRECTORY/bin.png";
     }
     
 

@@ -3,7 +3,6 @@
 <head>
     <?php 
         # PAGE SETUP
-        $webRings = ["techring", "darknet", "test", "joesales"];
         include('../../src/setup.php');
         # /PAGE SETUP
     ?>
@@ -19,14 +18,14 @@
         #wrap {
             max-width:550px;
             margin:auto;
-            font-size:18px;
+            font-size:13px;
             text-align: center;
             border: dashed 1px white;
             padding:15px;
             background-color:#0069b3;
         }
         .photo {
-            width:100%;
+            width:70%;
             display:block;
             margin:auto;
         }
@@ -60,7 +59,7 @@
             height:5px;
         }
         p{
-            margin:20px 0;
+            margin:10px 0;
         }
 
     </style>
@@ -86,7 +85,7 @@
         <p>THE WORLDS FIRST COMPUTER FOR PORN ONLY.</p>
         <div class="spacer"></div>
 
-        <img class="photo" src="src/img/computer.jpg">
+        <img class="photo" src="src/img/computer.png">
         <p class="caption">THE COMPUTER.</p>
 
 
@@ -99,7 +98,7 @@
 
         <div class="spacer"></div>
 
-        <img class="photo" src="src/img/computer2.jpg">
+        <img class="photo" src="src/img/computer2.png">
         <p class="caption">THE COMPUTER.</p>
 
         <div class="spacer"></div>
@@ -119,7 +118,7 @@
 
         <p>I BUILT THIS IN MY WORKSHOP USING <i>THESE</i>TOOLS.</p>
 
-        <img class="photo" src="src/img/Tools.jpg">
+        <img class="photo" src="src/img/Tools.png">
         <p class="caption">THE TOOLS.</p>
 
         <p>THESE TOOLS BELONGED TO MY GRANDFATHER.</p>
@@ -144,7 +143,7 @@
         <p>I NEVER EVEN SAW HIM EVEN MAKE ANYTHING AT ALL.</p>
         <p>I DONT KNOW WHAT THIS THING IS.</p>
 
-        <img class="photo" src="src/img/s-l1600 (4).jpg">
+        <img class="photo" src="src/img/s-l1600 (4).png">
         <p class="caption">I DONT KNOW WHAT IT DOES.</p>
 
         <p>I DONT EVEN LIKE COMPUTER ANYMORE.</p>
@@ -152,11 +151,11 @@
         <p>I USE TO LOVE COMPUTER .</p>
         <p>I USED COMPUTER EVERY DAY TO MAKE IMAGES JUST LIKE THIS.</p>
 
-        <img class="photo" src="src/img/mustang.png">
+        <img class="photo" src="src/img/mustang-export.png">
 
         <p>AND THIS.</p>
 
-        <img class="photo" src="src/img/Telly Robot.png">
+        <img class="photo" src="src/img/Telly Robot-export.png">
 
         <p>BUT THIS MACHINE HAS SUCKED THE LIFE OUT OF MY VERY BEING FROM HEAD TO TOE AND I DONT KNOW HOW TO GO ON ANYMORE AFTER DOING WHAT IVE DONE.</p>
 
@@ -194,7 +193,7 @@
         <hr>
         <p><strong>OTHER THINGS I HAVE MADE</strong>.</p>
 
-        <img class="photo" src="src/img/Phone.jpg">
+        <img class="photo" src="src/img/Phone.png">
 
         <p class="caption">PHONE TO LISTEN TO PORN.</p>
 

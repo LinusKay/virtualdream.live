@@ -1,0 +1,681 @@
+abattoir operative
+accommodation warden
+accountant
+accountant
+accountant
+accounting technician
+accounts assistant
+actor
+actuary
+acupuncturist
+administrative assistant or officer
+advertising account executive
+advertising account planner
+advertising copywriter
+advice worker
+advocate
+advocates' clerk
+aerial and satellite installers
+aerospace engineer
+agricultural consultant
+agricultural or horticultural scientist
+air cabin crew
+air conditioning engineer
+air quality consultant
+air traffic controller
+aircraft mechanic or engineer
+airline or airport passenger service assistant
+airline pilot
+ambulance care assistant
+ambulance technician
+ames taper
+anatomical pathology technologist
+animal care assistant
+animal technician
+animator
+applications developer
+arborist
+archaeologist
+architect
+architectural technologist
+archivist
+army – officer
+army – soldier
+aromatherapist
+art therapist
+arts administrator
+assembler
+assistance dog trainer
+astronomer or astrophysicist
+auctioneer
+audiologist
+automotive engineer
+baker or confectioner
+bank or building society customer branch adviser
+bank or building society manager
+bar worker
+barber
+beauty consultant
+beauty therapist
+bill poster or advertising installer
+bim technician
+biochemist
+biologist
+biomedical scientist
+biotechnologist
+blacksmith
+boat or ship builder
+body piercer
+bodyguard
+bookmaker
+border force officer or assistant officer
+botanist
+brewery worker
+bricklayer
+british sign language interpreter
+broadcast engineer
+broadcast journalist
+builders' merchant
+building services engineer
+building standards surveyor
+building technician
+bus or coach driver
+butcher
+cabinet maker
+cad technician
+call centre agent
+camera operator
+car valet
+cardiac physiologist
+care assistant or support worker
+care home manager
+careers adviser
+caretaker
+carpet and upholstery cleaner
+cartographer
+catering manager
+cctv operator
+ceiling fixer
+cemetery worker
+ceramic designer
+character artist
+charity fundraiser
+chef or cook
+chemical engineer
+chemical engineering technician
+chemical plant process operative
+chemist
+childminder
+children’s holiday representative
+chiropractor
+choreographer
+cinema or theatre assistant
+cinema or theatre manager
+civil engineer
+civil engineering technician
+civil service administrative assistant and officer
+civil service administrator
+classroom assistant
+cleaner
+clerical or administrative assistant
+clerk of court
+clerk of works
+clinical or biomedical engineer
+clinical perfusionist
+clinical photographer
+clinical technologist
+clothing alteration hand
+cnc machinist
+coastguard
+colour technologist
+commissioning editor
+community arts worker
+community education officer
+community enforcement officer
+company secretary
+composer or songwriter
+conference producer
+construction manager or site manager
+control and instrument engineer
+copy editor
+costume designer
+counsellor
+countryside ranger or warden
+courier
+craft designer or worker
+credit manager
+crematorium technician
+crime scene examiner
+croupier
+cruise ship worker
+customer service administrator
+cyber security analyst
+dance movement psychotherapist
+dance teacher
+dancer
+data analyst
+data scientist
+database administrator
+delivery assistant
+delivery driver
+demolition operative
+dental hygienist or therapist
+dental nurse
+dental technician
+dentist
+derrickhand
+design engineer
+dietetic support worker
+dietitian
+digital content editor
+digital marketer
+diplomatic service operational officer
+disc jockey – dj
+dispensing optician
+distillery worker
+diver
+doctor – general practitioner
+doctor – hospital
+document controller
+dog groomer
+dog handler
+dramatherapist
+driller
+drilling engineer
+driving examiner
+driving instructor
+dry cleaning or laundry worker
+dryliner
+dynamic positioning operator
+early years practitioner
+economic development officer
+economist
+electrical engineer
+electrical or electronic engineering technician
+electrician
+electricity distribution worker
+electronics engineer
+embalmer
+emergency call handler
+engineering assembler
+engineering machine operator
+environmental consultant
+environmental health officer
+environmental manager
+ergonomist
+estate agent
+estate or land manager
+estimator
+events organiser
+exhibition designer
+export sales manager
+fabric cutter
+fabricator or plater
+facilities manager
+factor – property
+farm manager
+farm worker or stockperson
+farrier
+fashion designer
+fashion model
+field service technician
+film or video editor
+financial adviser
+fine artist
+firefighter
+fish farm manager
+fish farm worker
+fisherman or woman
+fitness instructor
+flight dispatcher
+floor layer or carpet fitter
+floor manager – television
+florist
+food counter assistant
+food scientist or technologist
+forensic computer analyst
+forensic scientist
+forest or wildlife manager
+forest or wildlife ranger
+forest worker
+forklift truck operator
+formworker
+freight forwarder
+front  developer
+fundraising manager
+funeral director
+furniture designer
+furniture polisher or finisher
+gamekeeper
+games designer
+games programmer
+games tester
+garden centre assistant
+gardener
+garment technologist
+gas heating engineer
+gas service engineer
+general construction operative
+geneticist
+geologist
+geophysicist
+glass designer or maker
+glazier
+glazing technician
+government intelligence officer or analyst
+graphic designer
+groundsperson
+gym instructor
+hair stylist
+health and safety inspector
+health and safety officer
+health improvement officer
+health records staff
+health service manager
+health visitor or public health nurse
+heat treatment operative
+heating and ventilation engineer
+helicopter pilot
+herbalist
+heritage centre manager
+holiday centre worker
+homeopath
+hospital porter
+hotel general manager
+hotel porter
+hotel receptionist
+housekeeping manager
+housing officer
+human resources officer or manager
+hypnotherapist
+illustrator
+immigration officer
+indexer
+insurance account manager
+insurance broker
+insurance claims handler
+insurance loss adjuster
+insurance risk surveyor
+insurance underwriter
+interior designer
+interpreter
+investment analyst
+investment banker
+investment operations administrator
+it helpdesk analyst
+it support engineer
+it trainer
+jeweller
+jewellery designer
+joiner or carpenter
+journalist or reporter
+judge or sheriff
+kitchen assistant
+laboratory technician
+landbased service engineer
+landscape architect
+landscaper
+learning support assistant
+lecturer
+lecturer
+legal secretary
+library or information assistant
+library or information professional
+lifeguard or pool attant
+lighting technician
+lightning protection engineer
+literary agent
+local government administrative assistant or officer
+local government officer
+local government revenues officer
+locksmith
+loft and cavity insulation technician
+lorry or lgv driver
+machine printer
+make-up artist
+management consultant
+manufacturing systems engineer
+marine biologist
+marine engineer
+market research executive
+market research interviewer
+marketing manager
+mastic asphalter
+materials scientist or engineer
+maternity support worker
+mathematician
+meat process worker
+mechanical engineer
+mechanical engineering technician
+medical pathologist
+medical physicist
+medical representative
+medical secretary
+member of parliament
+merchant navy deck officer
+merchant navy engineering officer
+merchant navy rating
+meteorologist
+meter reader
+microbiologist
+midwife
+mining engineer
+model maker
+motor vehicle technician
+motorcycle instructor
+motorcycle technician
+mudlogger
+museum assistant or visitor centre assistant
+museum conservation officer
+museum or art gallery curator
+music promotions manager
+music therapist
+musical instrument technologist
+musician
+musician
+nail technician
+nanny
+nanotechnologist
+nature conservationist
+naturopath
+naval architect
+network architect
+network engineer
+neurophysiologist
+nuclear engineer
+nurse
+nurse
+nurse
+nurse
+nurse
+nurse
+nursing support worker
+occupational therapist
+occupational therapy support worker
+oceanographer
+office manager
+offshore medic
+offshore service technician
+operating department practitioner
+operational researcher
+optical assistant
+optical technician
+optometrist
+orthodontist
+orthoptist
+osteopath
+outdoor activities instructor or leader
+packer
+painter and decorator
+paralegal
+paramedic
+parking attant or traffic warden
+parliamentary assistant
+patent attorney
+patent examiner
+pattern cutter or grader
+personal or executive assistant
+personal trainer
+pest control technician
+pet shop assistant
+petroleum or reservoir engineer
+pharmacist
+pharmacologist
+pharmacy assistant
+pharmacy technician
+phlebotomist
+photographer
+photographic stylist
+photographic technician
+physicist
+physiotherapist
+physiotherapy support worker
+piano tuner
+picture framer
+picture researcher
+plant fitter
+plant operator
+plasterer
+play therapist
+playworker or play leader
+plumber
+podiatrist
+podiatry assistant practitioner
+police officer
+port operative
+post office customer service consultant
+postman or postwoman
+pre-press operator
+print finisher or bookbinder
+print manager
+prison officer
+private tutor
+procurator fiscal
+procurement administrator
+procurement manager
+producer – radio
+producer – tv, film or video
+product designer
+production assistant
+production controller or manager
+production worker
+project manager
+prop maker
+prosthetic or orthotic technician
+prosthetist or orthotist
+psychologist
+psychologist
+psychologist
+psychologist
+psychologist
+psychologist
+psychologist
+psychotherapist
+public relations officer
+quality control technician
+radio broadcast assistant
+radiographer
+radiographer
+radiography support worker
+railway maintenance engineering technician
+railway maintenance engineering technician
+railway maintenance engineering technician
+railway maintenance engineering technician
+railway maintenance engineering technician
+railway station assistant
+ramp agent
+receptionist
+recruitment consultant
+recycling officer
+recycling operative
+reflexologist
+refrigeration engineer
+refuse collector
+registrar of births, deaths, marriages and civil partnerships
+rehabilitation engineering technician
+removals operative
+renewable energy consultant
+renewable energy engineer
+reporter to the children's panel
+reprographic assistant
+researcher – broadcasting
+resort representative
+respiratory physiologist
+restaurant manager
+retail assistant
+retail buyer
+retail manager
+revenue and customs officer
+riding instructor
+risk manager
+road worker
+roadie
+roof sheeter and cladder
+roofer
+roofer – felt
+room attant
+roustabout
+rov pilot technician
+royal air force airman or airwoman
+royal air force officer
+royal marine
+royal marines officer
+royal navy officer
+royal navy rating
+runner
+sales representative
+scaffolder
+scenic artist
+school janitor
+scientific or technical illustrator
+scottish spca animal rescue officer
+scottish spca inspector
+sculptor
+security officer or guard
+security systems installer
+seo specialist
+set designer
+sewing machinist
+sheet metal worker
+sheriff officer or messenger-at-arms
+shoe repairer
+shopfitter
+signaller
+signwriter
+singer
+singer
+smart meter installer
+social worker
+software engineer or developer
+software tester
+solicitor
+sound technician
+special effects technician
+speech and language therapist
+speech and language therapy support worker
+sport and exercise scientist
+sports coach or instructor
+sports development officer
+sports or leisure centre assistant
+sports or leisure centre manager
+sports professional
+sports therapist
+stablehand or groom
+stage manager
+stagehand
+statistician
+steeplejack
+sterile services technician
+stockbroker
+stonemason
+store detective
+storyboard artist
+street cleaning operative
+structural engineer
+structural engineering technician
+stunt performer
+sub-editor — journalism
+subsea engineer
+supermarket assistant
+surgeon
+surveyor
+surveyor
+surveyor
+surveyor
+surveyor
+surveyor
+surveyor
+surveyor
+swimming teacher
+systems analyst
+tailor or dressmaker
+tattooist
+tax officer
+taxi or car driver
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher
+teacher of english as a foreign language
+technical author
+technical brewer
+technical distiller
+technical surveyor
+telecommunications engineer
+textile designer
+textile operative
+textile technologist
+theatre support worker
+thermal insulation engineer
+toolmaker
+toolpusher
+tour guide
+tour leader or manager
+town planner
+town planning assistant or technician
+track maintenance operative
+trade union official
+trading standards officer
+train conductor
+train driver
+train maintenance technician
+training officer or manager
+translator
+transport manager
+travel agency manager
+travel consultant
+tv or film director
+tv or radio presenter
+tyre or exhaust fitter
+upholsterer
+user experience (ux) designer
+vehicle body repairer
+vehicle breakdown engineer
+vehicle met technician
+vehicle parts advisor
+vehicle salesperson
+vehicle spray painter
+veterinary nurse
+veterinary surgeon
+visitor attraction manager
+visitor services advisor
+visual merchandiser
+waiter
+waitress
+wall and floor tiler
+warden or housing support officer
+wardrobe assistant
+warehouse operative
+waste energy engineer
+watch and clock repairer
+water or waste water network operative
+water or waste water treatment operative
+waterway operative
+web designer
+web developer
+welder
+wind turbine technician
+window cleaner
+window fitter
+wood machinist
+writer or author
+yoga teacher
+zoo keeper
+zoologist

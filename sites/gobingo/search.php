@@ -6,7 +6,7 @@
         $search = NULL;
     }
     $results = rand(15, 50);
-    $url = "https://grungle.virtualdream.live/";
+    $url = "https://MalPals.virtualdream.live/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoBingo! Search - <?php echo $search; ?></title>
     <link rel="stylesheet" href="style.css">
-</head>
+        <?php 
+        # PAGE SETUP
+        include('../../src/setup.php');
+        # /PAGE SETUP
+        ?>
+    </head>
 <body>
     <div id="topbar">
         <form action="search.php" method="get" enctype="multipart/form-data">
@@ -26,10 +31,13 @@
     </div>
     <div id="adspace">
         <!-- banner advertisement -->
-        <?php include("../advertising/getbanner.php"); ?>
+        <div class="advertisement-banner"></div>
     </div>
     <div id="results">
         <?php
+        if(strtolower($search) != 'malpals') {
+            echo '<p>Did you mean <a id="suggestion" href="?s=malpals">malpals</a>?</p>';
+        }
         if($search == NULL) {
             echo "<p><strong>Bingo found 0 results</strong></p>";
         }
@@ -37,17 +45,16 @@
             echo "<p><strong>Bingo found $results results for \"$search\"!</strong></p>";
             for($i = 0; $i < $results; $i++) {
                 echo "<div class=\"result\">
-                    <p class=\"resulttitle\"><a href=\"$url\">GRUNGLE</a></p>
-                    <p class=\"resulturl\">https://grungle.virtualdream.live/</p>
-                    <p class=\"resultdesc\">Your #1 homepage for Grungle News Updated Gossip Images Hot Tips Grungle Online Grungle For Kids Grungle For Adults Grungle Merchandise Buy Grungle Tickets Grungle Tour Grungle Music</p>
+                    <p class=\"resulttitle\"><a href=\"$url\">MalPals</a></p>
+                    <p class=\"resulturl\">https://malpals.virtualdream.live/</p>
+                    <p class=\"resultdesc\">Your #1 homepage for MalPals News Updated Gossip Images Hot Tips MalPals Online MalPals For Kids MalPals For Adults MalPals Merchandise Buy MalPals Tickets MalPals Tour MalPals Music</p>
                 </div>";
             }
         }
         ?>
     </div>
     <div id="adspace">
-        <!-- banner advertisement -->
-        <?php include("../advertising/getbanner.php"); ?>
+        <div class="advertisement-banner"></div>
     </div>
 </body>
 </html>
