@@ -4,26 +4,35 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
 
-// Development mode check
-$environment = $_SERVER['HTTP_HOST'];
-
 $hostLocal = 'localhost';
 $hostProd = 'virtualdream.live';
 $hostDev = 'virtualdream.dev';
 
+// Development mode check
+$hostname = $_SERVER['HTTP_HOST'];
+
+$envparts = explode('.', $hostname);
+if (count($envparts) > 2) {
+    // Remove the first part (subdomain) from the array
+    $baseDomain = implode('.', array_slice($envparts, 1));
+} else {
+    // If there's no subdomain, the base domain is the same as the hostname
+    $baseDomain = $hostname;
+}
+
 // Define base URL for assets based on environment
-$assetBaseUrl = $environment === $hostLocal ? '../../src/assets' : "https://assets.$environment";
-$webringBaseUrl = $environment === $hostLocal ? "http://$hostLocal/virtualdream.live/sites/webrings" : "https://webrings.$environment";
-$advertsBaseUrl = $environment === $hostLocal ? '../advertising' : "https://advertising.$environment";
+$assetBaseUrl = $baseDomain === $hostLocal ? '../../src/assets' : "https://assets.$baseDomain";
+$webringBaseUrl = $baseDomain === $hostLocal ? "http://$hostLocal/virtualdream.live/sites/webrings" : "https://webrings.$baseDomain";
+$advertsBaseUrl = $baseDomain === $hostLocal ? '../advertising' : "https://advertising.$baseDomain";
 
 echo $assetBaseUrl . '<br>';
 echo $webringBaseUrl . '<br>';
 echo $advertsBaseUrl . '<br>';
 
 // Get the current URL
-$currentUrl = "http://$environment$_SERVER[REQUEST_URI]";
+$currentUrl = "http://$baseDomain$_SERVER[REQUEST_URI]";
 // Extract site name based on environment
-if ($environment === 'local') {
+if ($baseDomain === 'local') {
     // Development environment
     $path = parse_url($currentUrl, PHP_URL_PATH);
     $siteName = '';
@@ -34,7 +43,7 @@ if ($environment === 'local') {
     }
 } else {
     // Production environment
-    $subdomain = explode('.', $environment )[0];
+    $subdomain = explode('.', $baseDomain )[0];
     $siteName = $subdomain;
 }
 

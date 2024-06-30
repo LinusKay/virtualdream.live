@@ -74,11 +74,11 @@
             foreach($popularSites as $site) {
                 $siteName = $site[0];
                 $siteTagline = $site[1];
-                if ($environment == $hostLocal) {
+                if ($baseDomain == $hostLocal) {
                     echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
                 }
                 else {
-                    echo "<li><a href='https://$siteName.$environment'>$siteTagline</a></li>";
+                    echo "<li><a href='https://$siteName.$baseDomain'>$siteTagline</a></li>";
                 }
             }
         ?>
@@ -89,11 +89,11 @@
         foreach($sponsoredSites as $site) {
             $siteName = $site[0];
             $siteTagline = $site[1];
-            if ($environment == $hostLocal) {
+            if ($baseDomain == $hostLocal) {
                 echo "<li><a href='sites/$siteName'>$siteTagline</a></li>";
             }
             else {
-                echo "<li><a href='https://$siteName.$environment'>$siteTagline</a></li>";
+                echo "<li><a href='https://$siteName.$baseDomain'>$siteTagline</a></li>";
             }
         }
     ?>
@@ -156,7 +156,7 @@
                         $isNewSite = true;
                     }
 
-                    if ($environment == $hostLocal) {
+                    if ($baseDomain == $hostLocal) {
                         if($isNewSite) {
                             echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
@@ -166,10 +166,10 @@
                     }
                     else {
                         if($isNewSite) {
-                            echo "<td><a href=\"https://$sitename.$environment\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"https://$sitename.$environment\">$sitename</a></td>";
+                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a></td>";
                         }
                     }
                     $isNewSite = false;
@@ -188,7 +188,7 @@
                     <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
                     <ul id="officialsites">
                         <?php 
-                        if($environment == $hostLocal) {
+                        if($baseDomain == $hostLocal) {
                             echo "<li><a href='sites/help/'>help</a></li>
                             |
                             <li><a href='sites/status/'>status</a></li>
@@ -198,13 +198,13 @@
                             <li><a href='sites/webrings/'>webrings</a></li>";
                         }
                         else {
-                            echo "<li><a href='https://help.$environment'>help</a></li>
+                            echo "<li><a href='https://help.$baseDomain'>help</a></li>
                             |
-                            <li><a href='https://status.$environment/'>status</a></li>
+                            <li><a href='https://status.$baseDomain/'>status</a></li>
                             |
-                            <li><a href='https://stickers.$environment/'>stickers</a><span class='newsite'>Hot!</span></li>
+                            <li><a href='https://stickers.$baseDomain/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='https://webrings.$environment/'>webrings</a></li>";
+                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>";
                         }
                         ?>
                         

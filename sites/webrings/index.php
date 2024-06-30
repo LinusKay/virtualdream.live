@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Dream - Webrings</title>
     <link rel="stylesheet" href="webrings.css">
+    <?php 
+        include('../../src/setup.php');
+    ?>
 </head>
 <body>
     <center>
     <p>Webrings help bring sites with similar content together. Here are all of Virtual Dream's official webrings!</p>
     <p>If you would like to request to create or join an official webring please <a href="mailto:webmaster@virtualdream.live">send an email</a></p>
     <?php 
-        include('../../src/setup.php');
         include('webringsetup.php');
         $webringSites = [];
 
