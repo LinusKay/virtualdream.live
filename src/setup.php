@@ -9,15 +9,15 @@ $hostProd = 'virtualdream.live';
 $hostDev = 'virtualdream.dev';
 
 // Development mode check
-$hostname = $_SERVER['HTTP_HOST'];
+$hostName = $_SERVER['HTTP_HOST'];
 
-$envparts = explode('.', $hostname);
+$envparts = explode('.', $hostName);
 if (count($envparts) > 2) {
     // Remove the first part (subdomain) from the array
     $baseDomain = implode('.', array_slice($envparts, 1));
 } else {
     // If there's no subdomain, the base domain is the same as the hostname
-    $baseDomain = $hostname;
+    $baseDomain = $hostName;
 }
 
 // Define base URL for assets based on environment
@@ -39,7 +39,7 @@ if ($baseDomain === $hostLocal) {
     }
 } else {
     // Production environment
-    $subdomain = explode('.', $baseDomain )[0];
+    $subdomain = explode('.', $hostName )[0];
     $siteName = $subdomain;
 }
 
