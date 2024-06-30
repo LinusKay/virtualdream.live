@@ -25,10 +25,6 @@ $assetBaseUrl = $baseDomain === $hostLocal ? '../../src/assets' : "https://asset
 $webringBaseUrl = $baseDomain === $hostLocal ? "http://$hostLocal/virtualdream.live/sites/webrings" : "https://webrings.$baseDomain";
 $advertsBaseUrl = $baseDomain === $hostLocal ? '../advertising' : "https://advertising.$baseDomain";
 
-echo $assetBaseUrl . '<br>';
-echo $webringBaseUrl . '<br>';
-echo $advertsBaseUrl . '<br>';
-
 // Get the current URL
 $currentUrl = "http://$baseDomain$_SERVER[REQUEST_URI]";
 // Extract site name based on environment
@@ -112,10 +108,8 @@ if(isset($cursorFollow)) {
 
 // Function to fetch webring data
 function fetchWebringData($site, $webringBaseUrl) {
-    
     $url = "$webringBaseUrl/getwebring.php?site=" . urlencode($site);
     $response = file_get_contents($url);
-    print($response);
     return json_decode($response, true);
 }
 

@@ -184,7 +184,7 @@
     <table>
         <tbody>
             <tr>
-                <td width="350">
+                <td width="475">
                     <h3><img src="index/aniheart.gif" class="headericon">Official Sites</h3>
                     <ul id="officialsites">
                         <?php 
@@ -212,11 +212,11 @@
                     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@<?php echo "$hostProd";?>">Email us</a>!</p>
                     
                 </td>
-                <td width="450" align="right">
+                <td width="325" align="right" bgcolor="#FDFBD6">
                     <h3><img src="index/flashingflowersmiley.gif" class="headericon">Tips: Exploring Virtual Dream</h3>
                     <p>A personal computer (PC) is highly recommended</p>
-                    <p>Ad-blocker is not advised. All advertisements are local only.</p>
-                    <p>Many sites are hidden, but can be linked to. Try exploring!</p>
+                    <p>Turn off ad-blocker. All advertisements are local only.</p>
+                    <p>Many sites are hidden. Try exploring!</p>
                 </td>
             </tr>
         </tbody>

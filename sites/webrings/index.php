@@ -12,7 +12,7 @@
 <body>
     <center>
     <p>Webrings help bring sites with similar content together. Here are all of Virtual Dream's official webrings!</p>
-    <p>If you would like to request to create or join an official webring please <a href="mailto:webmaster@virtualdream.live">send an email</a></p>
+    <p>If you would like to request to create or join an official webring please <a href="mailto:webmaster@<?php echo "$hostProd";?>">send an email</a></p>
     <?php 
         include('webringsetup.php');
         $webringSites = [];
@@ -53,7 +53,11 @@
             echo "<ul>";
             foreach ($sites as $site) {
                 // Hyperlink each website
-                $siteUrl = "https://$site.virtualdream.live/";
+                if ($baseDomain == $hostLocal) {
+                    $siteUrl = "../../sites/$site";
+                } else {
+                    $siteUrl = "https://$site.$baseDomain/";
+                }
                 echo "<li><a href='$siteUrl'>$site</a></li>";
             }
             echo "</ul>";
