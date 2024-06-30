@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 $environment = $_SERVER['HTTP_HOST'] === 'localhost' ? 'local' : 'production';
 
 // Define base URL for assets based on environment
+echo $_SERVER['HTTP_HOST'];
 $assetBaseUrl = $environment === 'local' ? '../../src/assets' : 'https://assets.virtualdream.live';
 $webringBaseUrl = $environment === 'local' ? 'http://localhost/virtualdream.live/sites/webrings' : 'https://webrings.virtualdream.live';
 $advertsBaseUrl = $environment === 'local' ? '../advertising' : 'https://advertising.virtualdream.live';
