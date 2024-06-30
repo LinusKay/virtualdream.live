@@ -12,6 +12,6 @@ $stickers = [
     "$assetBaseUrlStickers/dollar.gif",
     "$assetBaseUrlStickers/dragon.gif",
     "$assetBaseUrlStickers/bird-rotate.gif",
-    "$assetBaseUrlStickers/bit.png",
+    "$assetBaseUrlStickers/bit.png"
 ];
 ?>
