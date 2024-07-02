@@ -87,8 +87,9 @@
         }
         .vid-stats {
             margin: 0 10px 5px 10px;
-            color:gray; 
+            color:white; 
             font-size:13px;
+            opacity:0.6;
         }
         .footer {
             width: 750px;
