@@ -187,7 +187,6 @@ function screensaverBounceBubbles() {
     const newBubbleDelay = Math.floor(Math.random() * (newBubbleDelayMax - newBubbleDelayMin + 1)) + newBubbleDelayMin;
 
     function spawnBubble() {
-        console.log('spawnbubble');
         let bouncingElement = document.createElement('img');
         bouncingElement.src = chosenImage;
         Object.assign(bouncingElement.style, {
@@ -281,7 +280,6 @@ function fadeIn(element, duration) {
  * @param {number} duration - The duration of the fade-in effect in milliseconds.
  */
  function fadeOutAndRemove(element, duration) {
-    console.log('fadeoutandremove');
     let opacity = 1;
     const interval = 50; 
     const increment = interval / duration;
