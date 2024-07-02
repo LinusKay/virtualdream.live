@@ -138,7 +138,7 @@
             'theoneleader',
             'downloadmania',
             'bubblechat',
-            'squelchtube',
+            'squelchtv',
             'laika'
         ];
         $isNewSite = false;

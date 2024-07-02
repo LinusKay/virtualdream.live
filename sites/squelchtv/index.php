@@ -8,17 +8,30 @@
         include('../../src/setup.php');
         # /PAGE SETUP
     ?>
-    <title>SquelchTube - Share What You Love</title>
+    <title>SquelchTV - Share What You Love</title>
     <style>
         * {
             margin:0;
             padding:0;
+        }
+        .logo {
+            width:200px;
+        }
+        .logotext {
+            width:750px;
         }
         body {
             background: #111111;
             color:white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size:15px;
+            background: url('src/img/squelchtexture.jpg');
+            background-size: 200px;
+        }
+        table {
+            background-color: rgba(171, 56, 255, 0.5);
+            padding-top:5px;
+            border-radius:5px;
         }
         .vid-container {
             height:200px;
@@ -32,6 +45,7 @@
             margin: 5px 10px;
             position:relative;
             cursor:pointer;
+            border: solid 1px lime;
         }
         .vid-thumb img {
             width:230px;
@@ -83,17 +97,15 @@
             margin-top: 10px;
             line-height:15px;
             font-size:12px;
-            color:black;
-        }
-        .heading {
-            text-align:left;
-            width:770px;
+            color:white;
+            background-color: rgba(171, 56, 255, 0.5);
         }
     </style>
 </head>
 <body>
-        <center>
-        <h1 class="heading">SquelchTube</h1>
+    <center>
+        <img class="logo" src="src/img/squelchtv.png">
+        <img class="logotext" src="src/img/squelchtvtext_green.png">
         <table width="750" cellspacing="0" cellpadding="0" border="0">
             <tbody>
                 <tr>
@@ -111,7 +123,7 @@
                     </td>
                     <td class="vid-container">
                         <div class="vid-thumb"><img src="src/img/thumb/thumb3_small.jpg"><p class="vid-time">41:00</p></div>
-                        <p class="vid-title">Why I'm Leaving the SquelchTube Community...</p>
+                        <p class="vid-title">Why I'm Leaving the SquelchTV Community...</p>
                         <p class="vid-uploader">SquelchGod</p>
                         <p class="vid-stats">1,001,876 Views - 5 days</p>
                     </td>
@@ -140,7 +152,7 @@
                     <td class="vid-container">
                         <div class="vid-thumb"><img src="src/img/thumb/thumb10_small.jpg"><p class="vid-time">16:29</p></div>
                         <p class="vid-title">Why Virtual Dream is Dying</p>
-                        <p class="vid-uploader">TedTech</p>
+                        <p class="vid-uploader">SquelchTech</p>
                         <p class="vid-stats">18,240 Views - 1 day</p>
                     </td>
                     <td class="vid-container">
@@ -172,7 +184,7 @@
                     <td class="vid-container">
                         <div class="vid-thumb"><img src="src/img/thumb/thumb11_small.jpg"><p class="vid-time">11:11</p></div>
                         <p class="vid-title">Virtual Dream Stronger than Ever?</p>
-                        <p class="vid-uploader">TedTech</p>
+                        <p class="vid-uploader">SquelchTech</p>
                         <p class="vid-stats">89,083 Views - 2 weeks</p>
                     </td>
                 </tr>
@@ -259,7 +271,7 @@
             </tbody>
         </table>
         <div class="footer">
-            <p>c 2024 SquelchTube. All rights reserved. All uploaded videos property of SquelchTube Inc.</p>
+            <p>c 2024 SquelchTV. All rights reserved. All uploaded videos property of SquelchTV Inc.</p>
         </div>
     </center>
 </body>
