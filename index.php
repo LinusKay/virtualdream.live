@@ -113,10 +113,7 @@
             'stickers',
             '404',
             'rememberdreamwipe',
-            'downloadmania',
-            'lonelyboyloserclub',
-            'adrenadine',
-            'theporncomputer'
+            'lonelyboyloserclub'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
