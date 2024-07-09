@@ -113,7 +113,8 @@
             'stickers',
             '404',
             'rememberdreamwipe',
-            'lonelyboyloserclub'
+            'lonelyboyloserclub',
+            'builder'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
