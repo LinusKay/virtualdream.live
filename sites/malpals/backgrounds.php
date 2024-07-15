@@ -188,6 +188,21 @@
         #disclaimer {
             padding:40px;
         }
+        .background-preview {
+            width:90%;
+            margin:auto;
+            display:block;
+            border: solid 1px black;
+            padding:5px;
+        }
+        .background-download {
+            text-align: center;
+            width:100%;
+            display:block;
+        }
+        .background-download:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -212,6 +227,30 @@
                 <div id="spacer-top"></div>
                 <img id="site-logo" src="src/img//malpals-logo.png">
                 <p id="introduction">Check out some of the cool and fun backgrounds we've got for you to decorate your PC <b>your</b> way!</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="180">
+                                <a href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                    <img class="background-preview" src="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                </a>
+                                <a download class="background-download" href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">Download</a>
+                            </td>
+                            <!-- <td width="180">
+                                <a href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                    <img class="background-preview" src="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                    </a>
+                                <a class="background-download" href="">Download</a>
+                            </td>
+                            <td width="180">
+                                <a href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                    <img class="background-preview" src="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                </a>
+                                <a class="background-download" href="">Download</a>
+                            </td> -->
+                        </tr>
+                    </tbody>
+                </table>
                 <hr>
                 
             </td>
