@@ -55,8 +55,8 @@ function clearScreensaver() {
 
 // 
 const availableScreensavers = {
-    // "bounceRandom": screensaverBounceRandom,
-    // "bounceRandomMultiple": screensaverBounceRandomMultiple,
+    "bounceRandom": screensaverBounceRandom,
+    "bounceRandomMultiple": screensaverBounceRandomMultiple,
     "bounceBubbles": screensaverBounceBubbles
 };
 
