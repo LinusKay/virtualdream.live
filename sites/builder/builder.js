@@ -427,6 +427,8 @@ function toolCreateInsertElement() {
     // if an editing target is set, change values for existing element
     if(editTarget) {
         newElement = previewElement.cloneNode(true);
+        // ensure "preview-element" id is removed from preview element post-clone
+        newElement.setAttribute("id", null);
         // ensure relevant stylings from other tools are carried over
         newElement.style.position = editTarget.style.position;
         newElement.style.top = editTarget.style.top;
@@ -825,6 +827,20 @@ function updateToolDescription(toolDescriptionNew) {
     toolDescriptionElement.innerHTML = toolDescriptionNew;
 }
 
+// kind of wacky implementation to handle changing page size directly in HTML inputs
+function resizePageSizeHTMLInput() {
+    const backgroundWrapper = document.getElementById("wrapper-background");
+    const backgroundWrapperWidth = backgroundWrapper.style.width || "1000px";
+    const backgroundWrapperHeight = backgroundWrapper.style.height || "800px";
+    const backgroundWrapperWidthNumeric = backgroundWrapperWidth.slice(0, -2);
+    const backgroundWrapperHeightNumeric = backgroundWrapperHeight.slice(0, -2);
+    const pageWidth = document.getElementById("page-width");
+    const pageHeight = document.getElementById("page-height");
+    pageWidth.value = backgroundWrapperWidthNumeric;
+    pageHeight.value = backgroundWrapperHeightNumeric;
+    toolPageSettingsOptionPageSizeChanged();
+}
+
 // Update HTML input & output
 /**
  * Update the render box contents based on the HTML input textarea
@@ -835,6 +851,7 @@ function updateHTMLOutput() {
     const htmlBodyInput = htmlInputBody.value;
     htmlRenderBox.innerHTML = htmlBodyInput;
     toolChanged();
+    resizePageSizeHTMLInput();
 }
 
 /**

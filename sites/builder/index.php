@@ -245,19 +245,7 @@
     <p class="section-title">body (HTML)</p>
     <textarea id="creation-input-body" class="creation-input" onchange="updateHTMLOutput()" onkeypress="updateHTMLOutput()" onpaste="updateHTMLOutput()" oninput="updateHTMLOutput()">
 
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;My Website!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white; z-index: -9999;"&gt;&lt;/div&gt;
-&lt;p style="font-size:20px"&gt;hello world!&lt;/p&gt;
-&lt;img src="../../src/assets/img/shock.gif"&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;&lt;meta charset="UTF-8" style="cursor: default;" /&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" style="cursor: default;" /&gt;&lt;title style="cursor: default;"&gt;My Website!&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: url(http://virtualdream.dev/src/assets/img/stickers/dragon.gif) rgb(115, 203, 232); z-index: -9999; cursor: default;"&gt;&lt;/div&gt;&lt;p style="font-family: Arial; font-size: 68px; color: rgb(238, 255, 0); font-style: italic; font-weight: bolder; position: absolute; top: 182px; left: 671px; cursor: default; margin: 0px; width: 329px; height: 125px;" class=""&gt;hellllo whats up!! hello whats up!!&lt;/p&gt;&lt;img src="../../src/assets/img/shock.gif" style="cursor: default; position: absolute; margin: 0px; left: 828px; top: 619px;" class="" /&gt;&lt;img src="http://virtualdream.dev/src/assets/img/gitara.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 33.8427px; top: 509.082px; width: 365px; height: 269px; transform: rotate(12.7333deg);" /&gt;&lt;img src="http://virtualdream.dev/src/assets/img/popups/bug.png" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 641.065px; top: 289.727px; width: 117px; height: 79px; transform: rotate(-80.6649deg);" /&gt;&lt;img src="http://virtualdream.dev/src/assets/img/popups/bug.png" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 243px; top: 648px; width: 495px; height: 146px;" /&gt;&lt;img src="http://virtualdream.dev/src/assets/img/smilies/yellow.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 94px; top: 228px; width: 380px; height: 172px;" /&gt;&lt;p style="font-family: Arial; font-size: 68px; color: rgb(238, 255, 0); font-style: italic; font-weight: bolder; position: absolute; top: 24px; left: 16px; cursor: default; margin: 0px; width: 329px; height: 125px;" class=""&gt;hellllo whats up!! hello whats up!!&lt;/p&gt;&lt;img src="http://virtualdream.dev/src/assets/img/gitara.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 635px; top: 190.16px; width: 332px; height: 645px; transform: rotate(12.7333deg);" /&gt;&lt;img src="http://virtualdream.dev/src/assets/img/smilies/yellow-recent.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 470px; top: 117px; width: 453px; height: 82px;" /&gt;&lt;/body&gt;&lt;/html&gt;
     </textarea>
 </body>
 </html>

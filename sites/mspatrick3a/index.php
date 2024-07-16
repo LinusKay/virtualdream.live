@@ -11,8 +11,8 @@
     <title>Home</title>
 </head>
 <body>
-</h1>Ms. Patrick 5A</h1>
-<p>Hi, 5A students! This is where your home pages will go. I have made a list below for everyone to look at!<p>
+</h1>Ms. Patrick 3A</h1>
+<p>Hi, 3A students! This is where your home pages will go. I have made a list below for everyone to look at!<p>
     <ul>
         <li>Ailsa Fielding</li>
         <li><a href="brycekilinger.php">Bryce Kilinger</a></li>
