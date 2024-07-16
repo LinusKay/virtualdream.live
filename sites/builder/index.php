@@ -104,7 +104,7 @@
                     echo "src: url('../../src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
                 }
                 else {
-                    echo "src: url('$baseDomainfonts/src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
+                    echo "src: url('$baseDomain/fonts/src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
                 }
             ?>
             
