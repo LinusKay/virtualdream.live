@@ -155,11 +155,11 @@
             </div>
 
             <div id="create-image-options" style="display: none;">
-                <img id="image-preview" src="http://assets.virtualdream.live/img/shock.gif" alt="Image preview">
+                <img id="image-preview" src="https://assets.virtualdream.live/img/shock.gif" alt="Image preview">
                 <br>
                 <label for="image-select">Input Image:</label>
                 <br>
-                <input type="text" id="image-select" value="http://assets.virtualdream.live/img/shock.gif" oninput="toolCreateOptionImageSelectChanged()" onchange="toolCreateOptionImageSelectChanged()">
+                <input type="text" id="image-select" value="https://assets.virtualdream.live/img/shock.gif" oninput="toolCreateOptionImageSelectChanged()" onchange="toolCreateOptionImageSelectChanged()">
                 <p>Or, choose from the gallery:</p>
                 <div id="image-gallery">
                     <?php
@@ -230,7 +230,7 @@
             <br>
             <label for="image-select">Background Image:</label>
             <br>
-            <input type="text" id="image-select" value="http://assets.virtualdream.live/img/shock.gif" oninput="toolPageSettingsOptionBackgroundImageSelectChanged()" onchange="toolPageSettingsOptionBackgroundImageSelectChanged()">
+            <input type="text" id="image-select" value="https://assets.virtualdream.live/img/shock.gif" oninput="toolPageSettingsOptionBackgroundImageSelectChanged()" onchange="toolPageSettingsOptionBackgroundImageSelectChanged()">
             <p>Or, choose from the gallery:</p>
             <div id="image-gallery">
                 <?php
