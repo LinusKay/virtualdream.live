@@ -55,8 +55,8 @@ function clearScreensaver() {
 
 // 
 const availableScreensavers = {
-    "bounceRandom": screensaverBounceRandom,
-    "bounceRandomMultiple": screensaverBounceRandomMultiple,
+    // "bounceRandom": screensaverBounceRandom,
+    // "bounceRandomMultiple": screensaverBounceRandomMultiple,
     "bounceBubbles": screensaverBounceBubbles
 };
 
@@ -112,7 +112,7 @@ function screensaverBounceRandom() {
  * @returns {void}
  */
 function screensaverBounceRandomMultiple() {
-    const blackScreen = document.createElement('div');
+    let blackScreen = document.createElement('div');
     Object.assign(blackScreen.style, {
         backgroundColor: "black",
         position: "fixed",
@@ -161,6 +161,7 @@ function screensaverBounceRandomMultiple() {
  */
 function screensaverBounceBubbles() {
     const blackScreen = document.createElement('div');
+    blackScreen.setAttribute("id", "blackscreen");
     Object.assign(blackScreen.style, {
         backgroundColor: "black",
         position: "fixed",
@@ -187,26 +188,29 @@ function screensaverBounceBubbles() {
     const newBubbleDelay = Math.floor(Math.random() * (newBubbleDelayMax - newBubbleDelayMin + 1)) + newBubbleDelayMin;
 
     function spawnBubble() {
-        let bouncingElement = document.createElement('img');
-        bouncingElement.src = chosenImage;
-        Object.assign(bouncingElement.style, {
-            height: "200px",
-            position: "fixed",
-            zIndex: 100,
-            opacity: 0,
-            transition: "opacity 1s"
-        });
-        bouncingElement.dataset.screenSaver = true;
-        document.body.appendChild(bouncingElement);
-        animationBounce(bouncingElement);
-        fadeIn(bouncingElement, 1000);
+        const checkBlackScreen = document.getElementById("blackscreen");
+        if(checkBlackScreen) {
+            let bouncingElement = document.createElement('img');
+            bouncingElement.src = chosenImage;
+            Object.assign(bouncingElement.style, {
+                height: "200px",
+                position: "fixed",
+                zIndex: 100,
+                opacity: 0,
+                transition: "opacity 1s"
+            });
+            bouncingElement.dataset.screenSaver = true;
+            document.body.appendChild(bouncingElement);
+            animationBounce(bouncingElement);
+            fadeIn(bouncingElement, 1000);
 
-        // Set a random time-to-live (TTL) for the bubble
-        const bubbleTTL = Math.floor(Math.random() * (bubbleTTLMax - bubbleTTLMin + 1)) + bubbleTTLMin;
-        setTimeout(() => {
-            fadeOutAndRemove(bouncingElement, 1000);
-            setTimeout(spawnBubble, newBubbleDelay);
-        }, bubbleTTL);
+            // Set a random time-to-live (TTL) for the bubble
+            const bubbleTTL = Math.floor(Math.random() * (bubbleTTLMax - bubbleTTLMin + 1)) + bubbleTTLMin;
+            setTimeout(() => {
+                fadeOutAndRemove(bouncingElement, 1000);
+                setTimeout(spawnBubble, newBubbleDelay);
+            }, bubbleTTL);
+        }
     }
 
     for (let i = 0; i < bubbleCount; i++) {
