@@ -230,7 +230,7 @@
             <label for="delete-confirm">Delete Confirmation:</label>
             <input type="checkbox" id="delete-confirm" checked>
             <br><br>
-            <button onclick="toolHelpLoadTemplate(0)">Clear Screen</button>
+            <button onclick="toolHelpLoadTemplate(0)">Reset Screen</button>
         </div>
 
         <div id="page-settings" style="display:none;">
