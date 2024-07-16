@@ -256,7 +256,7 @@
     &lt;body&gt;
     &lt;div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white; z-index: -9999;"&gt;&lt;/div&gt;
     &lt;p style="font-size:20px"&gt;hello world!&lt;/p&gt;
-    &lt;img src="https://assets.virtualdream.live/src/assets/img/hacker.gif"&gt;
+    &lt;img src="https://assets.virtualdream.live/img/hacker.gif"&gt;
     &lt;/body&gt;
     &lt;/html&gt;
     </textarea>
