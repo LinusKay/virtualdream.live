@@ -153,6 +153,11 @@
 
                 <label for="text-underline">Text Underline:</label>
                 <input type="checkbox" id="text-underline" onchange="toolCreateOptionTextUnderlineChanged()">
+                <br>
+                <label for="text-background-colour">Background Colour:</label>
+                <input type="color" id="text-background-colour" oninput="toolCreateOptionTextBackgroundColourChanged()" onchange="toolCreateOptionTextBackgroundColourChanged()">
+                <br>
+                <button onclick="toolCreateOptionTextBackgroundColourClear()">Clear Background</button>
 
                 <br>
                 <label for="text-input">Text: </label>
@@ -254,21 +259,6 @@
     </div>
 
     <p class="section-title">body (HTML)</p>
-    <textarea id="creation-input-body" class="creation-input" onchange="updateHTMLOutput()" onkeypress="updateHTMLOutput()" onpaste="updateHTMLOutput()" oninput="updateHTMLOutput()">
-
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;My Website!&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white; z-index: -9999;"&gt;&lt;/div&gt;
-    &lt;p style="font-size:20px"&gt;hello world!&lt;/p&gt;
-    &lt;img src="https://assets.virtualdream.live/img/hacker.gif"&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-    </textarea>
+    <textarea id="creation-input-body" class="creation-input" onchange="updateHTMLOutput()" onkeypress="updateHTMLOutput()" onpaste="updateHTMLOutput()" oninput="updateHTMLOutput()"></textarea>
 </body>
 </html>
