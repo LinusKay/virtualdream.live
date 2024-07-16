@@ -97,18 +97,6 @@
         #page-width, #page-height {
             width:50px;
         }
-        @font-face {
-            font-family: "Yuji Syuku";
-            <?php 
-                if($baseDomain == $hostLocal) {
-                    echo "src: url('../../src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
-                }
-                else {
-                    echo "src: url('https://$baseDomain/src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
-                }
-            ?>
-            
-        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.15.1/beautify-html.js"></script>
     <script src="builder.js"></script>
@@ -142,7 +130,6 @@
                     <option value="Arial">Arial</option>
                     <option value="Times New Roman">Times New Roman</option>
                     <option value="Courier New">Courier New</option>
-                    <option value="Yuji Syuku">Yuji Syuku</option>
                 </select>
 
                 <label for="text-size">Text Size (px):</label>
