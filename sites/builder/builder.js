@@ -38,7 +38,7 @@ function toolChanged() {
             manageToolHelp(false);
             updateRenderBoxElementsCursor("alias");
             updateRenderBoxCursor("default");
-            toolDescription = "This is the edit tool! Click on an element to enable editing.<br>Currently supports &lt;p&gt; (text) and &lt;img&gt; (image) elements.<br>For images, enter an image location in the box, or select from the gallery below!";
+            toolDescription = "This is the edit tool! Click on an element to enable editing.<br>Currently supports &lt;p&gt; (text) and &lt;img&gt; (image) elements.<br>For images, enter an image location in the box, or select from the gallery below!<br>The preview below shows how it will look on the page. After you're finished, click \"Save Element\" to update it on the page!";
             updateToolDescription(toolDescription);
             break;
         case "delete":
@@ -66,7 +66,7 @@ function toolChanged() {
             manageToolHelp(false);
             updateRenderBoxElementsCursor("default"); 
             updateRenderBoxCursor("default");
-            toolDescription = "This is the create tool!";
+            toolDescription = "This is the create tool! You can use this to create new text or images using the settings below. The preview below shows how it will look on the page. After you're finished, click \"Add Element\" to slap it onto the page!";
             updateToolDescription(toolDescription);
             break;
         case "scale":
@@ -80,7 +80,7 @@ function toolChanged() {
             manageToolHelp(false);
             updateRenderBoxElementsCursor("default"); 
             updateRenderBoxCursor("default");
-            toolDescription = "This is the scale tool!";
+            toolDescription = "This is the scale tool! Click-and-drag an element to change its size. Hold the shift button for uniform scaling.";
             updateToolDescription(toolDescription);
             break;
         case "rotate":
@@ -94,7 +94,7 @@ function toolChanged() {
             manageToolHelp(false);
             updateRenderBoxElementsCursor("grab"); 
             updateRenderBoxCursor("default");
-            toolDescription = "This is the rotate tool!";
+            toolDescription = "This is the rotate tool! Click-and-drag an element to change its rotation.";
             updateToolDescription(toolDescription);
             break;
         case "pagesettings":
@@ -108,7 +108,7 @@ function toolChanged() {
             manageToolHelp(false);
             updateRenderBoxElementsCursor("default"); 
             updateRenderBoxCursor("default");
-            toolDescription = "This is the page settings tool!";
+            toolDescription = "This is the page settings tool! Use this area to change some basic settings for your page. Page Title won't show up here, but it will show up on the browser tab when you export this to an actual HTML page. The \"Clear Background\" button at the absolute bottom can be used to remove any unwanted background style.";
             updateToolDescription(toolDescription);
             break;
         case "help":
