@@ -205,7 +205,9 @@
                             |
                             <li><a href='https://stickers.$baseDomain/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>";
+                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>
+                            |
+                            <li><a href='https://builder.$baseDomain/'>website builder</a><span class='newsite'>Beta!</span></li";
                         }
                         ?>
                         
