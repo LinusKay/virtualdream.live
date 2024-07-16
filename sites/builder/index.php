@@ -194,11 +194,12 @@
                             return $imageFiles;
                         }
                         
-                        $directory = "https://assets.virtualdream.dev/img/";
-                        $imageFiles = array_reverse(getAllImages($directory));
+                        $lookUpDirectory = "../../src/assets/img/";
+                        $storageDirectory = "https://assets.virtualdream.live/img/";
+                        $imageFiles = array_reverse(getAllImages($lookUpDirectory));
 
-                        
                         foreach ($imageFiles as $file) {
+                            str_replace($lookUpDirectory, $storageDirectory, $file);
                             echo "<img src='$file' class='image-gallery-thumb' onclick='toolCreateOptionImageGallerySelect(this)'>";
                         }
                         
