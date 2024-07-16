@@ -492,6 +492,7 @@ function toolCreateOptionTypeChanged() {
         toolCreateOptionTextSizeChanged(textSizeNumber);
         toolCreateOptionTextColourChanged();
         toolCreateOptionTextItalicChanged();
+        toolCreateOptionTextUnderlineChanged();
         toolCreateOptionTextBoldnessChanged();
     }
  else if (elementType === "image") {
@@ -558,6 +559,16 @@ function toolCreateOptionTextItalicChanged() {
     const textPreview = document.getElementById("text-preview");
     if(textItalic) textPreview.style.fontStyle = "italic";
     else textPreview.style.fontStyle = "normal";
+}
+
+/**
+ * Updates the text decoration (underline) of the text preview element based on the checked state.
+ */
+function toolCreateOptionTextUnderlineChanged() {
+    const textItalic = document.getElementById("text-underline").checked;
+    const textPreview = document.getElementById("text-preview");
+    if(textItalic) textPreview.style.textDecoration = "underline";
+    else textPreview.style.textDecoration = "none";
 }
 
 /**
@@ -905,6 +916,7 @@ function updateHTMLInput() {
 }
 
 function rgbStringToHex(rgbString) {
+    if(!rgbString) { return rgbString }
     return "#" + rgbString.match(/\d+/g)
       .map(x => parseInt(x).toString(16).padStart(2, '0'))
       .join('');

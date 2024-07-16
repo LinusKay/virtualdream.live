@@ -147,6 +147,9 @@
                 <label for="text-italic">Text Italic:</label>
                 <input type="checkbox" id="text-italic" onchange="toolCreateOptionTextItalicChanged()">
 
+                <label for="text-underline">Text Underline:</label>
+                <input type="checkbox" id="text-underline" onchange="toolCreateOptionTextUnderlineChanged()">
+
                 <br>
                 <label for="text-input">Text: </label>
                 <input id="text-input" required onchange="toolCreateOptionTextInput()" onpaste="toolCreateOptionTextInput()" oninput="toolCreateOptionTextInput()" value="Insert text!">
