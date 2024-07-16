@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Dream Website Builder</title>
+    <?php 
+        include('../../src/setup.php');
+    ?>
     <style>
         body {
             background: blue;
@@ -94,11 +97,24 @@
         #page-width, #page-height {
             width:50px;
         }
+        @font-face {
+            font-family: "Yuji Syuku";
+            <?php 
+                if($baseDomain == $hostLocal) {
+                    echo "src: url('../../src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
+                }
+                else {
+                    echo "src: url('$baseDomainfonts/src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
+                }
+            ?>
+            
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.15.1/beautify-html.js"></script>
     <script src="builder.js"></script>
 </head>
 <body> 
+    <?php echo $hostLocal; ?>
     <div id="creation-render"></div>
     <div id="controls">
         <label for="tool-select">Select Tool:</label>
@@ -126,6 +142,8 @@
                 <select id="font-select" onchange="toolCreateOptionTextFontChanged()">
                     <option value="Arial">Arial</option>
                     <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Yuji Syuku">Yuji Syuku</option>
                 </select>
 
                 <label for="text-size">Text Size (px):</label>
