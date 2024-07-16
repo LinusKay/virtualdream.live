@@ -155,11 +155,11 @@
             </div>
 
             <div id="create-image-options" style="display: none;">
-                <img id="image-preview" src="http://localhost/virtualdream.live/src/assets/img/shock.gif" alt="Image preview">
+                <img id="image-preview" src="http://assets.virtualdream.live/src/assets/img/shock.gif" alt="Image preview">
                 <br>
                 <label for="image-select">Input Image:</label>
                 <br>
-                <input type="text" id="image-select" value="http://localhost/virtualdream.live/src/assets/img/shock.gif" oninput="toolCreateOptionImageSelectChanged()" onchange="toolCreateOptionImageSelectChanged()">
+                <input type="text" id="image-select" value="http://assets.virtualdream.live/src/assets/img/shock.gif" oninput="toolCreateOptionImageSelectChanged()" onchange="toolCreateOptionImageSelectChanged()">
                 <p>Or, choose from the gallery:</p>
                 <div id="image-gallery">
                     <?php
