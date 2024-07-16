@@ -231,7 +231,7 @@
             <br>
             <label for="image-select">Background Image:</label>
             <br>
-            <input type="text" id="image-select" value="http://localhost/virtualdream.live/src/assets/img/shock.gif" oninput="toolPageSettingsOptionBackgroundImageSelectChanged()" onchange="toolPageSettingsOptionBackgroundImageSelectChanged()">
+            <input type="text" id="image-select" value="http://assets.virtualdream.live/src/assets/img/shock.gif" oninput="toolPageSettingsOptionBackgroundImageSelectChanged()" onchange="toolPageSettingsOptionBackgroundImageSelectChanged()">
             <p>Or, choose from the gallery:</p>
             <div id="image-gallery">
                 <?php
@@ -256,7 +256,7 @@
     &lt;body&gt;
     &lt;div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white; z-index: -9999;"&gt;&lt;/div&gt;
     &lt;p style="font-size:20px"&gt;hello world!&lt;/p&gt;
-    &lt;img src="../../src/assets/img/hacker.gif"&gt;
+    &lt;img src="https://assets.virtualdream.live/src/assets/img/hacker.gif"&gt;
     &lt;/body&gt;
     &lt;/html&gt;
     </textarea>
