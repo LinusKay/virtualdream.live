@@ -20,6 +20,7 @@ function toolChanged() {
             manageToolRotate(false);
             manageToolEdit(false);
             manageToolPageSettings(false);
+            manageToolHelp(false);
             updateRenderBoxElementsCursor("grab");
             updateRenderBoxCursor("default");
             toolDescription = "This is the drag tool! Click-and-drag to move elements around the page.<br>Drag Boundary: Limits dragging to the page boundaries.<br>Clone Drag: Creates a copy of the element and drags that instead. The Ctrl key will toggle this.";
@@ -33,6 +34,7 @@ function toolChanged() {
             manageToolRotate(false);
             manageToolEdit(true);
             manageToolPageSettings(false);
+            manageToolHelp(false);
             updateRenderBoxElementsCursor("alias");
             updateRenderBoxCursor("default");
             toolDescription = "This is the edit tool! Click on an element to enable editing.<br>Currently supports &lt;p&gt; (text) and &lt;img&gt; (image) elements.<br>For images, enter an image location in the box, or select from the gallery below!";
@@ -46,6 +48,7 @@ function toolChanged() {
             manageToolRotate(false);
             manageToolEdit(false);
             manageToolPageSettings(false);
+            manageToolHelp(false);
             updateRenderBoxElementsCursor("not-allowed"); 
             updateRenderBoxCursor("default");
             toolDescription = "This is the delete tool! Click on an element to delete it.<br>Delete Confirmation: Determines whether you will be prompted before deletion or not. Careful! There is no undo around here.";
@@ -59,6 +62,7 @@ function toolChanged() {
             manageToolRotate(false);
             manageToolEdit(false);
             manageToolPageSettings(false);
+            manageToolHelp(false);
             updateRenderBoxElementsCursor("default"); 
             updateRenderBoxCursor("default");
             toolDescription = "This is the create tool!";
@@ -72,6 +76,7 @@ function toolChanged() {
             manageToolRotate(false);
             manageToolEdit(false);
             manageToolPageSettings(false);
+            manageToolHelp(false);
             updateRenderBoxElementsCursor("default"); 
             updateRenderBoxCursor("default");
             toolDescription = "This is the scale tool!";
@@ -85,6 +90,7 @@ function toolChanged() {
             manageToolRotate(true);
             manageToolEdit(false);
             manageToolPageSettings(false);
+            manageToolHelp(false);
             updateRenderBoxElementsCursor("grab"); 
             updateRenderBoxCursor("default");
             toolDescription = "This is the rotate tool!";
@@ -98,9 +104,24 @@ function toolChanged() {
             manageToolRotate(false);
             manageToolEdit(false);
             manageToolPageSettings(true);
-            updateRenderBoxElementsCursor("grab"); 
+            manageToolHelp(false);
+            updateRenderBoxElementsCursor("default"); 
             updateRenderBoxCursor("default");
             toolDescription = "This is the page settings tool!";
+            updateToolDescription(toolDescription);
+            break;
+        case "help":
+            manageToolDrag(false); 
+            manageToolDelete(false); 
+            manageToolCreate(false);
+            manageToolScale(false);
+            manageToolRotate(false);
+            manageToolEdit(false);
+            manageToolPageSettings(false);
+            manageToolHelp(true);
+            updateRenderBoxElementsCursor("default"); 
+            updateRenderBoxCursor("default");
+            toolDescription = "Welcome to the Virtual Dream Website Builder! This is a tool for creative webmasters to build their own cool websites, and share them with friends.<br><br>Above is the \"render box\", and below this text is the \"HTML box\". You can build your site visually using the many tools available, or by editing the raw HTML. The HTML box can also be used to share your page with friends! Simply copy and paste :)<br><br>Get started by selecting the \"Create\" tool to create a new element, or load one of the templates below and use the \"Edit\" tool to mix things up!<br><br><button onclick=\"toolHelpLoadTemplate(0);\">Load Template 1</button><button onclick=\"toolHelpLoadTemplate(1);\">Load Template 2</button><button onclick=\"toolHelpLoadTemplate(2);\">Load Template 3</button>";
             updateToolDescription(toolDescription);
             break;
         default:
@@ -615,7 +636,7 @@ function toolEditEdit(event) {
         document.getElementById("font-select").value = editTarget.style.fontFamily || "Times New Roman";
         document.getElementById("text-size-number").value = editTarget.style.fontSize.slice(0, -2) || "16";
         document.getElementById("text-size-range").value = editTarget.style.fontSize.slice(0, -2) || "16";
-        document.getElementById("text-colour").value = editTarget.style.color || "000000";
+        document.getElementById("text-colour").value = rgbStringToHex(editTarget.style.color) || "#000000";
         document.getElementById("text-boldness").value = editTarget.style.fontWeight || "normal";
         document.getElementById("text-italic").checked = (editTarget.style.fontStyle === "italic") ? true : false;
         document.getElementById("text-input").value = editTarget.innerText;
@@ -822,6 +843,20 @@ function toolPageSettingsOptionPageSizeChanged() {
     updateHTMLInput();
 }
 
+function manageToolHelp(){}
+
+function toolHelpLoadTemplate(templateNumber) {
+    templates = [
+        '<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" style="cursor: default;" /><meta name="viewport" content="width=device-width, initial-scale=1.0" style="cursor: default;" /><title style="cursor: default;">My Website!</title></head><body><div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: url(&quot;http://localhost/virtualdream.live/src/assets/img/popups/bug.png&quot;) rgb(136, 169, 61); z-index: -9999; cursor: default;"></div><p id="null" style="font-family: Arial; font-size: 68px; color: rgb(17, 255, 0); font-style: italic; font-weight: bolder; position: absolute; top: 420px; left: 298px; width: 329px; height: 125px; cursor: default; margin: 0px;">music for my bugs</p><img src="../../src/assets/img/shock.gif" style="cursor: default; position: absolute; margin: 0px; left: 828px; top: 619px;" class="" /><img src="http://virtualdream.dev/src/assets/img/gitara.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 33.8427px; top: 509.082px; width: 365px; height: 269px; transform: rotate(12.7333deg);" /><img src="http://virtualdream.dev/src/assets/img/popups/bug.png" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 641.065px; top: 289.727px; width: 117px; height: 79px; transform: rotate(-80.6649deg);" /><img src="http://virtualdream.dev/src/assets/img/popups/bug.png" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 243px; top: 648px; width: 495px; height: 146px;" /><img src="http://virtualdream.dev/src/assets/img/smilies/yellow.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 94px; top: 228px; width: 380px; height: 172px;" /><p style="font-family: Arial; font-size: 68px; color: rgb(238, 255, 0); font-style: italic; font-weight: bolder; position: absolute; top: 24px; left: 16px; cursor: default; margin: 0px; width: 329px; height: 125px;" class="">i love rocking roll!!</p><img src="http://virtualdream.dev/src/assets/img/gitara.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 635px; top: 190.16px; width: 332px; height: 645px; transform: rotate(12.7333deg);" /><img src="http://virtualdream.dev/src/assets/img/smilies/yellow-recent.gif" alt="Image preview" style="cursor: default; position: absolute; margin: 0px; left: 470px; top: 117px; width: 453px; height: 82px;" /></body></html>',
+        '<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" style="cursor: grab;" /><meta name="viewport" content="width=device-width, initial-scale=1.0" style="cursor: grab;" /><title style="cursor: grab;">My Website!</title></head><body><div id="wrapper-background" style="width: 1000px; height: 200px; position: absolute; background: url(&quot;https://virtualdream.dev/src/assets/img/heart3.gif&quot;) white; z-index: -9999; cursor: grab;"></div><p id="null" style="font-size: 32px; color: rgb(0, 0, 0); font-style: italic; font-weight: bolder; font-family: &quot;Times New Roman&quot;; position: absolute; top: 116px; left: 344px; width: 300px; height: 84px; cursor: grab; margin: 0px;">conputer. i love u</p><img src="https://virtualdream.dev/src/assets/img/popups/id_aniheart.gif" alt="Image preview" style="position: absolute; top: 43px; left: 6px; width: 983px; height: 66px; cursor: grab; margin: 0px;" class="" /><img src="http://localhost/virtualdream.live/src/assets/img/popups/Computer_2.gif" alt="Image preview" style="cursor: grab; width: 228px; height: 177px; position: absolute; margin: 0px; left: 755px; top: 11px;" /><img src="http://localhost/virtualdream.live/src/assets/img/popups/Computer_2.gif" alt="Image preview" style="cursor: grab; width: 228px; height: 177px; position: absolute; margin: 0px; left: 9px; top: 14px;" /></body></html>',
+        '<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" style="cursor: grab;" /><meta name="viewport" content="width=device-width, initial-scale=1.0" style="cursor: grab;" /><title style="cursor: grab;">My Website!</title></head><body><div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white url(https://virtualdream.dev/src/assets/img/stickers/planet3.gif); z-index: -9999; cursor: grab;"></div><p id="text-preview" style="font-family: Arial; font-size: 42px; color: rgb(255, 128, 192); font-style: italic; font-weight: normal; position: absolute; top: 607px; left: 139px; cursor: grab;">i love her</p><img src="https://virtualdream.dev/src/assets/img/popups/R.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 559px; top: 589px; width: 403px; height: 158px;" /><img src="https://virtualdream.dev/src/assets/img/smilies/red.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 514px; top: 623px; width: 186px; height: 150px;" /><img src="https://virtualdream.dev/src/assets/img/heart3.gif" alt="Image preview" style="cursor: grab; width: 468px; height: 349px; position: absolute; margin: 0px; left: -99px; top: 362px;" /><img src="https://virtualdream.dev/src/assets/img/heart2.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 185px; top: 321px; width: 256px; height: 223px;" /><img src="https://virtualdream.dev/src/assets/img/smilies/green-ack.gif" alt="Image preview" style="cursor: grab; width: 78px; height: 57px; position: absolute; margin: 0px; left: 225px; top: 439px;" /><img src="https://virtualdream.dev/src/assets/img/popups/puppylove.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 637px; top: 213px; transform: rotate(-20.9856deg);" /><img src="https://virtualdream.dev/src/assets/img/popups/SpinningHourglass.gif" alt="Image preview" style="cursor: grab; width: 328px; height: 219px; position: absolute; margin: 0px; left: 401px; top: 184px;" /><p style="font-family: Arial; font-size: 55px; color: rgb(255, 23, 29); font-style: normal; font-weight: normal; cursor: grab; position: absolute; margin: 0px; left: 39.1px; top: 211.517px; transform: rotate(8.36509deg);">save da eart</p><p style="font-family: Arial; font-size: 42px; color: rgb(255, 128, 192); font-style: normal; font-weight: normal; position: absolute; top: 128px; left: 728px; cursor: grab; margin: 0px; transform: rotate(12.9078deg);">i love her</p><p style="font-family: Arial; font-size: 55px; color: rgb(255, 23, 29); font-style: normal; font-weight: normal; cursor: grab; position: absolute; margin: 0px; left: 589px; top: 76px; transform: rotate(353.642deg);">save da eart</p></body></html>'
+    ]
+    const htmlInputBody = document.getElementById("creation-input-body");
+    htmlInputBody.value = templates[templateNumber]
+    updateHTMLOutput();
+}
+
+
 function updateToolDescription(toolDescriptionNew) { 
     const toolDescriptionElement = document.getElementById("tool-description");
     toolDescriptionElement.innerHTML = toolDescriptionNew;
@@ -868,3 +903,9 @@ function updateHTMLInput() {
 
     htmlInputBody.value = formattedHTML;
 }
+
+function rgbStringToHex(rgbString) {
+    return "#" + rgbString.match(/\d+/g)
+      .map(x => parseInt(x).toString(16).padStart(2, '0'))
+      .join('');
+  }
