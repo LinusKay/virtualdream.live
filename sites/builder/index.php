@@ -104,7 +104,7 @@
                     echo "src: url('../../src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
                 }
                 else {
-                    echo "src: url('https://$baseDomain/fonts/src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
+                    echo "src: url('https://$baseDomain/src/assets/fonts/YujiSyuku/YujiSyuku-Regular.ttf');";
                 }
             ?>
             
@@ -114,7 +114,6 @@
     <script src="builder.js"></script>
 </head>
 <body> 
-    <?php echo $hostLocal; ?>
     <div id="creation-render"></div>
     <div id="controls">
         <label for="tool-select">Select Tool:</label>
