@@ -194,7 +194,9 @@
                             |
                             <li><a href='sites/stickers/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='sites/webrings/'>webrings</a></li>";
+                            <li><a href='sites/webrings/'>webrings</a></li>
+                            |
+                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>";
                         }
                         else {
                             echo "<li><a href='https://help.$baseDomain'>help</a></li>
