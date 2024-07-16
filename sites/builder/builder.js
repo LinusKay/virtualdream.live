@@ -854,6 +854,14 @@ function toolPageSettingsOptionPageSizeChanged() {
     updateHTMLInput();
 }
 
+function toolPageSettingsOptionBackgroundClear() {
+    document.getElementById("wrapper-background").style.backgroundImage = null;
+    document.getElementById("image-select").value = null;
+    document.getElementById("wrapper-background").style.backgroundColor = "rgb(255,255,255)";
+    document.getElementById("background-colour").value = "#ffffff";
+    updateHTMLInput();
+}
+
 function manageToolHelp(){}
 
 function toolHelpLoadTemplate(templateNumber) {
@@ -915,6 +923,7 @@ function updateHTMLInput() {
     htmlInputBody.value = formattedHTML;
 }
 
+// converts an rgb() string to a hex string
 function rgbStringToHex(rgbString) {
     if(!rgbString) { return rgbString }
     return "#" + rgbString.match(/\d+/g)

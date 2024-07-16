@@ -229,7 +229,7 @@
             <input type="number" id="page-height" value="800" min="1" required oninput="toolPageSettingsOptionPageSizeChanged()" onchange="toolPageSettingsOptionPageSizeChanged()">
             <br>
             <label for="background-colour">Background Colour:</label>
-            <input type="color" id="background-colour" oninput="toolPageSettingsOptionBackgroundColourChanged()" onchange="toolPageSettingsOptionBackgroundColourChanged()">
+            <input type="color" id="background-colour" value="#ffffff" oninput="toolPageSettingsOptionBackgroundColourChanged()" onchange="toolPageSettingsOptionBackgroundColourChanged()">
             <br>
             <label for="image-select">Background Image:</label>
             <br>
@@ -242,6 +242,7 @@
                     } 
                 ?>
             </div>
+            <button onclick="toolPageSettingsOptionBackgroundClear()">Clear Background</button>
         </div>
     </div>
 
