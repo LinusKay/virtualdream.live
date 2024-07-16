@@ -196,7 +196,6 @@
                         
                         $directory = "../../src/assets/img/";
                         $imageFiles = array_reverse(getAllImages($directory));
-
                         
                         foreach ($imageFiles as $file) {
                             echo "<img src='$file' class='image-gallery-thumb' onclick='toolCreateOptionImageGallerySelect(this)'>";
