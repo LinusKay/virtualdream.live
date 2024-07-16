@@ -862,6 +862,14 @@ function toolPageSettingsOptionBackgroundClear() {
     updateHTMLInput();
 }
 
+function toolPageSettingsOptionPageTitleChanged() {
+    const pageTitle = document.getElementById("page-title").value;
+    const htmlRenderBox = document.getElementById("creation-render");
+    const titleElement = htmlRenderBox.getElementsByTagName("title")[0];
+    titleElement.innerText = pageTitle;
+    updateHTMLInput();
+}
+
 function manageToolHelp(){}
 
 function toolHelpLoadTemplate(templateNumber) {
@@ -919,7 +927,6 @@ function updateHTMLInput() {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlRenderString, "text/html");
     const formattedHTML = new XMLSerializer().serializeToString(doc);
-
     htmlInputBody.value = formattedHTML;
 }
 

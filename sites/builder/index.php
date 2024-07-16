@@ -227,6 +227,9 @@
         </div>
 
         <div id="page-settings" style="display:none;">
+            <label for="page-title">Page Title:</label>
+            <input type="text" id="page-title" value="My Website!" oninput="toolPageSettingsOptionPageTitleChanged()" onchange="toolPageSettingsOptionPageTitleChanged()">
+            <br>
             <label for="page-width">Page Width (px):</label>
             <input type="number" id="page-width" value="1000" min="1" required oninput="toolPageSettingsOptionPageSizeChanged()" onchange="toolPageSettingsOptionPageSizeChanged()">
             <label for="page-height">Page Height (px):</label>
