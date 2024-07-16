@@ -194,7 +194,7 @@
                             return $imageFiles;
                         }
                         
-                        $directory = "../../src/assets/img/";
+                        $directory = "https://assets.virtualdream.dev/img/";
                         $imageFiles = array_reverse(getAllImages($directory));
 
                         
