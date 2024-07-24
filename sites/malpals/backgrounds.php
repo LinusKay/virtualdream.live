@@ -9,12 +9,6 @@
     # /PAGE SETUP
     ?>
     <title>MalPals! - Free Backgrounds</title>
-    <script>
-        window.addEventListener("load", function() {
-            window.addInfection("malPalPyramid");
-            window.unlockSticker("malPals");
-        });
-    </script>
     <style>
         * {
             margin:0;
@@ -188,6 +182,18 @@
         #disclaimer {
             padding:40px;
         }
+        .background-preview {
+            padding:5px;
+            width:100%;
+            border:solid 1px gray;
+        }
+        .background-download {
+            display:block;
+            text-align:center;
+        }
+        .background-download:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -213,7 +219,20 @@
                 <img id="site-logo" src="src/img//malpals-logo.png">
                 <p id="introduction">Check out some of the cool and fun backgrounds we've got for you to decorate your PC <b>your</b> way!</p>
                 <hr>
-                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="180">
+                                <a href="src/img/backgrounds/MalPal_TubularTriangle_DesktopWallpaper_1024x568.png">
+                                    <img class="background-preview" src="src/img/backgrounds/MalPal_TubularTriangle_DesktopWallpaper_1024x568.png">
+                                </a>
+                                <a download class="background-download" href="src/img/backgrounds/MalPal_TubularTriangle_DesktopWallpaper_1024x568.png">Download</a>
+                            </td>
+                            <td width="180"></td>
+                            <td width="180"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </td>
             <td id="col-right">
                 <div id="spacer-top"></div>

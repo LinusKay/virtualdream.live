@@ -113,10 +113,9 @@
             'stickers',
             '404',
             'rememberdreamwipe',
-            'downloadmania',
             'lonelyboyloserclub',
-            'adrenadine',
-            'theporncomputer'
+            'builder',
+            'truth'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
@@ -138,7 +137,7 @@
             'theoneleader',
             'downloadmania',
             'bubblechat',
-            'squelchtube',
+            'squelchtv',
             'laika'
         ];
         $isNewSite = false;
@@ -196,7 +195,9 @@
                             |
                             <li><a href='sites/stickers/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='sites/webrings/'>webrings</a></li>";
+                            <li><a href='sites/webrings/'>webrings</a></li>
+                            |
+                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>";
                         }
                         else {
                             echo "<li><a href='https://help.$baseDomain'>help</a></li>
@@ -205,7 +206,9 @@
                             |
                             <li><a href='https://stickers.$baseDomain/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>";
+                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>
+                            |
+                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li";
                         }
                         ?>
                         

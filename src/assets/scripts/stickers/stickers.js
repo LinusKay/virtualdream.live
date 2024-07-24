@@ -111,6 +111,7 @@ let stickersEnabled = [];
 function loadStickersEnabled() {
     const stickersEnabledCookie = Cookies.get('stickersEnabled');
     stickersEnabled = stickersEnabledCookie ? JSON.parse(stickersEnabledCookie) : ["0", "1", "2", "3", "4", "5", "6", "7"];
+    return stickersEnabled;
 }
 
 /**
@@ -171,15 +172,16 @@ function saveStickers() {
  * @returns {void}
  */
 function generateRandomSticker() {
-    loadStickersEnabled();
-
-    const stickerImageIndex = stickersEnabled[Math.floor(Math.random() * stickersEnabled.length)];
-    const stickerX = mouseX + "px";
-    const stickerY = mouseY + "px";
-    const stickerZ = getHighestZIndex() + 1;
-    
-    createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
-    saveStickers();
+    if(loadStickersEnabled().length > 0) {
+        const stickerImageIndex = stickersEnabled[Math.floor(Math.random() * stickersEnabled.length)];
+        const stickerX = mouseX + "px";
+        const stickerY = mouseY + "px";
+        const stickerZ = getHighestZIndex() + 1;
+        
+        createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
+        saveStickers();
+    } 
+    else console.log("No stickers enabled!");
 }
 
 /**
