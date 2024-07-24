@@ -32,7 +32,7 @@
                         <p style="margin:0;">&nbsp;</p>
                         <p><font size="2"><b><u>About us!</u></b></font></p>
                         <p><font size="2"><b>xebulonluv</b> - webmistress / maintainer / xebulon #1 fan</font></p>
-                        <p><font size="2">Hi!!! I'm xebulonluv, probably the biggest fan of Planet Xarxax there is!  I love to read (I even write my own stuff!), draw and browse the internet. Making websites is one of my favourite hobbies, and maintaining this site is a joy of mine. I'm studying computer science at college and hope to be a successful web designer one day! As you can tell Xebulon is my favourite Xarxax character. She's so cool and I often try to dress just like her (Not full-on cosplay tee hee :P). Bye!!! <3 :P</font></p>
+                        <p><font size="2">Hi!!! I'm xebulonluv, probably the biggest fan of Planet Xarxax there is!  I love to read (I even write my own stuff!), draw and browse the internet. Making websites is one of my favourite hobbies, and maintaining this site is a joy of mine. I'm studying computer science at college and hope to be a successful web designer one day! As you can tell Xebulon is my favourite Xarxax character. She's so cool and I often try to dress just like her (Not full-on cosplay though :P) <33</font></p>
                     </td>
                     <td valign="top" width="27" bgcolor="white"></td>
                 </tr>
