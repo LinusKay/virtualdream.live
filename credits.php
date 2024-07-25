@@ -25,8 +25,10 @@
     <h1>Credits</h1>
     <p>Virtual Dream created by <a href="https://libus.xyz">Linus Kay</a></p>
     <p>Thank you to all the testers and early visitors who support weird little projects like this.</p>
-    <p>VD is not created for profit, but if you enjoy things like this, consider <a href="https://ko-fi.com/libus_">contributing</a> to hosting costs.</p>
+    <p>VD is not for profit, but if you enjoy things like this, consider <a href="https://ko-fi.com/libus_">contributing</a> to hosting costs.</p>
     <hr>
+    <h3>GIFs</h3>
+    <p>Many animated images are sourced from the GifCities media library, compiled by the Internet Archive. A full list of images and their original sites is in the works.</p>
     <h3>armourofgod</h3>
     <p>Portrait photos sourced from <a href="https://thispersondoesnotexist">https://thispersondoesnotexist.com/</a></p>
     <h3>friendonline</h3>
