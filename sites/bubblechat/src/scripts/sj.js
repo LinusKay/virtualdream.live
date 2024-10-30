@@ -75,6 +75,7 @@ const messageTextOptions = [
     ".Leave. Don't Come Back. Let Us Die."
 ];
 let usersLoggedIn = [];
+let setup = false;
 
 /**
  * Generates a random username using adjectives and nouns.
@@ -134,6 +135,7 @@ function setupChatroom() {
     const newMessageText = messageTextOptions[Math.floor(Math.random() * messageTextOptions.length)];
     const newMessageUserName = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
     createMessage("message", newMessageText, newMessageUserName);
+    setup = true;
 }
 
 /**
@@ -197,10 +199,19 @@ function createMessage(messageType = "message", messageText, messageUserName = "
     messageElement.innerText = messageContents;
 
     let messageClasses = ["message"];
-    if (messageType === "join") messageClasses.push("message-join");
-    else if (messageType === "quit") messageClasses.push("message-quit");
+    if (messageType === "join") {
+        if(setup) { let audio = new Audio('../../src/sounds/cuckoo.wav'); audio.play(); }
+        messageClasses.push("message-join");
+    }
+    else if (messageType === "quit") {
+        if(setup) { let audio = new Audio('../../src/sounds/error.wav'); audio.play(); }
+        messageClasses.push("message-quit");
+    }
     else if (messageType === "motd") messageClasses.push("message-motd");
     else if (messageType === "messageUser") messageClasses.push("message-user");
+    else { 
+        if(setup) { let audio = new Audio('../../src/sounds/stagechangeoldnotification.wav'); audio.play(); }
+    }
     messageElement.classList.add(...messageClasses);
 
     chatBox.appendChild(messageElement);

@@ -19,13 +19,22 @@
             font-weight: normal;
             src: url('../../src/fonts/YujiSyuku/YujiSyuku-Regular.ttf') format('truetype');
         }
+        html {
+            overflow:hidden;
+        }
         body {
             font-family: YujiSyuku;
             font-size:12px;
             background: url('../../src/img/Wallpaper_ParadisoMillenium.png');
+            animation: fadeIn 1s;
+            rotate:-1deg;
+        }
+        @keyframes fadeIn {
+            from { opacity:0; }
+            to { opacity:1; }
         }
         .wrap-header {
-            width:500px;
+            width:700px;
             margin:auto;
         }
         .logo {

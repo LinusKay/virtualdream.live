@@ -210,6 +210,6 @@
     <div class="footer aero">
         <p>© BubbleChat<a href="https://bubblechat.virtualdream.live/">[Go back]</a></p>
     </div>
-    <div class="advertisement-banner"></div>
+    <div style="text-align:center" class="advertisement-banner"></div>
 </body>
 </html>

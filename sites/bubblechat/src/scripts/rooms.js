@@ -46,6 +46,8 @@ function removeUserLoggedIn(userName) {
  * Sets up the initial state of the chatroom, including adding initial users and scheduling first message.
  */
 function setupChatroom() {
+    let audio = new Audio('../../src/sounds/cuckoo.wav');
+    audio.play();
     const userCount = Math.floor(Math.random() * 3);
     for (let i = 0; i < userCount; i++) {
         addUserLoggedIn(generateRandomUsername(), true);
@@ -79,7 +81,7 @@ function userLoginLogoutEvent() {
     } else {
         const userToRemove = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
         const guestUsername = document.getElementById('guestUsername').innerText;
-        if(newMessageUserName == guestUsername) newMessageUserName = usersLoggedIn[0];
+        if(userToRemove == guestUsername) userToRemove = usersLoggedIn[0];
         removeUserLoggedIn(userToRemove);
     }
 
@@ -140,6 +142,9 @@ function createMessage(messageType = "message", messageText, messageUserName = "
 
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+    
+    let audio = new Audio('../../src/sounds/stagechangeoldnotification.wav');
+    audio.play();
 
     const messageBuffer = document.getElementsByClassName("message");
     if (messageBuffer.length > messageBufferMax) {
