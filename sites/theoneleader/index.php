@@ -70,9 +70,9 @@
             <tbody>
                 <tr>
                     <td width="400">
-                        <h3>Xarxax joins Virtual Dream</h3>
+                        <!-- <h3>Xarxax joins Virtual Dream</h3>
                         <p>A <a href="https://planetxarxax.virtualdream.live/">new site</a> with the tag planetxarxax has appeared, with rumours circulating that this is likely to be an official site for the famous series, which could mean that fans of the show (see: nerds) are finally getting a central place to flock. Good for them. Maybe they'll do us a favour and stick to that site. Always hated Xarxax.</p>
-                        <p class="review-quote">Leave space to the scientists.</p>
+                        <p class="review-quote">Leave space to the scientists.</p> -->
                     </td>
                     <td width="400">
                         <h3>Review: Porn Computer</h3>

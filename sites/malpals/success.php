@@ -12,7 +12,6 @@
     <script>
         window.addEventListener("load", function() {
             window.addInfection("malPalPyramid");
-            window.unlockSticker("malPals");
         });
     </script>
     <style>

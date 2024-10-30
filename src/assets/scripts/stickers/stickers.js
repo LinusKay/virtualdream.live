@@ -177,7 +177,7 @@ function saveStickers() {
  * @returns {void}
  */
 function generateRandomSticker() {
-    if(loadStickersEnabled().length > 0) { 
+    if(loadStickersEnabled().length > 0) {
         const stickerImageIndex = stickersEnabled[Math.floor(Math.random() * stickersEnabled.length)];
         const stickerX = mouseX + "px";
         const stickerY = mouseY + "px";
@@ -185,8 +185,8 @@ function generateRandomSticker() {
         
         createSticker(stickerImageIndex, stickerX, stickerY, stickerZ);
         saveStickers();
-    }
-    else console.log("No stickers enabled :(");
+    } 
+    else console.log("No stickers enabled!");
 }
 
 /**

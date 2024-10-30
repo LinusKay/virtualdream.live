@@ -66,7 +66,7 @@
                             <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Removed all reviews by neocortex1986 [<a href="rants/solongsnoretex.php">SEE HERE</a>]</font></li>
                             <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Even more coming soon!</font></li>
                         </ul>
-                        <p align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="">An ad that you probably shouldnt trust!</a></font></p>
+                        <!-- <p align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="">An ad that you probably shouldnt trust!</a></font></p> -->
                     </td>
                     <td valign="top" width="27" height="340" bgcolor="white"></td>
                 </tr>

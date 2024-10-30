@@ -9,12 +9,6 @@
     # /PAGE SETUP
     ?>
     <title>MalPals! - Free Backgrounds</title>
-    <script>
-        window.addEventListener("load", function() {
-            window.addInfection("malPalPyramid");
-            window.unlockSticker("malPals");
-        });
-    </script>
     <style>
         * {
             margin:0;

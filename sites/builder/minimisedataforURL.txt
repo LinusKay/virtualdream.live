@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="UTF-8" style="cursor: grab;" /><meta name="viewport" content="width=device-width, initial-scale=1.0" style="cursor: grab;" /><title style="cursor: grab;">My Website!</title></head><body><div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white url(&quot;https://virtualdream.dev/src/assets/img/stickers/planet3.gif&quot;); z-index: -9999; cursor: grab;"></div><p id="text-preview" style="font-family: Arial; font-size: 42px; color: rgb(255, 128, 192); font-style: italic; font-weight: normal; position: absolute; top: 607px; left: 139px; cursor: grab;">i love her</p><img src="https://virtualdream.dev/src/assets/img/popups/R.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 559px; top: 589px; width: 403px; height: 158px;" /><img src="https://virtualdream.dev/src/assets/img/smilies/red.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 514px; top: 623px; width: 186px; height: 150px;" /><img src="https://virtualdream.dev/src/assets/img/heart3.gif" alt="Image preview" style="cursor: grab; width: 468px; height: 349px; position: absolute; margin: 0px; left: -99px; top: 362px;" /><img src="https://virtualdream.dev/src/assets/img/heart2.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 185px; top: 321px; width: 256px; height: 223px;" /><img src="https://virtualdream.dev/src/assets/img/smilies/green-ack.gif" alt="Image preview" style="cursor: grab; width: 78px; height: 57px; position: absolute; margin: 0px; left: 225px; top: 439px;" /><img src="https://virtualdream.dev/src/assets/img/popups/puppylove.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 637px; top: 213px; transform: rotate(-20.9856deg);" /><img src="https://virtualdream.dev/src/assets/img/popups/SpinningHourglass.gif" alt="Image preview" style="cursor: grab; width: 328px; height: 219px; position: absolute; margin: 0px; left: 401px; top: 184px;" /><p style="font-family: Arial; font-size: 55px; color: rgb(255, 23, 29); font-style: normal; font-weight: normal; cursor: grab; position: absolute; margin: 0px; left: 39.1px; top: 211.517px; transform: rotate(8.36509deg);">save da eart</p><p style="font-family: Arial; font-size: 42px; color: rgb(255, 128, 192); font-style: normal; font-weight: normal; position: absolute; top: 128px; left: 728px; cursor: grab; margin: 0px; transform: rotate(12.9078deg);">i love her</p><p style="font-family: Arial; font-size: 55px; color: rgb(255, 23, 29); font-style: normal; font-weight: normal; cursor: grab; position: absolute; margin: 0px; left: 589px; top: 76px; transform: rotate(353.642deg);">save da eart</p></body></html>
+
+2792
+
+div 
+- width: w
+- height: h
+- position: p (absolute: a, relative: null)
+- background-colour: b (fff),
+- background-image: i (source as numbered image lookup reference)
+- z-index: z
+- top: t
+- left: l
+
+p
+- font-family: f (source as numbered font lookup reference) (if no font, assume 1. if 1, can be omitted)
+- - font lookup
+- - 1: Arial
+- - 2: Times New Roman
+- font-size: s 
+- colour: c (fff)
+- font-style: i (italic: i)
+- font-weight: b (normal: n, bold: b, bolder:bb, lighter:l) (if normal, can be omitted)
+- position: p
+- z-index: z
+- top: t
+- left: l
+- width: w
+- height: h
+
+img
+- source: omitted, second column always source when image (source as numbered image lookup reference)
+- - image lookup
+- - 1: planet3.gif
+- - 2: R.gif
+- rotate: r (roud to nearest whole)
+
+d,w1000,h800,pa,bwhite,i1,z-9999|p,f1,s42,cf8c,ii,bn,pa,t607,l139,helllllo|i,2,pa,l559,t589,w403,h158,r353.642|
+
+<div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white url(&quot;https://virtualdream.dev/src/assets/img/stickers/planet3.gif&quot;); z-index: -9999; cursor: grab;"></div><p id="text-preview" style="font-family: Arial; font-size: 42px; color: rgb(255, 128, 192); font-style: italic; font-weight: normal; position: absolute; top: 607px; left: 139px; cursor: grab;">helllllo</p><img src="https://virtualdream.dev/src/assets/img/popups/R.gif" alt="Image preview" style="cursor: grab; position: absolute; margin: 0px; left: 559px; top: 589px; width: 403px; height: 158px;" />
+
+d,w1000,h800,pa,bwhite,i1,z-9999|p,s42,cf8c,ii,pa,t607,l139,helllllo|i,2,pa,l559,t589,w403,h158,r354
+
+compression rules: 
+* Abbreviate element types to single characters (div = d, p = p, img = i)
+* Abbreviate element style properties to single characters, and values to single characters where possible. Double ups are fine when element types are distinct enough to not clash. Allows for omitting colon characters due to fixed key length.
+* * width: w 
+* * height: h 
+* * position: p (absolute: a)
+* * background-colour: b,
+* * background-image: i (source as numbered image lookup reference)
+* * z-index: z
+* * top: t
+* * left: l
+* * z-index: z
+* * font-family: f (source as numbered font lookup reference)
+* * font-size: s 
+* * colour: c (fff)
+* * font-style: i (italic: i)
+* * font-weight: b (normal: n, bold: b, bolder:bb, lighter:l)
+* Omit style properties when value is 'default', eg: font=Times new roman, position=relative
+* Abbreviate colours by dropping least-significant bits and dropping hash character, eg: #FF83CD -> F8C
+* Require second field of image elements to always be source, dropping need for any `src` property
+* Drop `alt` property from images
+* Omit measurement units from values, infer unit from property, eg 100px, 200deg -> 100, 200
+* Round values to nearest whole, eg: 353.642 -> 354
+* Require all images to be sourced from same asset directory, allowing reference by name only, not path
+* Reference image and font sources by number in lookup table, eg: 0=planet3.gif, 1=explosion.png, and 0=Times New Roman, 1=Arial
+* Omit element IDs, as these are not used apart from `wrapper-background` which should always exist anyway
+
+round width and height values to nearest 100, nearest 500 if higher (15->20, 175->200, 1932->2000, 17423->17500), then replace zeros with stand-in character (200->2h, 2000->2t)

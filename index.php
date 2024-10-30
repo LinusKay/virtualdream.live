@@ -114,7 +114,8 @@
             '404',
             'rememberdreamwipe',
             'lonelyboyloserclub',
-            'builder'
+            'builder',
+            'truth'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
@@ -194,7 +195,11 @@
                             |
                             <li><a href='sites/stickers/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='sites/webrings/'>webrings</a></li>";
+                            <li><a href='sites/webrings/'>webrings</a></li>
+                            |
+                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>
+                            |
+                            <li><a href='credits.php'>credits</a></li>";
                         }
                         else {
                             echo "<li><a href='https://help.$baseDomain'>help</a></li>
@@ -203,7 +208,12 @@
                             |
                             <li><a href='https://stickers.$baseDomain/'>stickers</a><span class='newsite'>Hot!</span></li>
                             |
-                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>";
+                            <li><a href='https://webrings.$baseDomain/'>webrings</a></li>
+                            |
+                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>
+                            |
+                            <li><a href='credits.php'>credits</a></li>
+                            ";
                         }
                         ?>
                         
@@ -213,9 +223,9 @@
                 </td>
                 <td width="325" align="right" bgcolor="#FDFBD6">
                     <h3><img src="index/flashingflowersmiley.gif" class="headericon">Tips: Exploring Virtual Dream</h3>
-                    <p>A personal computer (PC) is highly recommended</p>
-                    <p>Turn off ad-blocker. All advertisements are local only.</p>
-                    <p>Many sites are hidden. Try exploring!</p>
+                    <p>A personal computer (PC) is highly recommended.</p>
+                    <p>Turn off ad-blocker. All advertisements are local only!</p>
+                    <p>Press <b>s</b> to place stickers!</p>
                 </td>
             </tr>
         </tbody>

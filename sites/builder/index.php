@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Dream Website Builder</title>
+    <?php 
+        include('../../src/setup.php');
+    ?>
     <style>
         body {
             background: blue;
@@ -103,6 +106,7 @@
     <div id="controls">
         <label for="tool-select">Select Tool:</label>
         <select id="tool-select" onchange="toolChanged()">
+            <option value="help">❓ Help</option>
             <option value="pagesettings">📄 Page Settings</option>
             <option value="create">➕ Create</option>
             <option value="edit">✏️ Edit</option>
@@ -125,6 +129,7 @@
                 <select id="font-select" onchange="toolCreateOptionTextFontChanged()">
                     <option value="Arial">Arial</option>
                     <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
                 </select>
 
                 <label for="text-size">Text Size (px):</label>
@@ -146,6 +151,14 @@
                 <label for="text-italic">Text Italic:</label>
                 <input type="checkbox" id="text-italic" onchange="toolCreateOptionTextItalicChanged()">
 
+                <label for="text-underline">Text Underline:</label>
+                <input type="checkbox" id="text-underline" onchange="toolCreateOptionTextUnderlineChanged()">
+                <br>
+                <label for="text-background-colour">Background Colour:</label>
+                <input type="color" id="text-background-colour" oninput="toolCreateOptionTextBackgroundColourChanged()" onchange="toolCreateOptionTextBackgroundColourChanged()">
+                <br>
+                <button onclick="toolCreateOptionTextBackgroundColourClear()">Clear Background</button>
+
                 <br>
                 <label for="text-input">Text: </label>
                 <input id="text-input" required onchange="toolCreateOptionTextInput()" onpaste="toolCreateOptionTextInput()" oninput="toolCreateOptionTextInput()" value="Insert text!">
@@ -154,11 +167,11 @@
             </div>
 
             <div id="create-image-options" style="display: none;">
-                <img id="image-preview" src="http://localhost/virtualdream.live/src/assets/img/shock.gif" alt="Image preview">
+                <img id="image-preview" src="https://assets.virtualdream.live/img/shock.gif" alt="Image preview">
                 <br>
                 <label for="image-select">Input Image:</label>
                 <br>
-                <input type="text" id="image-select" value="http://localhost/virtualdream.live/src/assets/img/shock.gif" oninput="toolCreateOptionImageSelectChanged()" onchange="toolCreateOptionImageSelectChanged()">
+                <input type="text" id="image-select" value="https://assets.virtualdream.live/img/shock.gif" oninput="toolCreateOptionImageSelectChanged()" onchange="toolCreateOptionImageSelectChanged()">
                 <p>Or, choose from the gallery:</p>
                 <div id="image-gallery">
                     <?php
@@ -195,7 +208,6 @@
                         
                         $directory = "../../src/assets/img/";
                         $imageFiles = array_reverse(getAllImages($directory));
-
                         
                         foreach ($imageFiles as $file) {
                             echo "<img src='$file' class='image-gallery-thumb' onclick='toolCreateOptionImageGallerySelect(this)'>";
@@ -217,20 +229,25 @@
         <div id="delete-options" style="display:none;">
             <label for="delete-confirm">Delete Confirmation:</label>
             <input type="checkbox" id="delete-confirm" checked>
+            <br><br>
+            <button onclick="toolHelpLoadTemplate(0)">Reset Screen</button>
         </div>
 
         <div id="page-settings" style="display:none;">
+            <label for="page-title">Page Title:</label>
+            <input type="text" id="page-title" value="My Website!" oninput="toolPageSettingsOptionPageTitleChanged()" onchange="toolPageSettingsOptionPageTitleChanged()">
+            <br>
             <label for="page-width">Page Width (px):</label>
             <input type="number" id="page-width" value="1000" min="1" required oninput="toolPageSettingsOptionPageSizeChanged()" onchange="toolPageSettingsOptionPageSizeChanged()">
             <label for="page-height">Page Height (px):</label>
             <input type="number" id="page-height" value="800" min="1" required oninput="toolPageSettingsOptionPageSizeChanged()" onchange="toolPageSettingsOptionPageSizeChanged()">
             <br>
             <label for="background-colour">Background Colour:</label>
-            <input type="color" id="background-colour" oninput="toolPageSettingsOptionBackgroundColourChanged()" onchange="toolPageSettingsOptionBackgroundColourChanged()">
+            <input type="color" id="background-colour" value="#ffffff" oninput="toolPageSettingsOptionBackgroundColourChanged()" onchange="toolPageSettingsOptionBackgroundColourChanged()">
             <br>
             <label for="image-select">Background Image:</label>
             <br>
-            <input type="text" id="image-select" value="http://localhost/virtualdream.live/src/assets/img/shock.gif" oninput="toolPageSettingsOptionBackgroundImageSelectChanged()" onchange="toolPageSettingsOptionBackgroundImageSelectChanged()">
+            <input type="text" id="image-select" value="https://assets.virtualdream.live/img/shock.gif" oninput="toolPageSettingsOptionBackgroundImageSelectChanged()" onchange="toolPageSettingsOptionBackgroundImageSelectChanged()">
             <p>Or, choose from the gallery:</p>
             <div id="image-gallery">
                 <?php
@@ -239,25 +256,11 @@
                     } 
                 ?>
             </div>
+            <button onclick="toolPageSettingsOptionBackgroundClear()">Clear Background</button>
         </div>
     </div>
 
     <p class="section-title">body (HTML)</p>
-    <textarea id="creation-input-body" class="creation-input" onchange="updateHTMLOutput()" onkeypress="updateHTMLOutput()" onpaste="updateHTMLOutput()" oninput="updateHTMLOutput()">
-
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;My Website!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="wrapper-background" style="width: 1000px; height: 800px; position: absolute; background: white; z-index: -9999;"&gt;&lt;/div&gt;
-&lt;p style="font-size:20px"&gt;hello world!&lt;/p&gt;
-&lt;img src="../../src/assets/img/shock.gif"&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-    </textarea>
+    <textarea id="creation-input-body" class="creation-input" onchange="updateHTMLOutput()" onkeypress="updateHTMLOutput()" onpaste="updateHTMLOutput()" oninput="updateHTMLOutput()"></textarea>
 </body>
 </html>

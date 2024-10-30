@@ -30,9 +30,7 @@
                         <ol>
                             <font size="2">
                             <li><a href="solongsnoretex.php">So long NeoSnoretex!!</a> - 29th March 2001 (xebulonluv)</li>
-                            <li><b>Rant Title</b> - 24th June 2000 (xebulonluv)</li>
-                            <li><b>Rant Title</b> - 24th June 2000 (xebulonluv)</li>
-                            <li><b>Rant Title</b> - 24th June 2000 (xebulonluv)</li>
+                            <!-- <li><a href="solongsnoretex.php">So long NeoSnoretex!!</a> - 29th March 2001 (xebulonluv)</li> -->
                             </font>
                         </ol>
                         <p><font size="2">Want to see me rant about something? Want to submit your own rant? Email me at <a href="mailto:xebulonluv@virtualdream.live">xebulonluv@virtualdream.live</a></font></p>
