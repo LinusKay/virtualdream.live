@@ -288,6 +288,10 @@ function dragElement(element) {
         // Adjust the position of the element based on the mouse movement
         element.style.top = (element.offsetTop - pos2) + "px";
         element.style.left = (element.offsetLeft - pos1) + "px";
+
+        // Adjust the rotation based on horizontal movement (pos1)
+        let dragTile = Math.max(-15, Math.min(15, (pos1 / 2)));  // Limits tilt to between -15 and 15 degrees
+        element.style.transform = `rotate(${dragTile}deg)`;
     
         // Get the bounding rectangles of the sticker and sticker bin
         const stickerRect = element.getBoundingClientRect();
