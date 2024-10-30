@@ -123,6 +123,9 @@
             color: orange;
             font-weight:bold;
         }
+        .message-user {
+            color:blue;
+        }
         .userlist-heading {
             font-weight:bold;
         }
@@ -178,6 +181,7 @@
             text-decoration:underline;
         }
     </style>
+    <script src="../../src/scripts/rooms.js"></script>
 </head>
 <body>
     <div class="wrap-header">
@@ -194,14 +198,18 @@
             <div id="userlist" class="wrap-chatsidebar-userlist">
             </div>
             <p class="usercount"><span id="usercount">0</span> users online</p>
+            <p>You are <span id="guestUsername"></span></p>
         </div>
         <div class="wrap-input">
-            <input class="input-message" type="text" placeholder="You must be logged in to chat." disabled>
-            <button class="input-send aero" type="submit" value="Send" onclick="alert('You must be logged in to chat!');">Send</button>
+            <form onsubmit="return false">
+                <input class="input-message" type="text" placeholder="Send guest message.">
+                <button class="input-send aero" value="Send" onclick="sendUserMessage()">Send</button>
+            </form>
         </div>
     </div>
     <div class="footer aero">
         <p>© BubbleChat<a href="https://bubblechat.virtualdream.live/">[Go back]</a></p>
     </div>
+    <div class="advertisement-banner"></div>
 </body>
 </html>

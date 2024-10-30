@@ -203,6 +203,9 @@
                         <a href="backgrounds.php"><p>Backgrounds</p></a>
                     </div>
                     <div id="nav-item">
+                        <a href="artwall.php"><p>Art Wall</p></a>
+                    </div>
+                    <div id="nav-item">
                         <a href="mailto:malpals@virtualdream.live"><p>Mail Us!</p></a>
                     </div>
                 </div>

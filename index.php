@@ -128,16 +128,8 @@
         $index = 0;
 
         $newSites = [
-            'planetxarxax',
-            'armourofgod',
-            'colordreamhyperforce',
-            'neocortex1986',
-            'rememberdreamwipe',
-            'spiceking',
-            'theoneleader',
-            'downloadmania',
-            'bubblechat',
-            'squelchtv',
+            'bugcollector',
+            'libus',
             'laika'
         ];
         $isNewSite = false;

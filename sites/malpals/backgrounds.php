@@ -183,16 +183,13 @@
             padding:40px;
         }
         .background-preview {
-            width:90%;
-            margin:auto;
-            display:block;
-            border: solid 1px black;
             padding:5px;
+            width:90%;
+            border:solid 1px gray;
         }
         .background-download {
-            text-align: center;
-            width:100%;
             display:block;
+            text-align:center;
         }
         .background-download:hover {
             text-decoration: underline;
@@ -213,6 +210,9 @@
                         <a href="backgrounds.php"><p>Backgrounds</p></a>
                     </div>
                     <div id="nav-item">
+                        <a href="artwall.php"><p>Art Wall</p></a>
+                    </div>
+                    <div id="nav-item">
                         <a href="mailto:malpals@virtualdream.live"><p>Mail Us!</p></a>
                     </div>
                 </div>
@@ -221,32 +221,21 @@
                 <div id="spacer-top"></div>
                 <img id="site-logo" src="src/img//malpals-logo.png">
                 <p id="introduction">Check out some of the cool and fun backgrounds we've got for you to decorate your PC <b>your</b> way!</p>
+                <hr>
                 <table>
                     <tbody>
                         <tr>
                             <td width="180">
-                                <a href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
-                                    <img class="background-preview" src="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
+                                <a href="src/img/backgrounds/MalPal_TubularTriangle_DesktopWallpaper_1024x568.png">
+                                    <img class="background-preview" src="src/img/backgrounds/MalPal_TubularTriangle_DesktopWallpaper_1024x568.png">
                                 </a>
-                                <a download class="background-download" href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">Download</a>
+                                <a download class="background-download" href="src/img/backgrounds/MalPal_TubularTriangle_DesktopWallpaper_1024x568.png">Download</a>
                             </td>
-                            <!-- <td width="180">
-                                <a href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
-                                    <img class="background-preview" src="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
-                                    </a>
-                                <a class="background-download" href="">Download</a>
-                            </td>
-                            <td width="180">
-                                <a href="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
-                                    <img class="background-preview" src="src/img/backgrounds/MalPals_TubularTriangle_Beach_1024x568_Desktop_Wallpaper.png">
-                                </a>
-                                <a class="background-download" href="">Download</a>
-                            </td> -->
+                            <td width="180"></td>
+                            <td width="180"></td>
                         </tr>
                     </tbody>
                 </table>
-                <hr>
-                
             </td>
             <td id="col-right">
                 <div id="spacer-top"></div>
