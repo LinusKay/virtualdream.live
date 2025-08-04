@@ -11,7 +11,19 @@
     <title>MalPals! - Congratulations!</title>
     <script>
         window.addEventListener("load", function() {
-            window.addInfection("malPalPyramid");
+            const urlString = window.location.search;
+            const urlParams = new URLSearchParams(urlString);
+            const palParam = urlParams.get('pal');
+            if (palParam != undefined) {
+                window.removeInfection("malPalPyramid", true);
+                window.removeInfection("malPalSpagBol", true);
+                if (palParam == "spagbol") {
+                    window.addInfection("malPalSpagBol",);
+                }
+                else if (palParam == "triangle") {
+                    window.addInfection("malPalPyramid");
+                }
+            }
         });
     </script>
     <style>
@@ -204,6 +216,9 @@
                     </div>
                     <div id="nav-item">
                         <a href="artwall.php"><p>Art Wall</p></a>
+                    </div>
+                    <div id="nav-item">
+                        <a href="malpals.php"><p>Pals</p></a>
                     </div>
                     <div id="nav-item">
                         <a href="mailto:malpals@virtualdream.live"><p>Mail Us!</p></a>

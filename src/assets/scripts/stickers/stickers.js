@@ -211,6 +211,7 @@ function createSticker(stickerImageIndex, stickerX, stickerY, stickerZ) {
     const stickerElement = document.createElement('img');
     stickerElement.classList.add('sticker-img');
     stickerElement.src = stickerImages[stickerImageIndex];
+    console.log(stickerImages)
     stickerElement.dataset.stickerImageIndex = stickerImageIndex;
     
     stickerDiv.appendChild(stickerElement);

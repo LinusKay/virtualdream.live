@@ -185,7 +185,7 @@
         .background-preview {
             padding:5px;
             width:90%;
-            border:solid 1px gray;
+            /* border:solid 1px gray; */
         }
         .background-download {
             display:block;
@@ -223,37 +223,26 @@
             <td id="col-middle">
                 <div id="spacer-top"></div>
                 <img id="site-logo" src="src/img//malpals-logo.png">
-                <p id="introduction">Check out some of the totally awesome art from fans just like you!!<br><a href="mailto:malpals@virtualdream.live">Send us some mail</a> to get your art featured. Every week we pick a new special piece to feature on the MalPals homepage!</p>
+                <p id="introduction">Select your pal!</p>
                 <hr>
                 <table>
                     <tbody>
                         <tr>
                             <td width="180">
-                                <a href="src/img/fanart/MalPal_FanartTuesday_01_DesktopWallpaper_1024x568.png">
-                                    <img class="background-preview" src="src/img/fanart/MalPal_FanartTuesday_01_DesktopWallpaper_1024x568.png">
+                                <a href="success.php?pal=spagbol">
+                                    <img class="background-preview" src="src/img/spagbol.png">
                                 </a>
+                                <p class="background-download" >Spag Bol</p>
+                                <a class="background-download" href="success.php?pal=spagbol">Download</a>
                             </td>
                             <td width="180">
-                                <a href="src/img/fanart/MalPal_FanartTuesday_02_DesktopWallpaper_1024x568.png">
-                                    <img class="background-preview" src="src/img/fanart/MalPal_FanartTuesday_02_DesktopWallpaper_1024x568.png">
+                                <a  href="success.php?pal=triangle">
+                                    <img class="background-preview" src="src/img/malpal-tubulartriangle.png">
                                 </a>
+                                <p class="background-download" >Tubular Triangle</p>
+                                <a class="background-download" href="success.php?pal=triangle">Download</a>
                             </td>
-                            <td width="180">
-                                <a href="src/img/fanart/MalPal_FanartTuesday_03_DesktopWallpaper_1024x568.png">
-                                    <img class="background-preview" src="src/img/fanart/MalPal_FanartTuesday_03_DesktopWallpaper_1024x568.png">
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                        <td width="180">
-                                <a href="src/img/fanart/MalPal_FanartTuesday_04_DesktopWallpaper_1024x568.png">
-                                    <img class="background-preview" src="src/img/fanart/MalPal_FanartTuesday_04_DesktopWallpaper_1024x568.png">
-                                </a>
-                            </td>
-                            <td width="180">
-                            </td>
-                            <td width="180">
-                            </td>
+
                         </tr>
                     </tbody>
                 </table>

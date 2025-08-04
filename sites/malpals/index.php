@@ -10,6 +10,11 @@
     # /PAGE SETUP
     ?>
     <title>MalPals! - Cool Online Friends</title>
+    <script>
+        window.addEventListener("load", function() {
+            Cookies.set('stickerPackMalPals', JSON.stringify(true), { domain: '<?php echo $baseDomain?>' , path: '/' });
+        });
+    </script>
     <style>
         * {
             margin:0;
@@ -198,6 +203,9 @@
                     </div>
                     <div id="nav-item">
                         <a href="artwall.php"><p>Art Wall</p></a>
+                    </div>
+                    <div id="nav-item">
+                        <a href="malpals.php"><p>Pals</p></a>
                     </div>
                     <div id="nav-item">
                         <a href="mailto:malpals@virtualdream.live"><p>Mail Us!</p></a>

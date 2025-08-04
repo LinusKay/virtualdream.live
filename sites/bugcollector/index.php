@@ -107,6 +107,7 @@
     <p class="placeholdersource">placeholder image by plastiboo: https://www.instagram.com/p/C4bVgonqWGm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==</p>
     <img src="bugcollector2.png" class="bugcollector">
 
+    <img src="">
     <div class="dialogue">
         <img class="avatar" src="bugcollector2.png">
         <p>

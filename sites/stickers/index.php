@@ -51,14 +51,25 @@
         <table>
             <?php
                 include('../../src/assets/scripts/stickers/configurestickers.php');
+
+                // load unlocked stickers
+                // CURRENT METHOD DOES NOT WORK
+                // sticker numbers change when unlocking more, so selections will change or break
+                if(isset($_COOKIE['stickerPackMalPals'])) { include('../../src/assets/scripts/stickers/stickerpackmalpals.php'); }
+                if(isset($_COOKIE['stickerPackSales'])) { include('../../src/assets/scripts/stickers/stickerpacksales.php'); }
+                if(isset($_COOKIE['stickerPack10000000'])) { include('../../src/assets/scripts/stickers/stickerpack10000000.php'); }
+
                 $columns = 5;
                 foreach($stickers as $index => $sticker) {
                     if ($index % $columns == 0) {
                         echo "<tr>";
                     }
+                    $stickerSrc = $sticker[0];
+                    $stickerName = $sticker[1];
+                    $stickerPack = $sticker[2];
                     echo "
                     <td class='stickercontainer' data-index=$index>
-                        <img class='stickerimage' src='$sticker' onclick='selectRadioImageClick(this)'>
+                        <img class='stickerimage' src='$stickerSrc' onclick='selectRadioImageClick(this)' title='$stickerName&#013;Pack: $stickerPack'>
                         <input type='checkbox' onclick='handleRadioClick(this)' checked>
                     </td>";
                     if ($index % $columns == $columns-1 || $index == count($stickers) - 1) {

@@ -53,6 +53,9 @@
                 margin-bottom:-10px;
                 padding:5px;
             }
+            .logo {
+                width:450px;
+            }
         </style>
     </head>
     <body>
@@ -76,13 +79,12 @@
                         </center>
                     </td>
                     <td>
-                        <!-- <center> -->
-                        <table width="400">
+                        <table width="400" style="border-top:solid 25px white">
                             <tbody>
                                 <tr>
                                     <td><img src="src/img/beholder_hovering_left.gif"></td>
                                     <td colspan="3">
-                                        <u><h1>The One Leader's Tech Blog</h1></u>
+                                        <img class="logo" src="src/img/cooltext487987509118888.png">
                                         <div class='advertisement-banner'></div>
                                     </td>
                                     <td><img src="src/img/beholder_hovering_right.gif"></td>
@@ -119,6 +121,7 @@
                                 <tr>
                                     <td width="200px"><img src="src/img/FBI.png" style="width:200px;"></td>
                                     <td width="200px"><a href="https://rememberdreamwipe.virtualdream.live/"><img src="src/img/dreamwipe.png" style="width:200px;"></a></td>
+                                    <td><div class='advertisement-card'></div></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -250,8 +253,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                        
-                        <!-- </center> -->
                     </td>
                 </tr>
             </tbody>

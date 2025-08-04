@@ -16,10 +16,14 @@ include("../../../config.php");
 $domain = $hostName === 'localhost' ? 'localhost' : ".$baseDomain";
 
 include('configurestickers.php');
+if(isset($_COOKIE['stickerPackMalPals'])) { include('stickerpackmalpals.php'); }
+if(isset($_COOKIE['stickerPackSales'])) { include('stickerpacksales.php'); }
+if(isset($_COOKIE['stickerPack10000000'])) { include('stickerpack10000000.php'); }
 
 $stickersString = "";
 foreach($stickers as $sticker) {
-    $stickersString = $stickersString . "'$sticker',";
+    $stickerSrc = $sticker[0];
+    $stickersString = $stickersString . "'$stickerSrc',";
 }
 
 $jsContent = file_get_contents('stickers.js');
