@@ -57,7 +57,7 @@
                 <td><p style="width:100px; height:40px; background:red;"><font face="arial" size="-2">Spread the word of God</font></p></td>
                 <td></td>
                 <td><img src="img/jesus2.gif"></td>
-                <td></td>
+                <td><img src="img/63IKBD76EEBI5LWRODKFY4C2J3NO2ULD.gif"></td>
                 <td><img src="img/cross.png"></td>
                 <td></td>
                 <td></td>

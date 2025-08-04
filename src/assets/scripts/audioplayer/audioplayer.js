@@ -5,6 +5,7 @@ let songIndex = 0;
  * @param {object} options - Configuration options for the audio player.
  * @param {string} options.playerWrapBackground - URL of the player background image.
  * @param {number[]} options.playerWrapBackgroundOffset - Offset coordinates [x, y] for the player background image.
+ * @param {number} options.playerWrapBackgroundSize - Size scale for the player background image.
  * @param {string} options.backgroundColour - Background color of the player container.
  * @param {string} options.borderColour - Border color of the player container.
  * @param {number} options.borderWidth - Border width of the player container.
@@ -27,6 +28,7 @@ function createAudioPlayer(options) {
         playerHeight = 75, 
         playerWrapBackground, 
         playerWrapBackgroundOffset, 
+        playerWrapBackgroundSize = 1,
         backgroundColour, 
         backgroundImage, 
         borderColour, 
@@ -41,7 +43,7 @@ function createAudioPlayer(options) {
         showCover, 
         songs, 
         textColour, 
-        dragEnabled 
+        dragEnabled
     } = options;
 
     // Create player wrapper
@@ -84,6 +86,7 @@ function createAudioPlayer(options) {
             position: absolute;
             left:${playerWrapBackgroundLeft}px;
             top: ${playerWrapBackgroundTop}px;
+            transform: scale(${playerWrapBackgroundSize});
             z-index: 1;
         `;
         playerWrapBackgroundElement.addEventListener("dragstart", event => event.preventDefault());

@@ -16,7 +16,7 @@
             <tbody>
                 <tr>
                     <td valign="top" width="600">
-                        <img alt="Site Banner" src="rantbanner.jpg">
+                        <img alt="Site Banner" src="banner-rants.png">
                     </td>
                 </tr>
             </tbody>

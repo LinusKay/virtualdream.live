@@ -6,17 +6,18 @@
     <title>Planet Xarxax - Central for everything Xarxax</title>
     <?php 
         include('../../src/setup.php');
+        echo "<script src='$assetBaseUrl/scripts/audioplayer/audioplayer.php' type='module'></script>\n";
     ?>
     <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#6699ff">
+<body>
     <center>
         <div class="advertisement-banner"></div>
-        <table width="600" height="175" cellpadding="0" cellspacing="0" border="0">
+        <table width="600" height="139" cellpadding="0" cellspacing="0" border="0">
             <tbody>
-                <tr height="175">
-                    <td valign="top" width="600" height="175">
-                        <img alt="Site Banner" src="banner.jpg">
+                <tr height="139">
+                    <td valign="top" width="600" height="139">
+                        <img alt="Site Banner" src="banner.png">
                     </td>
                 </tr>
             </tbody>
@@ -66,6 +67,38 @@
                             <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Removed all reviews by neocortex1986 [<a href="rants/solongsnoretex.php">SEE HERE</a>]</font></li>
                             <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Even more coming soon!</font></li>
                         </ul>
+                        <script>
+                            window.addEventListener("load", function() {
+                                window.createAudioPlayer({
+                                    playerXY: [50, 350],
+                                    dragEnabled: true,
+                                    backgroundColour: "#A12B74",
+                                    borderColour: "white",
+                                    borderWidth: "2",
+                                    borderStyle: "outset",
+                                    textColour: "white",
+                                    playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
+                                    pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",
+                                    timelineBackgroundColour: "white",
+                                    timelineColour: "black",
+                                    timelineOpacity: 1,
+                                    showCover: false,
+                                    // playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
+                                    // playerBackgroundOffset: [-190, -160],
+                                    playerWrapBackground: "<?php echo "spaceship5.gif" ?>",
+                                    playerWrapBackgroundOffset: [0, 75],
+                                    playerWrapBackgroundSize: 2,
+                                    songs: [
+                                        { 
+                                            file: "theme.wav",
+                                            title: "Xarxax VII Theme",
+                                            artist: "Brian Goldfield"
+                                        }
+                                    ]
+                                });
+                            });
+                            
+                        </script>
                         <!-- <p align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="">An ad that you probably shouldnt trust!</a></font></p> -->
                     </td>
                     <td valign="top" width="27" height="340" bgcolor="white"></td>
