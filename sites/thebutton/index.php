@@ -26,9 +26,6 @@
         <p>behold its crisp, rectangular form</p>
         <p>breathe in the aroma as dust passes through the PC fans to render it</p>
         <p>press... if you dare</p>
-        <!-- <div id='thebutton-container' style='position:fixed;bottom:25px;right:25px;margin:0;'> -->
-            
-        <!-- </div> -->
         </center>
     </body> 
 </html>
