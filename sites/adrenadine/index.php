@@ -327,24 +327,24 @@
         <?php 
             $posts = [
                 [
-                    "postTitle" => "Goodbye from Adrenadine",
+                    "postTitle" => "Goodbye from AdrenaDine",
                     "postThumb" => "src/img/broken_heart.gif",
-                    "postContent" => "Due to <u>tragic and unforeseeable</u> circumstances Adrenadine has been forced to close permanently.<br>
+                    "postContent" => "Due to <u>tragic and unforeseeable</u> circumstances AdrenaDine has been forced to close permanently.<br>
                 We thank you for an adrenaline-filled 2 months.",
-                    "postDisclaimers" => "If you believe you are eligible for compensation as a result of any alleged operations run by Adrenadine Co. or SkyHotel Co. Pty. Ltd. please contact reachout@jerryromlinsonlawyers.net.<br>
+                    "postDisclaimers" => "If you believe you are eligible for compensation as a result of any alleged operations run by AdrenaDine Co. or SkyHotel Co. Pty. Ltd. please contact reachout@jerryromlinsonlawyers.net.<br>
                 Under state legislation (3589 U.S.C. § 41356, 1993) the above statement is purely informational and does not consitute any admission of guilt."
                 ],
                 [
                     "postTitle" => "$$ February Deal: SOLO SKYDINING for 2!!",
                     "postThumb" => "src/img/3ZK3UZ65SZB6DWP6BVM6QZA6GUT7ZJGU.gif",
                     "postContent" => "CHOW to your HEARTS CONTENT from the SAFETY* of your very own DINEGLIDER. ENJOY a FULL 3-COURSE DINNER, with DRINKS PROVIDED^ at the comfortable altitude of 15,000 FEET. IT DOESN'T GET MORE ROMANTIC THAN THAT! Profess your love for a cherised one with our 2-for-1 SKYDINING EXPERIENCE, all through February ONLY. WANT MORE? GET MORE. Upgrade your package to get access to our PREMIUM in-flight entertainment as the stylings of world-renouned guitarist Alfonse Capriolo join you on your RAPID and AGGRESSIVE descent. GUARANTEED to get your HEART RACING. NOT SATISFIED? THEN NEITHER ARE WE! Our PREMIUM Date Night Rush package includes not just ONE but TWO SKYDINE experiences all rolled into the one ADRENALINE NUGGET served DIRECTLY to YOUR NERVOUS SYSTEM. Customise your descents with a choice of drop locations. Sunrise and Sunset dives available at additional cost to flyers. LIMITED SPOTS AVAILABLE. Email bookings.adrenadine@virtualdream.live for questions or to secure your spot NOW!",
-                    "postDisclaimers" => "*SAFETY is a registered trademark of Adrenadine Co. ^at additional cost of $199/pp."
+                    "postDisclaimers" => "*SAFETY is a registered trademark of AdrenaDine Co. ^at additional cost of $199/pp."
                 ],
                 [
                     "postTitle" => "March MAYHEM",
                     "postThumb" => "src/img/GWHJTMYJVPDLA7MVZYN2S2TS2OCTUBGT.gif",
                     "postContent" => "This March we're going ABSOLUTELY MAD with our MOST EXCLUSIVE* OFFER EVER! For just $399 YOU and 12 OTHERS can pilot your very own PRIVATE CHARTER PLANE. YOU bring the friends. YOU FLY THE PLANE. Catering and drinks provided^. Contact us TODAY and use code MARCHINSANITY to secure your spot.",
-                    "postDisclaimers" => "*EXCLUSIVE is a registered trademark of Adrenadine Co.^at additional cost of $199/pp."
+                    "postDisclaimers" => "*EXCLUSIVE is a registered trademark of AdrenaDine Co.^at additional cost of $199/pp."
                 ]
             ];
 
