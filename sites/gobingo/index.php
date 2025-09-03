@@ -16,7 +16,7 @@
             text-align:center;
         }
         #globe {
-            margin-top:100px;
+            margin-top:200px;
         }
         h1 {
             margin-top:0;
@@ -34,9 +34,9 @@
         </form> 
         <div id="adspace">
             
+    <!-- <div class="advertisement-banner"></div>
     <div class="advertisement-banner"></div>
-    <div class="advertisement-banner"></div>
-    <div class="advertisement-card"></div>
+    <div class="advertisement-card"></div> -->
 
     
         </div>

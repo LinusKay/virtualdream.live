@@ -180,7 +180,7 @@
                         <ul class="nav-top">
                             <li><a href=""><b>Sign Up</b></a></li>
                             <li><a href="">Log In</a></li>
-                            <li><a href="">GoBingo!</a></li>
+                            <li><a href="<?php echo $goBingoDomain; ?>">GoBingo!</a></li>
                         </ul>
                     </td>
                 </tr>
@@ -211,6 +211,8 @@
                         <li><a href="">Sidebar</a></li>
                         <li><a href="">Sidebar</a></li>
                     </ul>
+
+                    <br>
                     <h3 class="sidebar-heading">Sidebar</h3>
                     <ul class="sidebar-list">
                         <li><a href="">Sidebar</a></li>
