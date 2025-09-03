@@ -21,11 +21,7 @@
     <div id="spacer-top"></div>
     <table id="table-main">
         <tr id="row-main">
-            <td id="col-left">
-                <div id="bar-left">
-                    <?php include("nav.php");?>
-                </div>
-            </td>
+            <?php include("nav.php");?>
             <td id="col-middle">
                 <div id="spacer-top"></div>
                 <img id="site-logo" src="src/img//malpals-logo.png">
