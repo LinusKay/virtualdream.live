@@ -115,7 +115,11 @@
             'rememberdreamwipe',
             'lonelyboyloserclub',
             'builder',
-            'truth'
+            'truth',
+            'bugsisnotreal',
+            'tombfreaks',
+            'neocortex1986',
+            'laika'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);
