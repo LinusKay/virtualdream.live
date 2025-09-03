@@ -23,6 +23,8 @@ if ($baseDomain === $hostLocal) {
     $siteName = $subdomain;
 }
 
+$siteBaseUrl = $baseDomain === $hostLocal ? "../$siteName" : "https://$siteName.$baseDomain";
+
 if(!isset($metaTitle)) $metaTitle = $siteName; else $metaTitle = $metaTitle . " ";
 if(!isset($metaDescription)) $metaDescription = "";
 $brandingTagline = "Virtual Dream - Your new favourite web host, powered by community.";

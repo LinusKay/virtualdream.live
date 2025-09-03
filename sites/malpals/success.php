@@ -207,22 +207,7 @@
         <tr id="row-main">
             <td id="col-left">
                 <div id="bar-left">
-                    <marquee id="blacktop">malpals.virtualdream.live</marquee>
-                    <div id="nav-item">
-                        <a href="https://malpals.virtualdream.live/"><p>Home</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="backgrounds.php"><p>Backgrounds</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="artwall.php"><p>Art Wall</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="malpals.php"><p>Pals</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="mailto:malpals@virtualdream.live"><p>Mail Us!</p></a>
-                    </div>
+                    <?php include("nav.php");?>
                 </div>
             </td>
             <td id="col-middle">

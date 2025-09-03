@@ -194,22 +194,7 @@
         <tr id="row-main">
             <td id="col-left">
                 <div id="bar-left">
-                    <marquee id="blacktop">malpals.virtualdream.live</marquee>
-                    <div id="nav-item">
-                        <a href="https://malpals.virtualdream.live/"><p>Home</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="backgrounds.php"><p>Backgrounds</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="artwall.php"><p>Art Wall</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="malpals.php"><p>Pals</p></a>
-                    </div>
-                    <div id="nav-item">
-                        <a href="mailto:malpals@virtualdream.live"><p>Mail Us!</p></a>
-                    </div>
+                    <?php include("nav.php");?>
                 </div>
             </td>
             <td id="col-middle">
@@ -224,7 +209,7 @@
                                 <h2>What's New!</h2>
                                 <img id="feature-img" src="src/img/malpal-tubulartriangle.png">
                                 <p id="feature-title"><b>Try our newest MalPal FREE!</b></p>
-                                <p id="feature-text">Meet Tubular Triangle, your new best bud that lives right on your browser! Escaping into our world through a crazy cosmic wormhole, Tubular Triangle is here to surf along with you. <a href="success.php">Click here</a> to try!</p>
+                                <p id="feature-text">Meet Tubular Triangle, your new best bud that lives right on your browser! Escaping into our world through a crazy cosmic wormhole, Tubular Triangle is here to surf along with you. <a href="success.php?pal=triangle">Click here</a> to try!</p>
                                 <br>
                                 <img id="feature-img" src="src/img/WilliamArtwork.jpg">
                                 <p id="feature-title"><b>Art Wall Feature!</b></p>
