@@ -289,16 +289,16 @@
             <img class="logo" src="src/img/cooltext490062004273314.png">
             <div class="imgfeature">
                 <img src="src/img/3ZK3UZ65SZB6DWP6BVM6QZA6GUT7ZJGU.gif">
-                <a href=""><p class="aero">Life starts NOW!</p></a>
+                <a href="#Goodbye from AdrenaDine"><p class="aero">Life starts NOW!</p></a>
             </div>
             
             <img class="plane" src="src/img/plane.png">
             <div class="navbar">
                 <ul>
-                    <a href=""><li>News</li></a>
-                    <a href=""><li>About</li></a>
-                    <a href=""><li>Contact Us</li></a>
-                    <a href=""><li><img class="pageicon" src="src/img/CS3Z4OCTMK6YD3HFKRLDG2NEQIL4M6YD.gif">Book NOW</li></a>
+                    <a href="#Goodbye from AdrenaDine"><li>News</li></a>
+                    <a href="#Goodbye from AdrenaDine"><li>About</li></a>
+                    <a href="mailto:booking.adrenadine@virtualdream.live"><li>Contact Us</li></a>
+                    <a href="#Goodbye from AdrenaDine"><li><img class="pageicon" src="src/img/CS3Z4OCTMK6YD3HFKRLDG2NEQIL4M6YD.gif">Book NOW</li></a>
                 </ul>
             </div>
         </div>
@@ -307,14 +307,14 @@
             <hr>
             <p class="sidenav-header">Hot Links</p>
             <ul>
-                <li><a href=""><img class="pageicon" src="src/img/MRX2LYIICWA4LDZPAVA2SOG7WR3Y57OR.gif">News</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">About</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Menu Options</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Reviews</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Deals $$</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Family Packages</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Pet Passengers</a></li>
-                <li><a href=""><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Vehicle Hire</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/MRX2LYIICWA4LDZPAVA2SOG7WR3Y57OR.gif">News</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">About</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Menu Options</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Reviews</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Deals $$</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Family Packages</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Pet Passengers</a></li>
+                <li><a href="#Goodbye from AdrenaDine"><img class="pageicon" src="src/img/7UGY7VH7ZSBQTP62QEYQIHTOKE3GFYJD.gif">Vehicle Hire</a></li>
             </ul>
             <p class="adheader">Advertisements</p>
             <div class="advertisement-card"></div>
@@ -372,7 +372,7 @@
         
         </div>
         <div class="footer">
-            <p>Copyright Adrenadine. <a href="">Terms & Conditions</a></p>
+            <p>Copyright Adrenadine. <a href="#Goodbye from AdrenaDine">Terms & Conditions</a></p>
         </div>
     </div>
 </body>
