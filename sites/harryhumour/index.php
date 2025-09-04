@@ -12,10 +12,11 @@
         <link rel="stylesheet" href="style.css">
         <style> 
         body {
-            margin:0;
+            margin:auto;
             padding:0;
             text-align:center;
             background: #3299cc;
+            width:800px;
         }
         #freejoke {
             padding:15px;
@@ -95,28 +96,38 @@
             font-size:17px;
             margin: 30px;
         }
+        hr {
+            display: none;
+        }
         </style>
     </head>
     <body>
         <div id="introduction">
             <h1>Welcome to the groovy cyber realm of Harry Humour, the net's funniest clean comedian</h1>
         </div>
-        <div id="jester">
+        <!-- <div id="jester">
             <img src="src/img/jester.gif">
-        </div>
+        </div> -->
         
         <div id="freejoke">
+            <div id="joke">
+            <p><u>Welcome to Laugh City!</u></p>
+            <img src="src/img/anlthouse.gif">
+            <img src="src/img/Button_House.gif">
+            <img src="src/img/27.gif" style="width:50px;">
+            <img src="src/img/mushroom_house_md_wht.gif">
+            <img src="src/img/carmove.gif" style="width:50px;">
+            <img src="src/img/anihouse.gif">
+            <img src="src/img/house.gif">
+            <img src="src/img/valhousewithsmokehearts.gif">
+            <img src="src/img/swordfight.gif" style="width:50px;">
+            <p>Population: YOU!</p>
+            </div>
+            <p>Visitors: 23</p>
+            <hr>
             <p>Here's a free joke. Its on the house!</p>
             <p>"I tried to catch some fog yesterday. I mist!"</p>
             <img src="src/img/house02.gif">
-        </div>
-        <div id="presidentialpardon">
-            <img src="src/img/toysoldier_drumming_md_wht.gif"><img src="src/img/movingwhitehouse.gif"><img src="src/img/presidentmid.png" id="president"><img src="src/img/movingwhitehouse.gif"><img src="src/img/toysoldier_drumming_md_wht.gif">
-            <img src="src/img/halo.png" style="position:absolute;width:60px;left:48.5%;top:10px;">
-            <img src="src/img/cloud.png" style="position:absolute;left:40%;top:10px;">
-            <img src="src/img/cloud.png" style="position:absolute;left:55%;top:10px;">
-            <p>"I hereby pardon Harry Humour for his funny jokes and use my presidential power to say he is the funniest guy on the internet!"</p>
-            <p>- President Schmonger</p>
         </div>
         <div id="freejokes">
             <h2><b>Free Jokes!</b></h2>
@@ -136,24 +147,12 @@
             <hr>
             <p id="joke"><u>I told my friend I had a great joke about construction,</u><br>but I'm still working on it. Guess you could say I'm building up to it!</p>
             <hr>
-            <div id="joke">
-            <p><u>Welcome to Laugh City!</u></p>
-            <img src="src/img/anlthouse.gif">
-            <img src="src/img/Button_House.gif">
-            <img src="src/img/27.gif" style="width:50px;">
-            <img src="src/img/mushroom_house_md_wht.gif">
-            <img src="src/img/carmove.gif" style="width:50px;">
-            <img src="src/img/anihouse.gif">
-            <img src="src/img/house.gif">
-            <img src="src/img/valhousewithsmokehearts.gif">
-            <img src="src/img/swordfight.gif" style="width:50px;">
-            <p>Population: YOU!</p>
-            </div>
+            
         </div>
         <div id="buydvd">
             <img src="src/img/TV.gif"><img src="src/img/dvd.gif"><img src="src/img/TV.gif">
-            <p>Missed Harry Humour LIVE? Wish you could watch it again? Fear not, for technology is here!</p>
-            <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/caution.gif" style="width:20px;">Note from Harry: Hi! Thanks for looking at my DVDs. Currently I'm out of stock since my computer went on the fritz which makes it hard to burn any more copies. Working hard to get this up and running again for my loyal fans! Party on!</p>
+            <p>Missed Harry Humour LIVE? Wish you could watch it again? Never fear, for technology is here!</p>
+            <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;position:relative;z-index:2;margin:10px;"><img src="src/img/caution.gif" style="width:20px;">Note from Harry: Hi! Thanks for looking at my DVDs. Currently I'm out of stock since my computer went on the fritz which makes it hard to burn any more copies. Working hard to get this up and running again for my loyal fans! Party on!</p>
             <table>
                 <tbody>
                     <tr>
@@ -165,37 +164,45 @@
                 </tbody>
             </table>
             <div id="stage"></div>
-            <img src="src/img/microphone.png" style="position:absolute;left:50px;bottom:25px;z-index:2;">
-            <img src="src/img/stool.png" style="position:absolute;width:100px;left:150px;bottom:25px;z-index:2;">
+            <img src="src/img/microphone.png" style="position:absolute;left:50px;bottom:25px;z-index:1;">
+            <img src="src/img/stool.png" style="position:absolute;width:100px;left:150px;bottom:25px;z-index:1;">
         </div>
         <div id="calltoaction">
-            <img src="src/img/vote.gif">
             <h2>A call to action from Harry Humour!</h2>
-            <p>Hey there, fellow jokesters! It's your pal Harry Humour, here to spread some smiles and maybe even a chuckle or two. But lately, I've been feeling a bit bummed out about the state of comedy, and I just gotta get something off my chest. I've only said this twice in my life, but lets get serious for a moment.
+            <p>Hey there, fellow jokesters. It's your pal here, Harry Humour. Now I've been in the joke industry for a lot longer than I'm willing to admit, but lately, I've been feeling a bit bummed out about the state of comedy, and I have just got to get something off my chest. I've only said this twice in my life, folks, but lets get serious for a moment.
             <br>
             <br>
-            You see, it seems like everywhere I look these days, comedy has taken a nosedive into the gutter. Dirty jokes, crude humor, and innuendos are all the rage, leaving us clean comedians feeling like the odd ones out. And let me tell ya, it's not a fun place to be.
+            You see, it seems like everywhere I look these days, comedy has taken a nosedive into the gutter. Feels like wherever you look dirty jokes, crude humor, and innuendos are all the rage, leaving us clean comedians by the wayside. And let me tell ya, the wayside is just not a fun place to be.
             <br>
             <br>
-            Now, don't get me wrong — I'm all for a good laugh. But when every punchline is laced with profanity or relies on cheap shock value, it's like we've lost sight of what real comedy is all about: bringing joy and laughter to people of all ages, without resorting to cheap tricks.
+            It's like we've lost sight of what real comedy is all about: purity.
             <br>
             <br>
-            That's why I'm calling on all you fine folks out there to join me in <u>VOTING for Ronald Schmonger for a 7th term as President of our free nation!</u> There's only one man who is going to clean up this rabble, and bring back the humour we used to love. Ronald's got the wit, the charm, and the impeccable taste in clean jokes that our country needs right now. He's been fighting for us, and he's only going to fight more!
+            That's why I'm calling on all you fine folks out there to join me in <u>VOTING for Ronald Schmonger for a 7th term as President of our free nation!</u> There's only one man who is going to clean up this rabble, and bring back the humour we used to love. Ronald's got the wit, the charm, and the impeccable taste in clean jokes that our country needs right now. He's been fighting for us, and he's only going to fight more! For change!
             <br>
             <br>
-            Folks, let me tell you something. Ronald isn't just a politician; he's a force of nature, a whirlwind of change sweeping across our great nation. Ronald's vision for our country is bold, it's audacious, it's... well, it's something else, let me tell you. He's got plans, big plans, to make our country one again. And let me tell you, it's about time. 
+            Folks, let me tell you something. Ronald isn't just a politician; he's a force of nature, a whirlwind of change sweeping across our great nation. Ronald's vision for our country is bold, it's audacious, it's... well, it's something else, let me tell you. He's got plans, big plans, to make our country one again. And let me tell you, it's about time, after what that previous bunch did to this glorious nation.
             <br>
             <br>
-            There's plenty of jackanapes that don't understand, and they're exactly the kind of scum that's tearing this country apart at its core. They question his stance in medicine prices, but the sea walls aren't going to pay for themselves. They questioned when he promised to strap his presidential opponents to a rocket, but at least there will be enough room up there for their giant heads! If you can't take a joke, take a hike instead! We don't need you!
+            There's plenty of fools that don't understand, and they're exactly the kind of scum that's tearing this country apart at its core. They question his stance in medicine prices, but its glorious companies like MedaPharmGlobulite that keep this country running! When he promised to strap his presidential opponents to a rocket, they didn't believe him for a second! Look how that turned out for O'Brien! If that's not integrity, I don't know what is, and if you can't take a joke, take a hike instead! We don't need you!
             <br>
             <br>
             Together, let's keep the laughs coming, one squeaky-clean joke at a time!
             <br>
             <br>
-            Stay groovy,
+            Remember, stay goofy,
             <br>
             Harry Humour
             </p>
+            <img src="src/img/vote.gif">
+        </div>
+        <div id="presidentialpardon">
+            <img src="src/img/toysoldier_drumming_md_wht.gif"><img src="src/img/movingwhitehouse.gif"><img src="src/img/presidentmid.png" id="president"><img src="src/img/movingwhitehouse.gif"><img src="src/img/toysoldier_drumming_md_wht.gif">
+            <img src="src/img/halo.png" style="position:absolute;width:60px;left:48.5%;top:10px;">
+            <img src="src/img/cloud.png" style="position:absolute;left:40%;top:10px;">
+            <img src="src/img/cloud.png" style="position:absolute;left:55%;top:10px;">
+            <p>"I hereby pardon Harry Humour for his funny jokes and use my presidential power to say he is the funniest guy on the internet!"</p>
+            <p>- President Schmonger</p>
         </div>
         <div id="othersites">
             <p>Try out some of my other comedy sites!</p>
@@ -214,7 +221,7 @@
             <!-- <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p> -->
         </div>
         <div id="emailme">
-            <h1>I have mail! Send me some more!</h1>
+            <h1>I've got mail!</h1>
             <a href="mailto:harryhumour@virtualdream.live"><img src="src/img/mail6.gif"><img src="src/img/mailbox1.gif"><img src="src/img/mail.gif"></a>
             <p><a href="mailto:harryhumour@virtualdream.live">harryhumour@virtualdream.live</a></p>
         </div>
@@ -224,7 +231,7 @@
             <img src="src/img/tombstone_lg_clr.gif">
             <img src="src/img/fungle.png" id="fungle">
             <img src="src/img/tombstone_lg_clr.gif">
-            <p><i>"In the quiet depths of memory, their absence echoes louder than any words spoken in their honor, reminding us of the profound void left behind by their departure."</i></p>
+            <p><i>"In the quiet depths of memory, absence echoes."</i></p>
         </div>
     </body> 
 </html>
