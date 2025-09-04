@@ -11,12 +11,20 @@
         <title>Harry Humour's Homepage</title>
         <link rel="stylesheet" href="style.css">
         <style> 
+        @font-face {
+            font-family: vinivicious;
+            src: url('src/font/vinivicious.ttf');
+        }
         body {
             margin:auto;
             padding:0;
             text-align:center;
             background: #3299cc;
             width:800px;
+            font-family: vinivicious;
+        }
+        p {
+            margin:0;
         }
         #freejoke {
             padding:15px;
@@ -111,7 +119,7 @@
         
         <div id="freejoke">
             <div id="joke">
-            <p><u>Welcome to Laugh City!</u></p>
+            <p style="text-align:left"><u>Welcome to Laugh City!</u></p>
             <img src="src/img/anlthouse.gif">
             <img src="src/img/Button_House.gif">
             <img src="src/img/27.gif" style="width:50px;">
@@ -121,13 +129,29 @@
             <img src="src/img/house.gif">
             <img src="src/img/valhousewithsmokehearts.gif">
             <img src="src/img/swordfight.gif" style="width:50px;">
-            <p>Population: YOU!</p>
+            <p style="text-align:right;">Population: YOU!</p>
+             <p style="text-align:right;">Visitors: 23</p>
             </div>
-            <p>Visitors: 23</p>
+           
             <hr>
             <p>Here's a free joke. Its on the house!</p>
-            <p>"I tried to catch some fog yesterday. I mist!"</p>
-            <img src="src/img/house02.gif">
+            <br>
+            <p style="position:relative;z-index:2">"I tried to catch some fog yesterday. I mist!"</p>
+            <img style="position:relative;margin-top:-40px; z-index:0;" src="src/img/house02.gif">
+            <h3>Welcome to my website!</h3>
+            <p>Welcome to Harry Humour's domain of delight. I've been a purveyor of the priceless art of positivity for over 50 pears.. i mean years!!! Come join me and revel in the clean comedic stylings of... ME!!!! Some of my best work is featured right here on Virtual Dream. Thanks for stopping by my humble home on this internet. Stay goofy!<br>:~P<p>
+        </div>
+        <div id="notanapology">
+            <h3>A note on Rankfield Show 26/02/08</h3>
+            <p>My new lawyer has advised me that vicious, jackanape, so-called "reporters" think they can take down the king. My show at the Rankfield Comedy Club was flawless, yet these jackals want to shut down clean christian comedy FOR GOOD! I say NO! NO to foul vultures of society, NO! Begone from me, cretinous bugs. I have survived for this long off of blood, sweet and tears to bring my talents to society. Far too long to be shut down by misguided puppets of the world media. Call me "old-fashioned", call me "out of touch", but I make no apology for the things I say in my shows. It's COMEDY. It's JOKES. It's not my fault nobody taught the kid how to take a joke. Comedy, even clean (which need I remind you I PIONEERED) is meant to challenge society and make people uncomfortable. Comedians are the last bastion of free speech in this country. If we weren't here to speak truth to power, then GOOD LUCK on your own.  will be suing Rankfield, any anybody else that even thinks to challenge me on this. </p>
+        </div>
+        <div id="fired">
+            <h3>Statemenmt on Lawyers</h3>
+            <p>Representatives of Harry Humour, AKA HIMSELF, would like to state that his jackal lawyers have been FIRED.</p>
+        </div>
+        <div id="noteonbanktownincident">
+            <h3> Statement on Banktown incident 16/09/07</h3>
+            <p>Representatives of Harry Gore, AKA Harry Humour, would like to state that Harry has described the incident at Banktown Lounge on September 16th, 2007 as "regrettable" and "misguided". No further comments are made at this time, and Harry will not be reachable for question.</p>
         </div>
         <div id="freejokes">
             <h2><b>Free Jokes!</b></h2>
@@ -218,7 +242,7 @@
             <img src="src/img/pointleft.gif">
             <p>Or check out some of our new Virtual Dream sponsors!</p>
             <div class="advertisement-banner"></div>
-            <!-- <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">Note from Harry: I have noticed an increase in crass or violent websites advertised on Virtual Dream lately. Does anyone know how I can block ad banners for these websites?</p> -->
+            <p style="background: red; padding:10px; border-radius:10px; border: dashed 1px white;"><img src="src/img/Caution.gif" style="width:20px;">WEBMASTER's NOTE: I have no control over what appears on the above banner. If the above banner is un-Christian in manner there is nothing I can do about it.</p>
         </div>
         <div id="emailme">
             <h1>I've got mail!</h1>
