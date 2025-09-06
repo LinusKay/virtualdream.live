@@ -22,6 +22,7 @@
             background: #3299cc;
             width:800px;
             font-family: vinivicious;
+            font-size: 20px;
         }
         p {
             margin:0;
@@ -112,6 +113,7 @@
     <body>
         <div id="introduction">
             <h1>Welcome to the groovy cyber realm of Harry Humour, the net's funniest clean comedian</h1>
+            <p>As seen on Late Night with Steven Stevenson, ComedyBiz: AllStars and Good Morning Seattle's Comedy Cavalcade!</p>
         </div>
         <!-- <div id="jester">
             <img src="src/img/jester.gif">
@@ -145,14 +147,6 @@
             <h3>A note on Rankfield Show 26/02/08</h3>
             <p>My new lawyer has advised me that vicious, jackanape, so-called "reporters" think they can take down the king. My show at the Rankfield Comedy Club was flawless, yet these jackals want to shut down clean christian comedy FOR GOOD! I say NO! NO to foul vultures of society, NO! Begone from me, cretinous bugs. I have survived for this long off of blood, sweet and tears to bring my talents to society. Far too long to be shut down by misguided puppets of the world media. Call me "old-fashioned", call me "out of touch", but I make no apology for the things I say in my shows. It's COMEDY. It's JOKES. It's not my fault nobody taught the kid how to take a joke. Comedy, even clean (which need I remind you I PIONEERED) is meant to challenge society and make people uncomfortable. Comedians are the last bastion of free speech in this country. If we weren't here to speak truth to power, then GOOD LUCK on your own.  will be suing Rankfield, any anybody else that even thinks to challenge me on this. </p>
         </div>
-        <div id="fired">
-            <h3>Statemenmt on Lawyers</h3>
-            <p>Representatives of Harry Humour, AKA HIMSELF, would like to state that his jackal lawyers have been FIRED.</p>
-        </div>
-        <div id="noteonbanktownincident">
-            <h3> Statement on Banktown incident 16/09/07</h3>
-            <p>Representatives of Harry Gore, AKA Harry Humour, would like to state that Harry has described the incident at Banktown Lounge on September 16th, 2007 as "regrettable" and "misguided". No further comments are made at this time, and Harry will not be reachable for question.</p>
-        </div>
         <div id="freejokes">
             <h2><b>Free Jokes!</b></h2>
             <p id="joke"><u>Why don't skeletons fight each other?</u><br>They don't have the guts... or the muscles... or the skin. Okay, maybe they just don't have the spine for it!</p>
@@ -173,6 +167,17 @@
             <hr>
             
         </div>
+        
+        <div id="fired">
+            <h3>Statemenmt on Lawyers</h3>
+            <p>Representatives of Harry Humour, AKA HIMSELF, would like to state that his jackal lawyers have been FIRED.</p>
+        </div>
+        <div id="noteonbanktownincident">
+            <h3> Statement on Banktown incident 16/09/07</h3>
+            <p>Representatives of Harry Gore, AKA Harry Humour, would like to state that Harry has described the incident at Banktown Lounge on September 16th, 2007 as "regrettable" and "misguided". No further comments are made at this time, and Harry will not be reachable for question.</p>
+        </div>
+        <br>
+        <br>
         <div id="buydvd">
             <img src="src/img/TV.gif"><img src="src/img/dvd.gif"><img src="src/img/TV.gif">
             <p>Missed Harry Humour LIVE? Wish you could watch it again? Never fear, for technology is here!</p>
