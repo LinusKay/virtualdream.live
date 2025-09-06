@@ -15,7 +15,6 @@
         ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
         ["gobingo", "GoBingo! Search Engine"]
     ];
-    
     $sites = glob('./sites/*' , GLOB_ONLYDIR);
     $siteCount = sizeof( $sites );
     ?>
@@ -62,11 +61,24 @@
             color:white;
             font-weight:bold;
         }
+        .logo {
+            width:300px;
+            cursor: help;
+        }
     </style>
 </head>
 <body>
     <center>
-    <h1>Virtual Dream</h1>
+    <?php 
+    $logoTaglines = [
+        "We're glad you made it",
+        "Home at last",
+        "I love you",
+        "I'm a firin my lazer"
+    ];
+    $logoTagline = $logoTaglines[array_rand($logoTaglines)];
+    ?>
+    <img class="logo" src="index/VirtualDream-Dark.svg" title="<?php echo $logoTagline; ?>">
     <p>Welcome home, netizen</p>
     <h3><img src="index/aniheart.gif" class="headericon">Popular Sites</h3>
     <ul>

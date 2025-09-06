@@ -36,7 +36,7 @@ echo "<meta property=\"og:type\" content=\"website\" />\n";
 echo "<meta property=\"og:description\" content=\"$metaDescription $brandingTagline\" />\n";
 echo "<meta property=\"twitter:card\" content=\"$assetBaseUrl/img/vdbanner.png\" />\n";
 
-echo "<link rel='icon' type='image/x-icon' href='$assetBaseUrl/img/computer.ico'>\n";
+echo "<link rel='icon' type='image/x-icon' href='$assetBaseUrl/img/VirtualDream-Pyramid-500px.ico'>\n";
 
 echo "<script src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js'></script>\n";
 // Include stickers and malware scripts if not disabled
