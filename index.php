@@ -164,7 +164,7 @@
                         $isNewSite = true;
                     }
 
-                    if ($baseDomain == $hostLocal) {
+                    if ($baseDomain == $hostLocal) { 
                         if($isNewSite) {
                             echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
