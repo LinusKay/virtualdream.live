@@ -1,4 +1,4 @@
 <?php 
-    $roomTitle = "africa";
+    $roomTitle = "animeandmanga";
     include("../../src/roomtemplate.php");
 ?>

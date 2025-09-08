@@ -168,15 +168,14 @@
         <div class="wrap-sidebar">
             <div id="roomlist" class="wrap-sidebar-roomlist">
                 <p class="roomlist-heading">Rooms Open</p>
-                <p class="roomlist-room"><a href="rooms/room-20somethings">20somethings</a></p>
-                <p class="roomlist-room"><a href="rooms/room-30somethings">30somethings</a></p>
-                <p class="roomlist-room"><a href="rooms/room-africa">africa</a></p>
-                <p class="roomlist-room"><a href="rooms/room-animemanga">animemanga</a></p>
-                <p class="roomlist-room"><a href="rooms/room-europe">europe</a></p>
-                <p class="roomlist-room"><a href="rooms/room-oceania">oceania</a></p>
-                <p class="roomlist-room"><a href="rooms/room-southamerica">southamerica</a></p>
-                <p class="roomlist-room"><a href="rooms/room-unknown">unknown</a></p>
-                <p class="roomlist-room"><a href="rooms/room-usa">usa</a></p>
+                <?php
+                    $rooms = array_diff(scandir("rooms"), array('..', '.'));
+                    foreach($rooms as $room){
+                        $room_path = $room;
+                        $room_name = str_replace("rooms/room-", "", $room);
+                        echo "<p class=\"roomlist-room\"><a href=\"rooms/$room_path\">$room_name</a></p>";
+                    }
+                ?>
             </div>
         </div>
     </div>
