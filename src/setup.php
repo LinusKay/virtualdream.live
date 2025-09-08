@@ -39,12 +39,16 @@ echo "<meta property=\"twitter:card\" content=\"$assetBaseUrl/img/vdbanner.png\"
 echo "<link rel='icon' type='image/x-icon' href='$assetBaseUrl/img/VirtualDream-Pyramid-500px.ico'>\n";
 
 echo "<script src='https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js'></script>\n";
-// Include stickers and malware scripts if not disabled
+
+// Include stickers, software and malware scripts if not disabled
 echo "<script src='$assetBaseUrl/scripts/stickers/stickers.php' type='module'></script>\n";
 echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/stickers/stickers.css'>\n";
 
 echo "<script src='$assetBaseUrl/scripts/malware/malware.php' type='module'></script>\n";
 echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/malware/malware.css'>\n";
+
+echo "<script src='$assetBaseUrl/scripts/software/software.php' type='module'></script>\n";
+echo "<link rel='stylesheet' href='$assetBaseUrl/scripts/software/software.css'>\n";
 
 // allow opt out for screensaver feature
 if (!isset($screensaverOptOut) || !$screensaverOptOut) {

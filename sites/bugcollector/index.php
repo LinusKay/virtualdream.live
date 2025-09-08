@@ -84,7 +84,7 @@
         }
         function setupButton() {
             const button = document.getElementById("stopstart");
-            if(window.infectionExists("bugcollector")) {
+            if(window.softwareInstalled("bugcollector")) {
                 button.innerText = "stop hunting";
                 button.onclick = function() { stopHunting(); }
             }
@@ -94,11 +94,11 @@
             }
         }
         function startHunting() {
-            addInfection("bugcollector");
+            addSoftware("bugcollector");
             setupButton();
         }
         function stopHunting() {
-            removeInfection("bugcollector");
+            removeSoftware("bugcollector");
             setupButton();
         }
     </script>
