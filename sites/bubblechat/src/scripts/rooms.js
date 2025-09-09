@@ -95,7 +95,8 @@ function userLoginLogoutEvent() {
  * Displays the MOTD message regularly.
  */
 function motdEvent() {
-    createMessage("motd", "Welcome to ~©b$fÓß€ö{~! Be kkind!! For help type /hhhhelp!", "", false);
+    const roomName = window.location.pathname.split("/").filter(path => path !== '').at(-1).replace("room-", "")
+    createMessage("motd", `Welcome to ~${roomName}! Be kind! For help type /help!`, "", false);
     const nextMotdTimer = 30000;
     setTimeout(motdEvent, nextMotdTimer);
 }
