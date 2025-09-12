@@ -6,6 +6,7 @@
         <?php 
         # PAGE SETUP
         include('../../src/setup.php');
+        srand(floor(time() / (60*60*24)));
         # /PAGE SETUP
         ?>
         <title>Snail Mail</title>
