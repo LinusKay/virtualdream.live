@@ -48,6 +48,10 @@ const messageTextOptions = [
     "Ö„“A÷ôÇŸ&¨ê*h",
     "•­^!»Ã2ã±“-D™²ŠçÓ‰«ŸY:)çÌ¤ÏF‡ºÕ?¿ñW}p^xô|Ò£cIg^Ò!hFfž‡q",
     "Do you know what dying feels like?",
+    "m",
+    "i",
+    "n",
+    "a",
 
     "-HELP US-",
     "-I DON'T LIKE IT HERE-",

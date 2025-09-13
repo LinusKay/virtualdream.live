@@ -172,7 +172,7 @@
                     $rooms = array_diff(scandir("rooms"), array('..', '.'));
                     foreach($rooms as $room){
                         $room_path = $room;
-                        $room_name = str_replace("rooms/room-", "", $room);
+                        $room_name = str_replace("room-", "", $room);
                         echo "<p class=\"roomlist-room\"><a href=\"rooms/$room_path\">$room_name</a></p>";
                     }
                 ?>

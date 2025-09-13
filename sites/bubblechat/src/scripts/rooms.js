@@ -1,10 +1,11 @@
 const messageBufferMax = 50;
 const quitReasons = ["User disconnected.", "Ping timeout"];
 const messageTextOptions = [
-    "hi!",
+    "hi! :smile:",
     "hello world!",
     "asl?",
-    "is anyone actually here?"
+    "is anyone actually here? :confused::confused::bored:",
+    ":devil:"
 ];
 let usersLoggedIn = [];
 
@@ -60,9 +61,10 @@ function setupChatroom() {
     setTimeout(userLoginLogoutEvent, firstLoginLogoutTimer);
 
     const newMessageText = messageTextOptions[Math.floor(Math.random() * messageTextOptions.length)];
+    let newMessageTextFormatted = newMessageText.replace(":smile:", "<img src=\"../../src/img/smilies/smile.gif\" class=\"\">")
     const newMessageUserName = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
     
-    createMessage("message", newMessageText, newMessageUserName);
+    createMessage("message", newMessageTextFormatted, newMessageUserName);
 
     const guestUsernameElement = document.getElementById('guestUsername');
     const guestUsernameID = Math.random().toString().substring(2, 8);
@@ -130,9 +132,10 @@ function createMessage(messageType = "message", messageText, messageUserName = "
 
     const chatBox = document.getElementById("chatbox");
     const messageElement = document.createElement('p');
-    const messageUserNameFormatted = messageUserName ? `<${messageUserName}>` : "";
+    console.log(messageUserName);
+    const messageUserNameFormatted = messageUserName ? `${messageUserName}:` : "";
     const messageContents = `(${messageTime}) ${messageUserNameFormatted} ${messageText}`;
-    messageElement.innerText = messageContents;
+    messageElement.innerHTML = messageContents;
 
     let messageClasses = ["message"];
     if (messageType === "join") messageClasses.push("message-join");
@@ -158,12 +161,13 @@ function createMessage(messageType = "message", messageText, messageUserName = "
         const newMessageTimer = Math.floor(Math.random() * (newMessageTimerMax - newMessageTimerMin) + newMessageTimerMin);
 
         const newMessageText = messageTextOptions[Math.floor(Math.random() * messageTextOptions.length)];
-        const newMessageUserName = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
+        const newMessageTextFormatted = formatMessageSmilies(newMessageText);
+        let newMessageUserName = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
         const guestUsername = document.getElementById('guestUsername').innerText;
         if(newMessageUserName == guestUsername) newMessageUserName = usersLoggedIn[0];
 
         setTimeout(() => {
-            createMessage("message", newMessageText, newMessageUserName);
+            createMessage("message", newMessageTextFormatted, newMessageUserName);
         }, newMessageTimer);
     }
 }
@@ -171,9 +175,20 @@ function createMessage(messageType = "message", messageText, messageUserName = "
 function sendUserMessage() {
     const inputBox = document.getElementsByClassName('input-message')[0];
     const inputContents = inputBox.value;
+    const inputContentsFormatSmilies = formatMessageSmilies(inputContents);
     const guestUsername = document.getElementById('guestUsername').innerText;
-    createMessage("messageUser", inputContents, guestUsername);
+    createMessage("messageUser", inputContentsFormatSmilies, guestUsername);
     inputBox.value = "";
+}
+
+function formatMessageSmilies(messageText) {
+    let messageTextFormatted = messageText.replaceAll(":smile:", "<img src=\"../../src/img/smilies/smile.gif\" class=\"smiley\" title=\":smile:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":confused:", "<img src=\"../../src/img/smilies/confused.gif\" class=\"smiley\" title=\":confused:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":devil:", "<img src=\"../../src/img/smilies/devil.gif\" class=\"smiley\" title=\":devil:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":tease:", "<img src=\"../../src/img/smilies/tease.gif\" class=\"smiley\" title=\":tease:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":bored:", "<img src=\"../../src/img/smilies/bored.gif\" class=\"smiley\" title=\":bored:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":exclaim:", "<img src=\"../../src/img/smilies/exclaim.gif\" class=\"smiley\" title=\":exclaim:\">")
+    return messageTextFormatted;
 }
 
 /**

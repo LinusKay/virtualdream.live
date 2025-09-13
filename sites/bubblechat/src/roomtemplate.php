@@ -26,7 +26,7 @@
         <div class="wrap-chatsidebar">
             <div id="userlist" class="wrap-chatsidebar-userlist">
             </div>
-            <p class="usercount"><span id="usercount">0</span> users online</p>
+            <p class="usercount"><img src="../../src/img/smilies/green.gif"><span id="usercount">0</span> users online</p>
             <p>You are <span id="guestUsername"></span></p>
         </div>
         <div class="wrap-input">
