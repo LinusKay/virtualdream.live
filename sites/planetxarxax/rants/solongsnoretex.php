@@ -12,6 +12,7 @@
 <body bgcolor="#6699ff">
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
         <table width="600" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr>
@@ -48,6 +49,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </center>
 </body>
 </html>

@@ -18,3 +18,12 @@ a:hover{
 .advertisement-banner {
     margin:20px;
 }
+td {
+    background: url('pixlbg.png')
+}
+#wrap {
+    width:600px;
+    border:solid 3px #cd3178;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+}

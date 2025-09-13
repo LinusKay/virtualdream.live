@@ -12,6 +12,16 @@
 <body bgcolor="#6699ff">
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
+        <table width="600" height="139" cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <tr height="139">
+                    <td valign="top" width="600" height="139" style="background: #cd3178">
+                        <img alt="Site Banner" src="banner.png">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table width="600" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr>
@@ -83,6 +93,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </center>
 </body>
 </html>

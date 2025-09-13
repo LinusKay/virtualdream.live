@@ -13,10 +13,11 @@
 <body>
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
         <table width="600" height="139" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr height="139">
-                    <td valign="top" width="600" height="139">
+                    <td valign="top" width="600" height="139" style="background: #cd3178">
                         <img alt="Site Banner" src="banner.png">
                     </td>
                 </tr>
@@ -25,7 +26,7 @@
         <table width="600" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr>
-                    <td valign="top" width="600" height="23" bgcolor="#cd3178">
+                    <td valign="top" width="600" height="23" style="background: #cd3178">
                         <a href="faq.php">
                         <p align="center" style="margin:0;" height="23">
                             <font size="3" face="KosugiMaru-Regular" color="white">Welcome! Click</font> 
@@ -37,6 +38,11 @@
                         </a>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <marquee>Voted #1 fansite on Virtual Dream | The home of all things Planet Xarxax | NEW DESIGN!! | Get in touch! Email xebulonluv@virtualdream.live </marquee>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table width="600" cellpadding="0" cellspacing="0" border="0">
@@ -44,8 +50,7 @@
                 <tr>
                     <td valign="top" width="6" height="340" bgcolor="white"></td>
                     <td valign="top" width="194" height="340" bgcolor="white">
-                        <p style="margin:0;">&nbsp;</p>
-                        <ul>
+                        <ul style="list-style: url('iZw01S5.gif');">
                             <li><font size="3" face="KosugiMaru-Regular"><a href="reviews">Episode Reviews</a></font></li>
                             <li><font size="3" face="KosugiMaru-Regular"><a href="rants">Rants and Raves</a></font></li>
                             <li><font size="3" face="KosugiMaru-Regular"><a href="history.php">Site Updates</a></font></li>
@@ -55,19 +60,28 @@
                             <li><font size="3" face="KosugiMaru-Regular"><a href="coolsites.php">Cool Sites</a></font></li>
                             <li><font size="3" face="KosugiMaru-Regular"><a href="mailto:xebulonluv@virtualdream.live">Email Me</a></font></li>
                         </ul>
+                        <p align="center" style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:15px;padding:10px; width:160px; word-break: break-word; background: url('notebg.gif')">
+                            <font size="2">The webmaster is feeling <br>
+                                <span style="background: #eaf8ff; border-radius:15px">
+                                    <img src="SNs0GkH.gif"> sleepy <img src="SNs0GkH.gif">
+                                </span>
+                            </font>
+                        </p>
                         <p align="center">
                             <font size="3" face="KosugiMaru-Regular">Also check out:<br><b><a href="https://virtualdream.live">VirtualDream.Live</a></b></font>
                         </p>
-                        <p align="center" style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; width:160px; word-break: break-word">
-                            Featured Email:<br><br>
+                        <p align="center" style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; width:160px; word-break: break-word; background: url('notebg.gif')">
+                            <img src="ZPHsXtf.gif"> Featured Email:<br><br>
                             <b>From:</b> carpathianitar<br>
                             <b>Subject:</b><br>On Megathoid 17<br><br>
-                            Hi xebulonluv,<br>I read your guest review of Megathoid 17 on AniFans the other day, and I wanted to say that I totally agree with you!! I think the way you laid out your thoughts was super impressive, in a way that I just couldn't really formulate my own, and I found myself so disappointed in Norito when I watched the episode back. The way that Xeris capitulated to the Ormulurian Syndicate felt so cheap, so weird, and so wrong, especially after we spent SO long seeing just how awful they were. Yeah they took Xeris captive, and threatened to blow up a planet, and did blow up a ship or two, and subjugate so so many people all the time, but we HAVE to show Xeris being the "better man" and letting them go so lets forget about all that. Yuck. Anyway just wanted to say thanks, and keep up the great work! <br><br>
+                            <i>Hi xebulonluv,<br>I read your guest review of Megathoid 17 on AniFans the other day, and I wanted to say that I totally agree with you!! I think the way you laid out your thoughts was super impressive, in a way that I just couldn't really formulate my own, and I found myself so disappointed in Norito when I watched the episode back. The way that Xeris capitulated to the Ormulurian Syndicate felt so cheap, so weird, and so wrong, especially after we spent SO long seeing just how awful they were. Yeah they took Xeris captive, and threatened to blow up a planet, and did blow up a ship or two, and subjugate so so many people all the time, but we HAVE to show Xeris being the "better man" and letting them go so lets forget about all that. Yuck. Anyway just wanted to say thanks, and keep up the great work! <br><br>
                             P.S. i <u>love</u> the new site design! its soo much nicer than the old one. ok ok, bye!<br><br>
-                            From carpathianitar xoxo 
+                            From carpathianitar xoxo </i>
                         </p>
                     </td>
                     <td valign="top" width="373" height="340" bgcolor="white">
+                        <p style="margin:0px;">&nbsp;</p>
+                        <div style="border:solid 1px #cd3178; height:50px; width:300px; margin:auto;"></div>
                         <p style="margin:7px;">&nbsp;</p>
                         <font size="3" face="KosugiMaru-Regular"><b>Welcome, New World! </b>--- <b>[ <a href="history.php">Previous</a> ]</b></font>
                         <p><font size="3" face="KosugiMaru-Regular">Welcome to Planet Xarxax! This is the #1 spot for anything and everything Xarxax. Here you'll find episode reviews, rants, artwork and more.<br>~xebulonluv <3</font></p>
@@ -76,20 +90,29 @@
                             <li><font size="3" face="KosugiMaru-Regular">Removed all reviews by neocortex1986 [<a href="rants/solongsnoretex.php">SEE HERE</a>]</font></li>
                             <li><font size="3" face="KosugiMaru-Regular">Even more coming soon!</font></li>
                         </ul>
-                        <b>Xebulon's Question of the Week!</b>
-                        <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px">Maria, AKA qutiesparksx, asks:<br><br>
+                        <p style="margin:0px;">&nbsp;</p>
+                        <div style="border:solid 1px #cd3178; height:50px; width:300px; margin:auto;"></div>
+                        <p style="margin:0px;">&nbsp;</p>
+                        <b><img src="6eHVXVC.gif"> Xebulon's Question of the Week!</b>
+                        <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')">Maria, AKA qutiesparksx, asks:<br><br>
                         <i>If you got to fly one ship from Xarxax, which one would it be?</i></p>
                         <p>Email me your answers! Thanks Maria ;*</p>
                         <p>Here's some of the responses from last week's question, where Rolandcoaster12 asked who your favourite foe is, and why:</p>
                         
-                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px"><i>Gorgulon. He's just unstoppable - cor</i><br><br>He's really just so frightening! The first time I've ever really been scared for our heroes was when he showed up on Carputhax. Those muscles don't lie.</p>
-                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px"><i>Fremula awakened something in me i did not realise was there. thank you Norito, thank you. - CaptainApitan</i><br><br>There it is ladies and gentlemen, yet another victim of the Frem. Only god can save you, Apitan, don't bother poor Norito.</p>
-                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px"><i>Hiii Xebby, my favourite has to be Crawpink. He's just so small and tiny and feisty. You can't tell me you never just wanted to just squish that little pink guy in your hand. I so wish they bring him back somehow. - qutiesparksx</i><br><br>*squish*</p>
+                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Gorgulon. He's just unstoppable - cor</i><br><br>He's really just so frightening! The first time I've ever really been scared for our heroes was when he showed up on Carputhax. Those muscles don't lie.</p>
+                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Fremula awakened something in me i did not realise was there. thank you Norito, thank you. - CaptainApitan</i><br><br>There it is ladies and gentlemen, yet another victim of the Frem. Only god can save you, Apitan, don't bother poor Norito.</p>
+                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Hiii Xebby, my favourite has to be Crawpink. He's just so small and tiny and feisty. You can't tell me you never just wanted to just squish that little pink guy in your hand. I so wish they bring him back somehow. - qutiesparksx</i><br><br>*squish*</p>
                         
-                        <p><b>Episode Mini-Spotlight</b></p>
+                        <p style="margin:0px;">&nbsp;</p>
+                        <div style="border:solid 1px #cd3178; height:50px; width:300px; margin:auto;"></div>
+                        <p style="margin:0px;">&nbsp;</p>
+                        <p><img src="ZB6y5TT.gif"> <b>Episode Mini-Spotlight</b></p>
                         <p>Episode 117: Without a Graddle</p>
                         <p>This episode was always a fun one for me. Xebulon finds herself stuck in a mighty river, and is swept away, only to run into Graggy on her way down, who has to scoop her up and out of danger. As a kid I also never understood the name for solong (paddle + Graggy = Graddle, duh). </p>
-                        <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px"><b>Thought of the day</b><br><br>Have you ever wondered what happens to your missing socks? Something fishy is afoot! :p</p>
+                        <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')">
+                           <img src="ygYGvlW.gif"> <b>Thought of the day</b><br><br>Have you ever wondered what happens to your missing socks? Something fishy is afoot! :p
+                        </p>
+                        
                         <script>
                             window.addEventListener("load", function() {
                                 window.createAudioPlayer({
@@ -138,6 +161,7 @@
                 </tr>
             </tbody>
         </table>
+    </div>
     </center>
 </body>
 </html>

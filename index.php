@@ -131,7 +131,11 @@
             'bugsisnotreal',
             'tombfreaks',
             'neocortex1986',
-            'laika'
+            'laika',
+            'channel-71-weekly-winner',
+            'bugcollector',
+            'armourofgod',
+            'squelchtv'
         ];
         $sites = array_filter($sites, function($dir) use ($excludedDirs) {
             return !in_array(basename($dir), $excludedDirs);

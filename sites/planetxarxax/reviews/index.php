@@ -12,6 +12,7 @@
 <body bgcolor="#6699ff">
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
         <table width="600" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr>
@@ -41,7 +42,7 @@
                 <tr>
                     <td valign="top" width="6" height="340" bgcolor="white"></td>
                     <td valign="top" width="292" height="340" bgcolor="white">
-                        <ul>
+                        <ul style="list-style: url('../iZw01S5.gif');">
                             <li><font size="3"><b>Episode 1: A Call Beyond</b></font></li>
                             <li><font size="3"><b>Episode 2</b></font></li>
                             <li><font size="3"><b>Episode 3</b></font></li>
@@ -536,7 +537,7 @@
                     </td>
                     <td valign="top" width="292" height="340" bgcolor="white">
                         <p style="margin:0;">&nbsp;</p>
-                        <ul>
+                        <ul style="list-style: url('../iZw01S5.gif');">
                             <li><font size="3"><b>Episode 491</b></font></li>
                             <li><font size="3"><b>Episode 492</b></font></li>
                             <li><font size="3"><b>Episode 493</b></font></li>
@@ -1054,6 +1055,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </center>
 </body>
 </html>
