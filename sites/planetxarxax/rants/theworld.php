@@ -27,8 +27,10 @@
                     <td valign="top" width="6" height="340" bgcolor="white"></td>
                     <td valign="top" width="576" height="340" bgcolor="white">
                         <p style="margin:0;">&nbsp;</p>
-                        <p align="center"><font size="3"><b><u>So Long NeoSnoretex!!</u></b><br><i>by xebulonluv</i></font></p>
-                        <p><font size="3">If you've been following the site for a while you'd know that neocortex1986 has been my assistant around here since the move to Virtual Dream, and if you've been following even more closely you might notice that he hasn't posted much for a long time. There has been a LOT going on behind the scenes, and I'm just exhausted. He isn't a site admin anymore, and his posts are gone. Unfortunately, this means a <b><u>lot</u></b> of reviews will be missing, but I think its the right thing to do. I just don't feel right hosting his writing anymore. If he hasn't deleted his Virtual Dream page you can probably find them there. As I said there more to it, but I won't be answering any questions about it. This is not something I wanted to have to do, and I'm so very sad that it had to end this way. I'm even more sorry to our avid readers, but trust that we will rebuild! If you want to help fill in the many gaps, send me an email <3 I love you.</font></p>
+                        <p align="center"><font size="3"><b><u>The state of this world</u></b><br><i>by xebulonluv</i></font></p>
+                        <p><font size="3">
+                        Sometimes i think about the way this beautiful world taht we live in should be full of love and laughter and joy and instead is full of hatred and tears and sadness, and it just makes me so upset! I sometimes think that our parents just don't understand it. They still treat us like we're kids, and like we aren't affected by their stupid decisions! This planet (our real one, not Xarxax) is so beautiful. I often like to sit at the lake and watch the birds singing, and the grass swaying, and the trees dancing and it makes me want to cry. I wonder if our parents ever felt like this. They had to be young once too, what happened?
+                        </font></p>
                         <center>
                             <p><font size="3"><b>[ <a href="../">Return to Home Page</a> ]</b></font></p>
                         </center>

@@ -10,17 +10,27 @@
         ?>
         <title>The Leader's Tech Blog</title>
         <style> 
+        @font-face {
+            font-family: KosugiMaru-Regular;
+            src: url("src/KosugiMaru-Regular.ttf");
+        }
             body {
-                width:600px;
+                font-family: KosugiMaru-Regular;
+                width:950px;
+                margin:auto;
                 background:black;
+                /* background-image: url("src/img/0064_small.gif"); */
+                background-repeat:repeat;
+                background-size: auto;
                 color:white;
                 /* font-family:'Courier New', Courier, monospace; */
-                line-height:16px;
+                line-height:17px;
+                /* font-size:15px; */
                 font-size:20px;
                 color:red;
             }
             table {
-                border: dashed 1px white;
+                /* border: dashed 1px white; */
             }
             td {
                 /* text-align:center; */
@@ -65,27 +75,30 @@
                 <tr>
                     <td valign="top" width="300">
                         <ul class="navigation">
-                            <li><a href="#vdreviews">Virtual Dream Reviews</a></li>
+                            <li><a href="#vdreviews">Site Reviews</a></li>
                             <li><a href="#tecchreviews">Tech Reviews</a></li>
                             <li><a href="#shamewall">Shame Wall</a></li>
                         </ul>
                         <center>
                             <img src="src/img/portrait.jpg" width="75px">
                             <img src="src/img/nuevogif9.gif">
-                            <span class="review-quote">liberals.</span>
                             <img src="src/img/nuevogif11.gif">
                             <img src="src/img/7CK5ZEMFGQXNZ3EXNVQ3ORM2XYHFY76I.gif">
                             <span class="review-quote">fuck off.</span>
+                            <br>
+                            <br>
+                            <br>
+                            <img src="src/img/3GPU7B7JVMBWZTLQYVODMWS3T5F5LQDZ.gif">
                         </center>
                     </td>
                     <td>
-                        <table width="400" style="border-top:solid 25px white">
+                        <table width="400" style="background:url('src/img/lightning.gif');">
                             <tbody>
                                 <tr>
                                     <td><img src="src/img/beholder_hovering_left.gif"></td>
                                     <td colspan="3">
                                         <img class="logo" src="src/img/cooltext487987509118888.png">
-                                        <div class='advertisement-banner'></div>
+                                        <!-- <div class='advertisement-banner'></div> -->
                                     </td>
                                     <td><img src="src/img/beholder_hovering_right.gif"></td>
                                 </tr>
@@ -105,7 +118,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table width="600">
+                        <table width="800">
                             <tbody>
                                 <tr>
                                     <td>
@@ -125,8 +138,8 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <span class="review-quote">Sponsor</span>
-                                        <div class='advertisement-banner'></div>
+                                        <!-- <span class="review-quote">Sponsor</span> -->
+                                        <!-- <div class='advertisement-banner'></div> -->
                                     </td>
                                 </tr>
                             </tbody>
@@ -143,7 +156,7 @@
                         </table>
                         <hr>
                         
-                        <table width="600">
+                        <table width="800">
                             <tbody>
                                 <tr>
                                     <td width="300">
@@ -180,7 +193,7 @@
 
                         <h2 id="techreviews">Technology Reviews</h2>
                         <hr>
-                        <table width="600">
+                        <table width="800">
                             <tbody>
                                 <tr>
                                     <td width="300">
@@ -201,7 +214,7 @@
                         <h2 id="shamewall">Email Shame Wall</h2>
                         <hr>
                         <p>Inane musings of the depraved who haunt my inbox. My email address is not currently public.</p>
-                        <table width="600">
+                        <table width="800">
                             <tbody>
                                 <tr>
                                     <td class="email">
@@ -211,7 +224,7 @@
                                         <p>If I ever wanted to claim the exorbitant insurance policy I have placed on my home and family I would purchase a HyperShitstem. I do not currently plan to do this. Capitalise my fucking name. We are not brothers.</p>
                                         <img src="src/img/RMQVWKLOICXO2UT5OTOQOG2RREND7X6R.gif">
                                     <br><center>. . .</center>
-                                        <div class='advertisement-banner'></div>
+                                        <!-- <div class='advertisement-banner'></div> -->
                                     </td>
                                 </tr>
                                 <tr>
@@ -223,7 +236,7 @@
                                         <img src="src/img/5WIQJWJ3CMMGVMQCR7UU7OGJZ2IOCX3J.gif">
                                         <h2>NOT</h2>
                                         <br><center>. . .</center>
-                                        <div class='advertisement-banner'></div>
+                                        <!-- <div class='advertisement-banner'></div> -->
                                     </td>
                                 </tr>
                                 <tr>

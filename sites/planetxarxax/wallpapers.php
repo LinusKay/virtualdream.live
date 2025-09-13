@@ -27,8 +27,8 @@
                     <td valign="top" width="6" height="340" bgcolor="white"></td>
                     <td valign="top" width="576" height="340" bgcolor="white">
                         <p style="margin:0;">&nbsp;</p>
-                        <p><font size="2">Coming soon!</font></p>
-                        <p><font size="2"><b>Looking for artists</b>: We'd love to feature your Xarxax art here. Please <a href="mailto:xebulonluv@virtualdream.live">get in touch</a>!</font></p>
+                        <p><font size="3">Coming soon!</font></p>
+                        <p><font size="3"><b>Looking for artists</b>: We'd love to feature your Xarxax art here. Please <a href="mailto:xebulonluv@virtualdream.live">get in touch</a>!</font></p>
                     </td>
                     <td valign="top" width="27" height="340" bgcolor="white"></td>
                 </tr>
@@ -39,7 +39,7 @@
                 <tr>
                     <td valign="top" width="600" bgcolor="white">
                         <center>
-                            <p><font size="2"><b>[ <a href="index.php">Return to Home Page</a> ]</b></font></p>
+                            <p><font size="3"><b>[ <a href="index.php">Return to Home Page</a> ]</b></font></p>
                         </center>
                     </td>
                 </tr>

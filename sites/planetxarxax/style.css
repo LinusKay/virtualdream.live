@@ -1,9 +1,14 @@
+@font-face {
+    font-family: KosugiMaru-Regular;
+    src: url("KosugiMaru-Regular.ttf");
+}
 body {
-    font-family: Verdana, Arial, helvetica;
-    background-image: url('sky.jpg');
+    font-family: KosugiMaru-Regular;
+    background: #A12B74;
+    background-size:1920px;
 }
 a {
-    color: #3366ff;
+    color: #cd3178;
     text-decoration:none;
     font-weight:bold;
 }

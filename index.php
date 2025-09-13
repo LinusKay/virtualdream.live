@@ -144,9 +144,8 @@
         $index = 0;
 
         $newSites = [
+            'adrenadine',
             'bugcollector',
-            'libus',
-            'laika',
             'bigger'
         ];
         $isNewSite = false;
@@ -206,7 +205,7 @@
                             |
                             <li><a href='sites/webrings/'>webrings</a></li>
                             |
-                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>
+                            <li><a href='sites/builder/'>website builder</a></li>
                             |
                             <li><a href='credits.php'>credits</a></li>";
                         }
@@ -219,7 +218,7 @@
                             |
                             <li><a href='https://webrings.$baseDomain/'>webrings</a></li>
                             |
-                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>
+                            <li><a href='sites/builder/'>website builder</a></li>
                             |
                             <li><a href='credits.php'>credits</a></li>
                             ";
