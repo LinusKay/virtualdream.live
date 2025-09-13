@@ -146,7 +146,8 @@
         $newSites = [
             'bugcollector',
             'libus',
-            'laika'
+            'laika',
+            'bigger'
         ];
         $isNewSite = false;
     ?>
