@@ -90,6 +90,10 @@
         .roomlist-heading {
             font-weight:bold;
         }
+        .roomlist-room img {
+            height:12px;
+            margin-bottom:-2px;
+        }
         .aero {
             background-color: rgba(255, 127, 80, 0.8);
             background: radial-gradient(farthest-corner at bottom center, rgba(255, 255, 255, 0.7), transparent), linear-gradient(to bottom, rgba(235, 63, 0, 0.72), rgba(255, 127, 80, 0.8));
@@ -173,7 +177,7 @@
                     foreach($rooms as $room){
                         $room_path = $room;
                         $room_name = str_replace("room-", "", $room);
-                        echo "<p class=\"roomlist-room\"><a href=\"rooms/$room_path\">$room_name</a></p>";
+                        echo "<p class=\"roomlist-room\"><img src=\"src/img/WMdjlJy.jpg\"> <a href=\"rooms/$room_path\">$room_name</a></p>";
                     }
                 ?>
             </div>

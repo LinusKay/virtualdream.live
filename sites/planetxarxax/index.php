@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Xarxax - Central for everything Xarxax</title>
     <?php 
+        $cursorFollow = "9kEXULk.gif";
+        $cursorCustom = "229598.png";
+        $cursorFollowOffset = [25,25];
         include('../../src/setup.php');
         echo "<script src='$assetBaseUrl/scripts/audioplayer/audioplayer.php' type='module'></script>\n";
     ?>
@@ -40,7 +43,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <marquee>Voted #1 fansite on Virtual Dream | The home of all things Planet Xarxax | NEW DESIGN!! | Get in touch! Email xebulonluv@virtualdream.live </marquee>
+                        <marquee scrollamount="5"><img src="RPX30xg.gif"> Voted #1 fansite | <img src="KwX2CTv.gif"> The home of all things Planet Xarxax | <img src="ZPHsXtf.gif"> NEW DESIGN!! | <img src="KbXT5Rp.gif"> Get in touch! Email xebulonluv@virtualdream.live </marquee>
                     </td>
                 </tr>
             </tbody>
@@ -101,7 +104,7 @@
                         
                             <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Gorgulon. He's just unstoppable - cor</i><br><br>He's really just so frightening! The first time I've ever really been scared for our heroes was when he showed up on Carputhax. Those muscles don't lie.</p>
                             <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Fremula awakened something in me i did not realise was there. thank you Norito, thank you. - CaptainApitan</i><br><br>There it is ladies and gentlemen, yet another victim of the Frem. Only god can save you, Apitan, don't bother poor Norito.</p>
-                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Hiii Xebby, my favourite has to be Crawpink. He's just so small and tiny and feisty. You can't tell me you never just wanted to just squish that little pink guy in your hand. I so wish they bring him back somehow. - qutiesparksx</i><br><br>*squish*</p>
+                            <p style="border:solid 1px #cd3178; border-top: solid 3px #cd3178; border-radius:0 0 15px 15px;padding:10px; background: url('notebg.gif')"><i><img src="KbXT5Rp.gif"> Hiii Xebby, my favourite has to be Crawpink. He's just so small and tiny and feisty. You can't tell me you never just wanted to just squish that little pink guy in your hand. I so wish they bring him back somehow. - qutiesparksx</i><br><br>*squish*<br><br><img src="3g7zeGW.gif"></p>
                         
                         <p style="margin:0px;">&nbsp;</p>
                         <div style="border:solid 1px #cd3178; height:50px; width:300px; margin:auto;"></div>
@@ -120,8 +123,9 @@
                                     dragEnabled: true,
                                     backgroundColour: "#A12B74",
                                     borderColour: "white",
-                                    borderWidth: "2",
-                                    borderStyle: "outset",
+                                    borderWidth: "1",
+                                    borderStyle: "solid",
+                                    borderRadius: 15,
                                     textColour: "white",
                                     playIcon: "<?php echo "$assetBaseUrl/img/audioplayer/play-invert.png" ?>",
                                     pauseIcon: "<?php echo "$assetBaseUrl/img/audioplayer/pause-invert.png" ?>",

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Xarxax - Central for everything Xarxax</title>
     <?php 
+        $cursorFollow = "9kEXULk.gif";
+        $cursorCustom = "229598.png";
+        $cursorFollowOffset = [25,25];
         include('../../src/setup.php');
     ?>
     <link rel="stylesheet" href="style.css">

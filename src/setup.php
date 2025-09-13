@@ -72,6 +72,14 @@ echo "
 
 // Cursor Follow feature
 if(isset($cursorFollow)) {
+    if(isset($cursorFollowOffset)) {
+        $cursorFollowOffsetX = $cursorFollowOffset[0];
+        $cursorFollowOffsetY = $cursorFollowOffset[1];
+    }
+    else {
+        $cursorFollowOffsetX = 10;
+        $cursorFollowOffsetY = 10;
+    }
     echo "
     <!-- Cursor Follow -->
     <img id='cursor-follow' src='$cursorFollow' style='position: fixed; z-index: 99;'>
@@ -79,9 +87,8 @@ if(isset($cursorFollow)) {
         document.addEventListener('DOMContentLoaded', function() {
             var cursorFollow = document.getElementById('cursor-follow');
             document.addEventListener('mousemove', function(e) {
-                let offset = 10;
-                let left = e.clientX + offset;
-                let top = e.clientY + offset;
+                let left = e.clientX + $cursorFollowOffsetX;
+                let top = e.clientY + $cursorFollowOffsetY;
                 cursorFollow.style.left = left + 'px';
                 cursorFollow.style.top = top + 'px';
             });

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Xarxax - Central for everything Xarxax</title>
     <?php 
+        $cursorFollow = "9kEXULk.gif";
+        $cursorCustom = "229598.png";
+        $cursorFollowOffset = [25,25];
         include('../../src/setup.php');
     ?>
     <link rel="stylesheet" href="style.css">
@@ -12,6 +15,7 @@
 <body bgcolor="#6699ff">
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
         <table width="600" height="139" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr height="139">
@@ -99,6 +103,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </center>
 </body>
 </html>
