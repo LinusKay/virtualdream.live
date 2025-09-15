@@ -1,0 +1,33 @@
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .image-row img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        body {
+            margin: 0;
+            /* remove default spacing */
+            height: 100vh;
+            /* full viewport height */
+            background-image: url("src/america.jpg");
+            background-size: cover;
+            /* scales to cover entire screen */
+            background-position: center;
+            /* keeps it centered */
+            background-repeat: no-repeat;
+            /* no tiling */
+        }
+
+        .center-content {
+            text-align: center;
+            flex: 1;
+            /* lets center expand between images */
+            margin: 0 20px;
+            /* spacing */
+        }

@@ -1,0 +1,22 @@
+{
+    "pizza": {
+        "aliases": [
+            "pizza pie",
+            "za"
+        ],
+        "response": "Disgusting. HORRID, even!"
+    },
+    "virtualdream": {
+        "aliases": [
+            "vd",
+            "virtual dream"
+        ],
+        "response": "A pithiful place, presently. However there is some promise for us intellectual types should we seize the opportunity..."
+    },
+    "porncomputer": {
+        "aliases": [
+            "porn computer"
+        ],
+        "response": "Good HEAVENS, man! This is what I am talking about when I say Virtual Dream must be purged of degeneracy. Only then can intelligent discussion begin."
+    }
+}

@@ -1,0 +1,11 @@
+Sources:
+
+Music sourced as midi, converted using timidity & ffmpeg using command:
+timidity input_file.mid -Ow -o - | ffmpeg -i - -acodec libmp3lame -ab 64k output_file.mp3
+
+Textures:
+Alias3 Textures.
+PhotoDisc Volumes - US Landmarks and Travel 2 
+https://www.nicepng.com/png/full/106-1067345_roman-pillars-png.png
+
+https://www.1001freefonts.com/pompeji-petit.font
