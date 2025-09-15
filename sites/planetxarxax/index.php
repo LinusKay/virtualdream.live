@@ -135,7 +135,7 @@
                                     showCover: false,
                                     // playerBackground: "<?php echo "$assetBaseUrl/img/audioplayer/skins/palm.png" ?>",
                                     // playerBackgroundOffset: [-190, -160],
-                                    playerWrapBackground: "<?php echo "spaceship5.gif" ?>",
+                                    // playerWrapBackground: "<?php echo "spaceship5.gif" ?>",
                                     playerWrapBackgroundOffset: [0, 75],
                                     playerWrapBackgroundSize: 2,
                                     songs: [

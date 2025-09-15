@@ -8,6 +8,10 @@
         include('../../src/setup.php');
     ?>
     <style>
+        @font-face {
+            font-family: fredoka-semi-bold;
+            src: url("fredoka-semi-bold.ttf");
+        }
         body {
             background: #648fc6;
             width:600px;
@@ -37,6 +41,16 @@
             color:white;
             text-align: justify;
         }
+        .titlebar {
+            background: linear-gradient(0deg, #AEFFBC 1%, #63FF80 49%, #76FF1A 51%, #BCFBCF 90%);
+            border: 1px solid #1AFF66;
+            height:30px;
+        }
+        .titlebar h1 {
+            font-family: fredoka-semi-bold;
+            font-size: 15px;
+            text-shadow: -1px -1px 0 #1AFF66, 1px -1px 0 #1AFF66, -1px 1px 0 #1AFF66, 1px 1px 0 #1AFF66
+        }
     </style>
 </head>
 <body bgcolor="#ffffff">
@@ -49,7 +63,9 @@
             <a class="navlink" href="" style="top:277px;left:143px;"></a>
         </div>
         <div id="body">
-            <p>Labore aliquip non magna officia aute deserunt ipsum laborum duis nostrud do proident consequat sit. Est nulla veniam velit aliqua veniam commodo cillum nulla et veniam non fugiat ullamco officia. Duis ad non in commodo reprehenderit nisi anim aliqua velit. Consectetur ad anim aliquip voluptate deserunt aliqua magna. Est quis consectetur quis enim proident aute tempor do nulla cillum nulla veniam do cillum.</p>
+            <div class="titlebar">
+                <h1>Title Box</h1>
+            </div>
         </div>
     </center>
 </body>

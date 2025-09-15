@@ -5,7 +5,8 @@
 body {
     font-family: KosugiMaru-Regular;
     background: #A12B74;
-    background-size:1920px;
+    background-image: url("checkered-export.gif");
+    /* background-size:1920px; */
 }
 a {
     color: #cd3178;
