@@ -5,7 +5,8 @@ const messageTextOptions = [
     "hello world!",
     "asl?",
     "is anyone actually here? :confused::confused::bored:",
-    ":devil:"
+    ":devil:",
+    ":confused::devil::tease::bored::exclaim::bliral::bluequestion::dolphin::greenblur::griral::hearts1::hearts2::hearts3::piral::cake::horse::beetle::cuss::zapzap::sparkle::starbang::hearts4::mp3::stress::bubbleexclaim::snail::sun::shrimp::prawn::galaxy::city::sweat::blanet::wave:"
 ];
 let usersLoggedIn = [];
 
@@ -81,10 +82,10 @@ function userLoginLogoutEvent() {
     if (rand < 0.5) {
         addUserLoggedIn(generateRandomUsername());
     } else {
-        const userToRemove = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
+        let userToRemove = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
         const guestUsername = document.getElementById('guestUsername').innerText;
         if(userToRemove == guestUsername) userToRemove = usersLoggedIn[0];
-        removeUserLoggedIn(userToRemove);
+        if(userToRemove != guestUsername) { removeUserLoggedIn(userToRemove); }
     }
 
     const nextLoginLogoutTimerMin = 3000;
@@ -165,10 +166,11 @@ function createMessage(messageType = "message", messageText, messageUserName = "
         let newMessageUserName = usersLoggedIn[Math.floor(Math.random() * usersLoggedIn.length)];
         const guestUsername = document.getElementById('guestUsername').innerText;
         if(newMessageUserName == guestUsername) newMessageUserName = usersLoggedIn[0];
-
-        setTimeout(() => {
-            createMessage("message", newMessageTextFormatted, newMessageUserName);
-        }, newMessageTimer);
+        if(newMessageUserName != guestUsername) {
+            setTimeout(() => {
+                createMessage("message", newMessageTextFormatted, newMessageUserName);
+            }, newMessageTimer);
+        }
     }
 }
 
@@ -188,7 +190,37 @@ function formatMessageSmilies(messageText) {
     messageTextFormatted = messageTextFormatted.replaceAll(":tease:", "<img src=\"../../src/img/smilies/tease.gif\" class=\"smiley\" title=\":tease:\">")
     messageTextFormatted = messageTextFormatted.replaceAll(":bored:", "<img src=\"../../src/img/smilies/bored.gif\" class=\"smiley\" title=\":bored:\">")
     messageTextFormatted = messageTextFormatted.replaceAll(":exclaim:", "<img src=\"../../src/img/smilies/exclaim.gif\" class=\"smiley\" title=\":exclaim:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":bliral:", "<img src=\"../../src/img/smilies/bliral.gif\" class=\"smiley\" title=\":bliral:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":bluequestion:", "<img src=\"../../src/img/smilies/bluequestion.gif\" class=\"smiley\" title=\":bluequestion:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":dolphin:", "<img src=\"../../src/img/smilies/dolphin.gif\" class=\"smiley\" title=\":dolphin:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":greenblur:", "<img src=\"../../src/img/smilies/greenblur.gif\" class=\"smiley\" title=\":greenblur:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":griral:", "<img src=\"../../src/img/smilies/griral.gif\" class=\"smiley\" title=\":griral:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":hearts1:", "<img src=\"../../src/img/smilies/hearts1.gif\" class=\"smiley\" title=\":hearts1:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":hearts2:", "<img src=\"../../src/img/smilies/hearts2.gif\" class=\"smiley\" title=\":hearts2:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":hearts3:", "<img src=\"../../src/img/smilies/hearts3.gif\" class=\"smiley\" title=\":hearts3:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":piral:", "<img src=\"../../src/img/smilies/piral.gif\" class=\"smiley\" title=\":piral:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":cake:", "<img src=\"../../src/img/smilies/cake.gif\" class=\"smiley\" title=\":cake:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":horse:", "<img src=\"../../src/img/smilies/horse.gif\" class=\"smiley\" title=\":horse:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":beetle:", "<img src=\"../../src/img/smilies/beetle.gif\" class=\"smiley\" title=\":beetle:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":cuss:", "<img src=\"../../src/img/smilies/cuss.gif\" class=\"smiley\" title=\":cuss:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":zapzap:", "<img src=\"../../src/img/smilies/zapzap.gif\" class=\"smiley\" title=\":zapzap:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":sparkle:", "<img src=\"../../src/img/smilies/sparkle.gif\" class=\"smiley\" title=\":sparkle:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":starbang:", "<img src=\"../../src/img/smilies/starbang.gif\" class=\"smiley\" title=\":starbang:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":hearts4:", "<img src=\"../../src/img/smilies/hearts4.gif\" class=\"smiley\" title=\":hearts4:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":mp3:", "<img src=\"../../src/img/smilies/mp3.gif\" class=\"smiley\" title=\":mp3:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":stress:", "<img src=\"../../src/img/smilies/stress.gif\" class=\"smiley\" title=\":stress:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":bubbleexclaim:", "<img src=\"../../src/img/smilies/bubbleexclaim.gif\" class=\"smiley\" title=\":bubbleexclaim:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":snail:", "<img src=\"../../src/img/smilies/snail.gif\" class=\"smiley\" title=\":snail:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":sun:", "<img src=\"../../src/img/smilies/sun.gif\" class=\"smiley\" title=\":sun:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":shrimp:", "<img src=\"../../src/img/smilies/shrimp.gif\" class=\"smiley\" title=\":shrimp:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":prawn:", "<img src=\"../../src/img/smilies/shrimp.gif\" class=\"smiley\" title=\":prawn:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":galaxy:", "<img src=\"../../src/img/smilies/galaxy.gif\" class=\"smiley\" title=\":galaxy:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":city:", "<img src=\"../../src/img/smilies/city.gif\" class=\"smiley\" title=\":city:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":sweat:", "<img src=\"../../src/img/smilies/sweat.gif\" class=\"smiley\" title=\":sweat:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":blanet:", "<img src=\"../../src/img/smilies/blanet.gif\" class=\"smiley\" title=\":blanet:\">")
+    messageTextFormatted = messageTextFormatted.replaceAll(":wave:", "<img src=\"../../src/img/smilies/wave.gif\" class=\"smiley\" title=\":wave:\">")
     return messageTextFormatted;
+    // :confused::devil::tease::bored::exclaim::bliral::bluequestion::dolphin::greenblur::griral::hearts1::hearts2::hearts3::piral::cake::horse::beetle::cuss::zapzap::sparkle::starbang::hearts4::mp3::stress::bubbleexclaim::snail::sun::shrimp::prawn::galaxy::city::sweat::blanet::wave:
 }
 
 /**

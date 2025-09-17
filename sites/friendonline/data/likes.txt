@@ -48,7 +48,8 @@ blacksmithing
 blogging
 bmx
 board sports
-board/tabletop games
+board games
+tabletop games
 bodybuilding
 bonsai
 book collecting
@@ -74,7 +75,7 @@ canoeing
 canyoning
 car fixing & building
 card games
-cartophily (card collecting)
+cartophily
 cassettes
 caving
 cd players
@@ -117,7 +118,7 @@ dance
 dancing
 darts
 debate
-deltiology (postcard collecting)
+deltiology
 die-cast toy
 digital arts
 disc golf
@@ -164,8 +165,8 @@ fossicking
 fossil hunting
 freestyle football
 furniture building
-fusilately (phonecard collecting)
-gaming (tabletop games and role-playing games)
+fusilately
+gaming
 gardening
 genealogy
 geocaching
@@ -189,7 +190,8 @@ herp keeping
 herping
 high-power rocketry
 hiking
-hiking/backpacking
+hiking
+backpacking
 hobby horsing
 home improvement
 homebrewing
@@ -238,7 +240,7 @@ listening to music
 listening to podcasts
 lock picking
 longboarding
-lotology (lottery ticket collecting)
+lotology
 machining
 macrame
 magic
@@ -266,7 +268,7 @@ motor sports
 mountain biking
 mountaineering
 movie and movie memorabilia collecting
-mushroom hunting/mycology
+mycology
 nail art
 needlepoint
 netball
