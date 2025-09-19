@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php 
+    # rand content by day
+    srand(floor(time() / (60*60*24)));
     # PAGE SETUP
     include('src/setup.php');
     # /PAGE SETUP
@@ -30,7 +32,7 @@
             margin:auto;
         }
         td {
-            padding:10px;
+            padding:5px;
         }
         .headericon {
             width:15px;
@@ -64,6 +66,38 @@
         .logo {
             width:300px;
             cursor: help;
+        }
+        .weatherrap {
+            width:100%;
+            height:100%;
+            position:relative;
+        }
+        .weatherreport h3 {
+            margin: 0 5px;
+        }
+        .weatherreport p {
+            margin:0 5px;
+        }
+        .weatherreport .teledog {
+            float:left;
+            width:75px;
+            margin:10px 0 10px;
+            opacity: 0.2;
+            position:absolute;
+            z-index:0;
+            left:10px;
+        }
+        .diveCautionLow {
+            color:green;
+        }
+        .diveCautionCaution {
+            color:orange;
+        }
+        .diveCautionHazardous {
+            color:red;
+        }
+        .diveCautionFatal {
+            color:darkred;
         }
     </style>
 </head>
@@ -233,11 +267,25 @@
                     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@<?php echo "$hostProd";?>">Email us</a>!</p>
                     
                 </td>
-                <td width="325" align="right" bgcolor="#FDFBD6">
-                    <h3><img src="index/flashingflowersmiley.gif" class="headericon">Tips: Exploring Virtual Dream</h3>
-                    <p>A personal computer (PC) is highly recommended.</p>
-                    <p>Turn off ad-blocker. All advertisements are local only!</p>
-                    <p>Press <b>s</b> to place stickers!</p>
+                <td class="weatherreport" width="225" align="right" bgcolor="#FDFBD6">
+                    <div class="weatherrap">
+                        <img src="index/teledog.png" class="teledog">
+                        <h3><img src="index/flashingflowersmiley.gif" class="headericon">NetWeather Forecast</h3>
+                        <?php 
+                            $netWindMax = 500;
+                            $netWind = rand(0,333);
+                            $fogDriftStates = ["Minimal", "Light", "Significant", "Hazardous"];
+                            $fogDriftIndex = array_rand($fogDriftStates);
+                            $fogDrift = $fogDriftStates[$fogDriftIndex];
+
+                            $diveCautionStates = ["Low", "Caution", "Hazardous", "Fatal"];
+                            $diveCautionIndex = min(2 / ($netWindMax) * (( 100 + $netWind * max($fogDriftIndex, 1)) - $netWindMax) + 2, 3);
+                            $diveCaution = $diveCautionStates[$diveCautionIndex];
+                        ?>
+                        <p><img src="index/swirl.gif" class="headericon">Netwind: ±<?php echo $netWind; ?>Kbps</p>
+                        <p><img src="index/cloud.gif" class="headericon">Fog Drift: <?php echo $fogDrift; ?></p>
+                        <p><img src="index/disc.gif" class="headericon">Dive Caution: <span class="diveCaution<?php echo $diveCaution; ?>"><?php echo $diveCaution; ?></span></p>
+                    </div>
                 </td>
             </tr>
         </tbody>

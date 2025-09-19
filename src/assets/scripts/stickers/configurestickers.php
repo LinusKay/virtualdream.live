@@ -13,6 +13,13 @@ $stickers = [
     ["$assetBaseUrlStickers/bird-rotate.gif", "Bird Rotate", "base"],
     ["$assetBaseUrlStickers/bit.png", "Bit!", "base"],
     ["$assetBaseUrlStickers/explosion.gif", "BOOM!", "base"],
-    ["$assetBaseUrlStickers/srimpfriedrice.gif", "Srimp Fried Rice", "base"]
+    ["$assetBaseUrlStickers/srimpfriedrice.gif", "Srimp Fried Rice", "base"],
+    ["$assetBaseUrlStickers/malpal-tubulartriangle.gif", "Tubular Triangle", "base"],
+    ["$assetBaseUrlStickers/sunday.png", "Sunday", "base"],
+    ["$assetBaseUrlStickers/horse.gif", "horse", "tiny"],
+    ["$assetBaseUrlStickers/science.gif", "science", "tiny"],
+    ["$assetBaseUrlStickers/snail.gif", "snail", "tiny"],
+    ["$assetBaseUrlStickers/bow.gif", "bow", "tiny"],
+    ["$assetBaseUrlStickers/swirl.gif", "swirl", "tiny"],
 ];
 ?>
