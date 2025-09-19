@@ -58,3 +58,16 @@ body {
 #suggestion:hover{
     text-decoration: underline;
 }
+
+#logo {
+    width:150px;
+}
+
+#topbar {
+    padding-top:25px;
+}
+#topbar #logo {
+    width:125px;
+    margin-right:25px;
+    margin-left:15px;
+}
