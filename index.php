@@ -9,16 +9,6 @@
     # PAGE SETUP
     include('src/setup.php');
     # /PAGE SETUP
-    $popularSites = [
-        ["snailmail", "SnailMail - Consult the Snail"],
-        ["malwarecleaner", "Malware Cleaner"]
-    ];
-    $sponsoredSites = [
-        ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
-        ["gobingo", "GoBingo! Search Engine"]
-    ];
-    $sites = glob('./sites/*' , GLOB_ONLYDIR);
-    $siteCount = sizeof( $sites );
     ?>
     <title>Virtual Dream</title>
     <style>
@@ -111,6 +101,61 @@
         "I'm a firin my lazer"
     ];
     $logoTagline = $logoTaglines[array_rand($logoTaglines)];
+
+    $sites = glob('./sites/*' , GLOB_ONLYDIR);
+    $siteCount = sizeof( $sites );
+
+    $excludedDirs = [
+        'advertising', 
+        'earnvirtubucks', 
+        'webrings',
+        'zambonisimulator',
+        'rand',
+        'help',
+        'status',
+        'test',
+        'winbigcasinosweepstakes-bg9yzw0taxbzdw0',
+        'stickers',
+        '404',
+        'rememberdreamwipe',
+        'lonelyboyloserclub',
+        'builder',
+        'truth',
+        'bugsisnotreal',
+        'tombfreaks',
+        'neocortex1986',
+        'laika',
+        'channel-71-weekly-winner',
+        'bugcollector',
+        'armourofgod',
+        'squelchtv',
+        'rapiddealsonlinesaleswebboard'
+    ];
+    $sites = array_filter($sites, function($dir) use ($excludedDirs) {
+        return !in_array(basename($dir), $excludedDirs);
+    });
+    $sites = array_values($sites);
+
+    $sitecount = sizeof($sites);
+    $colcount = 4;
+    $rowcount = ceil($sitecount/4);
+    $index = 0;
+
+    $newSites = [
+        'adrenadine',
+        'bugcollector',
+        'bigger'
+    ];
+    $isNewSite = false;
+
+    $popularSites = [
+        ["snailmail", "SnailMail - Consult the Snail"],
+        ["malwarecleaner", "Malware Cleaner"]
+    ];
+    $sponsoredSites = [
+        ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
+        ["gobingo", "GoBingo! Search Engine"]
+    ];
     ?>
     <img class="logo" src="index/VirtualDream-Dark.svg" title="<?php echo $logoTagline; ?>">
     <p>Welcome home, netizen</p>
@@ -146,47 +191,7 @@
     </ul>
     <h3><img src="index/book2.gif" class="headericon">Public Directory</h3>
     <?php
-        $excludedDirs = [
-            'advertising', 
-            'earnvirtubucks', 
-            'webrings',
-            'zambonisimulator',
-            'rand',
-            'help',
-            'status',
-            'test',
-            'winbigcasinosweepstakes-bg9yzw0taxbzdw0',
-            'stickers',
-            '404',
-            'rememberdreamwipe',
-            'lonelyboyloserclub',
-            'builder',
-            'truth',
-            'bugsisnotreal',
-            'tombfreaks',
-            'neocortex1986',
-            'laika',
-            'channel-71-weekly-winner',
-            'bugcollector',
-            'armourofgod',
-            'squelchtv'
-        ];
-        $sites = array_filter($sites, function($dir) use ($excludedDirs) {
-            return !in_array(basename($dir), $excludedDirs);
-        });
-        $sites = array_values($sites);
-
-        $sitecount = sizeof($sites);
-        $colcount = 4;
-        $rowcount = ceil($sitecount/4);
-        $index = 0;
-
-        $newSites = [
-            'adrenadine',
-            'bugcollector',
-            'bigger'
-        ];
-        $isNewSite = false;
+        
     ?>
     <table>
         <tbody>
@@ -201,21 +206,23 @@
                     if(in_array($sitename, $newSites)) {
                         $isNewSite = true;
                     }
-
+                    $textJustify = "";
+                    if ($cell == 1 || $cell == 2) { $textJustify = "style=\"text-align:center;\""; }
+                    if ($cell == 3) { $textJustify = "style=\"text-align:right;\""; }
                     if ($baseDomain == $hostLocal) {
                         if($isNewSite) {
-                            echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td $textJustify><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"sites/$sitename\">$sitename</a></td>";
+                            echo "<td $textJustify><a href=\"sites/$sitename\">$sitename</a></td>";
                         }
                     }
                     else {
                         if($isNewSite) {
-                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td $textJustify><a href=\"https://$sitename.$baseDomain\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a></td>";
+                            echo "<td $textJustify><a href=\"https://$sitename.$baseDomain\">$sitename</a></td>";
                         }
                     }
                     $isNewSite = false;
