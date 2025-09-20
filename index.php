@@ -286,7 +286,7 @@
                             $fogDrift = $fogDriftStates[$fogDriftIndex];
 
                             $diveCautionStates = ["Low", "Caution", "Hazardous", "Fatal"];
-                            $diveCautionIndex = min(2 / ($netWindMax) * (( 100 + $netWind * max($fogDriftIndex, 1)) - $netWindMax) + 2, 3);
+                            $diveCautionIndex = round(min(2 / ($netWindMax) * (( 100 + $netWind * max($fogDriftIndex, 1)) - $netWindMax) + 2, 3));
                             $diveCaution = $diveCautionStates[$diveCautionIndex];
                         ?>
                         <p><img src="index/swirl.gif" class="headericon">Netwind: ±<?php echo $netWind; ?>Kbps</p>
