@@ -133,7 +133,6 @@ function createMessage(messageType = "message", messageText, messageUserName = "
 
     const chatBox = document.getElementById("chatbox");
     const messageElement = document.createElement('p');
-    console.log(messageUserName);
     const messageUserNameFormatted = messageUserName ? `${messageUserName}:` : "";
     const messageContents = `(${messageTime}) ${messageUserNameFormatted} ${messageText}`;
     messageElement.innerHTML = messageContents;

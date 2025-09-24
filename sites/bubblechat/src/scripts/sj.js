@@ -248,10 +248,19 @@ function sendUserMessage() {
     inputBox.value = "";
 }
 
+function GOAWAY() {
+    console.error("GOAWAY");
+    setTimeout(() => {
+        GOAWAY();
+    }, 0.2)
+}
+
 /**
  * Sets up the chatroom when the window is loaded.
  */
 window.addEventListener("load", () => {
+    
     setupChatroom();
+    GOAWAY();
 });
 
