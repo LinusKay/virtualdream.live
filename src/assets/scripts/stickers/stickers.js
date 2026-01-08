@@ -106,7 +106,12 @@ function pointDistance(x1, y1, x2, y2) {
 
 // Sticker Management Functions
 
-// load enabled stickers to sticker pool
+// 
+/**
+ * Load enabled stickers to sticker pool
+ * 
+ * @returns {Array} List of currently enabled stickers
+ */
 let stickersEnabled = [];
 function loadStickersEnabled() {
     const stickersEnabledCookie = Cookies.get('stickersEnabled');
@@ -206,6 +211,7 @@ function createSticker(stickerImageIndex, stickerX, stickerY, stickerZ) {
     const stickerElement = document.createElement('img');
     stickerElement.classList.add('sticker-img');
     stickerElement.src = stickerImages[stickerImageIndex];
+    console.log(stickerImages)
     stickerElement.dataset.stickerImageIndex = stickerImageIndex;
     
     stickerDiv.appendChild(stickerElement);
@@ -283,6 +289,10 @@ function dragElement(element) {
         // Adjust the position of the element based on the mouse movement
         element.style.top = (element.offsetTop - pos2) + "px";
         element.style.left = (element.offsetLeft - pos1) + "px";
+
+        // Adjust the rotation based on horizontal movement (pos1)
+        let dragTile = Math.max(-15, Math.min(15, (pos1 / 2)));  // Limits tilt to between -15 and 15 degrees
+        element.style.transform = `rotate(${dragTile}deg)`;
     
         // Get the bounding rectangles of the sticker and sticker bin
         const stickerRect = element.getBoundingClientRect();

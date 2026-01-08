@@ -52,7 +52,10 @@ function updateAdvertisements() {
                     const adImage = document.createElement('img');
                     adImage.src = `ADVERTISING_DIRECTORY/${type}/images/${adDataImg}`;
                     adImage.alt = 'Advertisement';
-
+                    if(type == "card") {
+                        adImage.style.width = "180px";
+                        adImage.style.height = "150px";
+                    }
                     // Append image to anchor element and then to the container
                     adLink.appendChild(adImage);
                     container.innerHTML = ''; // Clear existing content

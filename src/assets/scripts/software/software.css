@@ -1,0 +1,8 @@
+.malware-bug {
+    position: absolute;
+    cursor:crosshair;
+    transition: rotate 3s, transform .2s;
+}
+.malware-bug:hover {
+    transform: scale(1.3);
+}

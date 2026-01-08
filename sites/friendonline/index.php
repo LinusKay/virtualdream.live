@@ -1,4 +1,5 @@
 <?php
+srand(floor(time() / (60*60*24)));
 $name_end = ['avid', 'ichael', 'even', 'adam', 'ames', 'obert', 'illiam', 'ichard', 'arles', 'aniel', 'atthew', 'onald', 'oshua', 'evin', 'edward', 'ason', 'acob', 'ary', 'icholas', 'onathon', 'ank', 'amuel', 'imothy', 'aymond', 'alexander', 'athan', 'ethan', 'achary', 'arl', 'eremy', 'ristian', 'ordan', 'ylan', 'abriel', 'ogan', 'incent', 'adley'];
 $name_start = ['B', 'D', 'Gr', 'J', 'Kl', 'McD', 'R', 'Sl', 'S', 'Tr', 'M', 'McM'];
 
@@ -28,60 +29,180 @@ $ad_image_array = glob('ad-img/*.jpg');
 <head>
 <title>Meet Friend Online</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script>
+	window.addEventListener("load", (event) => {
+	new cursoreffects.trailingCursor({
+		particles: 15,
+		rate: 0.8,
+		baseImageSrc: "VNjvXAM.gif",
+	});
+});
+</script>
 <?php 
 # PAGE SETUP
 $webRings = ["joesales"];
-$cursorFollow = "heart.gif";
+$cursorCustom = "229598.png";
+$cursorFollow = "VNjvXAM.gif";
+// $cursorFollowOffset = [25, 25];
 include('../../src/setup.php');
 # /PAGE SETUP
 ?>
 <style>
-*{
+* {
 	margin:0;
+	box-sizing: border-box;
 }
-#profile-box{
-	border:solid 1px black;
-	width:600px;
-	height:200px;
-	position:relative;
-	float:left;
-	box-sizing:border-box;
+@font-face {
+	font-family: A-SpaceBoldDemo;
+	src: url("A-Space Bold Demo.otf")
 }
-.profile-photo{
-	width:175px;
-	height:175px;
-	margin:12.5px;
-	float:left;
+body {
+	background: lightblue;
+	background: url("https://frutigeraeroarchive.org/images/wallpapers/materialdictionary186/materialdictionary186_107.jpg");
+	background-size: cover;
+	font-family: Arial, Helvetica, sans-serif;
+	background-attachment: fixed;
+	background-position: center;
 }
 h1, h3{
 	text-align:center;
 	width:1200px;
 	margin:auto;
+	font-family: A-SpaceBoldDemo;
+}
+h1 {
+	font-size:45px;
+	color: white;
+	text-shadow: 0 0 5px white;
+}
+p{
+	line-height:20px;
+	font-size:15px;
+}
+a {
+	font-weight:bold;
+	text-decoration: none;
+	color: #0066ff;
+}
+#body-wrap{
+	width:1200px;
+	height:auto;
+	/* border: solid 5px rgba(17, 74, 180, 0.2); */
+	margin:auto;
+	border-radius:5px;
+	/* outline: solid 1px white; */
+}
+#profile-area{
+	height:auto;
+	width:1190px;
+	position:relative;
+	overflow:auto;
+	margin:auto;
+	/* border: solid 1px white; */
+	border-radius:5px;
+	/* background: rgba(255,255,255,0.3); */
+	/* background: linear-gradient(to bottom, rgba(226, 243, 255, 0.5) 1%,rgba(165, 213, 255, 0.5) 79%, rgba(133, 180, 255, 0.5) 81%,rgba(235, 240, 244, 0.5) 100%); */
+	/* box-shadow: 0 4px 8px 0 #a5d5ff, 0 6px 10px 0 #3f3f3f; */
+}
+.profile-box{
+	border:solid 1px white;
+	width:584px;
+	height:150px;
+	position:relative;
+	float:left;
+	box-sizing:border-box;
+	display:block;
+	overflow:hidden;
+	margin:5px;
+	border-radius: 5px;
+	z-index:0;
+	background: rgba(255,255,255,0.3);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(5px);
+}
+.profile-box p {
+	margin: 0 10px;
+}
+.profile-photo{
+	width:75px;
+	height:75px;
+	margin:6.5px;
+	float:left;
+	border: solid 1px lightblue;
+	padding:5px;
+	border-radius: 5px;
+	background: linear-gradient(to bottom, #e2f3ff 1%,#a5d5ff 79%,#85b4ff 81%,#ebf0f4 100%);
 }
 .site-info{
 	text-align:center;
 	width:1200px;
 	margin:25px auto;
 }
-#profile-area{
-	margin:auto;
-	height:100%;
-	width:1200px;
-}
 #profile-info{
 	margin-top:12.5px;
 }
-p{
-	line-height:20px;
+.profile-gradient {
+	background: linear-gradient(to bottom, #e2f3ff 1%,#a5d5ff 79%,#85b4ff 81%,#ebf0f4 100%);
+	height:100%;
+	width: 100%;
+	position:absolute;
+	display:block;
+	top:0;
+	left:0;
+	z-index:-1;
+	opacity:0.3;
 }
-.profile-id, .profile-bio{
-	margin-bottom:10px;
+.profile-backimg {
+	width:100%;
+	height:200px;
+	/* margin-top:-50px; */
+	opacity:.1;
+	top:0;
+	left:0;
+	position: absolute;
+	z-index:-1;
+	background: url("https://frutigeraeroarchive.org/images/wallpapers/materialdictionary226/materialdictionary226_29.jpg");
+	background-position: bottom center;
+	/* background-attachment: fixed; */
+	background-size: cover contain;
+}
+.profile-like {
+	padding:2px 5px;
+	background: linear-gradient(to bottom, #e2f3ff 1%,#a5d5ff 29%,#85b4ff 61%,#ebf0f4 100%);
+	border: solid 1px lightblue;
+	border-radius:25px;
+	color: #000000c0;
+	font-size:13px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+.profile-like img, .profile-dislike img {
+	height:10px;
+	margin-bottom:-1px;
+}
+.profile-dislike {
+	padding:2px 5px;
+	background: linear-gradient(to bottom, #e2f3ff 1%,#a5d5ff 59%,#85b4ff 61%,#ebf0f4 100%);
+	border: solid 1px lightblue;
+	border-radius:25px;
+	color: #494949c4;
+	font-size:13px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
 }
 .login{
 	text-align:right;
 	width:1200px;
 	margin:auto;
 	display:block;
+	padding:5px;
+	color:white;
+	text-decoration:underline;
+}
+.login::before{
+	content: url("https://i.imgur.com/u0X82vZ.gif");
+	padding:0 5px;
+	opacity:0.5;
 }
 #ad{
 	width:300px;
@@ -109,17 +230,52 @@ p{
 	color:white;
 	width:100%;
 }
+.top-img {
+	margin:auto;
+	display:block;
+	width:150px;
+}
+.profile-feeling {
+	position:absolute;
+	top:65px;
+	left: 5px;
+	background: rgba(255,255,255,0.2);
+	border-radius:5px;
+}
+@keyframes spinnn {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+#earth {
+	z-index:-1;
+	position:absolute;
+	width:1000px;
+	left: calc(50vw - 500px);
+	top:0;
+	opacity:0.1;
+	/* filter: invert(100%); */
+	/* animation: spinnn 180s linear infinite; */
+}
 	
 </style>
 </head>
-<body style="background-color:<?php echo $colour_array[array_rand($colour_array)]; ?>">
-<a class="login" href="login.php">login</a>
-<h1>Make friends online!</h1>
-<h3>Meet new fun people from across world. online!</h3>
-<p class="site-info">We curated a finest collection of friends for you to talk to from around globe! Please contact and make friendship today!
-<div id="profile-area">
+<body>
+	<img id="earth" src="https://pngimg.com/uploads/globe/globe_PNG100087.png">
+	<div id="header">
+		<a class="login" href="login.php">login</a>
+		<img class="top-img" src="https://i.postimg.cc/jqzK4Ryq/ffish.gif">
+		<h1>friend online</h1>
+		<h3>Meet new fun people from across world. online!</h3>
+		<p class="site-info">We curated a finest collection of friends for you to talk to from around globe! Please contact and make friendship today!</p>
+	</div>
+	<div id="body-wrap">
+	<div id="profile-area">
 <?php
-$profile_count = 72;
+$profile_count = 48;
 for($i=0;$i<$profile_count;$i++){
 	//Generate user name
 	$first_name = $name_start[array_rand($name_start)] . $name_end[array_rand($name_end)];
@@ -215,59 +371,78 @@ for($i=0;$i<$profile_count;$i++){
 	//Pull likes from txt file into array & shuffle array to provide random order
 	//get first 4 items from array, add together, and trim trailing comma
 	shuffle($user_likes_array);
-	$user_likes = "";
-	$count = rand(1,6);
+	$user_likes = [];
+	$count = rand(1,3);
 	for($x=0;$x<$count;$x++){
 		$choice = $user_likes_array[$x];
-		$user_likes = $user_likes . $choice . ", ";
+		array_push($user_likes, $choice);
 	}
-	$user_likes = rtrim($user_likes, ", ");
 	
 	//Generate user dislikes
 	//use while loop to allow to validate whether the current choice exists in the likes. No point having clashing likes/dislikes
 	shuffle($user_likes_array);
-	$user_dislikes = "";
+	$user_dislikes = [];
 	$dislike_count = 0;
 	$x = 0;
-	$count = rand(1,6);
+	$count = rand(1,3);
 	while($dislike_count < $count){
 		$choice = $user_likes_array[$x];
-		if(!strpos($user_likes, $choice)){
-			$user_dislikes = $user_dislikes . $choice . ', ';
+		if(!in_array($choice, $user_likes)){
+			array_push($user_dislikes, $choice);
 			$dislike_count++;
 		}
 		$x++;
 	}
-	$user_dislikes = rtrim($user_dislikes, ", ");
 	
 	//Generate background colour
 	$colour = $colour_array[array_rand($colour_array)];
 	
-echo '<div id="profile-box" style="background-color:' . $colour . '">
+	$feelings = [
+		"https://i.imgur.com/4DCKhtb.gif",
+		"https://i.imgur.com/lAiTlqk.gif",
+		"https://i.imgur.com/D5okAFL.gif",
+		"https://i.imgur.com/3GMCYqS.gif",
+		"https://i.imgur.com/AdI3kcM.gif",
+		"https://i.imgur.com/abQPK7k.gif",
+		"https://i.imgur.com/JrFcHap.gif",
+		"https://i.imgur.com/zRyIUQq.gif",
+		"https://i.imgur.com/S89ceBR.gif",
+		"https://i.imgur.com/DzCuYFu.gif",
+		"https://i.imgur.com/qQbmfVU.gif",
+		"https://i.imgur.com/OTqspj7.gif",
+		"https://i.imgur.com/z64synw.gif",
+		"https://i.imgur.com/cN6imbz.gif",
+		"https://i.imgur.com/cN6imbz.gif",
+		"https://i.imgur.com/tFCecpe.gif",
+		"https://i.imgur.com/jfbXbLu.gif",
+		"https://i.imgur.com/e9sDHJy.gif",
+		"https://i.imgur.com/8H7804z.gif",
+		"https://i.imgur.com/WlLTWDN.gif",
+		"https://i.imgur.com/HT3RIEC.gif",
+		"https://i.imgur.com/EtM4i1a.gif",
+		"https://i.imgur.com/V34xskT.gif"
+	];
+	$feeling = $feelings[array_rand($feelings)];
+
+echo '<div class="profile-box">
 <img class="profile-photo" src="' . $user_face . '">
+<img class="profile-feeling" src="' . $feeling . '" title="feeling">
 <div id="profile-info">
-<p class="profile-name">' . $user_name . '<span class="profile-age">, ' . $user_age . '</span></p>
-<p class="profile-id"><i>Username: ' . $user_id . '</i></p>
-<p class="profile-country"><b>Location</b>: ' . $country . '</p>
-<p class="profile-bio"><b>Bio</b>: ' . $user_bio . '</p>
-<p class="profile-likes"><b>Likes</b>: ' . $user_likes . '</p>
-<p class="profile-dislikes"><b>Dislikes</b>: ' . $user_dislikes . '</p>
+<p class="profile-name"><b>' . $user_name . '</b><span class="profile-age">, ' . $user_age . '</span></p>
+<p class="profile-id"><a href="mailto:' . $user_id . '@virtualdream.live">' . $user_id . '@virtualdream.live</a></p>
+<p class="profile-country">Country: ' . $country . '</p>
+<p class="profile-bio"><i>' . $user_bio . '</i></p>
+<p class="profile-likes"><b>Likes/Dislikes</b>: ';
+foreach($user_likes as $like) { echo '<span class="profile-like"><img src="https://i.imgur.com/V0Rorfj.gif"> ' . $like . '</span>'; }
+foreach($user_dislikes as $dislike) { echo '<span class="profile-dislike"><img src="https://i.imgur.com/hcwClcY.gif"> ' . $dislike . '</span>'; }
+echo '</p>
 </div>
+<div class="profile-gradient"></div>
+<div class="profile-backimg"></div>
 </div>';
 }
 ?>
 </div>
-<?php
-
-// $ad_count = rand(0,2);
-// for($i=0;$i<$ad_count;$i++){
-// 	echo 
-// '<div id="ad" style="right:' . rand(0,100) . '%">
-// 	<a href="https://libus.xyz/ads" target="_blank"><img src="' . $ad_image_array[array_rand($ad_image_array)] . '"></a>
-// 	<p class="ad-sign" onclick="$(this).parent().remove()">Advert</p>
-// 	</div>
-// 	<br>';
-// }
-// ?>
+</div>
 </body>
 </html>

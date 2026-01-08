@@ -15,8 +15,10 @@
         body {
             background:black;
             color:gold;
-            font-size:20px;
+            font-size:12px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             width:800px;
+            text-align:justify;
         }
         #microwave {
             width:200px;

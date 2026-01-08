@@ -14,7 +14,7 @@
         "The catacombs of my woe know no end. Eclipsed by my voracious clout doth the meek wallow in my supreme aura of social influence divinity.",
         "My mind is an unparalleled vessel of perspicaciousness. Throbbing with a girthy well of acuity, I penetrate the psyche of the fragile and disperse my seed of knowledge deep into their mind. Dominated and drained, they collapse in exhaustion. Whimpering, leaking, enlightened.",
         "The apparitions of chaos enslave me. A corrosive tempest of unholy fervour consumes my very being. Severed and splintered, I revive ascended, with a newfound, unquenchable zest for Pepsi's new boldly blended ginger cola™, premium cola spiced with real ginger. Refreshing and revitalising, it's tangy edge rejuvenates even the most crestfallen companion. Available in a satiating 300ml canister, you're certain to be enchanted by this gorgeous carbonated beverage.",
-        "Defied by my distorted Arcadia, the celestial dichotomy wisps into oblivion. An archaic metropolis departs the astral horizon, forever lost to the cosmic void; my intransigent vehemence withers. A broken and becalmed thrall, I wander the desolate abyss for aeons shattered and denigrated. Once a revered prophet of the divine, I seek purpose, judgement, vitality. But retribution is inconsequential under the piercing gaze of of the seraphs. My only salvation manifests itself in the semblance of a big-tiddy goth gf with thick thighs that could crush a watermelon and/or my head.",
+        "Defied by my distorted Arcadia, the celestial dichotomy wisps into oblivion. An archaic metropolis departs the astral horizon, forever lost to the cosmic void; my intransigent vehemence withers. A broken and becalmed thrall, I wander the desolate abyss for aeons shattered and denigrated. Once a revered prophet of the divine, I seek purpose, judgement, vitality. But retribution is inconsequential under the piercing gaze of of the seraphs.",
         "Seek the fist within.",
         "Seek the funk within"
     ];
@@ -60,6 +60,33 @@
             display:block;
             top:400px;
             left:500px;
+        }
+        .bubble {
+            position: fixed;
+            max-width: 350px;
+            /* height: 100px; */
+            border: solid 1px gray;
+            border-radius: 10px;
+            background: #FFFFCC;
+            padding-right:20px;
+            font-family: "Courier New";
+            font-size:15px;
+        }
+        .bubble p {
+            color:black;
+            margin:0;
+            padding: 10px;
+            font-size:15px;
+            text-align: left;
+        }
+        .bubbleClose {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+        }
+        .bubbleClose:hover{
+            border: dashed 1px gray;
+            cursor:pointer;
         }
         .speechbubble {
             background:#FFFFCC;
@@ -261,27 +288,10 @@
         <div class="interact" id="interact-monkleft"  onclick="createBubble('seek the fist.', this)"></div>
         <div class="interact" id="interact-templedoor"  onclick="createBubble('the temple is closed.', this)"></div>
         <div class="interact" id="interact-monkhead"  onclick="createBubble('the fist of enlightenment shows cranial strength.', this)"></div>
-        <!-- <h1>Funk Tempest</h1>
-        <p id="introtext">welcome... to my world...</p> -->
         <div class="speechbubble" id="speechbubblemonk">
             <p><b>Teachings of the Temple of Funk</b></p>
             <p><i><?php echo $todaysWisdom; ?></i></p>
         </div>
-        <!-- <audio controls id="track1"><source src="src/tracks/Priests of the Temple of the Fist.mp3"></audio>
-        <audio controls id="track2"><source src="src/tracks/Dominion of the Fist.mp3"></audio>
-        <audio controls id="track3"><source src="src/tracks/Evaporate the Nonbelievers.mp3"></audio>
-        <audio controls id="track4"><source src="src/tracks/Lavender Tea.mp3"></audio> -->
-        <p>time without time. for it had not yet been invented. yet, hurtling through space with the speed and fury of a billion fists, the funk abounds. 
-        
-        it began. four billion years ago. a microbe, the first of the living. the microbe thought not of the funk, yet it was within them.
-
-        then came the fish. they swam through the oceans like the mind swims through dreams.
-
-        homo habilis, the creater of the first tool. homo funkus, well, lets just say they had other ideas. 
-
-        man 
-
-        the age of funk tempest
     </div>
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html>
 	<head>
 	<?php 
+		srand(floor(time() / (60*60*24)));
 		# PAGE SETUP
 		$cursorFollow = "src/img/cursor/hand-point-62x62.png";
 		include('../../src/setup.php');
@@ -52,7 +53,14 @@
 			}
 		});
 	</script>
-	<title>$ $ $ RAPID SALES $ $ $</title>
+	<title>RapidDealsRapidDealsOnlineSalesWebBoardRapidDealsBuyOnlineItemBuyFriendlyPurchaseOnlineDeals</title>
+	<script>
+		let originalTitle = "RapidDealsRapidDealsOnlineSalesWebBoardRapidDealsBuyOnlineItemBuyFriendlyPurchaseOnlineDeals";
+		window.setInterval(function() {
+			document.title = originalTitle.substring(1) + originalTitle[0];
+			originalTitle = document.title; 
+		}, 500); 
+	</script>
 	<style>
 		
 	*{
@@ -63,7 +71,7 @@
 	}
 	body{
 		overflow-x:hidden;
-		background-image: url("src/img/dollar.png");
+		/* background-image: url("src/img/dollar.png"); */
 		background-repeat: repeat;
 		margin:auto;
 		font-family: 'Arial', monospace;
@@ -80,19 +88,28 @@
 		margin:auto;
 	}
 	#adarea {
-		max-width:1200px;
+		max-width:1600px;
 		margin:auto;
 		height:100%;
 		position:relative;
 		display:block;
 		overflow: hidden;
 	}
+	#ad {
+		font-size:12px;
+		height:40px;
+	}
+	#ad img {
+		height:40px;
+		width:40px;
+		float:left;
+	}
 	marquee{
 		position:absolute;
 		display:block;
 		width:100%;
 		z-index:3;
-		font-size:2em;
+		/* font-size:2em; */
 	}
 	a{
 		z-index:5;
@@ -110,7 +127,23 @@
 		padding:10px;
 		text-align: center;
 	}
+	#joe {
+		width:100%;
+		position:fixed;
+		bottom:0;
+		z-index:-1;
+		opacity:0;
+	}
 	</style>
+	<script>
+		// secret
+		addEventListener("load", (event) => { 
+			const joe = document.getElementById("joe");
+		});
+		addEventListener("scroll", (event) => { 
+			joe.style.opacity = ((window.scrollY/window.outerHeight)/10) - 0.5;
+		})
+	</script>
 	</head>
 	<?php
 	// Function to round up to the nearest multiple of 4
@@ -119,10 +152,10 @@
 	}
 
 	// Load taglines from file and split into array
-	$taglines = explode(",", file_get_contents('src/taglines.txt'));
+	$taglines = explode("\n", file_get_contents('src/taglines.txt'));
 
 	// Load products from file and split into array
-	$products = explode(",", file_get_contents('src/products.txt'));
+	$products = explode("\n", file_get_contents('src/products.txt'));
 
 	// Define arrays for ad styles
 	$colours = ['lightcyan', 'beige'];
@@ -132,6 +165,10 @@
 	?>
 
 	<body>
+		<audio autoplay loop>
+			<source src="src/audio/slowdeals.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio> 
 		<div id="header">
 			<h1>Rapid Deals Online Sales Web Board</h1>
 			<h3>Best deals from across the web net</h3>
@@ -143,7 +180,7 @@
 		<div id="adarea">
 		<?php
 		// Loop to generate ads
-		for ($x = 0; $x < 3; $x++) {
+		for ($x = 0; $x < 30; $x++) {
 			// Loop to generate multiple ads
 			for ($i = 0; $i < 40; $i++) {
 				// Randomly select product and tagline
@@ -158,13 +195,13 @@
 				$price = rand(10, 1000);
 
 				// Output ad HTML
-				echo "<div id='ad' style='width: 300px; background: $bgcol; overflow: hidden; float: left; border: $border black 2px; font-style: $fstyle; font-weight: $fweight; white-space: nowrap; box-sizing: border-box; display: inline-block; position: relative;'>
-					<img src='src/img/$product.png' style='width: 50px; float: left'>
+				echo "<div id='ad' style='width: 200px; background: $bgcol; overflow: hidden; float: left; border: $border black 2px; font-style: $fstyle; font-weight: $fweight; white-space: nowrap; box-sizing: border-box; display: inline-block; position: relative;' title='$adtext'>
+					<img src='src/img/$product.png'>
 					$adtext
 					<p class='price'>$ $price</p>
 					</div>\n";
 			}
-
+			
 			// Output advertisement banner or card
 			echo '<div id="adspace">';
 			if (rand(0, 1) == 0) {
@@ -174,7 +211,25 @@
 			}
 			echo '</div>';
 		}
+
+		for($i=0;$i<50;$i++){
+			$top = rand(0,12000) . "px";
+			$width = rand(0,2500) . "px";
+			$colour = str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, 0, STR_PAD_LEFT);
+			$text = str_replace('product', $products[rand(0,count($products)-1)], $taglines[rand(0,count($taglines)-1)]);
+			echo "
+				<marquee  
+					style='
+						top:$top;
+						width:$width;
+						color:#$colour;
+						'
+				>
+			<b>$text</b>
+			</marquee>";
+		}
 		?>
 		</div>
+		<img src="src/img/webring-joesales-export-export.png" id="joe">
 	</body>
 </html>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Xarxax - Central for everything Xarxax</title>
     <?php 
+        $cursorFollow = "9kEXULk.gif";
+        $cursorCustom = "229598.png";
+        $cursorFollowOffset = [25,25];
         include('../../src/setup.php');
     ?>
     <link rel="stylesheet" href="style.css">
@@ -12,11 +15,12 @@
 <body bgcolor="#6699ff">
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
         <table width="600" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr>
                     <td valign="top" width="600">
-                        <img alt="Site Banner" src="reviews/reviewbanner.jpg">
+                        <img alt="Site Banner" src="banner-coolsites.png">
                     </td>
                 </tr>
             </tbody>
@@ -27,14 +31,16 @@
                     <td valign="top" width="6" height="340" bgcolor="white"></td>
                     <td valign="top" width="576" height="340" bgcolor="white">
                         <p style="margin:0;">&nbsp;</p>
-                        <p align="center"><font size="2">Check out some of my favourite websites!</font></p>
+                        <p align="center"><font size="3">Check out some of my favourite websites!</font></p>
                         <ul>
-                            <li><font size="2"><a href="https://colordreamhyperforce.virtualdream.live">Hyper Dream Color Force</a> - These guys love Planet Xarxax almost as much as me!</font></li>
-                            <li><font size="2"><a href="https://contemplationrock.virtualdream.live">Contemplation Rock</a> - Simple, silly, but honestly really relaxing</font></li>
-                            <li><font size="2"><a href="https://downloadmania.virtualdream.live">Download Mania</a> - I got a bunch of Xarxax seasons off here (hard to find!!)</font></li>
+                            <li><font size="3"><a href="https://colordreamhyperforce.virtualdream.live">Hyper Dream Color Force</a> - These guys love Planet Xarxax almost as much as me!</font></li>
+                            <li><font size="3"><a href="https://contemplationrock.virtualdream.live">Contemplation Rock</a> - Simple, silly, but honestly really relaxing</font></li>
+                            <li><font size="3"><a href="https://downloadmania.virtualdream.live">Download Mania</a> - I got a bunch of Japanese Xarxax seasons off here (hard to find!!)</font></li>
                         </ul>
                         <center>
-                            <p><font size="2"><b>Advertisement</b></font></p>
+                            <img src="Jh9ViAAAABklEQVQDALA7JzkG7hXoAAAAAElFTkSuQmCC.png">
+                            <img src="ratpartybadge.gif">
+                            <p><font size="3"><b>Advertisement</b></font></p>
                             <div class="advertisement-card"></div>
                         </center>
                     </td>
@@ -47,7 +53,7 @@
                 <tr>
                     <td valign="top" width="600" bgcolor="white">
                         <center>
-                            <p><font size="2"><b>[ <a href="index.php">Return to Home Page</a> ]</b></font></p>
+                            <p><font size="3"><b>[ <a href="index.php">Return to Home Page</a> ]</b></font></p>
                         </center>
                     </td>
                 </tr>
@@ -64,6 +70,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </center>
 </body>
 </html>

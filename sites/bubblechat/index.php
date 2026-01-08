@@ -90,6 +90,10 @@
         .roomlist-heading {
             font-weight:bold;
         }
+        .roomlist-room img {
+            height:12px;
+            margin-bottom:-2px;
+        }
         .aero {
             background-color: rgba(255, 127, 80, 0.8);
             background: radial-gradient(farthest-corner at bottom center, rgba(255, 255, 255, 0.7), transparent), linear-gradient(to bottom, rgba(235, 63, 0, 0.72), rgba(255, 127, 80, 0.8));
@@ -168,15 +172,14 @@
         <div class="wrap-sidebar">
             <div id="roomlist" class="wrap-sidebar-roomlist">
                 <p class="roomlist-heading">Rooms Open</p>
-                <p class="roomlist-room"><a href="rooms/room-20somethings">20somethings</a></p>
-                <p class="roomlist-room"><a href="rooms/room-30somethings">30somethings</a></p>
-                <p class="roomlist-room"><a href="rooms/room-africa">africa</a></p>
-                <p class="roomlist-room"><a href="rooms/room-animemanga">animemanga</a></p>
-                <p class="roomlist-room"><a href="rooms/room-europe">europe</a></p>
-                <p class="roomlist-room"><a href="rooms/room-oceania">oceania</a></p>
-                <p class="roomlist-room"><a href="rooms/room-southamerica">southamerica</a></p>
-                <p class="roomlist-room"><a href="rooms/room-unknown">unknown</a></p>
-                <p class="roomlist-room"><a href="rooms/room-usa">usa</a></p>
+                <?php
+                    $rooms = array_diff(scandir("rooms"), array('..', '.'));
+                    foreach($rooms as $room){
+                        $room_path = $room;
+                        $room_name = str_replace("room-", "", $room);
+                        echo "<p class=\"roomlist-room\"><img src=\"src/img/WMdjlJy.jpg\"> <a href=\"rooms/$room_path\">$room_name</a></p>";
+                    }
+                ?>
             </div>
         </div>
     </div>

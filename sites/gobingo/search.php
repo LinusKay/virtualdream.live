@@ -7,6 +7,9 @@
     }
     $results = rand(15, 50);
     $url = "https://MalPals.virtualdream.live/";
+
+    $logos = ["gobingo.png"];
+    $logo = $logos[array_rand($logos)];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +27,7 @@
 <body>
     <div id="topbar">
         <form action="search.php" method="get" enctype="multipart/form-data">
-            <h1 class="sitetitle"><a href="index.php" class="nolink">GoBingo!</a></h1>
+            <a href="index.php" class="nolink"><img id="logo" src="src/img/<?php echo $logo; ?>"></a>
             <input class="inputsearch" value="<?php echo $search; ?>" placeholder="<?php echo $search; ?>" name="s">
             <input type="submit" value="Go!">
         </form> 

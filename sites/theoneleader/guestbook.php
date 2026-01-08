@@ -23,7 +23,7 @@
     </head>
     <body>
         <center>
-        <p>Guest books are for children and men with woman hands</p>
+        <p>fuck you</p>
         </center>
     </body> 
 </html>

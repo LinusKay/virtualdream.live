@@ -38,6 +38,23 @@
         </table>
         <div class='advertisement-banner'></div>
         <div class='advertisement-banner'></div>
+        <h3>Site Graveyard</h3>
+        <ul>
+            <li>greedygrinner</li>
+            <li>elizone</li>
+            <li>calebjacksonhistoricalart</li>
+            <li>monkeyfunds</li>
+            <li>bigbazooey89</li>
+            <li>frankcazooool</li>
+            <li>outlawgunstore66</li>
+            <li>fribbitfrog</li>
+            <li>merp</li>
+            <li>errolmarketblog</li>
+            <li>kazoohowto</li>
+            <li>zinespace</li>
+            <li>sabby</li>
+            <
+        </ul>
         </center>
     </body> 
 </html>

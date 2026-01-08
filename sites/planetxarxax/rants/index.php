@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Xarxax - Central for everything Xarxax</title>
     <?php 
+        $cursorFollow = "../9kEXULk.gif";
+        $cursorCustom = "../229598.png";
+        $cursorFollowOffset = [25,25];
         include('../../../src/setup.php');
     ?>
     <link rel="stylesheet" href="../style.css">
@@ -12,11 +15,12 @@
 <body bgcolor="#6699ff">
     <center>
         <div class="advertisement-banner"></div>
+        <div id="wrap">
         <table width="600" cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 <tr>
                     <td valign="top" width="600">
-                        <img alt="Site Banner" src="rantbanner.jpg">
+                        <img alt="Site Banner" src="banner-rants.png">
                     </td>
                 </tr>
             </tbody>
@@ -27,15 +31,16 @@
                     <td valign="top" width="6" height="340" bgcolor="white"></td>
                     <td valign="top" width="576" height="340" bgcolor="white">
                         <p style="margin:0;">&nbsp;</p>
+                        <p>Sometimes I like to write out my thoughts carefully, other times I just like to let it flow! This is the place for all my rants when I get annoyed or excited :p These aren't going to be super common, but who knows! Newer posts at the top.</p>
                         <ol>
-                            <font size="2">
-                            <li><a href="solongsnoretex.php">So long NeoSnoretex!!</a> - 29th March 2001 (xebulonluv)</li>
-                            <!-- <li><a href="solongsnoretex.php">So long NeoSnoretex!!</a> - 29th March 2001 (xebulonluv)</li> -->
+                            <font size="3">
+                            <li><a href="solongsnoretex.php">So long NeoSnoretex!!</a> (xebulonluv)</li>
+                            <li><a href="theworld.php">The state of this world</a> (xebulonluv)</li>
                             </font>
                         </ol>
-                        <p><font size="2">Want to see me rant about something? Want to submit your own rant? Email me at <a href="mailto:xebulonluv@virtualdream.live">xebulonluv@virtualdream.live</a></font></p>
+                        <p><font size="3">Want to see me rant about something? Want to submit your own rant? Email me at <a href="mailto:xebulonluv@virtualdream.live">xebulonluv@virtualdream.live</a></font></p>
                         <center>
-                            <p><font size="2"><b>[ <a href="../">Return to Home Page</a> ]</b></font></p>
+                            <p><font size="3"><b>[ <a href="../">Return to Home Page</a> ]</b></font></p>
                         </center>
                     </td>
                     <td valign="top" width="27" height="340" bgcolor="white"></td>
@@ -53,6 +58,8 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
     </center>
 </body>
 </html>

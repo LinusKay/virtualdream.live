@@ -2,18 +2,24 @@
 $assetBaseUrlStickers = "$assetBaseUrl/img/stickers";
 
 $stickers = [
-    "$assetBaseUrlStickers/planet8.gif",
-    "$assetBaseUrlStickers/planet3.gif",
-    "$assetBaseUrlStickers/planet4.gif",
-    "$assetBaseUrlStickers/planet5.gif",
-    "$assetBaseUrlStickers/planet6.gif",
-    "$assetBaseUrlStickers/polyfox2-transparent.gif",
-    "$assetBaseUrlStickers/skull-spin.gif",
-    "$assetBaseUrlStickers/dragon.gif",
-    "$assetBaseUrlStickers/bird-rotate.gif",
-    "$assetBaseUrlStickers/bit.png",
-    "$assetBaseUrlStickers/dollar.gif",
-    "$assetBaseUrlStickers/malpal-tubulartriangle.gif",
-    "$assetBaseUrlStickers/explosion.gif"
+    ["$assetBaseUrlStickers/planet8.gif", "Planet 8", "base"],
+    ["$assetBaseUrlStickers/planet3.gif", "Planet 3", "base"],
+    ["$assetBaseUrlStickers/planet4.gif", "Planet 4", "base"],
+    ["$assetBaseUrlStickers/planet5.gif", "Planet 5", "base"],
+    ["$assetBaseUrlStickers/planet6.gif", "Planet 6", "base"],
+    ["$assetBaseUrlStickers/polyfox2-transparent.gif", "Polyfox", "base"],
+    ["$assetBaseUrlStickers/skull-spin.gif", "Spinny Skull", "base"],
+    ["$assetBaseUrlStickers/dragon.gif", "Chompers", "base"],
+    ["$assetBaseUrlStickers/bird-rotate.gif", "Bird Rotate", "base"],
+    ["$assetBaseUrlStickers/bit.png", "Bit!", "base"],
+    ["$assetBaseUrlStickers/explosion.gif", "BOOM!", "base"],
+    ["$assetBaseUrlStickers/srimpfriedrice.gif", "Srimp Fried Rice", "base"],
+    ["$assetBaseUrlStickers/malpal-tubulartriangle.gif", "Tubular Triangle", "base"],
+    ["$assetBaseUrlStickers/sunday.png", "Sunday", "base"],
+    ["$assetBaseUrlStickers/horse.gif", "horse", "tiny"],
+    ["$assetBaseUrlStickers/science.gif", "science", "tiny"],
+    ["$assetBaseUrlStickers/snail.gif", "snail", "tiny"],
+    ["$assetBaseUrlStickers/bow.gif", "bow", "tiny"],
+    ["$assetBaseUrlStickers/swirl.gif", "swirl", "tiny"],
 ];
 ?>

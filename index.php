@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php 
+    # rand content by day
+    srand(floor(time() / (60*60*24)));
     # PAGE SETUP
     include('src/setup.php');
     # /PAGE SETUP
-    $popularSites = [
-        ["snailmail", "SnailMail - Consult the Snail"],
-        ["malwarecleaner", "Malware Cleaner"]
-    ];
-    $sponsoredSites = [
-        ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
-        ["gobingo", "GoBingo! Search Engine"]
-    ];
-    
-    $sites = glob('./sites/*' , GLOB_ONLYDIR);
-    $siteCount = sizeof( $sites );
     ?>
     <title>Virtual Dream</title>
     <style>
@@ -31,7 +22,7 @@
             margin:auto;
         }
         td {
-            padding:10px;
+            padding:5px;
         }
         .headericon {
             width:15px;
@@ -62,11 +53,111 @@
             color:white;
             font-weight:bold;
         }
+        .logo {
+            width:300px;
+            cursor: help;
+        }
+        .weatherrap {
+            width:100%;
+            height:100%;
+            position:relative;
+        }
+        .weatherreport h3 {
+            margin: 0 5px;
+        }
+        .weatherreport p {
+            margin:0 5px;
+        }
+        .weatherreport .teledog {
+            float:left;
+            width:75px;
+            margin:10px 0 10px;
+            opacity: 0.2;
+            position:absolute;
+            z-index:0;
+            left:10px;
+        }
+        .diveCautionLow {
+            color:green;
+        }
+        .diveCautionCaution {
+            color:orange;
+        }
+        .diveCautionHazardous {
+            color:red;
+        }
+        .diveCautionFatal {
+            color:darkred;
+        }
     </style>
 </head>
 <body>
     <center>
-    <h1>Virtual Dream</h1>
+    <?php 
+    $logoTaglines = [
+        "We're glad you made it",
+        "Home at last",
+        "I love you",
+        "I'm a firin my lazer"
+    ];
+    $logoTagline = $logoTaglines[array_rand($logoTaglines)];
+
+    $sites = glob('./sites/*' , GLOB_ONLYDIR);
+    $siteCount = sizeof( $sites );
+
+    $excludedDirs = [
+        'advertising', 
+        'earnvirtubucks', 
+        'webrings',
+        'zambonisimulator',
+        'rand',
+        'help',
+        'status',
+        'test',
+        'winbigcasinosweepstakes-bg9yzw0taxbzdw0',
+        'stickers',
+        '404',
+        'rememberdreamwipe',
+        'lonelyboyloserclub',
+        'builder',
+        'truth',
+        'bugsisnotreal',
+        'tombfreaks',
+        'neocortex1986',
+        'laika',
+        'channel-71-weekly-winner',
+        'bugcollector',
+        'armourofgod',
+        'squelchtv',
+        'rapiddealsonlinesaleswebboard'
+    ];
+    $sites = array_filter($sites, function($dir) use ($excludedDirs) {
+        return !in_array(basename($dir), $excludedDirs);
+    });
+    $sites = array_values($sites);
+
+    $sitecount = sizeof($sites);
+    $colcount = 4;
+    $rowcount = ceil($sitecount/4);
+    $index = 0;
+
+    $newSites = [
+        'adrenadine',
+        'bugcollector',
+        'bigger'
+    ];
+    $isNewSite = false;
+
+    $popularSites = [
+        ["snailmail", "SnailMail - Consult the Snail"],
+        ["malwarecleaner", "Malware Cleaner"]
+    ];
+    $sponsoredSites = [
+        ["rapiddealsonlinesaleswebboard", "Joe Sales' Rapid Deals Online Sales Web Board"],
+        ["gobingo", "GoBingo! Search Engine"]
+    ];
+    ?>
+    <img class="logo" src="index/VirtualDream-Dark.svg" title="<?php echo $logoTagline; ?>">
     <p>Welcome home, netizen</p>
     <h3><img src="index/aniheart.gif" class="headericon">Popular Sites</h3>
     <ul>
@@ -100,47 +191,7 @@
     </ul>
     <h3><img src="index/book2.gif" class="headericon">Public Directory</h3>
     <?php
-        $excludedDirs = [
-            'advertising', 
-            'earnvirtubucks', 
-            'webrings',
-            'zambonisimulator',
-            'rand',
-            'help',
-            'status',
-            'test',
-            'winbigcasinosweepstakes-bg9yzw0taxbzdw0',
-            'stickers',
-            '404',
-            'rememberdreamwipe',
-            'lonelyboyloserclub',
-            'builder',
-            'truth'
-        ];
-        $sites = array_filter($sites, function($dir) use ($excludedDirs) {
-            return !in_array(basename($dir), $excludedDirs);
-        });
-        $sites = array_values($sites);
-
-        $sitecount = sizeof($sites);
-        $colcount = 4;
-        $rowcount = ceil($sitecount/4);
-        $index = 0;
-
-        $newSites = [
-            'planetxarxax',
-            'armourofgod',
-            'colordreamhyperforce',
-            'neocortex1986',
-            'rememberdreamwipe',
-            'spiceking',
-            'theoneleader',
-            'downloadmania',
-            'bubblechat',
-            'squelchtv',
-            'laika'
-        ];
-        $isNewSite = false;
+        
     ?>
     <table>
         <tbody>
@@ -155,21 +206,23 @@
                     if(in_array($sitename, $newSites)) {
                         $isNewSite = true;
                     }
-
+                    $textJustify = "";
+                    if ($cell == 1 || $cell == 2) { $textJustify = "style=\"text-align:center;\""; }
+                    if ($cell == 3) { $textJustify = "style=\"text-align:right;\""; }
                     if ($baseDomain == $hostLocal) {
                         if($isNewSite) {
-                            echo "<td><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td $textJustify><a href=\"sites/$sitename\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"sites/$sitename\">$sitename</a></td>";
+                            echo "<td $textJustify><a href=\"sites/$sitename\">$sitename</a></td>";
                         }
                     }
                     else {
                         if($isNewSite) {
-                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a><span class='newsite'>New!</span></td>";
+                            echo "<td $textJustify><a href=\"https://$sitename.$baseDomain\">$sitename</a><span class='newsite'>New!</span></td>";
                         }
                         else {
-                            echo "<td><a href=\"https://$sitename.$baseDomain\">$sitename</a></td>";
+                            echo "<td $textJustify><a href=\"https://$sitename.$baseDomain\">$sitename</a></td>";
                         }
                     }
                     $isNewSite = false;
@@ -197,7 +250,9 @@
                             |
                             <li><a href='sites/webrings/'>webrings</a></li>
                             |
-                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li>";
+                            <li><a href='sites/builder/'>website builder</a></li>
+                            |
+                            <li><a href='credits.php'>credits</a></li>";
                         }
                         else {
                             echo "<li><a href='https://help.$baseDomain'>help</a></li>
@@ -208,7 +263,10 @@
                             |
                             <li><a href='https://webrings.$baseDomain/'>webrings</a></li>
                             |
-                            <li><a href='sites/builder/'>website builder</a><span class='newsite'>Beta!</span></li";
+                            <li><a href='sites/builder/'>website builder</a></li>
+                            |
+                            <li><a href='credits.php'>credits</a></li>
+                            ";
                         }
                         ?>
                         
@@ -216,11 +274,25 @@
                     <p><img src="index/emailtr.gif" class="headericon">Want your very own Virtual Dream page? <a href="mailto:webmaster@<?php echo "$hostProd";?>">Email us</a>!</p>
                     
                 </td>
-                <td width="325" align="right" bgcolor="#FDFBD6">
-                    <h3><img src="index/flashingflowersmiley.gif" class="headericon">Tips: Exploring Virtual Dream</h3>
-                    <p>A personal computer (PC) is highly recommended</p>
-                    <p>Turn off ad-blocker. All advertisements are local only.</p>
-                    <p>Many sites are hidden. Try exploring!</p>
+                <td class="weatherreport" width="225" align="right" bgcolor="#FDFBD6">
+                    <div class="weatherrap">
+                        <img src="index/teledog.png" class="teledog">
+                        <h3><img src="index/flashingflowersmiley.gif" class="headericon">NetWeather Forecast</h3>
+                        <?php 
+                            $netWindMax = 500;
+                            $netWind = rand(0,333);
+                            $fogDriftStates = ["Minimal", "Light", "Significant", "Hazardous"];
+                            $fogDriftIndex = array_rand($fogDriftStates);
+                            $fogDrift = $fogDriftStates[$fogDriftIndex];
+
+                            $diveCautionStates = ["Low", "Caution", "Hazardous", "Fatal"];
+                            $diveCautionIndex = round(min(2 / ($netWindMax) * (( 100 + $netWind * max($fogDriftIndex, 1)) - $netWindMax) + 2, 3));
+                            $diveCaution = $diveCautionStates[$diveCautionIndex];
+                        ?>
+                        <p><img src="index/swirl.gif" class="headericon">Netwind: ±<?php echo $netWind; ?>Kbps</p>
+                        <p><img src="index/cloud.gif" class="headericon">Fog Drift: <?php echo $fogDrift; ?></p>
+                        <p><img src="index/disc.gif" class="headericon">Dive Caution: <span class="diveCaution<?php echo $diveCaution; ?>"><?php echo $diveCaution; ?></span></p>
+                    </div>
                 </td>
             </tr>
         </tbody>

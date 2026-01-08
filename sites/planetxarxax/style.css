@@ -1,8 +1,15 @@
+@font-face {
+    font-family: KosugiMaru-Regular;
+    src: url("KosugiMaru-Regular.ttf");
+}
 body {
-    font-family: Verdana, Arial, helvetica;
+    font-family: KosugiMaru-Regular;
+    background: #A12B74;
+    background-image: url("checkered-export.gif");
+    /* background-size:1920px; */
 }
 a {
-    color: #3366ff;
+    color: #cd3178;
     text-decoration:none;
     font-weight:bold;
 }
@@ -11,4 +18,13 @@ a:hover{
 }
 .advertisement-banner {
     margin:20px;
+}
+td {
+    background: url('pixlbg.png')
+}
+#wrap {
+    width:600px;
+    border:solid 3px #cd3178;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
 }
