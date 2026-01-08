@@ -12,7 +12,8 @@
 </head>
 <body>
 </h1>Ms. Patrick 3A</h1>
-<p>Hi, 3A students! This is where your home pages will go. I have made a list below for everyone to look at!<p>
+<p>Hi, class 3A! Welcome to the world wide web. This is where your new "home pages" will go once you have sent me them. I have made a list below for everyone to look at!</p> 
+<p>Have fun! :)<p>
     <ul>
         <li>Ailsa Fielding</li>
         <li><a href="brycekilinger.php">Bryce Kilinger</a></li>

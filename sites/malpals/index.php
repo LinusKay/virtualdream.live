@@ -83,7 +83,7 @@
                             <div id="poll">
                                 <form>
                                     <p id="poll-title">MalPoll!</p>
-                                    <p id="poll-text">Would you be more inclined to purchase a product if it featured MalPal characters on it?</p>
+                                    <p id="poll-text">Would you be more inclined to purchase a retail product if it featured MalPal characters on it?</p>
                                     <input type="radio" id="poll-yes" name="poll-response" value="yes">
                                     <label for="poll-yes">Yes</label><br>
                                     <input type="radio" id="poll-no" name="poll-response" value="no">
